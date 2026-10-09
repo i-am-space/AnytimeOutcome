@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.nsys-rep
+*.ncu-rep
+*.sqlite
+*.qdstrm
+.venv/
+results/**/smoke_*.json
+results/**/probe_*

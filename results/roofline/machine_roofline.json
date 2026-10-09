@@ -1,0 +1,13 @@
+{
+  "bf16_tensor_tflops_measured": 211.07565464808556,
+  "bf16_tensor_tflops_median": 190.27854758019467,
+  "fp32_tflops_measured": 48.576809234639725,
+  "dram_copy_GBps": 656.0342897787276,
+  "dram_read_GBps": 746.7160189750539,
+  "l2_copy_GBps": 2978.9090676425903,
+  "ridge_bf16_flop_per_byte_measured": 282.6719251822253,
+  "gpu": "NVIDIA L40S",
+  "sms": 142,
+  "torch": "2.10.0+cu128",
+  "l2_bytes": 100663296
+}

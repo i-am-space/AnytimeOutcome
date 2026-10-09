@@ -1,0 +1,632 @@
+diff --git a/ssd/engine/draft_runner.py b/ssd/engine/draft_runner.py
+index bf1c6c9..a0af6e0 100644
+--- a/ssd/engine/draft_runner.py
++++ b/ssd/engine/draft_runner.py
+@@ -1,6 +1,7 @@
+ import os
+ import time
+ import torch
++from ssd.utils.nvtx import nvtx_range
+ import torch.distributed as dist
+ import dataclasses
+ 
+@@ -121,7 +122,11 @@ class DraftRunner(ModelRunner):
+         self._arange_kp1 = torch.arange(K + 1, device=d, dtype=torch.int64)
+         self._arange_2kp1 = torch.arange(2 * K + 1, device=d, dtype=torch.int64)
+ 
+-    def jit_speculate(self, 
++    def jit_speculate(self, *args, **kwargs):
++        with nvtx_range("draft/jit_speculate(miss)"):
++            return self._jit_speculate_impl(*args, **kwargs)
++
++    def _jit_speculate_impl(self, 
+                       request_keys: torch.Tensor, 
+                       num_tokens: torch.Tensor, 
+                       out_logits: torch.Tensor, 
+@@ -357,9 +362,10 @@ class DraftRunner(ModelRunner):
+                     print(f"    Detokenized: {tokens_text}", flush=True)
+             print(f"", flush=True)
+ 
+-        fused_response = torch.cat([cache_hits.reshape(-1), out_tokens.reshape(-1).to(torch.int64)])
+-        dist.send(fused_response, dst=0, group=self.async_pg)
+-        dist.send(out_logits[:, :K, :].contiguous(), dst=0, group=self.async_pg)
++        with nvtx_range("draft/send_response"):
++            fused_response = torch.cat([cache_hits.reshape(-1), out_tokens.reshape(-1).to(torch.int64)])
++            dist.send(fused_response, dst=0, group=self.async_pg)
++            dist.send(out_logits[:, :K, :].contiguous(), dst=0, group=self.async_pg)
+ 
+         partial_tree_decode_args = {
+             "num_tokens": num_tokens,
+@@ -795,10 +801,11 @@ class DraftRunner(ModelRunner):
+             if _prof or PROFILE_DRAFT:
+                 torch.cuda.synchronize()
+                 _st = time.perf_counter()
+-            current_input_ids = self._decode_tree_step(
+-                depth, current_input_ids, step_rope_positions, step_slot_maps,
+-                step_context_lens, dbt, payload, spec_tokens, spec_logits, spec_activations
+-            )
++            with nvtx_range(f"draft/tree_step_{depth}"):
++                current_input_ids = self._decode_tree_step(
++                    depth, current_input_ids, step_rope_positions, step_slot_maps,
++                    step_context_lens, dbt, payload, spec_tokens, spec_logits, spec_activations
++                )
+             if _prof or PROFILE_DRAFT:
+                 torch.cuda.synchronize()
+                 _et = time.perf_counter()
+@@ -866,11 +873,13 @@ class DraftRunner(ModelRunner):
+ 
+         while True:
+             # 1) Wait for the next command (may be PREFILL, SPEC_REQUEST, or EXIT)
+-            cmd = self.recv_cmd()
++            with nvtx_range("draft/idle_wait_cmd"):
++                cmd = self.recv_cmd()
+ 
+             # PREFILL: run the draft prefill and then loop back
+             if cmd == 1:
+-                self.draft_async_prefill()
++                with nvtx_range("draft/prefill"):
++                    self.draft_async_prefill()
+                 continue
+ 
+             # SPECULATE request: serve out-of-cache or random speculations
+@@ -881,7 +890,8 @@ class DraftRunner(ModelRunner):
+                     torch.cuda.synchronize()
+                     _d0 = time.perf_counter()
+ 
+-                glue_decode_input_ids, partial_tree_decode_args = self._service_spec_request()
++                with nvtx_range("draft/service_request"):
++                    glue_decode_input_ids, partial_tree_decode_args = self._service_spec_request()
+ 
+                 if _prof or PROFILE_DRAFT:
+                     torch.cuda.synchronize()
+@@ -889,21 +899,24 @@ class DraftRunner(ModelRunner):
+ 
+                 self._reset_tree_cache_tensors()
+ 
+-                tree_decode_args = self._build_tree_batch(partial_tree_decode_args, glue_decode_input_ids)
++                with nvtx_range("draft/build_tree(glue)"):
++                    tree_decode_args = self._build_tree_batch(partial_tree_decode_args, glue_decode_input_ids)
+ 
+                 if _prof or PROFILE_DRAFT:
+                     torch.cuda.synchronize()
+                     _d2 = time.perf_counter()
+ 
+                 # Decode the branch tree
+-                tokens, logits, activations = self._decode_tree(tree_decode_args)
++                with nvtx_range("draft/decode_tree"):
++                    tokens, logits, activations = self._decode_tree(tree_decode_args)
+ 
+                 if _prof or PROFILE_DRAFT:
+                     torch.cuda.synchronize()
+                     _d3 = time.perf_counter()
+ 
+                 # Populate the local cache so future spec-requests can hit
+-                self._populate_tree_cache(tree_decode_args, tokens, logits, tree_decode_args["cache_hits"], activations)
++                with nvtx_range("draft/populate_cache"):
++                    self._populate_tree_cache(tree_decode_args, tokens, logits, tree_decode_args["cache_hits"], activations)
+                 self._draft_step_times.append(time.perf_counter() - _ds0)
+ 
+                 if _prof or PROFILE_DRAFT:
+diff --git a/ssd/engine/helpers/cudagraph_helpers.py b/ssd/engine/helpers/cudagraph_helpers.py
+index e347b39..5d0a9ff 100644
+--- a/ssd/engine/helpers/cudagraph_helpers.py
++++ b/ssd/engine/helpers/cudagraph_helpers.py
+@@ -125,6 +125,8 @@ def run_decode_cudagraph(model_runner, input_ids, positions, last_only, graph_va
+ cache = {}
+ 
+ _plan_event = None  # Lazy-init CUDA event for plan() sync
++import flashinfer as _fi
++_FI_PLAN_HAS_COLOCATED_CTAS = tuple(int(x) for x in _fi.__version__.split(".")[:2]) >= (0, 6)
+ PROFILE = os.environ.get("SSD_PROFILE", "0") == "1"
+ PROFILE_DRAFT = os.environ.get("SSD_PROFILE_DRAFT", "0") == "1"
+ _draft_events = []  # [(step, label, start_event, end_event), ...]
+@@ -374,6 +376,8 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only,
+     ]
+     if wrapper._backend == "fa2":
+         plan_args.extend([-1, False])
++        if _FI_PLAN_HAS_COLOCATED_CTAS:
++            plan_args.append(0)  # num_colocated_ctas (added in flashinfer 0.6)
+     wrapper._plan_info = wrapper._cached_module.plan(*plan_args)
+ 
+     if PROFILE_DRAFT:
+diff --git a/ssd/engine/llm_engine.py b/ssd/engine/llm_engine.py
+index a101598..16258bc 100644
+--- a/ssd/engine/llm_engine.py
++++ b/ssd/engine/llm_engine.py
+@@ -14,6 +14,7 @@ from ssd.engine.step import InferenceStep, AutoRegressiveStep, SpecDecodeStep
+ from ssd.engine.verifier import Verifier
+ 
+ import atexit
++import torch
+ from dataclasses import fields
+ from time import perf_counter
+ from tqdm.auto import tqdm
+@@ -349,7 +350,9 @@ class LLMEngine:
+                 )
+             i += 1
+             t = perf_counter()
++            torch.cuda.nvtx.range_push(f"engine/step")
+             output = self.step(inference_step)
++            torch.cuda.nvtx.range_pop()
+             time_taken = perf_counter() - t
+             METRICS["target_step_times"].append(time_taken)
+ 
+diff --git a/ssd/engine/speculator_async.py b/ssd/engine/speculator_async.py
+index 2334fd9..af3b401 100644
+--- a/ssd/engine/speculator_async.py
++++ b/ssd/engine/speculator_async.py
+@@ -1,4 +1,5 @@
+ import torch
++from ssd.utils.nvtx import nvtx_range
+ import torch.distributed as dist
+ from transformers import AutoTokenizer
+ 
+@@ -146,6 +147,7 @@ class SpeculatorAsync(SpeculatorBase):
+             self._block_tables_buf[i, bt_len:] = -1
+ 
+         # Send cmd + meta + fused payload (temps fused into int64 burst)
++        torch.cuda.nvtx.range_push("SSD/handshake_send")
+         dist.send(self._cmd, dst=self.draft_runner_rank, group=self.async_pg)
+         dist.send(self._meta, dst=self.draft_runner_rank, group=self.async_pg)
+         temps_as_int64 = self._temps_buf.view(torch.int32).to(torch.int64)
+@@ -178,10 +180,13 @@ class SpeculatorAsync(SpeculatorBase):
+             dist.send(extend_eagle_acts, dst=self.draft_runner_rank, group=self.async_pg)
+             dist.send(extend_token_ids, dst=self.draft_runner_rank, group=self.async_pg)
+ 
++        torch.cuda.nvtx.range_pop()
+         # Recv into pre-allocated buffers
+-        dist.recv(self._fused_response, src=self.draft_runner_rank, group=self.async_pg)
++        with nvtx_range("SSD/wait_draft_tokens"):
++            dist.recv(self._fused_response, src=self.draft_runner_rank, group=self.async_pg)
+         cache_hits = self._fused_response[:B]
+         speculations = self._fused_response[B:].view(B, self.K)
+-        dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
++        with nvtx_range("SSD/recv_draft_logits"):
++            dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
+ 
+         return speculations, self._logits_q, cache_hits
+diff --git a/ssd/engine/speculator_sync.py b/ssd/engine/speculator_sync.py
+index 456b82d..5f9f2d2 100644
+--- a/ssd/engine/speculator_sync.py
++++ b/ssd/engine/speculator_sync.py
+@@ -1,4 +1,5 @@
+ import torch
++from ssd.utils.nvtx import nvtx_range
+ 
+ from ssd.engine.sequence import Sequence
+ from ssd.engine.model_runner import ModelRunner
+@@ -46,8 +47,9 @@ class SpeculatorSync(SpeculatorBase):
+ 
+         for k in range(self.lookahead + 1):
+             # Draft model forward pass - emits [B] tokens, True is for draft_return_logits
+-            token_ids, step_logits_q = self.draft_model_runner.call(
+-                "run", seqs, False, True, True)
++            with nvtx_range(f"SD/draft_fwd_{k}"):
++                token_ids, step_logits_q = self.draft_model_runner.call(
++                    "run", seqs, False, True, True)
+             # make sure we include this even on last iter since we put K+1 tokens thru draft cache
+             for s in seqs:
+                 s.num_draft_cached_tokens += 1
+diff --git a/ssd/engine/step.py b/ssd/engine/step.py
+index f60939c..82ec51b 100644
+--- a/ssd/engine/step.py
++++ b/ssd/engine/step.py
+@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
+ from dataclasses import dataclass
+ import os
+ import torch
++from ssd.utils.nvtx import nvtx_range
+ from time import perf_counter
+ from transformers import AutoTokenizer
+ 
+@@ -37,7 +38,8 @@ class AutoRegressiveStep(InferenceStep):
+         if __debug__:
+             print(f'[auto_regressive_step] is_prefill={is_prefill}', flush=True)
+ 
+-        token_ids = self.model_runner.call("run", seqs, is_prefill)
++        with nvtx_range("AR/prefill" if is_prefill else "AR/decode"):
++            token_ids = self.model_runner.call("run", seqs, is_prefill)
+ 
+         if __debug__:
+             decoded_tokens = decode_tokens(token_ids, self.tokenizer)
+@@ -75,11 +77,15 @@ class SpecDecodeStep(InferenceStep):
+         # When doing async speculation and not Eagle, we can do draft and target prefills in parallel.
+         if not self.eagle and self.async_spec:
+             empty_verify_result = VerifyResult([], [], None)
+-            self.speculator.prefill(seqs, empty_verify_result)
+-            verify_result = self.verifier.prefill(seqs, eagle=False)
++            with nvtx_range("SD/prefill_draft_send"):
++                self.speculator.prefill(seqs, empty_verify_result)
++            with nvtx_range("SD/prefill_target"):
++                verify_result = self.verifier.prefill(seqs, eagle=False)
+         else:
+-            verify_result = self.verifier.prefill(seqs, eagle=self.eagle)
+-            self.speculator.prefill(seqs, verify_result)
++            with nvtx_range("SD/prefill_target"):
++                verify_result = self.verifier.prefill(seqs, eagle=self.eagle)
++            with nvtx_range("SD/prefill_draft"):
++                self.speculator.prefill(seqs, verify_result)
+ 
+         for seq in seqs:
+             assert seq.recovery_token_id is not None
+@@ -107,7 +113,8 @@ class SpecDecodeStep(InferenceStep):
+             eagle_acts=eagle_sentinel,
+         )
+         #### STEP 1: SPECULATE ####
+-        speculate_result = self.speculator.speculate(seqs, in_verify_result)
++        with nvtx_range("SD/speculate"):
++            speculate_result = self.speculator.speculate(seqs, in_verify_result)
+ 
+         if _prof:
+             torch.cuda.synchronize()
+@@ -123,7 +130,8 @@ class SpecDecodeStep(InferenceStep):
+                 print(f"[SpecDecodeStep] speculation {i}: {decoded_tokens}", flush=True)
+ 
+         #### STEP 2: VERIFY ####
+-        out_verify_result = self.verifier.verify(seqs, speculate_result, eagle=self.eagle)
++        with nvtx_range("SD/verify"):
++            out_verify_result = self.verifier.verify(seqs, speculate_result, eagle=self.eagle)
+ 
+         if _prof:
+             torch.cuda.synchronize()
+@@ -145,12 +153,13 @@ class SpecDecodeStep(InferenceStep):
+             seq.num_cached_tokens = orig_nct
+ 
+         #### STEP 3: POSTPROCESS ####
+-        self.scheduler.postprocess_speculate(
+-            seqs,
+-            out_verify_result.new_suffixes,
+-            out_verify_result.recovery_tokens,
+-            eagle_acts=out_verify_result.eagle_acts if self.eagle else None,
+-        )
++        with nvtx_range("SD/postprocess"):
++            self.scheduler.postprocess_speculate(
++                seqs,
++                out_verify_result.new_suffixes,
++                out_verify_result.recovery_tokens,
++                eagle_acts=out_verify_result.eagle_acts if self.eagle else None,
++            )
+ 
+         if _prof:
+             torch.cuda.synchronize()
+diff --git a/ssd/engine/verifier.py b/ssd/engine/verifier.py
+index c5412b6..7919943 100644
+--- a/ssd/engine/verifier.py
++++ b/ssd/engine/verifier.py
+@@ -1,5 +1,6 @@
+ import os
+ import torch
++from ssd.utils.nvtx import nvtx_range
+ from time import perf_counter
+ from transformers import AutoTokenizer
+ 
+@@ -62,7 +63,8 @@ class Verifier(VerifierBase):
+ 
+         _pt = os.environ.get("SSD_PROFILE_TARGET", "0") == "1"
+         _tv0 = perf_counter()
+-        result = self.target_model_runner.call("run", seqs, False, False, True)
++        with nvtx_range("verify/target_fwd"):
++            result = self.target_model_runner.call("run", seqs, False, False, True)
+ 
+         if _prof:
+             torch.cuda.synchronize()
+@@ -93,6 +95,7 @@ class Verifier(VerifierBase):
+         temperatures_target = torch.tensor(temps_target, dtype=torch.float32, device=self.device)
+         temperatures_draft = torch.tensor(temps_draft, dtype=torch.float32, device=self.device)
+ 
++        torch.cuda.nvtx.range_push("verify/accept")
+         new_suffixes, recovery_tokens = verify(
+             logits_p=logits_p,
+             logits_q=speculate_result.logits_q,
+@@ -105,6 +108,7 @@ class Verifier(VerifierBase):
+             jit_speculate=self.jit_speculate,
+         )
+ 
++        torch.cuda.nvtx.range_pop()
+         self.metrics["target_verify_times"].append(perf_counter() - _tv0)
+ 
+         if _prof:
+diff --git a/ssd/layers/attention.py b/ssd/layers/attention.py
+index ed5ec7b..f63f037 100644
+--- a/ssd/layers/attention.py
++++ b/ssd/layers/attention.py
+@@ -3,9 +3,18 @@ from torch import nn
+ import triton
+ import triton.language as tl
+ 
+-from sgl_kernel.flash_attn import flash_attn_varlen_func, flash_attn_with_kvcache
+ from ssd.utils.context import get_context
+ 
++# FA3 (sgl_kernel) only runs on Hopper; fall back to the portable Triton/SDPA kernels elsewhere.
++_USE_FA3 = torch.cuda.is_available() and torch.cuda.get_device_capability()[0] >= 9
++if _USE_FA3:
++    try:
++        from sgl_kernel.flash_attn import flash_attn_varlen_func, flash_attn_with_kvcache
++    except ImportError:
++        _USE_FA3 = False
++if not _USE_FA3:
++    from ssd.layers.paged_attention_triton import flash_attn_varlen_func, flash_attn_with_kvcache
++
+ 
+ @triton.jit
+ def store_kvcache_kernel(
+@@ -83,6 +92,14 @@ class Attention(nn.Module):
+             store_kvcache(k, v, self.k_cache, self.v_cache, context.slot_mapping)
+ 
+         if context.is_prefill:
++            if context.block_tables is not None and not _USE_FA3:
++                # prefix-cache hit: portable path gathers keys from the paged cache via block_table
++                o = flash_attn_varlen_func(q, k_cache, v_cache,
++                                           max_seqlen_q=context.max_seqlen_q, cu_seqlens_q=context.cu_seqlens_q,
++                                           max_seqlen_k=context.max_seqlen_k, cu_seqlens_k=context.cu_seqlens_k,
++                                           softmax_scale=self.scale, causal=True, block_table=context.block_tables)
++                o = o.view(-1, self.num_heads * self.head_dim)
++                return o
+             if context.block_tables is not None:
+                 k, v = k_cache, v_cache
+ 
+diff --git a/ssd/layers/paged_attention_triton.py b/ssd/layers/paged_attention_triton.py
+new file mode 100644
+index 0000000..722b748
+--- /dev/null
++++ b/ssd/layers/paged_attention_triton.py
+@@ -0,0 +1,224 @@
++"""Portable (sm80+) replacements for the sgl_kernel FA3 calls used by ssd/layers/attention.py.
++
++sgl_kernel.flash_attn is FlashAttention-3, which only runs on Hopper (sm90). These kernels keep
++the same call signatures for the subset SSD uses, so the engine runs on Ada (L40S, sm89) and Ampere:
++
++  flash_attn_with_kvcache(q, k_cache, v_cache, cache_seqlens, page_table, softmax_scale, causal,
++                          cu_seqlens_q=None, max_seqlen_q=None)
++      Paged-KV attention for single-token decode (q: [B, 1, Hq, D]) and multi-token verify / glue
++      decode (q: [total_q, Hq, D] + cu_seqlens_q). Split-KV ("flash-decoding") Triton kernel; all
++      metadata stays on device, so it is safe inside CUDA-graph capture.
++
++  flash_attn_varlen_func(q, k, v, max_seqlen_q, cu_seqlens_q, max_seqlen_k, cu_seqlens_k,
++                         softmax_scale, causal, block_table=None)
++      Prefill. Uses torch SDPA (FlashAttention-2 backend) per sequence; prefill is never captured.
++
++Causal masking is bottom-right aligned (FA convention): query j of a sequence with q_len queries and
++kv_len keys may attend to keys [0, kv_len - q_len + j].
++"""
++import math
++
++import torch
++import torch.nn.functional as F
++import triton
++import triton.language as tl
++
++_NUM_SMS = {}
++
++
++@triton.jit
++def _paged_attn_split_kernel(
++    q_ptr, k_cache_ptr, v_cache_ptr, seqlens_ptr, page_table_ptr, cu_q_ptr,
++    out_part_ptr, lse_part_ptr,
++    stride_qt, stride_qh,
++    stride_kb, stride_kp, stride_kh,
++    stride_pt_b,
++    stride_ot, stride_os, stride_oh,
++    stride_lt, stride_ls,
++    scale,
++    G: tl.constexpr, HEAD_DIM: tl.constexpr, PAGE: tl.constexpr,
++    BLOCK_Q: tl.constexpr, BLOCK_M: tl.constexpr, BLOCK_N: tl.constexpr,
++    NUM_SPLITS: tl.constexpr, HAS_CU_Q: tl.constexpr, CAUSAL: tl.constexpr,
++):
++    b = tl.program_id(0)
++    h_kv = tl.program_id(1)
++    split = tl.program_id(2)
++
++    if HAS_CU_Q:
++        q_start = tl.load(cu_q_ptr + b)
++        q_len = tl.load(cu_q_ptr + b + 1) - q_start
++    else:
++        q_start = b
++        q_len = 1
++    kv_len = tl.load(seqlens_ptr + b)
++
++    # Rows of the tile are (query token, head-in-group) pairs sharing one KV head (GQA packing).
++    rows = tl.arange(0, BLOCK_M)
++    qi = rows // G
++    hq = h_kv * G + rows % G
++    row_valid = (qi < q_len) & (qi < BLOCK_Q)
++    d = tl.arange(0, HEAD_DIM)
++
++    q_ptrs = q_ptr + (q_start + qi)[:, None] * stride_qt + hq[:, None] * stride_qh + d[None, :]
++    q = tl.load(q_ptrs, mask=row_valid[:, None], other=0.0)
++
++    # This split's contiguous slice of the KV sequence, aligned to BLOCK_N.
++    chunk = tl.cdiv(tl.cdiv(kv_len, NUM_SPLITS), BLOCK_N) * BLOCK_N
++    kv_lo = split * chunk
++    kv_hi = tl.minimum(kv_lo + chunk, kv_len)
++
++    # Last key each row may see (inclusive bound is kv_len - q_len + qi).
++    if CAUSAL:
++        row_limit = kv_len - q_len + qi + 1
++    else:
++        row_limit = kv_len + qi * 0
++
++    m_i = tl.full([BLOCK_M], float("-inf"), dtype=tl.float32)
++    l_i = tl.zeros([BLOCK_M], dtype=tl.float32)
++    acc = tl.zeros([BLOCK_M, HEAD_DIM], dtype=tl.float32)
++    qk_scale = scale * 1.4426950408889634  # fold log2(e) so we can use exp2
++
++    for start in range(kv_lo, kv_hi, BLOCK_N):
++        n = start + tl.arange(0, BLOCK_N)
++        n_valid = n < kv_hi
++        page = tl.load(page_table_ptr + b * stride_pt_b + start // PAGE)
++        off = n % PAGE
++        kv_off = page.to(tl.int64) * stride_kb + off[:, None] * stride_kp + h_kv * stride_kh + d[None, :]
++        k = tl.load(k_cache_ptr + kv_off, mask=n_valid[:, None], other=0.0)
++        v = tl.load(v_cache_ptr + kv_off, mask=n_valid[:, None], other=0.0)
++
++        s = tl.dot(q, tl.trans(k)) * qk_scale
++        allowed = (n[None, :] < row_limit[:, None]) & n_valid[None, :] & row_valid[:, None]
++        s = tl.where(allowed, s, float("-inf"))
++
++        m_new = tl.maximum(m_i, tl.max(s, 1))
++        m_safe = tl.where(m_new == float("-inf"), 0.0, m_new)
++        alpha = tl.exp2(m_i - m_safe)
++        p = tl.exp2(s - m_safe[:, None])
++        l_i = l_i * alpha + tl.sum(p, 1)
++        acc = acc * alpha[:, None] + tl.dot(p.to(v.dtype), v)
++        m_i = m_new
++
++    has = l_i > 0
++    out = acc / tl.where(has, l_i, 1.0)[:, None]
++    lse = tl.where(has, m_i + tl.log2(tl.where(has, l_i, 1.0)), float("-inf"))  # log2 domain
++
++    t = q_start + qi
++    o_ptrs = out_part_ptr + t[:, None] * stride_ot + split * stride_os + hq[:, None] * stride_oh + d[None, :]
++    tl.store(o_ptrs, out, mask=row_valid[:, None])
++    tl.store(lse_part_ptr + t * stride_lt + split * stride_ls + hq, lse, mask=row_valid)
++
++
++@triton.jit
++def _combine_kernel(
++    out_part_ptr, lse_part_ptr, out_ptr,
++    stride_ot, stride_os, stride_oh,
++    stride_lt, stride_ls,
++    stride_out_t, stride_out_h,
++    HEAD_DIM: tl.constexpr, NUM_SPLITS: tl.constexpr,
++):
++    t = tl.program_id(0)
++    h = tl.program_id(1)
++    s = tl.arange(0, NUM_SPLITS)
++    d = tl.arange(0, HEAD_DIM)
++    lse = tl.load(lse_part_ptr + t * stride_lt + s * stride_ls + h)
++    m = tl.max(lse, 0)
++    m = tl.where(m == float("-inf"), 0.0, m)
++    w = tl.exp2(lse - m)
++    o = tl.load(out_part_ptr + t * stride_ot + s[:, None] * stride_os + h * stride_oh + d[None, :])
++    o = tl.sum(o * w[:, None], 0) / tl.maximum(tl.sum(w, 0), 1e-30)
++    tl.store(out_ptr + t * stride_out_t + h * stride_out_h + d, o.to(out_ptr.dtype.element_ty))
++
++
++def _num_splits(batch, num_kv_heads, device):
++    idx = device.index if device.index is not None else torch.cuda.current_device()
++    if idx not in _NUM_SMS:
++        _NUM_SMS[idx] = torch.cuda.get_device_properties(idx).multi_processor_count
++    target = 2 * _NUM_SMS[idx]
++    splits = max(1, min(32, target // max(1, batch * num_kv_heads)))
++    return 1 << (splits.bit_length() - 1)  # power of two for tl.arange in the combine kernel
++
++
++def flash_attn_with_kvcache(
++    q, k_cache, v_cache, cache_seqlens, page_table, softmax_scale=None, causal=True,
++    cu_seqlens_q=None, max_seqlen_q=None, **unused,
++):
++    single = cu_seqlens_q is None
++    if single:  # q: [B, 1, Hq, D]
++        assert q.dim() == 4 and q.shape[1] == 1, "decode path expects q of shape [B, 1, Hq, D]"
++        q3 = q.reshape(q.shape[0], q.shape[2], q.shape[3])
++        batch, block_q = q.shape[0], 1
++    else:  # q: [total_q, Hq, D]
++        q3 = q
++        batch = cu_seqlens_q.numel() - 1
++        block_q = triton.next_power_of_2(int(max_seqlen_q))
++
++    total_q, num_heads, head_dim = q3.shape
++    _, page, num_kv_heads, _ = k_cache.shape
++    group = num_heads // num_kv_heads
++    if softmax_scale is None:
++        softmax_scale = 1.0 / math.sqrt(head_dim)
++    block_m = max(16, triton.next_power_of_2(block_q * group))
++    block_n = 64 if block_m <= 64 else 32
++    assert page % block_n == 0, "page size must be a multiple of BLOCK_N"
++    splits = _num_splits(batch, num_kv_heads, q.device)
++
++    out_part = torch.empty(total_q, splits, num_heads, head_dim, dtype=torch.float32, device=q.device)
++    lse_part = torch.empty(total_q, splits, num_heads, dtype=torch.float32, device=q.device)
++    out = torch.empty_like(q3)
++
++    _paged_attn_split_kernel[(batch, num_kv_heads, splits)](
++        q3, k_cache, v_cache, cache_seqlens, page_table, cu_seqlens_q if not single else cache_seqlens,
++        out_part, lse_part,
++        q3.stride(0), q3.stride(1),
++        k_cache.stride(0), k_cache.stride(1), k_cache.stride(2),
++        page_table.stride(0),
++        out_part.stride(0), out_part.stride(1), out_part.stride(2),
++        lse_part.stride(0), lse_part.stride(1),
++        softmax_scale,
++        G=group, HEAD_DIM=head_dim, PAGE=page,
++        BLOCK_Q=block_q, BLOCK_M=block_m, BLOCK_N=block_n,
++        NUM_SPLITS=splits, HAS_CU_Q=not single, CAUSAL=causal,
++        num_warps=4, num_stages=2,
++    )
++    _combine_kernel[(total_q, num_heads)](
++        out_part, lse_part, out,
++        out_part.stride(0), out_part.stride(1), out_part.stride(2),
++        lse_part.stride(0), lse_part.stride(1),
++        out.stride(0), out.stride(1),
++        HEAD_DIM=head_dim, NUM_SPLITS=splits,
++        num_warps=4,
++    )
++    return out.view_as(q) if single else out
++
++
++def flash_attn_varlen_func(
++    q, k, v, max_seqlen_q, cu_seqlens_q, max_seqlen_k, cu_seqlens_k,
++    softmax_scale=None, causal=True, block_table=None, **unused,
++):
++    """Prefill attention. q: [total_q, Hq, D]; k/v: [total_k, Hkv, D] or paged caches with block_table."""
++    num_heads, head_dim = q.shape[1], q.shape[2]
++    out = torch.empty_like(q)
++    cu_q = cu_seqlens_q.tolist()
++    cu_k = cu_seqlens_k.tolist()
++    for i in range(len(cu_q) - 1):
++        qs, qe = cu_q[i], cu_q[i + 1]
++        kv_len = cu_k[i + 1] - cu_k[i]
++        if block_table is not None:  # gather this sequence's keys from the paged cache
++            page = k.shape[1]
++            pages = block_table[i, : (kv_len + page - 1) // page].long()
++            ki = k[pages].flatten(0, 1)[:kv_len]
++            vi = v[pages].flatten(0, 1)[:kv_len]
++        else:
++            ki, vi = k[cu_k[i]:cu_k[i + 1]], v[cu_k[i]:cu_k[i + 1]]
++        qi = q[qs:qe].transpose(0, 1).unsqueeze(0)
++        ki = ki.transpose(0, 1).unsqueeze(0)
++        vi = vi.transpose(0, 1).unsqueeze(0)
++        q_len = qe - qs
++        if causal and q_len != kv_len:  # bottom-right aligned causal mask
++            mask = torch.ones(q_len, kv_len, dtype=torch.bool, device=q.device).tril(kv_len - q_len)
++            o = F.scaled_dot_product_attention(qi, ki, vi, attn_mask=mask, scale=softmax_scale, enable_gqa=True)
++        else:
++            o = F.scaled_dot_product_attention(qi, ki, vi, is_causal=causal, scale=softmax_scale, enable_gqa=True)
++        out[qs:qe] = o.squeeze(0).transpose(0, 1)
++    return out
+diff --git a/ssd/layers/sampler.py b/ssd/layers/sampler.py
+index c32eee0..c4c5fb1 100644
+--- a/ssd/layers/sampler.py
++++ b/ssd/layers/sampler.py
+@@ -8,9 +8,9 @@ from ssd.utils.async_helpers.async_spec_helpers import apply_sampler_x_rescaling
+ # but generator is on CUDA, causing TypeError: RNG state must be a torch.ByteTensor.
+ import flashinfer.sampling as _fi_samp
+ _orig_get_seed_and_offset = _fi_samp.get_seed_and_offset
+-def _fixed_get_seed_and_offset(increment, generator=None):
++def _fixed_get_seed_and_offset(increment, generator=None, device=None):  # flashinfer>=0.6 also passes device
+     if generator is None:
+-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++        device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
+         generator = torch.Generator(device=device)
+     state = generator.get_state()
+     seed, offset = state.view(torch.int64)
+diff --git a/ssd/utils/nvtx.py b/ssd/utils/nvtx.py
+new file mode 100644
+index 0000000..1aa1a02
+--- /dev/null
++++ b/ssd/utils/nvtx.py
+@@ -0,0 +1,13 @@
++"""NVTX ranges for Nsight Systems. Near-zero cost when no profiler is attached."""
++from contextlib import contextmanager
++
++import torch
++
++
++@contextmanager
++def nvtx_range(name: str):
++    torch.cuda.nvtx.range_push(name)
++    try:
++        yield
++    finally:
++        torch.cuda.nvtx.range_pop()

@@ -1,9 +1,7 @@
 """Shared benchmark driver for AR / synchronous SD / SSD on the SSD engine (one request at a time).
 
-Measures, per prompt: full-request latency (includes both prefills), time-to-first-token proxy
-(prefill step), decode time, committed tokens, plus engine metrics (accepted tokens per step,
-cache-hit rate). The timed region is wrapped in an NVTX range "timed_region" and
-cudaProfilerStart/Stop so Nsight Systems / Compute can restrict capture to steady state.
+Measures full-request latency including prefills, first delivery, decode time, and committed tokens.
+Profiler capture is opt-in. Frozen campaign manifests bypass prompt selection and tokenization.
 
 Examples:
   python profiling/run_engine.py --mode ar  --n 4 --out results/engine/ar.json
@@ -30,6 +28,9 @@ from ssd.engine.llm_engine import METRICS  # noqa: E402
 from transformers import AutoTokenizer  # noqa: E402
 
 from workloads import get_prompts  # noqa: E402
+from baseline_common import (allocation, atomic_json, digest, execution_fingerprint, ordered_prompts,
+                             read_json, software_fingerprint, validate_manifest)
+from baseline_common import worker_settings
 
 
 def parse():
@@ -50,18 +51,109 @@ def parse():
     p.add_argument("--eager", action="store_true")
     p.add_argument("--gpu_mem_util", type=float, default=0.7,
                    help="fraction of free memory for KV cache; use ~0.08 under ncu (replay backs up written buffers)")
-    p.add_argument("--ignore_eos", action="store_true", default=True)
+    p.add_argument("--draft_gpu_mem_util", type=float)
+    p.add_argument("--ignore_eos", action=argparse.BooleanOptionalAction, default=True)
+    p.add_argument("--protocol", choices=['fixed', 'natural'])
+    p.add_argument("--profile-capture", action="store_true")
+    p.add_argument("--disable-prefix-cache", action="store_true")
+    p.add_argument("--manifest")
+    p.add_argument("--job")
+    p.add_argument("--order-seed", type=int, default=0)
     p.add_argument("--out", required=True)
     return p.parse_args()
 
 
+def measure_request(llm, item, sampling, *, synchronize, clock=time.perf_counter, profile_capture=False):
+    """Only generation and output readiness are timed; callback logging is disabled."""
+    synchronize()
+    if profile_capture:
+        torch.cuda.nvtx.range_push(f"request:{item['id']}")
+    first_delivery = None
+    t0 = clock()
+    def delivered(seq_id, tokens):
+        nonlocal first_delivery
+        if tokens and first_delivery is None:
+            first_delivery = clock() - t0
+    try:
+        outputs, metrics = llm.generate([item['token_ids']], [sampling], use_tqdm=False,
+                                        stream_callback=delivered)
+        synchronize()
+        latency = clock() - t0
+    finally:
+        if profile_capture:
+            torch.cuda.nvtx.range_pop()
+    steps = metrics['target_step_times']
+    accepted = metrics['accepted_suffix_lens_with_recovery']
+    hits = metrics['cache_hits']
+    return dict(id=item['id'], family=item['family'], category=item['category'],
+        input_token_ids_sha256=digest(item['token_ids']), prompt_tokens=len(item['token_ids']),
+        output_tokens=len(outputs[0]['token_ids']), latency_s=latency, first_delivery_s=first_delivery,
+        prefill_s=metrics['prefill_total_time'], decode_s=metrics['decode_total_time'],
+        num_steps=len(steps), mean_step_ms=1000*sum(steps[1:])/max(1,len(steps)-1),
+        tokens_per_step=sum(accepted)/len(accepted) if accepted else 1.0,
+        accepted_draft_tokens=sum(n-1 for n in accepted),
+        verified_draft_tokens=len(accepted)*llm.config.speculate_k if accepted else 0,
+        accepted_suffix_lens_with_recovery=list(accepted),
+        cache_hit_rate=sum(hits)/len(hits) if hits else None,
+        output_token_ids=outputs[0]['token_ids'])
+
+
+def execute_requests(llm, prompts, warm, sampling, *, synchronize, profile_capture=False,
+                     clock=time.perf_counter):
+    for item in warm:
+        llm.generate([item['token_ids']],[sampling],use_tqdm=False,stream_callback=lambda *args:None)
+    synchronize()
+    if profile_capture:
+        torch.cuda.profiler.start()
+        torch.cuda.nvtx.range_push('timed_region')
+    try:
+        return [measure_request(llm,item,sampling,synchronize=synchronize,clock=clock,
+                                profile_capture=profile_capture) for item in prompts]
+    finally:
+        if profile_capture:
+            torch.cuda.nvtx.range_pop()
+            torch.cuda.profiler.stop()
+
+
 def main():
     args = parse()
+    if args.protocol:
+        args.ignore_eos = args.protocol == 'fixed'
+    manifest = read_json(args.manifest) if args.manifest else None
+    job = read_json(args.job) if args.job else None
+    if manifest:
+        validate_manifest(manifest)
+        args.target=args.target or manifest['models']['target']['path']
+        args.draft=args.draft or manifest['models']['draft']['path']
+        if execution_fingerprint() != manifest['execution'] or software_fingerprint() != manifest['software']:
+            raise ValueError('Worker execution environment differs from frozen campaign')
+        for role, path in [('target',args.target),('draft',args.draft)]:
+            if os.path.realpath(path) != manifest['models'][role]['path']:
+                raise ValueError(f'{role} model differs from frozen manifest')
+    if job:
+        if not manifest or digest({k:v for k,v in job.items() if k!='job_sha256'}) != job['job_sha256']:
+            raise ValueError('Invalid campaign job')
+        if job['manifest_sha256'] != manifest['manifest_sha256']:
+            raise ValueError('Job manifest differs')
+        for key,value in worker_settings(job).items():
+            if vars(args).get(key)!=value:
+                raise ValueError(f'Worker setting differs from declared campaign: {key}')
+    if os.environ.get("AO_SPAWN_EXECUTABLE"):
+        # Spawn the SSD drafter through a differently named interpreter so Nsight Compute can profile
+        # only that process (--target-processes-filter); serializing both processes deadlocks NCCL.
+        import multiprocessing
+        multiprocessing.set_executable(os.environ["AO_SPAWN_EXECUTABLE"])
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    tok = AutoTokenizer.from_pretrained(args.target)
-    prompts = get_prompts(args.families, args.n, split=args.split, tokenizer=tok,
-                          max_prompt_tokens=args.max_prompt_tokens)
-    warm = get_prompts(["chat"], args.warmup, split="tune", tokenizer=tok)
+    if manifest:
+        prompts = ordered_prompts(manifest,args.split,args.order_seed)
+        warm = manifest['splits']['warmup']
+        if job and [r['id'] for r in prompts] != job['prompt_ids']:
+            raise ValueError('Worker prompt order differs from frozen job')
+    else:
+        tok = AutoTokenizer.from_pretrained(args.target)
+        prompts = get_prompts(args.families, args.n, split=args.split, tokenizer=tok,
+                              max_prompt_tokens=args.max_prompt_tokens)
+        warm = get_prompts(["chat"], args.warmup, split="tune", tokenizer=tok)
 
     spec = args.mode in ("sd", "ssd")
     llm = LLM(
@@ -78,40 +170,14 @@ def main():
         enforce_eager=args.eager,
         kvcache_block_size=256,
         gpu_memory_utilization=args.gpu_mem_util,
+        draft_gpu_memory_utilization=(args.draft_gpu_mem_util if args.draft_gpu_mem_util is not None else
+                                      args.gpu_mem_util if args.gpu_mem_util < 0.7 else None),
+        enable_prefix_cache=not args.disable_prefix_cache,
     )
     sp = SamplingParams(temperature=0.0, max_new_tokens=args.output_len, ignore_eos=args.ignore_eos)
 
-    for w in warm:
-        llm.generate([w["token_ids"]], [sp], use_tqdm=False)
-
-    results = []
-    torch.cuda.synchronize()
-    torch.cuda.profiler.start()
-    torch.cuda.nvtx.range_push("timed_region")
-    for it in prompts:
-        torch.cuda.nvtx.range_push(f"request:{it['id']}")
-        t0 = time.perf_counter()
-        outs, metrics = llm.generate([it["token_ids"]], [sp], use_tqdm=False)
-        torch.cuda.synchronize()
-        lat = time.perf_counter() - t0
-        torch.cuda.nvtx.range_pop()
-        steps = metrics["target_step_times"]
-        acc = metrics["accepted_suffix_lens_with_recovery"]
-        results.append(dict(
-            id=it["id"], family=it["family"], category=it["category"],
-            prompt_tokens=len(it["token_ids"]), output_tokens=len(outs[0]["token_ids"]),
-            latency_s=lat, prefill_s=metrics["prefill_total_time"], decode_s=metrics["decode_total_time"],
-            num_steps=len(steps), mean_step_ms=1e3 * sum(steps[1:]) / max(1, len(steps) - 1),
-            tokens_per_step=(sum(acc) / len(acc)) if acc else 1.0,
-            cache_hit_rate=(sum(metrics["cache_hits"]) / len(metrics["cache_hits"])) if metrics["cache_hits"] else None,
-            output_token_ids=outs[0]["token_ids"],
-        ))
-        r = results[-1]
-        print(f"[{args.mode}] {r['id']:22s} prompt={r['prompt_tokens']:5d} out={r['output_tokens']:4d} "
-              f"lat={r['latency_s']*1e3:8.1f}ms prefill={r['prefill_s']*1e3:6.1f}ms "
-              f"tok/step={r['tokens_per_step']:.2f} hit={r['cache_hit_rate']}", flush=True)
-    torch.cuda.nvtx.range_pop()
-    torch.cuda.profiler.stop()
+    results=execute_requests(llm,prompts,warm,sp,synchronize=torch.cuda.synchronize,
+                             profile_capture=args.profile_capture)
 
     tot_tok = sum(r["output_tokens"] for r in results)
     tot_lat = sum(r["latency_s"] for r in results)
@@ -119,14 +185,23 @@ def main():
         mode=args.mode, k=args.k if spec else None, f=args.f if args.mode == "ssd" else None,
         backup=args.backup if args.mode == "ssd" else None, output_len=args.output_len, n_requests=len(results),
         mean_latency_s=tot_lat / len(results), committed_tok_per_s=tot_tok / tot_lat,
-        decode_tok_per_s=tot_tok / sum(r["decode_s"] for r in results),
+        decode_tok_per_s=tot_tok / sum(r["decode_s"] for r in results) if sum(r['decode_s'] for r in results)>0 else None,
         mean_tokens_per_step=sum(r["tokens_per_step"] for r in results) / len(results),
         mean_step_ms=sum(r["mean_step_ms"] for r in results) / len(results),
         gpu=torch.cuda.get_device_name(0),
     )
     print(json.dumps(summary, indent=2), flush=True)
-    with open(args.out, "w") as f:
-        json.dump(dict(summary=summary, args=vars(args), requests=results), f, indent=1)
+    hardware = allocation(manifest,args.mode) if manifest else dict(
+        gpu_count=2 if args.mode=='ssd' else 1, cuda_visible_devices=os.environ.get('CUDA_VISIBLE_DEVICES'),
+        logical_devices=[torch.cuda.get_device_name(i) for i in range(2 if args.mode=='ssd' else 1)])
+    atomic_json(args.out,dict(summary=summary,args=vars(args),requests=results,job=job,
+        manifest_sha256=manifest['manifest_sha256'] if manifest else None,
+        hardware_allocation=hardware,software=software_fingerprint(),
+        hardware=manifest['hardware'] if manifest else None,
+        actual_dtype=str(llm.config.hf_config.torch_dtype),torch_cuda_version=torch.version.cuda,
+        prefix_cache_enabled=llm.config.enable_prefix_cache,
+        cuda_visible_devices=os.environ.get('CUDA_VISIBLE_DEVICES'),
+        correctness_status='Fast-mode exact equivalence is unresolved; compare saved output tokens.'))
     llm.exit(hard=True)
 
 

@@ -15,17 +15,35 @@ NAME=$1; NVTX=$2; SKIP=$3; COUNT=$4; shift 4
 TRACE_DIR=${TRACE_DIR:-/scratch/$USER/ao_traces}
 mkdir -p "$TRACE_DIR" "$AO_ROOT/results/ncu"
 NCU=${NCU:-/opt/nvidia/nsight-compute/2025.2.1/ncu}
-$NCU --target-processes all \
-  --nvtx --nvtx-include "$NVTX" \
-  --graph-profiling node \
-  --launch-skip "$SKIP" --launch-count "$COUNT" \
-  --section SpeedOfLight --section SpeedOfLight_RooflineChart \
-  --section Occupancy --section LaunchStats \
-  --section MemoryWorkloadAnalysis --section ComputeWorkloadAnalysis \
-  --section WarpStateStats --section SchedulerStats \
-  --metrics sm__ops_path_tensor_src_bf16_dst_fp32.sum,dram__bytes_read.sum,dram__bytes_write.sum,sm__sass_thread_inst_executed_op_ffma_pred_on.sum,sm__sass_thread_inst_executed_op_fadd_pred_on.sum,sm__sass_thread_inst_executed_op_fmul_pred_on.sum \
-  --clock-control none \
-  --force-overwrite -o "$TRACE_DIR/ncu_$NAME" \
-  python -O "$AO_ROOT/profiling/run_engine.py" --n 1 --families chat --warmup 2 --output_len 64 --gpu_mem_util 0.08 \
-    --out "$AO_ROOT/results/ncu/${NAME}_run.json" "$@"
+NCU_ARGS=(--target-processes all
+  --nvtx --nvtx-include "$NVTX"
+  --graph-profiling node
+  --launch-skip "$SKIP" --launch-count "$COUNT"
+  --section SpeedOfLight --section SpeedOfLight_RooflineChart
+  --section Occupancy --section LaunchStats
+  --section MemoryWorkloadAnalysis --section ComputeWorkloadAnalysis
+  --section WarpStateStats --section SchedulerStats
+  --metrics sm__ops_path_tensor_src_bf16_dst_fp32.sum,dram__bytes_read.sum,dram__bytes_write.sum,sm__sass_thread_inst_executed_op_ffma_pred_on.sum,sm__sass_thread_inst_executed_op_fadd_pred_on.sum,sm__sass_thread_inst_executed_op_fmul_pred_on.sum
+  --clock-control none
+  --force-overwrite -o "$TRACE_DIR/ncu_$NAME")
+ENGINE_ARGS=(-O "$AO_ROOT/profiling/run_engine.py" --profile-capture --n 1 --families chat --warmup 2 --output_len 64 --gpu_mem_util 0.08
+  --out "$AO_ROOT/results/ncu/${NAME}_run.json" "$@")
+PY=$(python -c 'import sys,os; print(os.path.realpath(sys.executable))')
+if [[ " $* " == *" --mode ssd "* ]]; then
+  # SSD: ncu serializes kernels across every process it attaches to, which deadlocks the target<->drafter
+  # NCCL send/recv. Run the target uninstrumented and spawn only the drafter under ncu via a wrapper
+  # interpreter (run_engine.py honours AO_SPAWN_EXECUTABLE).
+  WRAP="/scratch/$USER/ao_tools/python_ncu_wrap.sh"
+  mkdir -p "$(dirname "$WRAP")"
+  {
+    echo '#!/bin/bash'
+    echo 'if [[ "$*" == *spawn_main* ]]; then'
+    printf '  exec %q' "$NCU"; printf ' %q' "${NCU_ARGS[@]}"; printf ' %q "$@"\n' "$PY"
+    printf 'else\n  exec %q "$@"\nfi\n' "$PY"
+  } > "$WRAP"
+  chmod +x "$WRAP"
+  AO_SPAWN_EXECUTABLE="$WRAP" "$PY" "${ENGINE_ARGS[@]}"
+else
+  "$NCU" "${NCU_ARGS[@]}" "$PY" "${ENGINE_ARGS[@]}"
+fi
 python "$AO_ROOT/profiling/analyze_ncu.py" "$TRACE_DIR/ncu_$NAME.ncu-rep" --name "$NAME" --out "$AO_ROOT/results/ncu"

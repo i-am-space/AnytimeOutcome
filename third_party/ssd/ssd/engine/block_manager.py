@@ -32,7 +32,8 @@ class BlockManager:
         is_draft: bool = False, 
         speculate_k: int = -1, 
         max_model_len: int = -1,
-        verbose: bool = False
+        verbose: bool = False,
+        enable_prefix_cache: bool = True,
     ):
         assert num_blocks > 0
         self.block_size = block_size
@@ -43,6 +44,7 @@ class BlockManager:
         self.is_draft: bool = is_draft
         self.speculate_k: int = speculate_k 
         self.verbose: bool = verbose
+        self.enable_prefix_cache = enable_prefix_cache
         self.max_model_len: int = max_model_len
 
         
@@ -105,7 +107,7 @@ class BlockManager:
         for i in range(seq.num_blocks):
             token_ids = seq.block(i)
             h = self.compute_hash(token_ids, h) if len(token_ids) == self.block_size else -1
-            block_id = self.hash_to_block_id.get(h, -1)
+            block_id = self.hash_to_block_id.get(h, -1) if self.enable_prefix_cache else -1
             if block_id == -1 or self.blocks[block_id].token_ids != token_ids:
                 cache_miss = True
             if cache_miss:

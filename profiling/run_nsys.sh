@@ -16,6 +16,6 @@ nsys profile \
   --capture-range=cudaProfilerApi --capture-range-end=stop \
   --sample=none --cpuctxsw=none \
   --force-overwrite=true -o "$TRACE_DIR/$NAME" \
-  python -O "$AO_ROOT/profiling/run_engine.py" --out "$AO_ROOT/results/nsys/${NAME}_run.json" "$@"
+  python -O "$AO_ROOT/profiling/run_engine.py" --profile-capture --out "$AO_ROOT/results/nsys/${NAME}_run.json" "$@"
 nsys export --type sqlite --force-overwrite=true -o "$TRACE_DIR/$NAME.sqlite" "$TRACE_DIR/$NAME.nsys-rep"
 python "$AO_ROOT/profiling/analyze_nsys.py" "$TRACE_DIR/$NAME.sqlite" --name "$NAME" --out "$AO_ROOT/results/nsys"

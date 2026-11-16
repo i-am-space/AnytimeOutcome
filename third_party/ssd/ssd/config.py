@@ -11,6 +11,8 @@ class Config:
     max_num_seqs: int = 1 
     max_model_len: int = 4096 
     gpu_memory_utilization: float = 0.7
+    enable_prefix_cache: bool = True
+    draft_gpu_memory_utilization: float | None = None  # None = upstream default (0.75 sync / 0.8 async)
     num_gpus: int = 1
     enforce_eager: bool = False
     hf_config: AutoConfig | None = None

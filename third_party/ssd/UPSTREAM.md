@@ -13,3 +13,9 @@ Local changes:
   `ssd/engine/helpers/cudagraph_helpers.py` (fa2 `plan()` gained `num_colocated_ctas`).
 - **NVTX instrumentation** (`ssd/utils/nvtx.py`; ranges in `step.py`, `verifier.py`, `speculator_{sync,async}.py`,
   `draft_runner.py`, `llm_engine.py`) for Nsight Systems/Compute phase attribution. No behavioral change.
+- **Configurable drafter KV fraction** (`ssd/config.py`, `draft_runner.py`): optional
+  `draft_gpu_memory_utilization` (default `None` = upstream's hardcoded 0.75 sync / 0.8 async). Needed to
+  keep KV small under Nsight Compute, whose kernel replay backs up every writable buffer.
+- **Optional prefix-cache control** (`ssd/config.py`, `engine/block_manager.py`, `engine/scheduler.py`):
+  `enable_prefix_cache=True` preserves normal behavior. The Evaluation 1 campaign disables target
+  and draft prompt-cache lookup so every timed request includes full prefill with warm model weights.

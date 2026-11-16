@@ -27,11 +27,12 @@ CATEGORIES = [
     ("gemv (cuBLAS)", re.compile(r"gemv", re.I)),
     ("gemm (tensor core)", re.compile(r"gemm|cutlass|xmma|s16816|wmma", re.I)),
     ("attention (paged, Triton)", re.compile(r"_paged_attn|_combine_kernel", re.I)),
-    ("attention (flashinfer tree)", re.compile(r"BatchPrefill|PrefillWithPaged|flashinfer", re.I)),
+    ("sampling/argmax", re.compile(r"Sampling|argmax|TopK|softmax", re.I)),
+    ("attention (flashinfer tree)", re.compile(r"BatchPrefill|PrefillWithPaged|PrefillWithKVCache", re.I)),
     ("attention (prefill SDPA)", re.compile(r"flash_fwd|fmha|efficient_attention", re.I)),
     ("kv-cache store", re.compile(r"store_kvcache", re.I)),
     ("rmsnorm/rope/silu (fused Triton)", re.compile(r"^triton_", re.I)),
-    ("sampling/argmax", re.compile(r"Sampling|argmax|reduce_kernel|TopK|softmax", re.I)),
+    ("reductions (argmax etc.)", re.compile(r"reduce_kernel", re.I)),
     ("memcpy/memset", re.compile(r"^\[memcpy|^\[memset", re.I)),
 ]
 PCT_METRICS = {

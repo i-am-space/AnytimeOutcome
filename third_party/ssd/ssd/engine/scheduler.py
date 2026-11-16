@@ -27,14 +27,16 @@ class Scheduler:
         self.verbose = config.verbose
         self.draft_async = config.draft_async
         self.block_manager = BlockManager(
-            config.num_kvcache_blocks, config.kvcache_block_size, is_draft=False, verbose=self.verbose, max_model_len=self.max_model_len)
+            config.num_kvcache_blocks, config.kvcache_block_size, is_draft=False, verbose=self.verbose,
+            max_model_len=self.max_model_len, enable_prefix_cache=config.enable_prefix_cache)
 
         self.tokenizer = AutoTokenizer.from_pretrained(config.model)
 
         # num_kvcache_blocks is determined by gpu_mem_allocation in allocate()
         if self.speculate:
             self.draft_block_manager = BlockManager(
-                draft_cfg.num_kvcache_blocks, draft_cfg.kvcache_block_size, is_draft=True, speculate_k=self.K, verbose=self.verbose, max_model_len=self.max_model_len)
+                draft_cfg.num_kvcache_blocks, draft_cfg.kvcache_block_size, is_draft=True, speculate_k=self.K,
+                verbose=self.verbose, max_model_len=self.max_model_len, enable_prefix_cache=config.enable_prefix_cache)
 
         self.waiting: deque[Sequence] = deque()
         self.running: deque[Sequence] = deque()
@@ -325,4 +327,4 @@ class Scheduler:
                 self.block_manager.deallocate(seq)
                 self.draft_block_manager.deallocate(seq)
                 self.running.remove(seq)
-    
+

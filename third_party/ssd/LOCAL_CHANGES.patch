@@ -1,7 +1,17 @@
-diff --git a/ssd/engine/draft_runner.py b/ssd/engine/draft_runner.py
-index bf1c6c9..a0af6e0 100644
---- a/ssd/engine/draft_runner.py
-+++ b/ssd/engine/draft_runner.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/config.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/config.py
+--- ssd_upstream/ssd/config.py	2026-10-09 11:34:00.010560584 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/config.py	2026-10-09 10:25:26.046852433 +0000
+@@ -11,6 +11,7 @@
+     max_num_seqs: int = 1 
+     max_model_len: int = 4096 
+     gpu_memory_utilization: float = 0.7
++    draft_gpu_memory_utilization: float | None = None  # None = upstream default (0.75 sync / 0.8 async)
+     num_gpus: int = 1
+     enforce_eager: bool = False
+     hf_config: AutoConfig | None = None
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/draft_runner.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/draft_runner.py
+--- ssd_upstream/ssd/engine/draft_runner.py	2026-10-09 11:34:00.011560605 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/draft_runner.py	2026-10-09 10:25:26.046852433 +0000
 @@ -1,6 +1,7 @@
  import os
  import time
@@ -10,7 +20,16 @@ index bf1c6c9..a0af6e0 100644
  import torch.distributed as dist
  import dataclasses
  
-@@ -121,7 +122,11 @@ class DraftRunner(ModelRunner):
+@@ -24,7 +25,7 @@
+         draft_cfg = dataclasses.replace(
+             cfg,
+             model=cfg.draft,
+-            gpu_memory_utilization = (0.75 if not cfg.draft_async else 0.8), # REMAINING SPACE if not draft_async
++            gpu_memory_utilization = cfg.draft_gpu_memory_utilization or (0.75 if not cfg.draft_async else 0.8), # REMAINING SPACE if not draft_async
+             tokenizer_path=cfg.model if cfg.use_eagle else None,
+             d_model_target=cfg.hf_config.hidden_size if cfg.use_eagle and cfg.hf_config else None,
+             enforce_eager=cfg.enforce_eager,
+@@ -121,7 +122,11 @@
          self._arange_kp1 = torch.arange(K + 1, device=d, dtype=torch.int64)
          self._arange_2kp1 = torch.arange(2 * K + 1, device=d, dtype=torch.int64)
  
@@ -23,7 +42,7 @@ index bf1c6c9..a0af6e0 100644
                        request_keys: torch.Tensor, 
                        num_tokens: torch.Tensor, 
                        out_logits: torch.Tensor, 
-@@ -357,9 +362,10 @@ class DraftRunner(ModelRunner):
+@@ -357,9 +362,10 @@
                      print(f"    Detokenized: {tokens_text}", flush=True)
              print(f"", flush=True)
  
@@ -37,7 +56,7 @@ index bf1c6c9..a0af6e0 100644
  
          partial_tree_decode_args = {
              "num_tokens": num_tokens,
-@@ -795,10 +801,11 @@ class DraftRunner(ModelRunner):
+@@ -795,10 +801,11 @@
              if _prof or PROFILE_DRAFT:
                  torch.cuda.synchronize()
                  _st = time.perf_counter()
@@ -53,7 +72,7 @@ index bf1c6c9..a0af6e0 100644
              if _prof or PROFILE_DRAFT:
                  torch.cuda.synchronize()
                  _et = time.perf_counter()
-@@ -866,11 +873,13 @@ class DraftRunner(ModelRunner):
+@@ -866,11 +873,13 @@
  
          while True:
              # 1) Wait for the next command (may be PREFILL, SPEC_REQUEST, or EXIT)
@@ -69,7 +88,7 @@ index bf1c6c9..a0af6e0 100644
                  continue
  
              # SPECULATE request: serve out-of-cache or random speculations
-@@ -881,7 +890,8 @@ class DraftRunner(ModelRunner):
+@@ -881,7 +890,8 @@
                      torch.cuda.synchronize()
                      _d0 = time.perf_counter()
  
@@ -79,7 +98,7 @@ index bf1c6c9..a0af6e0 100644
  
                  if _prof or PROFILE_DRAFT:
                      torch.cuda.synchronize()
-@@ -889,21 +899,24 @@ class DraftRunner(ModelRunner):
+@@ -889,21 +899,24 @@
  
                  self._reset_tree_cache_tensors()
  
@@ -107,11 +126,10 @@ index bf1c6c9..a0af6e0 100644
                  self._draft_step_times.append(time.perf_counter() - _ds0)
  
                  if _prof or PROFILE_DRAFT:
-diff --git a/ssd/engine/helpers/cudagraph_helpers.py b/ssd/engine/helpers/cudagraph_helpers.py
-index e347b39..5d0a9ff 100644
---- a/ssd/engine/helpers/cudagraph_helpers.py
-+++ b/ssd/engine/helpers/cudagraph_helpers.py
-@@ -125,6 +125,8 @@ def run_decode_cudagraph(model_runner, input_ids, positions, last_only, graph_va
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/helpers/cudagraph_helpers.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/helpers/cudagraph_helpers.py
+--- ssd_upstream/ssd/engine/helpers/cudagraph_helpers.py	2026-10-09 11:34:00.011560605 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/helpers/cudagraph_helpers.py	2026-10-09 09:12:45.976864166 +0000
+@@ -125,6 +125,8 @@
  cache = {}
  
  _plan_event = None  # Lazy-init CUDA event for plan() sync
@@ -120,7 +138,7 @@ index e347b39..5d0a9ff 100644
  PROFILE = os.environ.get("SSD_PROFILE", "0") == "1"
  PROFILE_DRAFT = os.environ.get("SSD_PROFILE_DRAFT", "0") == "1"
  _draft_events = []  # [(step, label, start_event, end_event), ...]
-@@ -374,6 +376,8 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only,
+@@ -374,6 +376,8 @@
      ]
      if wrapper._backend == "fa2":
          plan_args.extend([-1, False])
@@ -129,11 +147,10 @@ index e347b39..5d0a9ff 100644
      wrapper._plan_info = wrapper._cached_module.plan(*plan_args)
  
      if PROFILE_DRAFT:
-diff --git a/ssd/engine/llm_engine.py b/ssd/engine/llm_engine.py
-index a101598..16258bc 100644
---- a/ssd/engine/llm_engine.py
-+++ b/ssd/engine/llm_engine.py
-@@ -14,6 +14,7 @@ from ssd.engine.step import InferenceStep, AutoRegressiveStep, SpecDecodeStep
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/llm_engine.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/llm_engine.py
+--- ssd_upstream/ssd/engine/llm_engine.py	2026-10-09 11:34:00.011560605 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/llm_engine.py	2026-10-09 08:43:29.504021310 +0000
+@@ -14,6 +14,7 @@
  from ssd.engine.verifier import Verifier
  
  import atexit
@@ -141,7 +158,7 @@ index a101598..16258bc 100644
  from dataclasses import fields
  from time import perf_counter
  from tqdm.auto import tqdm
-@@ -349,7 +350,9 @@ class LLMEngine:
+@@ -349,7 +350,9 @@
                  )
              i += 1
              t = perf_counter()
@@ -151,17 +168,16 @@ index a101598..16258bc 100644
              time_taken = perf_counter() - t
              METRICS["target_step_times"].append(time_taken)
  
-diff --git a/ssd/engine/speculator_async.py b/ssd/engine/speculator_async.py
-index 2334fd9..af3b401 100644
---- a/ssd/engine/speculator_async.py
-+++ b/ssd/engine/speculator_async.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/speculator_async.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/speculator_async.py
+--- ssd_upstream/ssd/engine/speculator_async.py	2026-10-09 11:34:00.012560625 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/speculator_async.py	2026-10-09 08:43:21.360015757 +0000
 @@ -1,4 +1,5 @@
  import torch
 +from ssd.utils.nvtx import nvtx_range
  import torch.distributed as dist
  from transformers import AutoTokenizer
  
-@@ -146,6 +147,7 @@ class SpeculatorAsync(SpeculatorBase):
+@@ -146,6 +147,7 @@
              self._block_tables_buf[i, bt_len:] = -1
  
          # Send cmd + meta + fused payload (temps fused into int64 burst)
@@ -169,7 +185,7 @@ index 2334fd9..af3b401 100644
          dist.send(self._cmd, dst=self.draft_runner_rank, group=self.async_pg)
          dist.send(self._meta, dst=self.draft_runner_rank, group=self.async_pg)
          temps_as_int64 = self._temps_buf.view(torch.int32).to(torch.int64)
-@@ -178,10 +180,13 @@ class SpeculatorAsync(SpeculatorBase):
+@@ -178,10 +180,13 @@
              dist.send(extend_eagle_acts, dst=self.draft_runner_rank, group=self.async_pg)
              dist.send(extend_token_ids, dst=self.draft_runner_rank, group=self.async_pg)
  
@@ -185,17 +201,16 @@ index 2334fd9..af3b401 100644
 +            dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
  
          return speculations, self._logits_q, cache_hits
-diff --git a/ssd/engine/speculator_sync.py b/ssd/engine/speculator_sync.py
-index 456b82d..5f9f2d2 100644
---- a/ssd/engine/speculator_sync.py
-+++ b/ssd/engine/speculator_sync.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/speculator_sync.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/speculator_sync.py
+--- ssd_upstream/ssd/engine/speculator_sync.py	2026-10-09 11:34:00.012560625 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/speculator_sync.py	2026-10-09 08:43:21.360015757 +0000
 @@ -1,4 +1,5 @@
  import torch
 +from ssd.utils.nvtx import nvtx_range
  
  from ssd.engine.sequence import Sequence
  from ssd.engine.model_runner import ModelRunner
-@@ -46,8 +47,9 @@ class SpeculatorSync(SpeculatorBase):
+@@ -46,8 +47,9 @@
  
          for k in range(self.lookahead + 1):
              # Draft model forward pass - emits [B] tokens, True is for draft_return_logits
@@ -207,11 +222,10 @@ index 456b82d..5f9f2d2 100644
              # make sure we include this even on last iter since we put K+1 tokens thru draft cache
              for s in seqs:
                  s.num_draft_cached_tokens += 1
-diff --git a/ssd/engine/step.py b/ssd/engine/step.py
-index f60939c..82ec51b 100644
---- a/ssd/engine/step.py
-+++ b/ssd/engine/step.py
-@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/step.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/step.py
+--- ssd_upstream/ssd/engine/step.py	2026-10-09 11:34:00.012560625 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/step.py	2026-10-09 08:43:21.360015757 +0000
+@@ -2,6 +2,7 @@
  from dataclasses import dataclass
  import os
  import torch
@@ -219,7 +233,7 @@ index f60939c..82ec51b 100644
  from time import perf_counter
  from transformers import AutoTokenizer
  
-@@ -37,7 +38,8 @@ class AutoRegressiveStep(InferenceStep):
+@@ -37,7 +38,8 @@
          if __debug__:
              print(f'[auto_regressive_step] is_prefill={is_prefill}', flush=True)
  
@@ -229,7 +243,7 @@ index f60939c..82ec51b 100644
  
          if __debug__:
              decoded_tokens = decode_tokens(token_ids, self.tokenizer)
-@@ -75,11 +77,15 @@ class SpecDecodeStep(InferenceStep):
+@@ -75,11 +77,15 @@
          # When doing async speculation and not Eagle, we can do draft and target prefills in parallel.
          if not self.eagle and self.async_spec:
              empty_verify_result = VerifyResult([], [], None)
@@ -249,7 +263,7 @@ index f60939c..82ec51b 100644
  
          for seq in seqs:
              assert seq.recovery_token_id is not None
-@@ -107,7 +113,8 @@ class SpecDecodeStep(InferenceStep):
+@@ -107,7 +113,8 @@
              eagle_acts=eagle_sentinel,
          )
          #### STEP 1: SPECULATE ####
@@ -259,7 +273,7 @@ index f60939c..82ec51b 100644
  
          if _prof:
              torch.cuda.synchronize()
-@@ -123,7 +130,8 @@ class SpecDecodeStep(InferenceStep):
+@@ -123,7 +130,8 @@
                  print(f"[SpecDecodeStep] speculation {i}: {decoded_tokens}", flush=True)
  
          #### STEP 2: VERIFY ####
@@ -269,7 +283,7 @@ index f60939c..82ec51b 100644
  
          if _prof:
              torch.cuda.synchronize()
-@@ -145,12 +153,13 @@ class SpecDecodeStep(InferenceStep):
+@@ -145,12 +153,13 @@
              seq.num_cached_tokens = orig_nct
  
          #### STEP 3: POSTPROCESS ####
@@ -289,10 +303,9 @@ index f60939c..82ec51b 100644
  
          if _prof:
              torch.cuda.synchronize()
-diff --git a/ssd/engine/verifier.py b/ssd/engine/verifier.py
-index c5412b6..7919943 100644
---- a/ssd/engine/verifier.py
-+++ b/ssd/engine/verifier.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/engine/verifier.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/verifier.py
+--- ssd_upstream/ssd/engine/verifier.py	2026-10-09 11:34:00.012560625 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/verifier.py	2026-10-09 08:43:21.360015757 +0000
 @@ -1,5 +1,6 @@
  import os
  import torch
@@ -300,7 +313,7 @@ index c5412b6..7919943 100644
  from time import perf_counter
  from transformers import AutoTokenizer
  
-@@ -62,7 +63,8 @@ class Verifier(VerifierBase):
+@@ -62,7 +63,8 @@
  
          _pt = os.environ.get("SSD_PROFILE_TARGET", "0") == "1"
          _tv0 = perf_counter()
@@ -310,7 +323,7 @@ index c5412b6..7919943 100644
  
          if _prof:
              torch.cuda.synchronize()
-@@ -93,6 +95,7 @@ class Verifier(VerifierBase):
+@@ -93,6 +95,7 @@
          temperatures_target = torch.tensor(temps_target, dtype=torch.float32, device=self.device)
          temperatures_draft = torch.tensor(temps_draft, dtype=torch.float32, device=self.device)
  
@@ -318,7 +331,7 @@ index c5412b6..7919943 100644
          new_suffixes, recovery_tokens = verify(
              logits_p=logits_p,
              logits_q=speculate_result.logits_q,
-@@ -105,6 +108,7 @@ class Verifier(VerifierBase):
+@@ -105,6 +108,7 @@
              jit_speculate=self.jit_speculate,
          )
  
@@ -326,11 +339,10 @@ index c5412b6..7919943 100644
          self.metrics["target_verify_times"].append(perf_counter() - _tv0)
  
          if _prof:
-diff --git a/ssd/layers/attention.py b/ssd/layers/attention.py
-index ed5ec7b..f63f037 100644
---- a/ssd/layers/attention.py
-+++ b/ssd/layers/attention.py
-@@ -3,9 +3,18 @@ from torch import nn
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/layers/attention.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/attention.py
+--- ssd_upstream/ssd/layers/attention.py	2026-10-09 11:34:00.012560625 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/attention.py	2026-10-09 08:29:47.848023528 +0000
+@@ -3,9 +3,18 @@
  import triton
  import triton.language as tl
  
@@ -350,7 +362,7 @@ index ed5ec7b..f63f037 100644
  
  @triton.jit
  def store_kvcache_kernel(
-@@ -83,6 +92,14 @@ class Attention(nn.Module):
+@@ -83,6 +92,14 @@
              store_kvcache(k, v, self.k_cache, self.v_cache, context.slot_mapping)
  
          if context.is_prefill:
@@ -365,11 +377,9 @@ index ed5ec7b..f63f037 100644
              if context.block_tables is not None:
                  k, v = k_cache, v_cache
  
-diff --git a/ssd/layers/paged_attention_triton.py b/ssd/layers/paged_attention_triton.py
-new file mode 100644
-index 0000000..722b748
---- /dev/null
-+++ b/ssd/layers/paged_attention_triton.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/layers/paged_attention_triton.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/paged_attention_triton.py
+--- ssd_upstream/ssd/layers/paged_attention_triton.py	1970-01-01 00:00:00.000000000 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/paged_attention_triton.py	2026-10-09 08:29:05.724815335 +0000
 @@ -0,0 +1,224 @@
 +"""Portable (sm80+) replacements for the sgl_kernel FA3 calls used by ssd/layers/attention.py.
 +
@@ -595,11 +605,10 @@ index 0000000..722b748
 +            o = F.scaled_dot_product_attention(qi, ki, vi, is_causal=causal, scale=softmax_scale, enable_gqa=True)
 +        out[qs:qe] = o.squeeze(0).transpose(0, 1)
 +    return out
-diff --git a/ssd/layers/sampler.py b/ssd/layers/sampler.py
-index c32eee0..c4c5fb1 100644
---- a/ssd/layers/sampler.py
-+++ b/ssd/layers/sampler.py
-@@ -8,9 +8,9 @@ from ssd.utils.async_helpers.async_spec_helpers import apply_sampler_x_rescaling
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/layers/sampler.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/sampler.py
+--- ssd_upstream/ssd/layers/sampler.py	2026-10-09 11:34:00.013560646 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/sampler.py	2026-10-09 08:49:00.811575337 +0000
+@@ -8,9 +8,9 @@
  # but generator is on CUDA, causing TypeError: RNG state must be a torch.ByteTensor.
  import flashinfer.sampling as _fi_samp
  _orig_get_seed_and_offset = _fi_samp.get_seed_and_offset
@@ -611,11 +620,9 @@ index c32eee0..c4c5fb1 100644
          generator = torch.Generator(device=device)
      state = generator.get_state()
      seed, offset = state.view(torch.int64)
-diff --git a/ssd/utils/nvtx.py b/ssd/utils/nvtx.py
-new file mode 100644
-index 0000000..1aa1a02
---- /dev/null
-+++ b/ssd/utils/nvtx.py
+diff -ruN '--exclude=.git' '--exclude=__pycache__' '--exclude=LOCAL_CHANGES.patch' '--exclude=UPSTREAM.md' ssd_upstream/ssd/utils/nvtx.py /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/utils/nvtx.py
+--- ssd_upstream/ssd/utils/nvtx.py	1970-01-01 00:00:00.000000000 +0000
++++ /home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/utils/nvtx.py	2026-10-09 08:42:55.198001204 +0000
 @@ -0,0 +1,13 @@
 +"""NVTX ranges for Nsight Systems. Near-zero cost when no profiler is attached."""
 +from contextlib import contextmanager

@@ -1,0 +1,101 @@
+Starting: /home/vishalrao/AnytimeOutcome/profiling/run_publication_study.py --outdir /home/vishalrao/AnytimeOutcome/results/correctness/uniform_publication_v1_2026-11-17 --phase correctness --source /home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_v1_2026-11-17_v2 --watch
+Starting: /home/vishalrao/AnytimeOutcome/profiling/check_publication_interrupt.py --outdir results/correctness/uniform_publication_stress_v1_2026-11-17 --source /home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_v1_2026-11-17_v2 --watch
+Starting: /home/vishalrao/AnytimeOutcome/profiling/run_baselines.py --outdir /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines --phase prepare --target-numerics shared_fixed16
+Fingerprinting model/tokenizer files and freezing the workload...
+Frozen campaign: /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines
+Starting: /home/vishalrao/AnytimeOutcome/profiling/watch_baselines.py --outdir /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines
+running: Both GPUs idle; starting/resuming validated blocks.
+Running tune/fixed/r0/ssd_k7_f3
+Running tune/fixed/r0/ssd_k10_f1
+Running tune/fixed/r0/sd_k4
+Running tune/fixed/r0/ssd_k4_f3
+Running tune/fixed/r0/sd_k8
+Running tune/fixed/r0/ssd_k4_f1
+Running tune/fixed/r0/sd_k6
+Running tune/fixed/r0/ar
+Block invalidated by contention/monitoring failure: tune/fixed/r0/ar
+waiting_for_gpus: Dedicated window lost; incomplete/contaminated block will be rerun.
+running: Both GPUs idle; starting/resuming validated blocks.
+Resume: validated tune/fixed/r0/ssd_k7_f3
+Resume: validated tune/fixed/r0/ssd_k10_f1
+Resume: validated tune/fixed/r0/sd_k4
+Resume: validated tune/fixed/r0/ssd_k4_f3
+Resume: validated tune/fixed/r0/sd_k8
+Resume: validated tune/fixed/r0/ssd_k4_f1
+Resume: validated tune/fixed/r0/sd_k6
+Running tune/fixed/r0/ar
+Running tune/fixed/r0/ssd_k10_f3
+Running tune/fixed/r0/ssd_k7_f1
+Running tune/fixed/r1/ssd_k7_f1
+Running tune/fixed/r1/ssd_k10_f3
+Running tune/fixed/r1/ar
+Running tune/fixed/r1/sd_k6
+Running tune/fixed/r1/ssd_k4_f1
+Running tune/fixed/r1/sd_k8
+Running tune/fixed/r1/ssd_k4_f3
+Running tune/fixed/r1/sd_k4
+Running tune/fixed/r1/ssd_k10_f1
+Running tune/fixed/r1/ssd_k7_f3
+Running heldout/fixed/r0/ssd_k7_f3
+Running heldout/fixed/r0/ar
+Running heldout/fixed/r0/sd_k6
+Running heldout/natural/r0/sd_k6
+Running heldout/natural/r0/ar
+Running heldout/natural/r0/ssd_k7_f3
+Running heldout/natural/r1/ssd_k7_f3
+Running heldout/natural/r1/ar
+Running heldout/natural/r1/sd_k6
+Running heldout/fixed/r1/sd_k6
+Running heldout/fixed/r1/ar
+Running heldout/fixed/r1/ssd_k7_f3
+Running heldout/fixed/r2/ar
+Running heldout/fixed/r2/ssd_k7_f3
+Running heldout/fixed/r2/sd_k6
+Running heldout/natural/r2/sd_k6
+Running heldout/natural/r2/ssd_k7_f3
+Running heldout/natural/r2/ar
+Running heldout/natural/r3/ssd_k7_f3
+Running heldout/natural/r3/sd_k6
+Running heldout/natural/r3/ar
+Running heldout/fixed/r3/ar
+Running heldout/fixed/r3/sd_k6
+Running heldout/fixed/r3/ssd_k7_f3
+Running heldout/fixed/r4/ssd_k7_f3
+Running heldout/fixed/r4/sd_k6
+Running heldout/fixed/r4/ar
+Running heldout/natural/r4/ar
+Running heldout/natural/r4/sd_k6
+Running heldout/natural/r4/ssd_k7_f3
+Complete report: /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines/report.md
+complete: All valid blocks and the final report are complete.
+Starting: /home/vishalrao/AnytimeOutcome/profiling/run_publication_study.py --outdir /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/publication --phase compare --source /home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_v1_2026-11-17_v2 --baseline-dir /home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines --publish-tokens 4 --watch
+Running fixed_r0_complete
+Running fixed_r0_early
+Running fixed_r0_ar
+Running natural_r0_complete
+Running natural_r0_early
+Running natural_r0_ar
+Running natural_r1_early
+Running natural_r1_complete
+Running natural_r1_ar
+Running fixed_r1_early
+Running fixed_r1_complete
+Running fixed_r1_ar
+Running fixed_r2_ar
+Running fixed_r2_complete
+Running fixed_r2_early
+Running natural_r2_ar
+Running natural_r2_complete
+Running natural_r2_early
+Running natural_r3_ar
+Running natural_r3_early
+Running natural_r3_complete
+Running fixed_r3_ar
+Running fixed_r3_early
+Running fixed_r3_complete
+Running fixed_r4_complete
+Running fixed_r4_ar
+Running fixed_r4_early
+Running natural_r4_complete
+Running natural_r4_ar
+Running natural_r4_early

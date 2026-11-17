@@ -1,0 +1,108 @@
+{
+  "captured_at_ist": "2026-11-17T21:34:37.878514+05:30",
+  "sources": {
+    "B1": {
+      "source": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/summary.json",
+      "snapshot": "evidence_snapshot/B1.json",
+      "sha256": "fa3177d9c4cd73a16487d65a053b6cfb096dc7c9d0322d648eb0e17282147cb2",
+      "bytes": 39924
+    },
+    "B2": {
+      "source": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/selection.json",
+      "snapshot": "evidence_snapshot/B2.json",
+      "sha256": "5e1ba7505d70169c1c2d19f7ec91521ab48cbbfa521ce3dcace696667467b7cc",
+      "bytes": 4196
+    },
+    "B3": {
+      "source": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/manifest.json",
+      "snapshot": "evidence_snapshot/B3.json",
+      "sha256": "8249d804da0a402544dd444f0888c77927c0053f7991d576c1fba809194a27fd",
+      "bytes": 750582
+    },
+    "U1": {
+      "source": "results/next_stage/overnight_extensions_v2_2026-11-17/heldout/summary.json",
+      "snapshot": "evidence_snapshot/U1.json",
+      "sha256": "68ce59fdfe4f691403c404200239d20d4be471fca68795c3fff5e50beb387cd9",
+      "bytes": 285443
+    },
+    "U2": {
+      "source": "results/next_stage/overnight_extensions_v2_2026-11-17/depth_tune/summary.json",
+      "snapshot": "evidence_snapshot/U2.json",
+      "sha256": "faae71bed31713aa2345f9ebd9abbddc440ca40e0096600ff9daf5b8f483958d",
+      "bytes": 56593
+    },
+    "O1": {
+      "source": "results/next_stage/prefix_overlap_v1_2026-11-17/correctness/summary.json",
+      "snapshot": "evidence_snapshot/O1.json",
+      "sha256": "313e35ddae8c85e03826847fdd75f6534bedcb637367e3a498ae8b7b1ef4f4f4",
+      "bytes": 70601
+    },
+    "O2": {
+      "source": "results/next_stage/prefix_overlap_v1_2026-11-17/stress/summary.json",
+      "snapshot": "evidence_snapshot/O2.json",
+      "sha256": "3f102f216ddd324deefed522e8f07658463cde2e55677e155b49f471c227ce79",
+      "bytes": 13210
+    },
+    "A1": {
+      "source": "results/next_stage/adaptive_publication_v1_2026-11-17/correctness/summary.json",
+      "snapshot": "evidence_snapshot/A1.json",
+      "sha256": "4401211d5afa8acda650bcf14353c77090edf0572277cbb968afd96b7ed7ad9a",
+      "bytes": 61802
+    },
+    "L1": {
+      "source": "results/next_stage/publication_performance_v1_2026-11-17/status.json",
+      "snapshot": "evidence_snapshot/L1.json",
+      "sha256": "d01281d3d255b817f47bb1e5119399a2d0ae34f6c79082c559743334dcd73334",
+      "bytes": 296
+    },
+    "D1": {
+      "source": "docs/prefix_publication.md",
+      "snapshot": "evidence_snapshot/D1.md",
+      "sha256": "dfccd1bed02c58166e15e06041caaea80450a8dc513ade4287709111917550e8",
+      "bytes": 9268
+    },
+    "D2": {
+      "source": "docs/publication_performance_campaign.md",
+      "snapshot": "evidence_snapshot/D2.md",
+      "sha256": "a7b538ebaaa828bd99afa1909148a0dafd90adb3db7170dbe24f82887a8a59a7",
+      "bytes": 6783
+    },
+    "D3": {
+      "source": "docs/shared_fast_backend.md",
+      "snapshot": "evidence_snapshot/D3.md",
+      "sha256": "6ed5f49792079149720a49ee3539ffa7dc47a991d361564a81c7bc14e8ac1183",
+      "bytes": 10175
+    },
+    "D4": {
+      "source": "docs/adaptive_publication.md",
+      "snapshot": "evidence_snapshot/D4.md",
+      "sha256": "b36f0163966ee6c9f1fe97dabd7ecd2807d32c1ce78da1718dc4fc1ca142bcbe",
+      "bytes": 8606
+    },
+    "T1": {
+      "source": "results/next_stage/publication_performance_v1_2026-11-17/cpu_tests.log",
+      "snapshot": "evidence_snapshot/T1.log",
+      "sha256": "5c4373096f53c2ad7b90913f9c11d1af56f916ab550af6260c078e32358f2258",
+      "bytes": 817
+    },
+    "T2": {
+      "source": "results/next_stage/prefix_overlap_v1_2026-11-17/gpu_tests.log",
+      "snapshot": "evidence_snapshot/T2.log",
+      "sha256": "fd7b710175fcb33f59e85e85fdc6706c555c5ef94c456a819a5025f616f1eb3d",
+      "bytes": 563
+    },
+    "T3": {
+      "source": "results/next_stage/publication_performance_v1_2026-11-17/campaign_tests.log",
+      "snapshot": "evidence_snapshot/T3.log",
+      "sha256": "7fd488c13770bc5b566a3f4005cc48ef48b4d71c9e91242ea2097becf558dccb",
+      "bytes": 563
+    },
+    "H1": {
+      "source": "reports/evaluation1_2026-10-22_update/Anytime_SSD_Performance_Report.pdf",
+      "snapshot": "evidence_snapshot/H1.pdf",
+      "sha256": "1c4623292d925b65476941306381d84c651f491f40a2afbe3e6872f806355c8c",
+      "bytes": 2016661
+    }
+  },
+  "rubric_source": "User-supplied Evaluation 2 requirements in this conversation"
+}

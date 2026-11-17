@@ -1,0 +1,29 @@
+{
+  "valid": false,
+  "samples": 101,
+  "contamination": [],
+  "error": "KeyboardInterrupt",
+  "returncode": -15,
+  "at": "2026-11-16T18:53:08.198602+00:00",
+  "monitored_gpu_uuids": [
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd"
+  ],
+  "background_process_changes": [
+    {
+      "at": "2026-11-16T18:51:17.049988+00:00",
+      "processes": []
+    }
+  ],
+  "shared_gpu_correctness_only": true,
+  "external_process_changes": [
+    {
+      "at": "2026-11-16T18:51:17.049972+00:00",
+      "processes": []
+    }
+  ],
+  "admission_memory_free_mib": {
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de": 45458,
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd": 45458
+  }
+}

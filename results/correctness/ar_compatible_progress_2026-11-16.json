@@ -1,0 +1,73 @@
+{
+  "pairwise_exact_matches": 36,
+  "pairwise_comparisons": 36,
+  "full_historical_gate_passed": false,
+  "historical_reproduction": [
+    {
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 170
+    }
+  ],
+  "archived_engine": {
+    "at": "2026-11-16T19:06:57.030517+00:00",
+    "commit": "68df65e684e14fb22e86f8dfca00a5620737aac5",
+    "exact_frozen_execution_match": true,
+    "shared_correctness_only": true,
+    "comparisons": [
+      {
+        "id": "specbench-148",
+        "ar_matches_historical": false,
+        "ar_first_difference": 12,
+        "sd_matches_ar": false,
+        "sd_first_difference": 12
+      },
+      {
+        "id": "HumanEval/36",
+        "ar_matches_historical": true,
+        "ar_first_difference": null,
+        "sd_matches_ar": false,
+        "sd_first_difference": 181
+      },
+      {
+        "id": "specbench-553",
+        "ar_matches_historical": false,
+        "ar_first_difference": 170,
+        "sd_matches_ar": false,
+        "sd_first_difference": 194
+      }
+    ]
+  },
+  "archived_ar_controls": [
+    {
+      "id": "specbench-148",
+      "unchanged_archived_ar_equals_new_reference": true
+    },
+    {
+      "id": "HumanEval/36",
+      "unchanged_archived_ar_equals_new_reference": true
+    },
+    {
+      "id": "specbench-553",
+      "unchanged_archived_ar_equals_new_reference": true
+    }
+  ],
+  "allocation_control": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_reproduction_kv070_2026-11-16/summary.json",
+  "cpu_tests": {
+    "passed": 75,
+    "skipped": 15,
+    "excluded": "existing CUDA-only paged-attention suite"
+  },
+  "performance_claim": false,
+  "default_batched_exactness_fixed": false
+}

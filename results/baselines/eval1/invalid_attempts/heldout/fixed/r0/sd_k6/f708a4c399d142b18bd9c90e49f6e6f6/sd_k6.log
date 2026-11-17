@@ -1,0 +1,143 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.63it/s]Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.12it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  2.00it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.76it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.63it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.80it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 569, 256, 8, 128])
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|          | 0/1 [00:00<?, ?it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.53it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.53it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 187, 256, 8, 128])
+Draft runner created on rank 0 (no async)
+[LLMEngine] finished llm_engine init
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=54 recovery=95456
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=124 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1014 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=103 recovery=77045
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=174 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=584 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=171 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=47 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=850 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=40 recovery=36
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=787 recovery=1
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=302 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=98 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1192 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=34 recovery=641
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=637 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=24 recovery=4498
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=120 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=84 recovery=2610
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1267 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=108 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1130 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=597 recovery=2082
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=95 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=170 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=48 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=53 recovery=95456
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=136 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=130 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=736 recovery=75668
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=42 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=69 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=177 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=122 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=211 recovery=86015
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=29 recovery=95456
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=81 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=88 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=719 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=32 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=696 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=123 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=44 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=649 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=169 recovery=1249
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=33 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1409 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=122 recovery=1249
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=710 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=617 recovery=13079
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=855 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=273 recovery=25863
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=685 recovery=86306
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=266 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=744 recovery=641
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=34 recovery=2589
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=85 recovery=77045
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=121 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=709 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=157 recovery=73594
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=63 recovery=24765
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=94 recovery=8420

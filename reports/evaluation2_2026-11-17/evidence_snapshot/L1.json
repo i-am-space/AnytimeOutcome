@@ -1,0 +1,7 @@
+{
+  "status": "pending_dedicated_gpus",
+  "phase": "tune",
+  "job": "fixed_r0_ar",
+  "reason": "Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 2602128, 'name': 'VLLM::EngineCore'}]",
+  "at": "2026-11-17T16:04:22.830129+00:00"
+}

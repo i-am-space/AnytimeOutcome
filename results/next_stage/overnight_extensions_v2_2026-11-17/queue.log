@@ -1,0 +1,355 @@
+profiles: fixed_r0_early
+Processing 2139893 events: [1%                                                 ]Processing 2139893 events: [2%                                                 ]Processing 2139893 events: [3%                                                 ]Processing 2139893 events: [4%                                                 ]Processing 2139893 events: [5%                                                 ]Processing 2139893 events: [=6%                                                ]Processing 2139893 events: [=7%                                                ]Processing 2139893 events: [==8%                                               ]Processing 2139893 events: [==9%                                               ]Processing 2139893 events: [==10%                                              ]Processing 2139893 events: [==11%                                              ]Processing 2139893 events: [===12%                                             ]Processing 2139893 events: [===13%                                             ]Processing 2139893 events: [====14%                                            ]Processing 2139893 events: [====15%                                            ]Processing 2139893 events: [=====16%                                           ]Processing 2139893 events: [=====17%                                           ]Processing 2139893 events: [======18%                                          ]Processing 2139893 events: [======19%                                          ]Processing 2139893 events: [=======20%                                         ]Processing 2139893 events: [=======21%                                         ]Processing 2139893 events: [========22%                                        ]Processing 2139893 events: [========23%                                        ]Processing 2139893 events: [=========24%                                       ]Processing 2139893 events: [=========25%                                       ]Processing 2139893 events: [==========26%                                      ]Processing 2139893 events: [==========27%                                      ]Processing 2139893 events: [===========28%                                     ]Processing 2139893 events: [===========29%                                     ]Processing 2139893 events: [============30%                                    ]Processing 2139893 events: [============31%                                    ]Processing 2139893 events: [=============32%                                   ]Processing 2139893 events: [=============33%                                   ]Processing 2139893 events: [==============34%                                  ]Processing 2139893 events: [==============35%                                  ]Processing 2139893 events: [===============36%                                 ]Processing 2139893 events: [===============37%                                 ]Processing 2139893 events: [================38%                                ]Processing 2139893 events: [================39%                                ]Processing 2139893 events: [=================40%                               ]Processing 2139893 events: [=================41%                               ]Processing 2139893 events: [==================42%                              ]Processing 2139893 events: [==================43%                              ]Processing 2139893 events: [===================44%                             ]Processing 2139893 events: [===================45%                             ]Processing 2139893 events: [====================46%                            ]Processing 2139893 events: [====================47%                            ]Processing 2139893 events: [=====================48%                           ]Processing 2139893 events: [=====================49%                           ]Processing 2139893 events: [======================50%                          ]Processing 2139893 events: [=======================51%                         ]Processing 2139893 events: [=======================52%                         ]Processing 2139893 events: [========================53%                        ]Processing 2139893 events: [========================54%                        ]Processing 2139893 events: [=========================55%                       ]Processing 2139893 events: [=========================56%                       ]Processing 2139893 events: [==========================57%                      ]Processing 2139893 events: [==========================58%                      ]Processing 2139893 events: [===========================59%                     ]Processing 2139893 events: [===========================60%                     ]Processing 2139893 events: [============================61%                    ]Processing 2139893 events: [============================62%                    ]Processing 2139893 events: [=============================63%                   ]Processing 2139893 events: [=============================64%                   ]Processing 2139893 events: [==============================65%                  ]Processing 2139893 events: [==============================66%                  ]Processing 2139893 events: [===============================67%                 ]Processing 2139893 events: [===============================68%                 ]Processing 2139893 events: [================================69%                ]Processing 2139893 events: [================================70%                ]Processing 2139893 events: [=================================71%               ]Processing 2139893 events: [=================================72%               ]Processing 2139893 events: [==================================73%              ]Processing 2139893 events: [==================================74%              ]Processing 2139893 events: [===================================75%             ]Processing 2139893 events: [===================================76%             ]Processing 2139893 events: [====================================77%            ]Processing 2139893 events: [====================================78%            ]Processing 2139893 events: [=====================================79%           ]Processing 2139893 events: [=====================================80%           ]Processing 2139893 events: [======================================81%          ]Processing 2139893 events: [======================================82%          ]Processing 2139893 events: [=======================================83%         ]Processing 2139893 events: [=======================================84%         ]Processing 2139893 events: [========================================85%        ]Processing 2139893 events: [========================================86%        ]Processing 2139893 events: [=========================================87%       ]Processing 2139893 events: [=========================================88%       ]Processing 2139893 events: [==========================================89%      ]Processing 2139893 events: [==========================================90%      ]Processing 2139893 events: [===========================================91%     ]Processing 2139893 events: [===========================================92%     ]Processing 2139893 events: [============================================93%    ]Processing 2139893 events: [============================================94%    ]Processing 2139893 events: [=============================================95%   ]Processing 2139893 events: [=============================================96%   ]Processing 2139893 events: [==============================================97%  ]Processing 2139893 events: [==============================================98%  ]Processing 2139893 events: [===============================================99% ]Processing 2139893 events: [===============================================100%]
+
+===== early  timed window 8383.0 ms =====
+
+GPU0: busy 90.0%  (7543.2 ms busy / 839.9 ms idle), 383534 kernels (45.8/ms)
+  GPU time by category:
+    gemm (tensor core)                   4830.85 ms   64.0% of busy
+    nccl                                 2232.52 ms   29.6% of busy
+    other elementwise                     162.26 ms    2.2% of busy
+    memcpy/memset                         113.96 ms    1.5% of busy
+    attention (paged, Triton)             101.35 ms    1.3% of busy
+    rmsnorm/rope/silu (fused Triton)       84.80 ms    1.1% of busy
+    kv-cache store                          9.63 ms    0.1% of busy
+    gemv (cuBLAS)                           5.16 ms    0.1% of busy
+    reductions (argmax etc.)                3.20 ms    0.0% of busy
+    attention (prefill SDPA)                1.78 ms    0.0% of busy
+    sampling/argmax                         0.12 ms    0.0% of busy
+  GPU time by launching phase:
+    verify/target_fwd                    5189.06 ms
+    ncclGroupEnd                         2232.52 ms
+    SD/prefill_target                     111.38 ms
+    verify/accept                           8.44 ms
+    SD/speculate                            1.87 ms
+    SSD/handshake_send                      0.95 ms
+    cub::DeviceScan::InclusiveScan          0.94 ms
+    SD/verify                               0.40 ms
+    SD/prefill_draft_send                   0.02 ms
+    (unattributed)                          0.01 ms
+  Idle time by open phase:
+    verify/target_fwd                     496.90 ms
+    verify/accept                         104.98 ms
+    SSD/handshake_send                     51.04 ms
+    SD/postprocess                         45.13 ms
+    SD/prefill_target                      38.14 ms
+    SD/verify                              32.54 ms
+    SD/speculate                           27.23 ms
+    SSD/recv_draft_logits                  11.13 ms
+    SSD/wait_draft_tokens                  10.15 ms
+    ncclGroupStart                          7.99 ms
+  Idle gap histogram: {'0.1-1ms': '296x/50.9ms', '20-100us': '5598x/205.5ms', '<5us': '336717x/23.1ms', '5-20us': '10401x/131.7ms', '>1ms': '209x/428.6ms'}
+
+GPU1: busy 74.0%  (6204.8 ms busy / 2178.2 ms idle), 1127672 kernels (134.5/ms)
+  GPU time by category:
+    gemm (tensor core)                   3399.35 ms   54.8% of busy
+    gemv (cuBLAS)                         740.75 ms   11.9% of busy
+    attention (flashinfer tree)           686.45 ms   11.1% of busy
+    rmsnorm/rope/silu (fused Triton)      519.37 ms    8.4% of busy
+    other elementwise                     379.30 ms    6.1% of busy
+    reductions (argmax etc.)              133.37 ms    2.1% of busy
+    nccl                                  119.05 ms    1.9% of busy
+    attention (paged, Triton)              98.47 ms    1.6% of busy
+    kv-cache store                         65.54 ms    1.1% of busy
+    memcpy/memset                          47.09 ms    0.8% of busy
+    sampling/argmax                        15.43 ms    0.2% of busy
+    attention (prefill SDPA)                0.88 ms    0.0% of busy
+  GPU time by launching phase:
+    draft/jit_speculate(miss)             929.02 ms
+    draft/tree_step_0                     646.89 ms
+    draft/tree_step_6                     645.80 ms
+    draft/tree_step_5                     644.97 ms
+    draft/tree_step_4                     643.65 ms
+    draft/tree_step_3                     642.20 ms
+    draft/tree_step_2                     640.16 ms
+    draft/tree_step_1                     637.48 ms
+    draft/build_tree(glue)                592.29 ms
+    ncclGroupEnd                          119.05 ms
+  Idle time by open phase:
+    draft/tree_step_0                     362.44 ms
+    draft/build_tree(glue)                303.75 ms
+    draft/jit_speculate(miss)             288.52 ms
+    draft/service_request                 141.15 ms
+    draft/tree_step_2                     131.89 ms
+    draft/tree_step_1                     131.35 ms
+    draft/tree_step_6                     130.09 ms
+    draft/tree_step_5                     128.88 ms
+    draft/tree_step_3                     128.61 ms
+    draft/tree_step_4                     125.15 ms
+  Idle gap histogram: {'>1ms': '33x/53.6ms', '0.1-1ms': '2647x/1062.1ms', '20-100us': '15894x/544.6ms', '5-20us': '39031x/423.4ms', '<5us': '1066498x/94.6ms'}
+
+NVTX phases (CPU wall):
+  timed_region                       n=    1 total=  8383.04 ms mean=8383.042 ms
+  engine/step                        n=  213 total=  8359.37 ms mean=  39.246 ms
+  SD/verify                          n=  210 total=  5842.09 ms mean=  27.819 ms
+  draft/decode_tree                  n=  210 total=  5726.53 ms mean=  27.269 ms
+  draft/tree_step_*                  n= 1470 total=  5006.91 ms mean=   3.406 ms
+  SD/speculate                       n=  210 total=  2336.39 ms mean=  11.126 ms
+  draft/service_request              n=  210 total=  1427.36 ms mean=   6.797 ms
+  draft/jit_speculate(miss)          n=   55 total=  1217.50 ms mean=  22.136 ms
+  draft/build_tree(glue)             n=  210 total=   918.20 ms mean=   4.372 ms
+  verify/target_fwd                  n=  210 total=   561.33 ms mean=   2.673 ms
+  SD/prefill_target                  n=    3 total=   149.49 ms mean=  49.830 ms
+  draft/idle_wait_cmd                n=  215 total=   116.52 ms mean=   0.542 ms
+  verify/accept                      n=  210 total=   109.92 ms mean=   0.523 ms
+  draft/populate_cache               n=  210 total=    86.16 ms mean=   0.410 ms
+  draft/prefill                      n=    3 total=    85.72 ms mean=  28.574 ms
+  SSD/handshake_send                 n=  210 total=    57.80 ms mean=   0.275 ms
+  draft/send_response                n=  210 total=    47.28 ms mean=   0.225 ms
+  ncclGroupEnd                       n= 2130 total=    28.27 ms mean=   0.013 ms
+  SSD/recv_draft_logits              n=  210 total=    20.61 ms mean=   0.098 ms
+  SD/postprocess                     n=  210 total=    20.17 ms mean=   0.096 ms
+  cub::DeviceSelect::Flagged         n= 1670 total=    16.80 ms mean=   0.010 ms
+  cub::DeviceScan::InclusiveScan     n=  849 total=    10.62 ms mean=   0.013 ms
+  SSD/wait_draft_tokens              n=  210 total=    10.48 ms mean=   0.050 ms
+  cub::DeviceReduce::Sum             n= 1670 total=     8.95 ms mean=   0.005 ms
+  ncclGroupStart                     n= 2130 total=     8.83 ms mean=   0.004 ms
+
+GPU0 hardware counters (sampled 20 kHz): sm_active_pct=57.1, sm_issue_pct=2.7, tensor_active_pct=2.3, dram_read_pct=52.1, dram_write_pct=1.1, pcie_rx_pct=0.9, pcie_tx_pct=1.0
+  SD/verify                          sm_active_pct= 89.5  sm_issue_pct=  3.7  tensor_active_pct=  2.7  dram_read_pct= 82.1  dram_write_pct=  1.7  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=103406)
+  SD/speculate                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.3  dram_write_pct=  0.0  pcie_rx_pct=  1.6  pcie_tx_pct=  1.1  (n=44952)
+  verify/target_fwd                  sm_active_pct=  8.8  sm_issue_pct=  0.6  tensor_active_pct=  0.3  dram_read_pct=  7.7  dram_write_pct=  0.2  pcie_rx_pct=  0.7  pcie_tx_pct=  1.1  (n=11139)
+  SD/prefill_target                  sm_active_pct= 58.6  sm_issue_pct=  5.7  tensor_active_pct= 34.1  dram_read_pct= 45.2  dram_write_pct=  4.3  pcie_rx_pct=  0.7  pcie_tx_pct=  1.0  (n=2990)
+  verify/accept                      sm_active_pct=  1.8  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.4  dram_write_pct=  0.3  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=2201)
+  SSD/handshake_send                 sm_active_pct=  0.9  sm_issue_pct=  0.9  tensor_active_pct=  0.0  dram_read_pct=  0.9  dram_write_pct=  0.0  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=960)
+  (none)                             sm_active_pct=  0.8  sm_issue_pct=  0.8  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=440)
+  SD/postprocess                     sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.2  dram_write_pct=  0.0  pcie_rx_pct=  0.1  pcie_tx_pct=  1.0  (n=413)
+  ncclGroupEnd                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.0  dram_write_pct=  0.2  pcie_rx_pct=  4.5  pcie_tx_pct=  1.4  (n=275)
+  SSD/recv_draft_logits              sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.0  dram_write_pct=  0.8  pcie_rx_pct= 28.7  pcie_tx_pct=  4.1  (n=188)
+  engine/step                        sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.6  pcie_tx_pct=  1.0  (n=187)
+  ncclGroupStart                     sm_active_pct=  0.1  sm_issue_pct=  0.1  tensor_active_pct=  0.0  dram_read_pct=  0.2  dram_write_pct=  0.0  pcie_rx_pct=  0.7  pcie_tx_pct=  1.1  (n=170)
+
+GPU1 hardware counters (sampled 20 kHz): sm_active_pct=47.4, sm_issue_pct=3.7, tensor_active_pct=3.7, dram_read_pct=42.1, dram_write_pct=1.6, pcie_rx_pct=0.5, pcie_tx_pct=1.2
+  draft/jit_speculate(miss)          sm_active_pct= 58.0  sm_issue_pct=  4.5  tensor_active_pct=  0.5  dram_read_pct= 52.7  dram_write_pct=  0.9  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=24355)
+  draft/build_tree(glue)             sm_active_pct= 44.5  sm_issue_pct=  2.4  tensor_active_pct=  1.3  dram_read_pct= 38.5  dram_write_pct=  1.9  pcie_rx_pct=  0.6  pcie_tx_pct=  1.2  (n=18089)
+  draft/tree_step_6                  sm_active_pct= 52.2  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 46.6  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15511)
+  draft/tree_step_1                  sm_active_pct= 52.5  sm_issue_pct=  4.1  tensor_active_pct=  5.3  dram_read_pct= 46.3  dram_write_pct=  2.4  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15447)
+  draft/tree_step_4                  sm_active_pct= 52.5  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 46.9  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15397)
+  draft/tree_step_5                  sm_active_pct= 52.2  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 46.7  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15359)
+  draft/tree_step_2                  sm_active_pct= 52.2  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.5  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15315)
+  draft/tree_step_3                  sm_active_pct= 52.3  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.7  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15305)
+  draft/decode_tree                  sm_active_pct= 55.3  sm_issue_pct=  4.5  tensor_active_pct=  5.7  dram_read_pct= 49.0  dram_write_pct=  1.9  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=14389)
+  draft/tree_step_0                  sm_active_pct=  4.2  sm_issue_pct=  0.4  tensor_active_pct=  0.2  dram_read_pct=  3.7  dram_write_pct=  1.2  pcie_rx_pct=  0.8  pcie_tx_pct=  1.0  (n=7808)
+  draft/service_request              sm_active_pct=  2.5  sm_issue_pct=  1.5  tensor_active_pct=  0.0  dram_read_pct=  0.9  dram_write_pct=  2.2  pcie_rx_pct=  0.9  pcie_tx_pct=  3.0  (n=2968)
+  draft/idle_wait_cmd                sm_active_pct=  1.9  sm_issue_pct=  0.9  tensor_active_pct=  0.0  dram_read_pct=  1.3  dram_write_pct=  0.2  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=2249)
+profiles: fixed_r0_complete
+profiles: fixed_r0_complete
+Processing 2119175 events: [1%                                                 ]Processing 2119175 events: [2%                                                 ]Processing 2119175 events: [3%                                                 ]Processing 2119175 events: [4%                                                 ]Processing 2119175 events: [5%                                                 ]Processing 2119175 events: [=6%                                                ]Processing 2119175 events: [=7%                                                ]Processing 2119175 events: [==8%                                               ]Processing 2119175 events: [==9%                                               ]Processing 2119175 events: [==10%                                              ]Processing 2119175 events: [==11%                                              ]Processing 2119175 events: [===12%                                             ]Processing 2119175 events: [===13%                                             ]Processing 2119175 events: [====14%                                            ]Processing 2119175 events: [====15%                                            ]Processing 2119175 events: [=====16%                                           ]Processing 2119175 events: [=====17%                                           ]Processing 2119175 events: [======18%                                          ]Processing 2119175 events: [======19%                                          ]Processing 2119175 events: [=======20%                                         ]Processing 2119175 events: [=======21%                                         ]Processing 2119175 events: [========22%                                        ]Processing 2119175 events: [========23%                                        ]Processing 2119175 events: [=========24%                                       ]Processing 2119175 events: [=========25%                                       ]Processing 2119175 events: [==========26%                                      ]Processing 2119175 events: [==========27%                                      ]Processing 2119175 events: [===========28%                                     ]Processing 2119175 events: [===========29%                                     ]Processing 2119175 events: [============30%                                    ]Processing 2119175 events: [============31%                                    ]Processing 2119175 events: [=============32%                                   ]Processing 2119175 events: [=============33%                                   ]Processing 2119175 events: [==============34%                                  ]Processing 2119175 events: [==============35%                                  ]Processing 2119175 events: [===============36%                                 ]Processing 2119175 events: [===============37%                                 ]Processing 2119175 events: [================38%                                ]Processing 2119175 events: [================39%                                ]Processing 2119175 events: [=================40%                               ]Processing 2119175 events: [=================41%                               ]Processing 2119175 events: [==================42%                              ]Processing 2119175 events: [==================43%                              ]Processing 2119175 events: [===================44%                             ]Processing 2119175 events: [===================45%                             ]Processing 2119175 events: [====================46%                            ]Processing 2119175 events: [====================47%                            ]Processing 2119175 events: [=====================48%                           ]Processing 2119175 events: [=====================49%                           ]Processing 2119175 events: [======================50%                          ]Processing 2119175 events: [=======================51%                         ]Processing 2119175 events: [=======================52%                         ]Processing 2119175 events: [========================53%                        ]Processing 2119175 events: [========================54%                        ]Processing 2119175 events: [=========================55%                       ]Processing 2119175 events: [=========================56%                       ]Processing 2119175 events: [==========================57%                      ]Processing 2119175 events: [==========================58%                      ]Processing 2119175 events: [===========================59%                     ]Processing 2119175 events: [===========================60%                     ]Processing 2119175 events: [============================61%                    ]Processing 2119175 events: [============================62%                    ]Processing 2119175 events: [=============================63%                   ]Processing 2119175 events: [=============================64%                   ]Processing 2119175 events: [==============================65%                  ]Processing 2119175 events: [==============================66%                  ]Processing 2119175 events: [===============================67%                 ]Processing 2119175 events: [===============================68%                 ]Processing 2119175 events: [================================69%                ]Processing 2119175 events: [================================70%                ]Processing 2119175 events: [=================================71%               ]Processing 2119175 events: [=================================72%               ]Processing 2119175 events: [==================================73%              ]Processing 2119175 events: [==================================74%              ]Processing 2119175 events: [===================================75%             ]Processing 2119175 events: [===================================76%             ]Processing 2119175 events: [====================================77%            ]Processing 2119175 events: [====================================78%            ]Processing 2119175 events: [=====================================79%           ]Processing 2119175 events: [=====================================80%           ]Processing 2119175 events: [======================================81%          ]Processing 2119175 events: [======================================82%          ]Processing 2119175 events: [=======================================83%         ]Processing 2119175 events: [=======================================84%         ]Processing 2119175 events: [========================================85%        ]Processing 2119175 events: [========================================86%        ]Processing 2119175 events: [=========================================87%       ]Processing 2119175 events: [=========================================88%       ]Processing 2119175 events: [==========================================89%      ]Processing 2119175 events: [==========================================90%      ]Processing 2119175 events: [===========================================91%     ]Processing 2119175 events: [===========================================92%     ]Processing 2119175 events: [============================================93%    ]Processing 2119175 events: [============================================94%    ]Processing 2119175 events: [=============================================95%   ]Processing 2119175 events: [=============================================96%   ]Processing 2119175 events: [==============================================97%  ]Processing 2119175 events: [==============================================98%  ]Processing 2119175 events: [===============================================99% ]Processing 2119175 events: [===============================================100%]
+
+===== complete  timed window 8208.1 ms =====
+
+GPU0: busy 89.9%  (7376.7 ms busy / 831.4 ms idle), 383531 kernels (46.7/ms)
+  GPU time by category:
+    gemm (tensor core)                   4830.55 ms   65.5% of busy
+    nccl                                 2065.67 ms   28.0% of busy
+    other elementwise                     162.44 ms    2.2% of busy
+    memcpy/memset                         114.13 ms    1.5% of busy
+    attention (paged, Triton)             101.60 ms    1.4% of busy
+    rmsnorm/rope/silu (fused Triton)       84.88 ms    1.2% of busy
+    kv-cache store                          9.65 ms    0.1% of busy
+    gemv (cuBLAS)                           5.16 ms    0.1% of busy
+    reductions (argmax etc.)                3.20 ms    0.0% of busy
+    attention (prefill SDPA)                1.75 ms    0.0% of busy
+    sampling/argmax                         0.11 ms    0.0% of busy
+  GPU time by launching phase:
+    verify/target_fwd                    5189.67 ms
+    ncclGroupEnd                         2065.67 ms
+    SD/prefill_target                     111.14 ms
+    verify/accept                           8.47 ms
+    SD/speculate                            1.87 ms
+    SSD/handshake_send                      0.95 ms
+    cub::DeviceScan::InclusiveScan          0.94 ms
+    SD/verify                               0.40 ms
+    SD/prefill_draft_send                   0.02 ms
+    (unattributed)                          0.01 ms
+  Idle time by open phase:
+    verify/target_fwd                     502.17 ms
+    verify/accept                         107.35 ms
+    SSD/handshake_send                     51.28 ms
+    SD/postprocess                         43.96 ms
+    SD/verify                              33.47 ms
+    SD/speculate                           28.70 ms
+    SD/prefill_target                      25.67 ms
+    SSD/recv_draft_logits                  11.09 ms
+    SSD/wait_draft_tokens                  10.20 ms
+    cub::DeviceScan::InclusiveScan          6.27 ms
+  Idle gap histogram: {'0.1-1ms': '274x/47.2ms', '20-100us': '5646x/202.0ms', '5-20us': '10242x/130.2ms', '<5us': '336816x/23.2ms', '>1ms': '210x/428.9ms'}
+
+GPU1: busy 75.0%  (6154.2 ms busy / 2053.9 ms idle), 1122218 kernels (136.7/ms)
+  GPU time by category:
+    gemm (tensor core)                   3394.08 ms   55.2% of busy
+    gemv (cuBLAS)                         735.03 ms   11.9% of busy
+    attention (flashinfer tree)           686.34 ms   11.2% of busy
+    rmsnorm/rope/silu (fused Triton)      519.05 ms    8.4% of busy
+    other elementwise                     355.80 ms    5.8% of busy
+    reductions (argmax etc.)              133.29 ms    2.2% of busy
+    nccl                                  104.85 ms    1.7% of busy
+    attention (paged, Triton)              97.95 ms    1.6% of busy
+    kv-cache store                         65.49 ms    1.1% of busy
+    memcpy/memset                          46.27 ms    0.8% of busy
+    sampling/argmax                        15.43 ms    0.3% of busy
+    attention (prefill SDPA)                0.88 ms    0.0% of busy
+  GPU time by launching phase:
+    draft/jit_speculate(miss)             923.18 ms
+    draft/tree_step_0                     646.79 ms
+    draft/tree_step_6                     645.67 ms
+    draft/tree_step_5                     644.84 ms
+    draft/tree_step_4                     643.57 ms
+    draft/tree_step_3                     642.10 ms
+    draft/tree_step_2                     640.03 ms
+    draft/tree_step_1                     637.36 ms
+    draft/build_tree(glue)                586.63 ms
+    ncclGroupEnd                          104.85 ms
+  Idle time by open phase:
+    draft/tree_step_0                     353.17 ms
+    draft/build_tree(glue)                299.69 ms
+    draft/jit_speculate(miss)             278.07 ms
+    draft/service_request                 140.53 ms
+    draft/tree_step_4                     128.83 ms
+    draft/tree_step_1                     127.78 ms
+    draft/tree_step_3                     125.49 ms
+    draft/tree_step_2                     125.11 ms
+    draft/tree_step_6                     125.09 ms
+    draft/tree_step_5                     121.98 ms
+  Idle gap histogram: {'>1ms': '23x/39.2ms', '0.1-1ms': '2458x/1005.7ms', '20-100us': '15090x/524.7ms', '5-20us': '36566x/395.4ms', '<5us': '1064569x/88.9ms'}
+
+NVTX phases (CPU wall):
+  timed_region                       n=    1 total=  8208.13 ms mean=8208.128 ms
+  engine/step                        n=  213 total=  8187.06 ms mean=  38.437 ms
+  SD/verify                          n=  210 total=  5851.72 ms mean=  27.865 ms
+  draft/decode_tree                  n=  210 total=  5061.31 ms mean=  24.101 ms
+  draft/tree_step_*                  n= 1470 total=  4972.47 ms mean=   3.383 ms
+  SD/speculate                       n=  210 total=  2167.38 ms mean=  10.321 ms
+  draft/service_request              n=  210 total=  1411.43 ms mean=   6.721 ms
+  draft/jit_speculate(miss)          n=   55 total=  1201.24 ms mean=  21.841 ms
+  draft/build_tree(glue)             n=  210 total=   899.97 ms mean=   4.286 ms
+  verify/target_fwd                  n=  210 total=   567.10 ms mean=   2.700 ms
+  SD/prefill_target                  n=    3 total=   136.79 ms mean=  45.598 ms
+  verify/accept                      n=  210 total=   112.11 ms mean=   0.534 ms
+  draft/idle_wait_cmd                n=  215 total=   110.75 ms mean=   0.515 ms
+  draft/prefill                      n=    3 total=    83.19 ms mean=  27.730 ms
+  SSD/handshake_send                 n=  210 total=    59.44 ms mean=   0.283 ms
+  draft/send_response                n=  210 total=    47.21 ms mean=   0.225 ms
+  ncclGroupEnd                       n= 2130 total=    28.35 ms mean=   0.013 ms
+  SD/postprocess                     n=  210 total=    20.12 ms mean=   0.096 ms
+  draft/populate_cache               n=  210 total=    13.38 ms mean=   0.064 ms
+  SSD/recv_draft_logits              n=  210 total=    13.03 ms mean=   0.062 ms
+  cub::DeviceScan::InclusiveScan     n=  849 total=    10.62 ms mean=   0.013 ms
+  SSD/wait_draft_tokens              n=  210 total=    10.23 ms mean=   0.049 ms
+  cub::DeviceSelect::Flagged         n=  830 total=     8.75 ms mean=   0.011 ms
+  cub::DeviceScan::InclusiveSumByKey n=  420 total=     4.72 ms mean=   0.011 ms
+  cub::DeviceReduce::Sum             n=  830 total=     4.58 ms mean=   0.006 ms
+
+GPU0 hardware counters (sampled 20 kHz): sm_active_pct=58.3, sm_issue_pct=2.7, tensor_active_pct=2.3, dram_read_pct=53.2, dram_write_pct=1.2, pcie_rx_pct=0.9, pcie_tx_pct=1.0
+  SD/verify                          sm_active_pct= 89.4  sm_issue_pct=  3.7  tensor_active_pct=  2.7  dram_read_pct= 82.1  dram_write_pct=  1.7  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=103468)
+  SD/speculate                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.3  dram_write_pct=  0.0  pcie_rx_pct=  1.6  pcie_tx_pct=  1.1  (n=41690)
+  verify/target_fwd                  sm_active_pct=  8.6  sm_issue_pct=  0.6  tensor_active_pct=  0.3  dram_read_pct=  7.6  dram_write_pct=  0.2  pcie_rx_pct=  0.7  pcie_tx_pct=  1.1  (n=11201)
+  SD/prefill_target                  sm_active_pct= 64.0  sm_issue_pct=  6.1  tensor_active_pct= 37.2  dram_read_pct= 49.3  dram_write_pct=  4.7  pcie_rx_pct=  0.7  pcie_tx_pct=  1.0  (n=2736)
+  verify/accept                      sm_active_pct=  1.8  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.3  dram_write_pct=  0.3  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=2241)
+  SSD/handshake_send                 sm_active_pct=  0.9  sm_issue_pct=  0.9  tensor_active_pct=  0.0  dram_read_pct=  0.9  dram_write_pct=  0.0  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=987)
+  SD/postprocess                     sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.3  dram_write_pct=  0.0  pcie_rx_pct=  0.1  pcie_tx_pct=  1.0  (n=402)
+  (none)                             sm_active_pct=  0.7  sm_issue_pct=  0.7  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=387)
+  ncclGroupEnd                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.0  dram_write_pct=  0.2  pcie_rx_pct=  4.8  pcie_tx_pct=  1.4  (n=269)
+  SSD/recv_draft_logits              sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.0  dram_write_pct=  0.8  pcie_rx_pct= 26.3  pcie_tx_pct=  3.8  (n=197)
+  engine/step                        sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.6  pcie_tx_pct=  1.0  (n=194)
+  SSD/wait_draft_tokens              sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.7  dram_write_pct=  0.0  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=157)
+
+GPU1 hardware counters (sampled 20 kHz): sm_active_pct=48.1, sm_issue_pct=3.7, tensor_active_pct=3.8, dram_read_pct=42.8, dram_write_pct=1.4, pcie_rx_pct=0.5, pcie_tx_pct=1.2
+  draft/jit_speculate(miss)          sm_active_pct= 58.4  sm_issue_pct=  4.5  tensor_active_pct=  0.5  dram_read_pct= 53.2  dram_write_pct=  0.5  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=24023)
+  draft/build_tree(glue)             sm_active_pct= 45.0  sm_issue_pct=  2.4  tensor_active_pct=  1.3  dram_read_pct= 39.4  dram_write_pct=  1.2  pcie_rx_pct=  0.6  pcie_tx_pct=  1.2  (n=17712)
+  draft/tree_step_1                  sm_active_pct= 52.7  sm_issue_pct=  4.1  tensor_active_pct=  5.3  dram_read_pct= 46.5  dram_write_pct=  2.4  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15432)
+  draft/tree_step_4                  sm_active_pct= 52.3  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.7  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15393)
+  draft/tree_step_6                  sm_active_pct= 52.5  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 46.9  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15342)
+  draft/tree_step_5                  sm_active_pct= 52.7  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 47.1  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15279)
+  draft/tree_step_3                  sm_active_pct= 52.6  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.9  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15267)
+  draft/tree_step_2                  sm_active_pct= 52.6  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 47.0  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=15130)
+  (none)                             sm_active_pct= 61.0  sm_issue_pct=  4.9  tensor_active_pct=  6.4  dram_read_pct= 54.6  dram_write_pct=  1.8  pcie_rx_pct=  0.4  pcie_tx_pct=  1.5  (n=12537)
+  draft/tree_step_0                  sm_active_pct=  4.1  sm_issue_pct=  0.4  tensor_active_pct=  0.2  dram_read_pct=  3.7  dram_write_pct=  1.2  pcie_rx_pct=  0.8  pcie_tx_pct=  1.0  (n=7611)
+  draft/service_request              sm_active_pct=  2.6  sm_issue_pct=  1.5  tensor_active_pct=  0.0  dram_read_pct=  1.1  dram_write_pct=  0.1  pcie_rx_pct=  0.9  pcie_tx_pct=  3.1  (n=2966)
+  draft/idle_wait_cmd                sm_active_pct=  1.9  sm_issue_pct=  0.9  tensor_active_pct=  0.0  dram_read_pct=  1.4  dram_write_pct=  0.1  pcie_rx_pct=  0.9  pcie_tx_pct=  1.0  (n=2119)
+profiles: fixed_r0_ar
+Processing 2223019 events: [1%                                                 ]Processing 2223019 events: [2%                                                 ]Processing 2223019 events: [3%                                                 ]Processing 2223019 events: [4%                                                 ]Processing 2223019 events: [5%                                                 ]Processing 2223019 events: [=6%                                                ]Processing 2223019 events: [=7%                                                ]Processing 2223019 events: [==8%                                               ]Processing 2223019 events: [==9%                                               ]Processing 2223019 events: [==10%                                              ]Processing 2223019 events: [==11%                                              ]Processing 2223019 events: [===12%                                             ]Processing 2223019 events: [===13%                                             ]Processing 2223019 events: [====14%                                            ]Processing 2223019 events: [====15%                                            ]Processing 2223019 events: [=====16%                                           ]Processing 2223019 events: [=====17%                                           ]Processing 2223019 events: [======18%                                          ]Processing 2223019 events: [======19%                                          ]Processing 2223019 events: [=======20%                                         ]Processing 2223019 events: [=======21%                                         ]Processing 2223019 events: [========22%                                        ]Processing 2223019 events: [========23%                                        ]Processing 2223019 events: [=========24%                                       ]Processing 2223019 events: [=========25%                                       ]Processing 2223019 events: [==========26%                                      ]Processing 2223019 events: [==========27%                                      ]Processing 2223019 events: [===========28%                                     ]Processing 2223019 events: [===========29%                                     ]Processing 2223019 events: [============30%                                    ]Processing 2223019 events: [============31%                                    ]Processing 2223019 events: [=============32%                                   ]Processing 2223019 events: [=============33%                                   ]Processing 2223019 events: [==============34%                                  ]Processing 2223019 events: [==============35%                                  ]Processing 2223019 events: [===============36%                                 ]Processing 2223019 events: [===============37%                                 ]Processing 2223019 events: [================38%                                ]Processing 2223019 events: [================39%                                ]Processing 2223019 events: [=================40%                               ]Processing 2223019 events: [=================41%                               ]Processing 2223019 events: [==================42%                              ]Processing 2223019 events: [==================43%                              ]Processing 2223019 events: [===================44%                             ]Processing 2223019 events: [===================45%                             ]Processing 2223019 events: [====================46%                            ]Processing 2223019 events: [====================47%                            ]Processing 2223019 events: [=====================48%                           ]Processing 2223019 events: [=====================49%                           ]Processing 2223019 events: [======================50%                          ]Processing 2223019 events: [=======================51%                         ]Processing 2223019 events: [=======================52%                         ]Processing 2223019 events: [========================53%                        ]Processing 2223019 events: [========================54%                        ]Processing 2223019 events: [=========================55%                       ]Processing 2223019 events: [=========================56%                       ]Processing 2223019 events: [==========================57%                      ]Processing 2223019 events: [==========================58%                      ]Processing 2223019 events: [===========================59%                     ]Processing 2223019 events: [===========================60%                     ]Processing 2223019 events: [============================61%                    ]Processing 2223019 events: [============================62%                    ]Processing 2223019 events: [=============================63%                   ]Processing 2223019 events: [=============================64%                   ]Processing 2223019 events: [==============================65%                  ]Processing 2223019 events: [==============================66%                  ]Processing 2223019 events: [===============================67%                 ]Processing 2223019 events: [===============================68%                 ]Processing 2223019 events: [================================69%                ]Processing 2223019 events: [================================70%                ]Processing 2223019 events: [=================================71%               ]Processing 2223019 events: [=================================72%               ]Processing 2223019 events: [==================================73%              ]Processing 2223019 events: [==================================74%              ]Processing 2223019 events: [===================================75%             ]Processing 2223019 events: [===================================76%             ]Processing 2223019 events: [====================================77%            ]Processing 2223019 events: [====================================78%            ]Processing 2223019 events: [=====================================79%           ]Processing 2223019 events: [=====================================80%           ]Processing 2223019 events: [======================================81%          ]Processing 2223019 events: [======================================82%          ]Processing 2223019 events: [=======================================83%         ]Processing 2223019 events: [=======================================84%         ]Processing 2223019 events: [========================================85%        ]Processing 2223019 events: [========================================86%        ]Processing 2223019 events: [=========================================87%       ]Processing 2223019 events: [=========================================88%       ]Processing 2223019 events: [==========================================89%      ]Processing 2223019 events: [==========================================90%      ]Processing 2223019 events: [===========================================91%     ]Processing 2223019 events: [===========================================92%     ]Processing 2223019 events: [============================================93%    ]Processing 2223019 events: [============================================94%    ]Processing 2223019 events: [=============================================95%   ]Processing 2223019 events: [=============================================96%   ]Processing 2223019 events: [==============================================97%  ]Processing 2223019 events: [==============================================98%  ]Processing 2223019 events: [===============================================99% ]Processing 2223019 events: [===============================================100%]
+
+===== ar  timed window 20404.3 ms =====
+
+GPU0: busy 91.5%  (18664.7 ms busy / 1739.6 ms idle), 1298082 kernels (63.6/ms)
+  GPU time by category:
+    gemm (tensor core)                  17272.19 ms   92.5% of busy
+    other elementwise                     472.69 ms    2.5% of busy
+    memcpy/memset                         376.54 ms    2.0% of busy
+    rmsnorm/rope/silu (fused Triton)      294.09 ms    1.6% of busy
+    attention (paged, Triton)             183.59 ms    1.0% of busy
+    kv-cache store                         34.18 ms    0.2% of busy
+    sampling/argmax                        28.01 ms    0.2% of busy
+    gemv (cuBLAS)                           5.16 ms    0.0% of busy
+    reductions (argmax etc.)                4.94 ms    0.0% of busy
+    attention (prefill SDPA)                1.62 ms    0.0% of busy
+  GPU time by launching phase:
+    AR/decode                           18562.23 ms
+    AR/prefill                            110.79 ms
+  Idle time by open phase:
+    AR/decode                            1597.17 ms
+    (none)                                 34.12 ms
+    engine/step                            31.83 ms
+    AR/prefill                             27.06 ms
+    request:specbench-148                  22.07 ms
+    request:HumanEval/36                   14.33 ms
+    request:specbench-496                  13.05 ms
+  Idle gap histogram: {'0.1-1ms': '67x/26.7ms', '20-100us': '5830x/195.8ms', '5-20us': '10340x/118.7ms', '<5us': '1178724x/79.0ms', '>1ms': '762x/1319.4ms'}
+
+NVTX phases (CPU wall):
+  timed_region                       n=    1 total= 20404.35 ms mean=20404.348 ms
+  engine/step                        n=  768 total= 20349.71 ms mean=  26.497 ms
+  AR/decode                          n=  765 total= 20193.69 ms mean=  26.397 ms
+  AR/prefill                         n=    3 total=   138.45 ms mean=  46.150 ms
+
+GPU0 hardware counters (sampled 20 kHz): sm_active_pct=82.0, sm_issue_pct=3.1, tensor_active_pct=2.7, dram_read_pct=76.9, dram_write_pct=1.0, pcie_rx_pct=0.8, pcie_tx_pct=1.0
+  AR/decode                          sm_active_pct= 82.4  sm_issue_pct=  3.1  tensor_active_pct=  2.5  dram_read_pct= 77.3  dram_write_pct=  1.0  pcie_rx_pct=  0.8  pcie_tx_pct=  1.0  (n=403875)
+  AR/prefill                         sm_active_pct= 63.2  sm_issue_pct=  6.1  tensor_active_pct= 36.7  dram_read_pct= 48.7  dram_write_pct=  4.7  pcie_rx_pct=  0.7  pcie_tx_pct=  1.0  (n=2769)
+  (none)                             sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.3  dram_write_pct=  0.0  pcie_rx_pct=  0.1  pcie_tx_pct=  1.0  (n=513)
+  engine/step                        sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.5  dram_write_pct=  0.1  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=354)
+  request:specbench-148              sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=317)
+  request:HumanEval/36               sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=136)
+  request:specbench-496              sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.2  dram_write_pct=  0.0  pcie_rx_pct=  0.1  pcie_tx_pct=  1.0  (n=119)
+
+GPU1 hardware counters (sampled 20 kHz): sm_active_pct=0.0, sm_issue_pct=0.0, tensor_active_pct=0.0, dram_read_pct=0.0, dram_write_pct=0.1, pcie_rx_pct=0.1, pcie_tx_pct=2.3
+correctness: fixed_r0_complete_k4
+correctness: fixed_r0_early_k7
+correctness: fixed_r0_sd_k10
+correctness: fixed_r0_sd_k4
+correctness: fixed_r0_early_k4
+correctness: fixed_r0_complete_k7
+correctness: fixed_r0_sd_k7
+correctness: fixed_r0_complete_k10
+correctness: fixed_r0_early_k10
+correctness: fixed_r0_ar
+correctness: natural_r0_complete_k4
+correctness: natural_r0_early_k7
+correctness: natural_r0_sd_k10
+correctness: natural_r0_sd_k4
+correctness: natural_r0_early_k4
+correctness: natural_r0_complete_k7
+correctness: natural_r0_sd_k7
+correctness: natural_r0_complete_k10
+correctness: natural_r0_early_k10
+correctness: natural_r0_ar
+heldout: fixed_r0_complete
+heldout: fixed_r0_early
+heldout: natural_r0_complete
+heldout: natural_r0_early
+heldout: natural_r1_early
+heldout: natural_r1_complete
+heldout: fixed_r1_early
+heldout: fixed_r1_complete
+heldout: fixed_r2_complete
+heldout: fixed_r2_early
+heldout: natural_r2_complete
+heldout: natural_r2_early
+heldout: natural_r3_early
+heldout: natural_r3_complete
+heldout: fixed_r3_early
+heldout: fixed_r3_complete
+heldout: fixed_r4_complete
+heldout: fixed_r4_early
+heldout: natural_r4_complete
+heldout: natural_r4_early

@@ -13,10 +13,11 @@
     "gemv (cuBLAS)": 3242.369677,
     "rmsnorm/rope/silu (fused Triton)": 532.282652,
     "attention (paged, Triton)": 337.707521,
-    "sampling/argmax": 75.636343,
     "other elementwise": 73.42371,
     "kv-cache store": 63.880759,
+    "sampling/argmax": 61.998438,
     "memcpy/memset": 27.032232,
+    "reductions (argmax etc.)": 13.637905,
     "attention (prefill SDPA)": 2.469899
    },
    "top_kernels": [

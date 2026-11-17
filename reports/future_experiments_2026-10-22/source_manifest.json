@@ -1,0 +1,31 @@
+{
+  "built_at": "2026-10-22T13:37:04.953443+05:30",
+  "sources": [
+    {
+      "path": "/home/vishalrao/.codex/attachments/aa4baff8-177d-4258-83f1-3cecf8e15826/ProjectProposalPAIA (1).pdf",
+      "sha256": "ace2304fbd15927a94818740283ca06fc3aafa7dde463ca715f6bc8a6a996a71"
+    },
+    {
+      "path": "/home/vishalrao/.codex/attachments/10d66bab-cdf9-4013-915c-ae06db63aa21/project_roadmap.pdf",
+      "sha256": "0d7c0be1095417eae76c3c399cf451975bc571d0ba00cf5f8b1f90c905747678"
+    },
+    {
+      "path": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/status.json",
+      "sha256": "3916d261eb445d208bf3a1b00605757884f9e01720d34585725352825c5cc015"
+    },
+    {
+      "path": "/home/vishalrao/AnytimeOutcome/reports/evaluation1_2026-10-22_update/completed_campaign_snapshot.json",
+      "sha256": "cd07ef3645ad91537069490fcd4e4a79ca3cfe55e4655a8b831dd8af6480be04"
+    },
+    {
+      "path": "/home/vishalrao/AnytimeOutcome/results/nsys/ssd_k7_f3_critical_path.json",
+      "sha256": "5ce79ddf271b63f9c6d3c282d17d78165cd331958140b48715677ced96d8d81f"
+    }
+  ],
+  "literature": [
+    "https://arxiv.org/html/2603.03251v1",
+    "https://arxiv.org/html/2506.11309v1"
+  ],
+  "removed_comparison": "Dedicated named fan-out comparator omitted at user request",
+  "slide_count": 16
+}

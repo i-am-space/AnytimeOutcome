@@ -1,0 +1,2564 @@
+{
+  "queue_sha256": "afa5ea552fca685df1e3ee8af475245170b46ba8a04ef8e769e7e7e1c1ee61ae",
+  "definition_sha256": "9dd86e157cbd479a57522120fce57cab774186466dbfd2ad4005372f5d66e89c",
+  "phase": "depth_tune",
+  "valid_blocks": 10,
+  "requests": 240,
+  "statistics": [
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0
+      },
+      "gpu_count": 2,
+      "requests": 48,
+      "mean_latency_s": 2.1212088607711244,
+      "p50_latency_s": 2.1928246919851517,
+      "p95_latency_s": 3.3103437072961244,
+      "committed_tok_per_s": 120.68589978779184,
+      "mean_first_delivery_s": 0.0964648273329658,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.53933195845712,
+      "draft_acceptance_rate": 0.428294752374804,
+      "mean_cache_hit_rate": 0.7775914025776212,
+      "mean_wait_s": 0.4156789360052547,
+      "mean_final_drain_s": 0.00014095587296954667,
+      "mean_publication_wall_s": 0.0030122134464170432,
+      "mean_interrupt_drain_s": 0.0,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 3098
+      },
+      "accepted_draft_tokens": 9288,
+      "verified_draft_tokens": 21686,
+      "max_target_allocated_bytes": 37681303040,
+      "max_target_reserved_bytes": 37820039168,
+      "max_draft_allocated_bytes": 33436000768,
+      "max_draft_reserved_bytes": 33573306368,
+      "output_lengths": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 16,
+          "mean_latency_s": 2.2044898428721353,
+          "p50_latency_s": 2.356211391990655,
+          "p95_latency_s": 3.0416506890105666,
+          "committed_tok_per_s": 116.12664074082036,
+          "mean_first_delivery_s": 0.09227673649729695,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.327921754939416,
+          "draft_acceptance_rate": 0.4001054296257248,
+          "mean_cache_hit_rate": 0.740352834444143
+        },
+        "code": {
+          "requests": 16,
+          "mean_latency_s": 1.2671251498140919,
+          "p50_latency_s": 1.2596988454897655,
+          "p95_latency_s": 1.5732952752514393,
+          "committed_tok_per_s": 202.03213552943797,
+          "mean_first_delivery_s": 0.08274371506377065,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 6.133486701238673,
+          "draft_acceptance_rate": 0.7201166180758017,
+          "mean_cache_hit_rate": 0.9125903097067158
+        },
+        "doc": {
+          "requests": 16,
+          "mean_latency_s": 2.8920115896271454,
+          "p50_latency_s": 2.81155642750673,
+          "p95_latency_s": 3.6901524100176175,
+          "committed_tok_per_s": 88.51970058425837,
+          "mean_first_delivery_s": 0.11437403043782979,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.156587419193274,
+          "draft_acceptance_rate": 0.3005593803786575,
+          "mean_cache_hit_rate": 0.6798310635820047
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "p1",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 1
+      },
+      "gpu_count": 2,
+      "requests": 48,
+      "mean_latency_s": 2.1899592022479433,
+      "p50_latency_s": 2.261036738011171,
+      "p95_latency_s": 3.3996825342386727,
+      "committed_tok_per_s": 116.89715485896807,
+      "mean_first_delivery_s": 0.10201217195511465,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.53933195845712,
+      "draft_acceptance_rate": 0.42831450311275077,
+      "mean_cache_hit_rate": 0.7775914025776212,
+      "mean_wait_s": 0.4826057935630767,
+      "mean_final_drain_s": 0.002500116021716773,
+      "mean_publication_wall_s": 0.0003202680735958683,
+      "mean_interrupt_drain_s": 0.002998934756617172,
+      "partial_handoffs": 1,
+      "ready_length_histogram": {
+        "6": 1,
+        "7": 3097
+      },
+      "accepted_draft_tokens": 9288,
+      "verified_draft_tokens": 21685,
+      "max_target_allocated_bytes": 37681303040,
+      "max_target_reserved_bytes": 37820039168,
+      "max_draft_allocated_bytes": 33436000768,
+      "max_draft_reserved_bytes": 33573306368,
+      "output_lengths": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 16,
+          "mean_latency_s": 2.2734588681905734,
+          "p50_latency_s": 2.429836614013766,
+          "p95_latency_s": 3.1335540790096275,
+          "committed_tok_per_s": 112.60375262638827,
+          "mean_first_delivery_s": 0.0951795119963208,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.327921754939416,
+          "draft_acceptance_rate": 0.4001054296257248,
+          "mean_cache_hit_rate": 0.740352834444143
+        },
+        "code": {
+          "requests": 16,
+          "mean_latency_s": 1.315097390433948,
+          "p50_latency_s": 1.3072278009931324,
+          "p95_latency_s": 1.6261935044967686,
+          "committed_tok_per_s": 194.66238916003525,
+          "mean_first_delivery_s": 0.08903421668401279,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 6.133486701238673,
+          "draft_acceptance_rate": 0.7201166180758017,
+          "mean_cache_hit_rate": 0.9125903097067158
+        },
+        "doc": {
+          "requests": 16,
+          "mean_latency_s": 2.981321348119309,
+          "p50_latency_s": 2.891230427485425,
+          "p95_latency_s": 3.790745972735749,
+          "committed_tok_per_s": 85.86796594788117,
+          "mean_first_delivery_s": 0.12182278718501038,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.156587419193274,
+          "draft_acceptance_rate": 0.3005917159763314,
+          "mean_cache_hit_rate": 0.6798310635820047
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "p2",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2
+      },
+      "gpu_count": 2,
+      "requests": 48,
+      "mean_latency_s": 2.180020175417667,
+      "p50_latency_s": 2.250846866008942,
+      "p95_latency_s": 3.3949923568972737,
+      "committed_tok_per_s": 117.43010587090247,
+      "mean_first_delivery_s": 0.10157752775012341,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.53933195845712,
+      "draft_acceptance_rate": 0.428294752374804,
+      "mean_cache_hit_rate": 0.7775914025776212,
+      "mean_wait_s": 0.47049914977166435,
+      "mean_final_drain_s": 0.002371433478401741,
+      "mean_publication_wall_s": 0.0003141462885732731,
+      "mean_interrupt_drain_s": 0.0029909935600387345,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 3098
+      },
+      "accepted_draft_tokens": 9288,
+      "verified_draft_tokens": 21686,
+      "max_target_allocated_bytes": 37681303040,
+      "max_target_reserved_bytes": 37820039168,
+      "max_draft_allocated_bytes": 33436000768,
+      "max_draft_reserved_bytes": 33573306368,
+      "output_lengths": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 16,
+          "mean_latency_s": 2.264095770255153,
+          "p50_latency_s": 2.418779955507489,
+          "p95_latency_s": 3.1168290935020195,
+          "committed_tok_per_s": 113.0694219578662,
+          "mean_first_delivery_s": 0.09594237263081595,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.327921754939416,
+          "draft_acceptance_rate": 0.4001054296257248,
+          "mean_cache_hit_rate": 0.740352834444143
+        },
+        "code": {
+          "requests": 16,
+          "mean_latency_s": 1.3021939389964245,
+          "p50_latency_s": 1.2956058484996902,
+          "p95_latency_s": 1.6130089397411211,
+          "committed_tok_per_s": 196.59130052263507,
+          "mean_first_delivery_s": 0.0824994889953814,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 6.133486701238673,
+          "draft_acceptance_rate": 0.7201166180758017,
+          "mean_cache_hit_rate": 0.9125903097067158
+        },
+        "doc": {
+          "requests": 16,
+          "mean_latency_s": 2.973770817001423,
+          "p50_latency_s": 2.8824253490020055,
+          "p95_latency_s": 3.7723330030057696,
+          "committed_tok_per_s": 86.08598838095246,
+          "mean_first_delivery_s": 0.12629072162417287,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.156587419193274,
+          "draft_acceptance_rate": 0.3005593803786575,
+          "mean_cache_hit_rate": 0.6798310635820047
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "p4",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4
+      },
+      "gpu_count": 2,
+      "requests": 48,
+      "mean_latency_s": 2.158544955793938,
+      "p50_latency_s": 2.234502415492898,
+      "p95_latency_s": 3.487078582163667,
+      "committed_tok_per_s": 118.59841015256512,
+      "mean_first_delivery_s": 0.09639001249949312,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.53933195845712,
+      "draft_acceptance_rate": 0.428294752374804,
+      "mean_cache_hit_rate": 0.7775914025776212,
+      "mean_wait_s": 0.44710332283284515,
+      "mean_final_drain_s": 0.0021638868947775336,
+      "mean_publication_wall_s": 0.00031425680277598453,
+      "mean_interrupt_drain_s": 0.002946650522595223,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 3098
+      },
+      "accepted_draft_tokens": 9288,
+      "verified_draft_tokens": 21686,
+      "max_target_allocated_bytes": 37681303040,
+      "max_target_reserved_bytes": 37820039168,
+      "max_draft_allocated_bytes": 33436000768,
+      "max_draft_reserved_bytes": 33573306368,
+      "output_lengths": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 16,
+          "mean_latency_s": 2.229100989567087,
+          "p50_latency_s": 2.4016003945143893,
+          "p95_latency_s": 3.0931506125052692,
+          "committed_tok_per_s": 114.8445051158125,
+          "mean_first_delivery_s": 0.07796248731392552,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.327921754939416,
+          "draft_acceptance_rate": 0.4001054296257248,
+          "mean_cache_hit_rate": 0.740352834444143
+        },
+        "code": {
+          "requests": 16,
+          "mean_latency_s": 1.2920089875642589,
+          "p50_latency_s": 1.2851704445056384,
+          "p95_latency_s": 1.6040160942502553,
+          "committed_tok_per_s": 198.14103652840703,
+          "mean_first_delivery_s": 0.08248688949970528,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 6.133486701238673,
+          "draft_acceptance_rate": 0.7201166180758017,
+          "mean_cache_hit_rate": 0.9125903097067158
+        },
+        "doc": {
+          "requests": 16,
+          "mean_latency_s": 2.954524890250468,
+          "p50_latency_s": 2.8602510840137256,
+          "p95_latency_s": 3.7500486485078,
+          "committed_tok_per_s": 86.64675692689723,
+          "mean_first_delivery_s": 0.12872066068484855,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.156587419193274,
+          "draft_acceptance_rate": 0.3005593803786575,
+          "mean_cache_hit_rate": 0.6798310635820047
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "p7",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7
+      },
+      "gpu_count": 2,
+      "requests": 48,
+      "mean_latency_s": 2.139280371645024,
+      "p50_latency_s": 2.2107064285082743,
+      "p95_latency_s": 3.480275074088422,
+      "committed_tok_per_s": 119.6664090378887,
+      "mean_first_delivery_s": 0.09705627462547757,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.53933195845712,
+      "draft_acceptance_rate": 0.428294752374804,
+      "mean_cache_hit_rate": 0.7775914025776212,
+      "mean_wait_s": 0.42779295162836206,
+      "mean_final_drain_s": 0.00181179472868583,
+      "mean_publication_wall_s": 0.00031434111136216915,
+      "mean_interrupt_drain_s": 0.0028377910116204005,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 3098
+      },
+      "accepted_draft_tokens": 9288,
+      "verified_draft_tokens": 21686,
+      "max_target_allocated_bytes": 37681303040,
+      "max_target_reserved_bytes": 37820039168,
+      "max_draft_allocated_bytes": 33436000768,
+      "max_draft_reserved_bytes": 33573306368,
+      "output_lengths": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 16,
+          "mean_latency_s": 2.208124558746931,
+          "p50_latency_s": 2.3769624259875854,
+          "p95_latency_s": 3.06540211301035,
+          "committed_tok_per_s": 115.93548877753307,
+          "mean_first_delivery_s": 0.07804004943864129,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.327921754939416,
+          "draft_acceptance_rate": 0.4001054296257248,
+          "mean_cache_hit_rate": 0.740352834444143
+        },
+        "code": {
+          "requests": 16,
+          "mean_latency_s": 1.2789422941859812,
+          "p50_latency_s": 1.2742676144989673,
+          "p95_latency_s": 1.5865387325029587,
+          "committed_tok_per_s": 200.16540321151737,
+          "mean_first_delivery_s": 0.08242228074777813,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 6.133486701238673,
+          "draft_acceptance_rate": 0.7201166180758017,
+          "mean_cache_hit_rate": 0.9125903097067158
+        },
+        "doc": {
+          "requests": 16,
+          "mean_latency_s": 2.93077426200216,
+          "p50_latency_s": 2.8331556810007896,
+          "p95_latency_s": 3.7168173967511393,
+          "committed_tok_per_s": 87.34893141347347,
+          "mean_first_delivery_s": 0.1307064936900133,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.156587419193274,
+          "draft_acceptance_rate": 0.3005593803786575,
+          "mean_cache_hit_rate": 0.6798310635820047
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "HumanEval/50",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p4",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p7",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p1",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-152",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-117",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-158",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-253",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/54",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-131",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/50",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/94",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-270",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/71",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/67",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-133",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-260",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-109",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/68",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-147",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/97",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-110",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-315",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-505",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-255",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-556",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/146",
+      "round": 1,
+      "protocol": "fixed",
+      "config": "p2",
+      "exact": true,
+      "first_difference": null
+    }
+  ],
+  "correctness_passed": true,
+  "exact_matches": 240,
+  "repeatability": {
+    "fixed/complete": true,
+    "fixed/p1": true,
+    "fixed/p2": true,
+    "fixed/p4": true,
+    "fixed/p7": true
+  },
+  "paired_intervals": {},
+  "performance_evidence": false,
+  "limitations": [
+    "Exactness is against shared-fixed16-v1 AR, not original historical AR.",
+    "Profiled and synthetic boundary timings are diagnostic only.",
+    "Target graph retains padded K+1 work; all final draft draining is included.",
+    "Publication wall time includes outstanding GPU completion in complete-cache SSD."
+  ]
+}

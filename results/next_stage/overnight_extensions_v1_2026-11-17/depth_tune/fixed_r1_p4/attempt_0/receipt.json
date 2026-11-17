@@ -1,0 +1,25 @@
+{
+  "valid": true,
+  "definition_sha256": "bd2547aaf301a1fcce89b0c74cca9d49203943451202bbaceca8e978a8b7a2ff",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_overnight_extensions.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v1_2026-11-17",
+    "--phase",
+    "depth_tune",
+    "--job",
+    "fixed_r1_p4",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v1_2026-11-17/depth_tune/fixed_r1_p4/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 67,
+  "external_processes": [],
+  "error": null,
+  "output_sha256": "67fc6ce072ee6aa8cc67c6b8ee654442c05ee9f494b760b4f699bedf4e9a31b9",
+  "artifacts": {},
+  "at": "2026-11-17T01:01:55.296501+00:00"
+}

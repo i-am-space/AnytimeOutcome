@@ -1,0 +1,9 @@
+{
+  "requested_at_unix": 1792648429.5102727,
+  "deadline_unix": 1792655629.5102727,
+  "budget_seconds": 7200,
+  "scope": "all frozen tuning evidence; fixed-256 held-out only; all 75 prompts and 5 repeats per method",
+  "natural_eos": "deferred",
+  "takeover_watcher_pid": 3755600,
+  "current_block_receipt": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/raw/heldout/fixed/r0/ar.receipt.json"
+}

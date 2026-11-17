@@ -1,0 +1,75 @@
+{
+  "queue_sha256": "d6084826173041921df34c029bcb824396582b4672e8a62e365bbd79a8435aea",
+  "tuning_definition_sha256": "bd2547aaf301a1fcce89b0c74cca9d49203943451202bbaceca8e978a8b7a2ff",
+  "winner_p": 7,
+  "k": 7,
+  "f": 3,
+  "scores": [
+    {
+      "config": {
+        "label": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0
+      },
+      "mean_latency_s": 2.1212088607711244,
+      "requests": 48
+    },
+    {
+      "config": {
+        "label": "p1",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 1
+      },
+      "mean_latency_s": 2.1899592022479433,
+      "requests": 48
+    },
+    {
+      "config": {
+        "label": "p2",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2
+      },
+      "mean_latency_s": 2.180020175417667,
+      "requests": 48
+    },
+    {
+      "config": {
+        "label": "p4",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4
+      },
+      "mean_latency_s": 2.158544955793938,
+      "requests": 48
+    },
+    {
+      "config": {
+        "label": "p7",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7
+      },
+      "mean_latency_s": 2.139280371645024,
+      "requests": 48
+    }
+  ],
+  "selection_rule": {
+    "grid_rule": "sorted unique {1,2,4,K}, plus complete-cache P=0 control",
+    "repetitions": 2,
+    "protocol": "fixed",
+    "objective": "lowest balanced mean full-request latency among P>0",
+    "exact_tie_rule": "smaller P",
+    "selection_data": "24 tuning prompts only; no held-out results"
+  },
+  "tuning_speed_ratio": 0.991552528077466,
+  "scope": "Selection on tuning only; this ratio is not held-out performance evidence",
+  "sha256": "e059a51f3120d4faa3f345adb1d395efe82e11a048773e395bc4d962d96fe836"
+}

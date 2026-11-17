@@ -1,0 +1,88 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.77it/s]Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.17it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:00,  2.03it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.78it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.65it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.83it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 569, 256, 8, 128])
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|          | 0/1 [00:00<?, ?it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.50it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.50it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 187, 256, 8, 128])
+Draft runner created on rank 0 (no async)
+[LLMEngine] finished llm_engine init
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=54 recovery=95456
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=124 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1014 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=141 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=703 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=653 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=626 recovery=48452
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=743 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=461 recovery=28084
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=147 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=125 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=74 recovery=4498
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=327 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=64 recovery=1249
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=920 recovery=9485
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=368 recovery=41298
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=238 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=135 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=770 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=339 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=103 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=184 recovery=58
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=152 recovery=1249
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1355 recovery=334
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=27 recovery=50
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=32 recovery=1654
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=26 recovery=785
+{
+  "mode": "sd",
+  "k": 6,
+  "f": null,
+  "backup": null,
+  "output_len": 256,
+  "n_requests": 24,
+  "mean_latency_s": 2.947950954529612,
+  "committed_tok_per_s": 86.83997934451676,
+  "decode_tok_per_s": 88.8972490466156,
+  "mean_tokens_per_step": 4.214888812184761,
+  "mean_step_ms": 42.53002189580917,
+  "gpu": "NVIDIA L40S"
+}
+[LLMEngine] Exiting (hard=True)

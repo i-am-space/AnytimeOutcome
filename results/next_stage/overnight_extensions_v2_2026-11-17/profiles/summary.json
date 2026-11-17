@@ -1,0 +1,306 @@
+{
+  "queue_sha256": "afa5ea552fca685df1e3ee8af475245170b46ba8a04ef8e769e7e7e1c1ee61ae",
+  "definition_sha256": "237c292d43a2a829beced26592b5d3925f6040a4f1cf1d987b51a021a993b600",
+  "phase": "profiles",
+  "valid_blocks": 3,
+  "requests": 9,
+  "statistics": [
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "ar",
+        "mode": "ar",
+        "k": 7,
+        "f": 3,
+        "p": 0
+      },
+      "gpu_count": 1,
+      "requests": 3,
+      "mean_latency_s": 6.800994668330532,
+      "p50_latency_s": 6.780743711045943,
+      "p95_latency_s": 6.839268040674506,
+      "committed_tok_per_s": 37.64155281463283,
+      "mean_first_delivery_s": 0.04627453099237755,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 1.0,
+      "draft_acceptance_rate": null,
+      "mean_cache_hit_rate": null,
+      "mean_wait_s": 0.0,
+      "mean_final_drain_s": 0.0,
+      "mean_publication_wall_s": null,
+      "mean_interrupt_drain_s": null,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {},
+      "accepted_draft_tokens": 0,
+      "verified_draft_tokens": 0,
+      "max_target_allocated_bytes": 37975555072,
+      "max_target_reserved_bytes": 38105251840,
+      "max_draft_allocated_bytes": 0,
+      "max_draft_reserved_bytes": 0,
+      "output_lengths": [
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 6.780743711045943,
+          "p50_latency_s": 6.780743711045943,
+          "p95_latency_s": 6.780743711045943,
+          "committed_tok_per_s": 37.75397078980758,
+          "mean_first_delivery_s": 0.03424793703015894,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 6.776469549979083,
+          "p50_latency_s": 6.776469549979083,
+          "p95_latency_s": 6.776469549979083,
+          "committed_tok_per_s": 37.77778356589682,
+          "mean_first_delivery_s": 0.0395636489847675,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 6.845770743966568,
+          "p50_latency_s": 6.845770743966568,
+          "p95_latency_s": 6.845770743966568,
+          "committed_tok_per_s": 37.39535102393288,
+          "mean_first_delivery_s": 0.06501200696220621,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0
+      },
+      "gpu_count": 2,
+      "requests": 3,
+      "mean_latency_s": 2.735597784689162,
+      "p50_latency_s": 2.6518935000058264,
+      "p95_latency_s": 3.9043042698234784,
+      "committed_tok_per_s": 93.58100866757667,
+      "mean_first_delivery_s": 0.09913120500277728,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.139625852690148,
+      "draft_acceptance_rate": 0.38639455782312926,
+      "mean_cache_hit_rate": 0.7801706071199915,
+      "mean_wait_s": 0.7016236670509292,
+      "mean_final_drain_s": 0.00019720301497727633,
+      "mean_publication_wall_s": 0.0029981746619047616,
+      "mean_interrupt_drain_s": 0.0,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 210
+      },
+      "accepted_draft_tokens": 568,
+      "verified_draft_tokens": 1470,
+      "max_target_allocated_bytes": 37600270336,
+      "max_target_reserved_bytes": 37752930304,
+      "max_draft_allocated_bytes": 33418342400,
+      "max_draft_reserved_bytes": 33569112064,
+      "output_lengths": [
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 4.04346102202544,
+          "p50_latency_s": 4.04346102202544,
+          "p95_latency_s": 4.04346102202544,
+          "committed_tok_per_s": 63.31209787989131,
+          "mean_first_delivery_s": 0.0858015029807575,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 2.6565656565656566,
+          "draft_acceptance_rate": 0.23665223665223664,
+          "mean_cache_hit_rate": 0.6161616161616161
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 1.5114388320362195,
+          "p50_latency_s": 1.5114388320362195,
+          "p95_latency_s": 1.5114388320362195,
+          "committed_tok_per_s": 169.37503164128398,
+          "mean_first_delivery_s": 0.09282384504331276,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 5.953488372093023,
+          "draft_acceptance_rate": 0.707641196013289,
+          "mean_cache_hit_rate": 0.9302325581395349
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 2.6518935000058264,
+          "p50_latency_s": 2.6518935000058264,
+          "p95_latency_s": 2.6518935000058264,
+          "committed_tok_per_s": 96.53479674030558,
+          "mean_first_delivery_s": 0.11876826698426157,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.8088235294117645,
+          "draft_acceptance_rate": 0.4012605042016807,
+          "mean_cache_hit_rate": 0.7941176470588235
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "early",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7
+      },
+      "gpu_count": 2,
+      "requests": 3,
+      "mean_latency_s": 2.793903010994351,
+      "p50_latency_s": 2.714113803987857,
+      "p95_latency_s": 4.0003522933053315,
+      "committed_tok_per_s": 91.62809123745835,
+      "mean_first_delivery_s": 0.1035532303309689,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 4.139625852690148,
+      "draft_acceptance_rate": 0.38639455782312926,
+      "mean_cache_hit_rate": 0.7801706071199915,
+      "mean_wait_s": 0.7579971105248356,
+      "mean_final_drain_s": 0.006034171984841426,
+      "mean_publication_wall_s": 0.00044663535714285714,
+      "mean_interrupt_drain_s": 0.0028662009476190476,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {
+        "7": 210
+      },
+      "accepted_draft_tokens": 568,
+      "verified_draft_tokens": 1470,
+      "max_target_allocated_bytes": 37600270336,
+      "max_target_reserved_bytes": 37752930304,
+      "max_draft_allocated_bytes": 33422585344,
+      "max_draft_reserved_bytes": 33569112064,
+      "output_lengths": [
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 4.1432676810072735,
+          "p50_latency_s": 4.1432676810072735,
+          "p95_latency_s": 4.1432676810072735,
+          "committed_tok_per_s": 61.786980641753665,
+          "mean_first_delivery_s": 0.08555133198387921,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 2.6565656565656566,
+          "draft_acceptance_rate": 0.23665223665223664,
+          "mean_cache_hit_rate": 0.6161616161616161
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 1.524327547987923,
+          "p50_latency_s": 1.524327547987923,
+          "p95_latency_s": 1.524327547987923,
+          "committed_tok_per_s": 167.9429072432064,
+          "mean_first_delivery_s": 0.10618772503221408,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 5.953488372093023,
+          "draft_acceptance_rate": 0.707641196013289,
+          "mean_cache_hit_rate": 0.9302325581395349
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 2.714113803987857,
+          "p50_latency_s": 2.714113803987857,
+          "p95_latency_s": 2.714113803987857,
+          "committed_tok_per_s": 94.32176337773984,
+          "mean_first_delivery_s": 0.1189206339768134,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.8088235294117645,
+          "draft_acceptance_rate": 0.4012605042016807,
+          "mean_cache_hit_rate": 0.7941176470588235
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "HumanEval/36",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "early",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-148",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "early",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "early",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/36",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-148",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "complete",
+      "exact": true,
+      "first_difference": null
+    }
+  ],
+  "correctness_passed": true,
+  "exact_matches": 6,
+  "repeatability": {
+    "fixed/ar": true,
+    "fixed/complete": true,
+    "fixed/early": true
+  },
+  "paired_intervals": {},
+  "performance_evidence": false,
+  "limitations": [
+    "Exactness is against shared-fixed16-v1 AR, not original historical AR.",
+    "Profiled and synthetic boundary timings are diagnostic only.",
+    "Target graph retains padded K+1 work; all final draft draining is included.",
+    "Publication wall time includes outstanding GPU completion in complete-cache SSD."
+  ]
+}

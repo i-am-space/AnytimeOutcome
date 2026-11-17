@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "definition_sha256": "8af38a6545077651ba1c4b77155cf1d0c7830fda3b2f0c487b3b3d54751101cc",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_prefix_publication.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/prefix_overlap_v1_2026-11-17",
+    "--phase",
+    "stress",
+    "--job",
+    "natural_r0_overlap_k10",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/prefix_overlap_v1_2026-11-17/stress/natural_r0_overlap_k10/attempt_0",
+    "--stress-worker"
+  ],
+  "returncode": 0,
+  "samples": 41,
+  "external_processes": [],
+  "shared_correctness": true,
+  "performance_evidence": false,
+  "error": null,
+  "run_token": "e93dcd74d182426e84efd9e184cbf815",
+  "at": "2026-11-17T14:09:00.113994+00:00",
+  "output_sha256": "0cf7fbf574f53daf37d51e5ec4a414f4c6c0eb24999b2c1d5a7a4782d49cfe97"
+}

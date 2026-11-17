@@ -1,0 +1,352 @@
+{
+  "valid": true,
+  "error": null,
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/tmp/anytime-archived-engine-3n7lnpsr/profiling/run_engine.py",
+    "--mode",
+    "sd",
+    "--n",
+    "1",
+    "--warmup",
+    "3",
+    "--output_len",
+    "256",
+    "--gpu_mem_util",
+    "0.70",
+    "--target",
+    "/scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local",
+    "--draft",
+    "/scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+    "--out",
+    "/home/vishalrao/AnytimeOutcome/results/correctness/archived_68df65e_2026-11-16/sd.json"
+  ],
+  "admission_memory_free_mib": {
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de": 45456,
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd": 45458
+  },
+  "samples": [
+    {
+      "at": "2026-11-16T19:06:15.964982+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:06:16.997269+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:06:18.321153+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:06:19.667178+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:06:20.701078+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:06:21.729782+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:22.762063+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:23.789618+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:24.958913+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:26.297259+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:27.328144+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:28.358271+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:29.389744+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:30.420261+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:31.659326+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:32.967142+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:33.999314+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:35.027148+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:36.058676+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:37.331125+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:38.862178+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:39.896102+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:40.926431+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:41.960340+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:43.451018+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:44.953256+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:45.992092+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:47.024255+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:48.055114+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:49.545568+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:51.075703+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:52.581909+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:53.622259+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:54.654078+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "/home/vishalrao/miniconda3/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:06:55.683014+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+          "pid": 1827961,
+          "name": "[No data]"
+        }
+      ]
+    }
+  ],
+  "shared_correctness_only": true
+}

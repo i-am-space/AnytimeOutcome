@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "definition_sha256": "197f7b862ff06347153e867ceddd0dbfcc3d7dc8e10532c293fee22192af6bff",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_prefix_publication.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/prefix_overlap_v1_2026-11-17",
+    "--phase",
+    "correctness",
+    "--job",
+    "natural_r0_uniform_k10",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/prefix_overlap_v1_2026-11-17/correctness/natural_r0_uniform_k10/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 40,
+  "external_processes": [
+    {
+      "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+      "pid": 2545483,
+      "name": ".venv/bin/python"
+    }
+  ],
+  "shared_correctness": true,
+  "performance_evidence": false,
+  "error": null,
+  "run_token": "6c3a0f29c7104bd3ad0ee26513f7a20d",
+  "at": "2026-11-17T14:00:55.808575+00:00",
+  "output_sha256": "de43707fd536682106a73f9a0bb03c3c7d3264defdb651bb25b6a9d845ef701f"
+}

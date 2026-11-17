@@ -1,0 +1,53 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:01,  3.15it/s]Loading model files:  40%|████      | 2/5 [00:01<00:01,  1.74it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.73it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.59it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.54it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.64it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 81, 256, 8, 128])
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|          | 0/1 [00:00<?, ?it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.22it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  3.21it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 89, 256, 8, 128])
+Draft runner created on rank 0 (no async)
+[LLMEngine] finished llm_engine init
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=64 recovery=1249
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=26 recovery=785
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=27 recovery=50
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=48 recovery=20470
+natural sd: specbench-148 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=96 recovery=8420
+natural sd: HumanEval/36 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=631 recovery=334
+natural sd: specbench-553 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=64 recovery=1249
+natural sd: specbench-109 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=26 recovery=785
+natural sd: specbench-152 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=141 recovery=8420
+natural sd: HumanEval/146 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=238 recovery=8420
+natural sd: HumanEval/67 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=653 recovery=785
+natural sd: specbench-496 complete
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1355 recovery=334
+natural sd: specbench-253 complete
+[LLMEngine] Exiting (hard=True)

@@ -111,6 +111,8 @@ def validate_manifest(manifest):
         raise ValueError('Manifest hash mismatch')
     if manifest['spec'] != SPEC:
         raise ValueError('Campaign protocol differs from the declared Evaluation 1 protocol')
+    if manifest.get('target_numerics', 'batched') not in ('batched', 'shared_fixed16'):
+        raise ValueError('Unsupported baseline numerical contract')
     seen = set()
     for split, per_family in [('tune', 8), ('heldout', 25), ('warmup', 1)]:
         rows = manifest['splits'][split]
@@ -171,6 +173,9 @@ def make_job(manifest, phase, config, repeat, protocol, selection_sha=None):
                 manifest_sha256=manifest['manifest_sha256'], execution_sha256=manifest['execution']['sha256'],
                 selection_sha256=selection_sha,
                 prompt_ids=[r['id'] for r in ordered_prompts(manifest, split, seed)])
+    if 'target_numerics' in manifest:
+        body['target_numerics'] = manifest['target_numerics']
+        body['drain_draft_on_finish'] = manifest.get('drain_draft_on_finish', False)
     body['id'] = f'{phase}/{protocol}/r{repeat}/{config_id(config)}'
     return dict(body, job_sha256=digest(body))
 
@@ -201,6 +206,9 @@ def worker_settings(job):
                     disable_prefix_cache=True, gpu_mem_util=0.7, draft_gpu_mem_util=0.7,
                     backup='jit', output_len=256, max_model_len=4096, max_prompt_tokens=2048,
                     warmup=3,order_seed=job['order_seed'],ignore_eos=job['protocol']=='fixed')
+    if 'target_numerics' in job:
+        expected['target_numerics'] = job['target_numerics']
+        expected['drain_draft_on_finish'] = job['drain_draft_on_finish'] and job['config']['mode']=='ssd'
     if job['config']['mode']!='ar':
         expected['k']=job['config']['k']
     if job['config']['mode']=='ssd':

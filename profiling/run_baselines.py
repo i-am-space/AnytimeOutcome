@@ -101,7 +101,7 @@ def validated_selection(folder, manifest):
     return selection
 
 
-def prepare(folder, target, draft):
+def prepare(folder, target, draft, target_numerics='batched'):
     from transformers import AutoTokenizer
     from workloads import get_prompts
     if not target or not draft:
@@ -111,6 +111,12 @@ def prepare(folder, target, draft):
     tokenizer=AutoTokenizer.from_pretrained(models['target']['path'],local_files_only=True)
     manifest=make_manifest(tokenizer,models,execution_fingerprint(),software_fingerprint(),
                            gpu_inventory(),get_prompts)
+    if target_numerics != 'batched':
+        from baseline_common import seal_manifest
+        manifest = seal_manifest({k:v for k,v in manifest.items() if k != 'manifest_sha256'} |
+            dict(schema_version=2, target_numerics=target_numerics, drain_draft_on_finish=True,
+                 reference_contract='shared-fixed16-v1; new AR arithmetic; original AR is a separate control'))
+        validate_manifest(manifest)
     freeze_json(folder/'manifest.json',manifest)
     freeze_json(folder/'tuning_jobs.json',tuning_jobs(manifest))
     atomic_json(folder/'status.json',dict(status='prepared',at=now(),tuning_blocks=20,
@@ -156,6 +162,10 @@ def worker_command(folder, manifest, job, job_path, output):
          '--output_len','256','--max_prompt_tokens','2048','--max_model_len','4096',
          '--warmup','3','--gpu_mem_util','0.70','--draft_gpu_mem_util','0.70',
          '--backup','jit','--disable-prefix-cache','--out',str(output)]
+    if 'target_numerics' in manifest:
+        cmd += ['--target-numerics', manifest['target_numerics']]
+        if manifest.get('drain_draft_on_finish') and cfg['mode']=='ssd':
+            cmd += ['--drain-draft-on-finish']
     if cfg['k'] is not None:
         cmd+=['--k',str(cfg['k'])]
     if cfg['f'] is not None:
@@ -252,6 +262,7 @@ def main():
     parser.add_argument('--outdir',type=Path,default=ROOT/'results/baselines/eval1')
     parser.add_argument('--target',default=os.environ.get('SSD_TARGET_MODEL'))
     parser.add_argument('--draft',default=os.environ.get('SSD_DRAFT_MODEL'))
+    parser.add_argument('--target-numerics',choices=['batched','shared_fixed16'],default='batched')
     parser.add_argument('--resume',action='store_true')
     args=parser.parse_args()
     if args.phase=='held-out':
@@ -270,7 +281,7 @@ def main():
             if not (folder/'manifest.json').exists():
                 if args.phase not in ('prepare','all'):
                     raise ValueError('Prepare the campaign first')
-                manifest=prepare(folder,args.target,args.draft)
+                manifest=prepare(folder,args.target,args.draft,args.target_numerics)
             else:
                 manifest=load_campaign(folder)
             freeze_json(folder/'tuning_jobs.json',tuning_jobs(manifest))

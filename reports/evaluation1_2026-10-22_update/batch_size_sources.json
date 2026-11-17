@@ -1,0 +1,26 @@
+[
+  {
+    "id": "L01",
+    "title": "Original SD",
+    "url": "https://proceedings.mlr.press/v202/leviathan23a/leviathan23a.pdf",
+    "verified_claim": "Latency experiment batch size 1 on one TPU-v4, Section 4.1."
+  },
+  {
+    "id": "L02",
+    "title": "SSD",
+    "url": "https://arxiv.org/html/2603.03251v1",
+    "verified_claim": "Appendix B.2 uses one concurrent request for baselines unless specified otherwise; Figure 1 latency example batch size 1."
+  },
+  {
+    "id": "L03",
+    "title": "EAGLE-3 v1",
+    "url": "https://arxiv.org/html/2503.01840v1",
+    "verified_claim": "Latency discussed at batch 1; throughput Table 3 sweeps 2,4,8,16,24,32,48,56 in vLLM."
+  },
+  {
+    "id": "L04",
+    "title": "SwiftSpec v1",
+    "url": "https://arxiv.org/html/2506.11309v1",
+    "verified_claim": "Single-query latency focus. bs=8 target nodes and w=8 draft leaves are internal speculative batches, Sections 3.1 and 5.5."
+  }
+]

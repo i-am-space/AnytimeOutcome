@@ -1,0 +1,31 @@
+{
+  "valid": false,
+  "diagnostic_valid": true,
+  "valid_for_dedicated_campaign": false,
+  "scope": "GPU0 exclusive; unrelated GPU1 compute explicitly allowed by user",
+  "job_sha256": "75074b96bd34a2b244032565d748c4ab7774fa7f30e283bfa479d0611cbe1fc6",
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "execution_sha256": "3f5ca1112ffdd8258141e1092ef3d156ff4a82d79b727b626a5b09542b29fad6",
+  "output_sha256": "72d4c53248d404c4217a140a8fa0c9db30e2c83ef5426e9d3108dfe1ea7543c7",
+  "returncode": 0,
+  "monitoring": {
+    "started_at": "2026-10-22T06:18:38.499636+00:00",
+    "samples": 228,
+    "gpu0_external": [],
+    "gpu1_process_changes": [
+      {
+        "at": "2026-10-22T06:18:38.532540+00:00",
+        "processes": [
+          {
+            "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+            "pid": 3803018,
+            "name": "python"
+          }
+        ]
+      }
+    ],
+    "error": null,
+    "finished_at": "2026-10-22T06:22:56.844293+00:00"
+  },
+  "error": null
+}

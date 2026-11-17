@@ -1,0 +1,57 @@
+{
+  "as_of_utc": "2026-11-17T08:18:30Z",
+  "completed": {
+    "baseline_tuning_requests": 480,
+    "baseline_heldout_requests": 2250,
+    "baseline_valid_blocks": 50,
+    "publication_pilot_requests": 270,
+    "depth_tuning_requests": 240
+  },
+  "baseline_fixed_256": {
+    "ar": {
+      "gpus": 1,
+      "mean_s": 6.271060411028021
+    },
+    "sd": {
+      "gpus": 1,
+      "mean_s": 3.1607081796159813,
+      "speed_ratio": 1.9840681438012224
+    },
+    "ssd": {
+      "gpus": 2,
+      "mean_s": 2.2083635103339327,
+      "speed_ratio": 2.839686664664984
+    }
+  },
+  "paired_sd_ssd_heldout_exact": {
+    "matches": 1500,
+    "total": 1500,
+    "reference": "shared-fixed16-v1 AR; not historical original AR"
+  },
+  "early_publication_pilot": {
+    "prompts": 9,
+    "rounds": 5,
+    "fixed_complete_s": 2.3201481064891496,
+    "fixed_early_p4_s": 2.3595593505758896,
+    "partial_handoffs_fixed": 0,
+    "partial_handoffs_natural": 2
+  },
+  "depth_tuning": {
+    "winner_p": 7,
+    "k": 7,
+    "complete_s": 2.1212088607711244,
+    "selected_p7_s": 2.139280371645024,
+    "scope": "tuning evidence only"
+  },
+  "remaining": {
+    "queue": "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17",
+    "tmux": "ao-overnight-extra-v2",
+    "phases": [
+      "profiles",
+      "correctness",
+      "heldout"
+    ]
+  },
+  "controller_issue": "Version 1 repeatedly invalidated its own profiler worker after Nsight changed its process group. Completed measurements remain valid. Version 2 uses an inherited per-run token and preserves pinned valid calibration.",
+  "controller_validation": "19 targeted tests passed; first corrected Nsight capture finished and analysis is running."
+}

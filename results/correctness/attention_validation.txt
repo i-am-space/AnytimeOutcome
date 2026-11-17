@@ -1,0 +1,26 @@
+ok   decode Hq=32 kv=[1]                                     max_abs_err=0.00e+00
+ok   decode Hq=32 kv=[17]                                    max_abs_err=3.74e-03
+ok   decode Hq=32 kv=[300]                                   max_abs_err=1.07e-03
+ok   decode Hq=32 kv=[1024]                                  max_abs_err=6.04e-04
+ok   decode Hq=32 kv=[4097]                                  max_abs_err=3.19e-04
+ok   decode Hq=32 kv=[5, 700, 2048]                          max_abs_err=7.56e-03
+ok   verify Hq=32 q=[8] kv=[8]                               max_abs_err=8.88e-03
+ok   verify Hq=32 q=[8] kv=[520]                             max_abs_err=9.59e-04
+ok   verify Hq=32 q=[8, 8] kv=[300, 1500]                    max_abs_err=1.20e-03
+ok   verify Hq=32 q=[3, 15, 1] kv=[40, 2000, 257]            max_abs_err=2.61e-03
+ok   prefill Hq=32 q=[37, 512]                               max_abs_err=9.30e-03
+ok   decode Hq=16 kv=[1]                                     max_abs_err=0.00e+00
+ok   decode Hq=16 kv=[17]                                    max_abs_err=4.30e-03
+ok   decode Hq=16 kv=[300]                                   max_abs_err=1.04e-03
+ok   decode Hq=16 kv=[1024]                                  max_abs_err=5.29e-04
+ok   decode Hq=16 kv=[4097]                                  max_abs_err=2.33e-04
+ok   decode Hq=16 kv=[5, 700, 2048]                          max_abs_err=6.47e-03
+ok   verify Hq=16 q=[8] kv=[8]                               max_abs_err=8.16e-03
+ok   verify Hq=16 q=[8] kv=[520]                             max_abs_err=1.03e-03
+ok   verify Hq=16 q=[8, 8] kv=[300, 1500]                    max_abs_err=1.55e-03
+ok   verify Hq=16 q=[3, 15, 1] kv=[40, 2000, 257]            max_abs_err=3.79e-03
+ok   prefill Hq=16 q=[37, 512]                               max_abs_err=8.00e-03
+ok   cuda-graph replay kv=100                                max_abs_err=2.00e-03
+ok   cuda-graph replay kv=1000                               max_abs_err=5.18e-04
+ok   cuda-graph replay kv=2048                               max_abs_err=3.06e-04
+all paged-attention tests passed

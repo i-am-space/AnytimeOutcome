@@ -1,0 +1,14 @@
+{
+  "valid": false,
+  "samples": 5,
+  "contamination": [
+    {
+      "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+      "pid": 1805500,
+      "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+    }
+  ],
+  "error": null,
+  "returncode": -15,
+  "at": "2026-11-16T18:37:50.917708+00:00"
+}

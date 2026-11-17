@@ -1,0 +1,470 @@
+{
+  "at": "2026-11-16T20:13:02.832166+00:00",
+  "definition_sha256": "99f6155ad56b82f327a676d6bac534fc333d2c9106d1011501dd0a4e0cea5ebb",
+  "passed": false,
+  "candidate_comparisons": 36,
+  "exact_matches": 36,
+  "paired_correctness_passed": true,
+  "historical_reference_passed": false,
+  "reference_contract": "shared-fixed16-v1; new AR arithmetic, original AR retained separately",
+  "original_ar_comparisons": [
+    {
+      "protocol": "fixed",
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "protocol": "fixed",
+      "id": "HumanEval/36",
+      "exact_match": false,
+      "first_difference": 181
+    },
+    {
+      "protocol": "fixed",
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 194
+    },
+    {
+      "protocol": "fixed",
+      "id": "specbench-109",
+      "exact_match": false,
+      "first_difference": 86
+    },
+    {
+      "protocol": "fixed",
+      "id": "specbench-152",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "protocol": "fixed",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "id": "HumanEval/67",
+      "exact_match": false,
+      "first_difference": 54
+    },
+    {
+      "protocol": "fixed",
+      "id": "specbench-496",
+      "exact_match": false,
+      "first_difference": 175
+    },
+    {
+      "protocol": "fixed",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "protocol": "natural",
+      "id": "HumanEval/36",
+      "exact_match": false,
+      "first_difference": 181
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 194
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-109",
+      "exact_match": false,
+      "first_difference": 86
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-152",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "protocol": "natural",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "id": "HumanEval/67",
+      "exact_match": false,
+      "first_difference": 54
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-496",
+      "exact_match": false,
+      "first_difference": 175
+    },
+    {
+      "protocol": "natural",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null
+    }
+  ],
+  "shared_gpu_correctness_only": true,
+  "reused_results": {},
+  "unchanged_ar_reference": [
+    {
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 170
+    }
+  ],
+  "comparisons": [
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 179,
+      "actual_length": 179
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 226,
+      "actual_length": 226
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 179,
+      "actual_length": 179
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 226,
+      "actual_length": 226
+    }
+  ],
+  "limitations": [
+    "Small deterministic greedy correctness gate; not a universal proof.",
+    "Not a completed performance campaign or an acceleration claim.",
+    "Original frozen fast-mode campaign is unchanged; it still has exact-output failures."
+  ]
+}

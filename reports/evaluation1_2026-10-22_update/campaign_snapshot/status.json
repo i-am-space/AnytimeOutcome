@@ -1,0 +1,17 @@
+{
+  "status": "waiting_for_gpus",
+  "at": "2026-10-22T06:23:40.733242+00:00",
+  "reason": "Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]",
+  "deadline_unix": 1792655629.5102727,
+  "scope": "fixed-256 only; 75 prompts and 5 repetitions; natural EOS deferred",
+  "valid_fixed_blocks": 2,
+  "required_fixed_blocks": 15,
+  "fixed_scored_requests": 150,
+  "completed": [
+    "heldout/fixed/r0/ssd_k7_f3",
+    "heldout/fixed/r0/ar"
+  ],
+  "full_campaign_complete": false,
+  "natural_eos": "deferred",
+  "tuning_requests": 480
+}

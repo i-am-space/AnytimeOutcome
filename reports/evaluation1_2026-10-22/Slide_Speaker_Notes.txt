@@ -1,0 +1,35 @@
+SLIDE 1
+Our question is whether safe incremental publication and unequal outcome depths reduce full-request latency compared with tuned complete-cache SSD and simple uniform early handoff. The contribution is not just running speculation. Ten main slides answer the experimental-plan question; the last two are backup evidence.
+
+SLIDE 2
+The actual trace shows 9.2 milliseconds of wait on cache hits, 30 milliseconds on misses, and depth five ready in 155 of 166 hit rounds. This motivates early publication but does not prove an eight-millisecond gain; acceptance loss and control/drain costs must be charged.
+
+SLIDE 3
+First establish tuned AR, SD, and complete SSD timing. Then add uniform early publication, unequal fixed depths, and adaptive scheduling. Include fixed and online global depth/fan-out, probability-first, and a SwiftSpec-inspired timing adaptation. Match GPU/candidate budgets within the SSD policy ladder.
+
+SLIDE 4
+Increasing K can increase acceptance but delays readiness. Increasing F covers more outcomes but uses more memory. More publication opportunities reduce waiting but add event/control/drain work. An adaptive scheduler must improve latency after including its own decision cost.
+
+SLIDE 5
+These comparisons isolate the contribution in stages. Hold candidate generation and rankings fixed initially. Uniform early publication is the key novelty comparator, not just ordinary speculative decoding. Safety checks remain enabled in every deployable policy.
+
+SLIDE 6
+Test readiness estimates on/off, fixed/online outcome statistics, and publication depth 1,2,4,8 clipped to available K. Measure real controller cost and compare to no-op invocation. An idealized zero-overhead policy is an upper bound, not a deployable result. Always charge obsolete in-flight work and stream interference.
+
+SLIDE 7
+All three fast SD/SSD prompts differ from AR, at zero-based indices 13,181,170. Same-history BF16 ties explain the immediate decisions. Attention-only replacement does not fix it. A slow synchronous numerical reference matches all 768 original AR tokens, but asynchronous SSD/natural EOS/full workload remain unvalidated. Tolerance is not a strict pass.
+
+SLIDE 8
+The grid has ten configurations: AR, three SD K values, six SSD K/F combinations. Each sees 24 tuning prompts twice: 480 measurements. Freeze minimum mean latency winners before held-out access. Test AR and frozen winners on 75 prompts five times under fixed256 and naturalEOS capped256:2250 measurements. Total 50 worker blocks and150warmups.
+
+SLIDE 9
+AR and SD use one GPU, SSD uses two. Within SSD policy comparisons hold two GPUs and candidate construction fixed. Disable prompt-prefix lookup, include both prefills, warm weights/kernels, keep profiler out of scored timing, shuffle/alternate order, pair prompt and round, report 10000-sample bootstrap intervals. Dedicated-window watcher kills only our contaminated block and retries after idle.
+
+SLIDE 10
+Run the frozen campaign, resolve strict correctness, implement safe uniform early handoff and the comparator ladder, then run one-component ablations. Broader final evaluation includes approximately100prompts per family, feasible512/2K/8Kinputs, naturalEOS output128/512 and3090replication. 8K requires increasing current4096capacity. Success is10percent lower full-request latency than strongest matched baseline, exact target tokens, and disclosed family regressions. If scheduler adds no value, retain simpler correct policy.
+
+SLIDE 11
+The descriptive throughput is44.0 AR,62.5 SD,80.6SSD tokens/second, with means5.82,4.09,3.18 seconds/request. Ratios1.42x and1.83x are illustrative only. No unprofiled repeated heldout timing exists yet, and outputs differ.
+
+SLIDE 12
+Target decode and verify are95percent memorybound; prefill is85percent computebound; drafter has29to37percent latencyboundkernel time. Measured roof211TFLOPS and747GB/s gives ridge283FLOP/byte. This motivates amortized verification and reducing draft waiting/host overhead, not assuming more target compute peak will solve it.

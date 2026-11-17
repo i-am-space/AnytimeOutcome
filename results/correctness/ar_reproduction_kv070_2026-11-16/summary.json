@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-16T19:02:52.438129+00:00",
+  "definition_sha256": "85155566961b0afdc3b27b1946aeeb725fda3ecb5eaa64891648ffce262fdf28",
+  "passed": false,
+  "candidate_comparisons": 0,
+  "exact_matches": 0,
+  "shared_gpu_correctness_only": true,
+  "reused_results": {},
+  "unchanged_ar_reference": [
+    {
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 170
+    }
+  ],
+  "comparisons": [],
+  "limitations": [
+    "Small deterministic greedy correctness gate; not a universal proof.",
+    "Not a completed performance campaign or an acceleration claim.",
+    "Original frozen fast-mode campaign is unchanged; it still has exact-output failures."
+  ]
+}

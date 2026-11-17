@@ -1,0 +1,50 @@
+[
+  {
+    "id": "boundary-specbench-148-2048",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "specbench-148",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "boundary-specbench-496-2048",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "HumanEval/36",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "boundary-HumanEval/36-2048",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "specbench-496",
+    "round": 0,
+    "protocol": "natural",
+    "config": "bounded_k10",
+    "exact": true,
+    "first_difference": null
+  }
+]

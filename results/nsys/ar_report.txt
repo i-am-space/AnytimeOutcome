@@ -1,0 +1,42 @@
+
+===== ar  timed window 17468.9 ms =====
+
+GPU0: busy 94.3%  (16479.7 ms busy / 989.2 ms idle), 413778 kernels (23.7/ms)
+  GPU time by category:
+    gemv (cuBLAS)                       15886.71 ms   96.4% of busy
+    rmsnorm/rope/silu (fused Triton)      251.44 ms    1.5% of busy
+    attention (paged, Triton)             161.32 ms    1.0% of busy
+    gemm (tensor core)                     90.53 ms    0.5% of busy
+    kv-cache store                         30.35 ms    0.2% of busy
+    sampling/argmax                        28.01 ms    0.2% of busy
+    other elementwise                      15.36 ms    0.1% of busy
+    memcpy/memset                           9.72 ms    0.1% of busy
+    reductions (argmax etc.)                4.81 ms    0.0% of busy
+    attention (prefill SDPA)                1.47 ms    0.0% of busy
+  GPU time by launching phase:
+    AR/decode                           16376.87 ms
+    AR/prefill                            102.84 ms
+  Idle time by open phase:
+    AR/decode                             667.70 ms
+    AR/prefill                            257.27 ms
+    engine/step                            55.72 ms
+    (none)                                  3.78 ms
+    request:HumanEval/36                    1.74 ms
+    request:specbench-553                   1.52 ms
+    request:specbench-148                   1.46 ms
+  Idle gap histogram: {'0.1-1ms': '808x/363.0ms', '20-100us': '6266x/206.2ms', '<5us': '395965x/32.8ms', '5-20us': '10014x/113.7ms', '>1ms': '15x/273.5ms'}
+
+NVTX phases (CPU wall):
+  timed_region                       n=    1 total= 17468.85 ms mean=17468.855 ms
+  engine/step                        n=  768 total= 17462.96 ms mean=  22.738 ms
+  AR/decode                          n=  765 total= 17085.84 ms mean=  22.334 ms
+  AR/prefill                         n=    3 total=   360.46 ms mean= 120.154 ms
+
+GPU0 hardware counters (sampled 20 kHz): sm_active_pct=89.5, sm_issue_pct=6.4, tensor_active_pct=0.3, dram_read_pct=87.7, dram_write_pct=0.4, pcie_rx_pct=0.4, pcie_tx_pct=1.0
+  AR/decode                          sm_active_pct= 91.0  sm_issue_pct=  6.5  tensor_active_pct=  0.1  dram_read_pct= 89.3  dram_write_pct=  0.4  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=341711)
+  AR/prefill                         sm_active_pct= 23.1  sm_issue_pct=  2.2  tensor_active_pct= 12.6  dram_read_pct= 18.9  dram_write_pct=  1.7  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=7209)
+  engine/step                        sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.6  pcie_tx_pct=  1.0  (n=344)
+  (none)                             sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=58)
+  request:HumanEval/36               sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.6  dram_write_pct=  0.1  pcie_rx_pct=  0.8  pcie_tx_pct=  1.0  (n=20)
+
+GPU1 hardware counters (sampled 20 kHz): sm_active_pct=0.0, sm_issue_pct=0.0, tensor_active_pct=0.0, dram_read_pct=0.0, dram_write_pct=0.0, pcie_rx_pct=0.1, pcie_tx_pct=1.9

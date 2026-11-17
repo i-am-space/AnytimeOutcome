@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-16T19:06:57.030517+00:00",
+  "commit": "68df65e684e14fb22e86f8dfca00a5620737aac5",
+  "exact_frozen_execution_match": true,
+  "shared_correctness_only": true,
+  "comparisons": [
+    {
+      "id": "specbench-148",
+      "ar_matches_historical": false,
+      "ar_first_difference": 12,
+      "sd_matches_ar": false,
+      "sd_first_difference": 12
+    },
+    {
+      "id": "HumanEval/36",
+      "ar_matches_historical": true,
+      "ar_first_difference": null,
+      "sd_matches_ar": false,
+      "sd_first_difference": 181
+    },
+    {
+      "id": "specbench-553",
+      "ar_matches_historical": false,
+      "ar_first_difference": 170,
+      "sd_matches_ar": false,
+      "sd_first_difference": 194
+    }
+  ]
+}

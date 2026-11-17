@@ -13,10 +13,11 @@
     "rmsnorm/rope/silu (fused Triton)": 251.437255,
     "attention (paged, Triton)": 161.322603,
     "gemm (tensor core)": 90.525845,
-    "sampling/argmax": 32.814291,
     "kv-cache store": 30.348359,
+    "sampling/argmax": 28.007922,
     "other elementwise": 15.356911,
     "memcpy/memset": 9.723983,
+    "reductions (argmax etc.)": 4.806369,
     "attention (prefill SDPA)": 1.474342
    },
    "top_kernels": [

@@ -1,0 +1,7 @@
+{
+  "status": "pending_dedicated_gpus",
+  "phase": "tune",
+  "job": "fixed_r0_ar",
+  "reason": "Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 2701047, 'name': '.venv/bin/python'}]",
+  "at": "2026-11-17T19:32:21.317080+00:00"
+}

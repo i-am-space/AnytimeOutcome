@@ -1,0 +1,133 @@
+{
+  "status": "implemented_and_gpu_validated",
+  "completed_at": "2026-11-17T12:16:34.096656+00:00",
+  "cpu_tests_passed": 168,
+  "cpu_cuda_tests_skipped": 15,
+  "excluded_cpu_test": "tests/test_paged_attention.py",
+  "gpu_blocks": 16,
+  "gpu_requests": 96,
+  "paired_exact_matches": 84,
+  "partial_handoffs": {
+    "bounded": 590,
+    "adaptive": 590
+  },
+  "performance_claim": false,
+  "default_changed": false,
+  "reference": "shared-fixed16-v1; original AR is a separate reference",
+  "implemented": [
+    "bounded asynchronous checkpointing",
+    "causal adaptive publication heuristic"
+  ],
+  "deferred": [
+    "prefix handoff concurrent with deeper work",
+    "variable-length target graphs",
+    "unequal continuation-depth allocation"
+  ],
+  "diagnostic_conclusion": "No improvement over original uniform publication or strongest complete K7 SSD; do not promote",
+  "telemetry": {
+    "natural_r0_complete_k10": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "natural_r0_adaptive_k10": {
+      "event_queries": 5440.0,
+      "checkpoint_waits": 414.0,
+      "decisions": 414.0,
+      "extend_decisions": 0.0
+    },
+    "natural_r0_ar": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "fixed_r0_adaptive_k10": {
+      "event_queries": 5658.0,
+      "checkpoint_waits": 430.0,
+      "decisions": 430.0,
+      "extend_decisions": 0.0
+    },
+    "natural_r0_bounded_k7": {
+      "event_queries": 4543.0,
+      "checkpoint_waits": 0.0,
+      "decisions": 0.0,
+      "extend_decisions": 0.0
+    },
+    "fixed_r0_complete_k10": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "fixed_r0_ar": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "natural_r0_complete_k7": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "natural_r0_uniform_k10": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "fixed_r0_bounded_k10": {
+      "event_queries": 5662.0,
+      "checkpoint_waits": 430.0,
+      "decisions": 430.0,
+      "extend_decisions": 0.0
+    },
+    "fixed_r0_adaptive_k7": {
+      "event_queries": 4741.0,
+      "checkpoint_waits": 0.0,
+      "decisions": 0.0,
+      "extend_decisions": 0.0
+    },
+    "fixed_r0_uniform_k10": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    },
+    "fixed_r0_bounded_k7": {
+      "event_queries": 4741.0,
+      "checkpoint_waits": 0.0,
+      "decisions": 0.0,
+      "extend_decisions": 0.0
+    },
+    "natural_r0_bounded_k10": {
+      "event_queries": 5462.0,
+      "checkpoint_waits": 414.0,
+      "decisions": 414.0,
+      "extend_decisions": 0.0
+    },
+    "natural_r0_adaptive_k7": {
+      "event_queries": 4543.0,
+      "checkpoint_waits": 0.0,
+      "decisions": 0.0,
+      "extend_decisions": 0.0
+    },
+    "fixed_r0_complete_k7": {
+      "event_queries": 0,
+      "checkpoint_waits": 0,
+      "decisions": 0,
+      "extend_decisions": 0
+    }
+  },
+  "artifacts_sha256": {
+    "queue.json": "330bbcd7254742d9fed83f9fc09651ee1ad389936c46b6d85ac363d289bd5313",
+    "correctness/definition.json": "1c397ff1788a4cedd6a355094b1cf11c02698344fd2459c9a26f28959bc5dc4e",
+    "correctness/summary.json": "4401211d5afa8acda650bcf14353c77090edf0572277cbb968afd96b7ed7ad9a",
+    "correctness/report.md": "a804edbaacd7c0b75f7937b1127c72b0a148d34eeafe7ff6b7e276a2f494568f",
+    "cpu_tests.log": "7e5db8399fefdd81d0a94503481aa25e759b44cbf5434b5c53df7d6b42f763c2",
+    "ar_reference_continuity.json": "ffcfbb0957eb1e79bd7cd1dcbb82d9211c1a2c319b0cb30423cdc7160d8c28eb"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "execution_sha256": "8f5d81ad4e7f73267c4f8e34bcb5d7799c5c0e83b8cfee589c81a89b8c87131a",
+  "manifest_sha256": "e6a160f9363e45b0c74b92949b517f2a21343349d8d90d9fbffdfa92977c65ad",
+  "command": "source profiling/env.sh; python -m pytest tests -q",
+  "tests_passed": 56,
+  "test_log": "validation_tests.txt",
+  "syntax_checks": [
+    "Python compilation of benchmark modules",
+    "Shell syntax for Nsight wrappers"
+  ],
+  "dry_run": "dry_run.txt",
+  "synthetic_test_evidence_only_in_temporary_directories": true
+}

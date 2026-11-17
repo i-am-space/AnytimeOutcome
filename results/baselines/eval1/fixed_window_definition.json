@@ -1,0 +1,31 @@
+{
+  "request": {
+    "requested_at_unix": 1792648429.5102727,
+    "deadline_unix": 1792655629.5102727,
+    "budget_seconds": 7200,
+    "scope": "all frozen tuning evidence; fixed-256 held-out only; all 75 prompts and 5 repeats per method",
+    "natural_eos": "deferred",
+    "takeover_watcher_pid": 3755600,
+    "current_block_receipt": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/raw/heldout/fixed/r0/ar.receipt.json"
+  },
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "selection_sha256": "9f40a50e3bda8b08fc06b447c1640abd5b4183c0eab8336eb2da3944539d1dc0",
+  "supervisor_sha256": "0964556580ed47863939c60f640b9e9b6c43c6c35eaf8c3c0bd638cb0aacd9f4",
+  "job_ids": [
+    "heldout/fixed/r0/ssd_k7_f3",
+    "heldout/fixed/r0/ar",
+    "heldout/fixed/r0/sd_k6",
+    "heldout/fixed/r1/sd_k6",
+    "heldout/fixed/r1/ar",
+    "heldout/fixed/r1/ssd_k7_f3",
+    "heldout/fixed/r2/ar",
+    "heldout/fixed/r2/ssd_k7_f3",
+    "heldout/fixed/r2/sd_k6",
+    "heldout/fixed/r3/ar",
+    "heldout/fixed/r3/sd_k6",
+    "heldout/fixed/r3/ssd_k7_f3",
+    "heldout/fixed/r4/ssd_k7_f3",
+    "heldout/fixed/r4/sd_k6",
+    "heldout/fixed/r4/ar"
+  ]
+}

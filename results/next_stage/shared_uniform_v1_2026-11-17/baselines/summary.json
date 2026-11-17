@@ -1,0 +1,1304 @@
+{
+  "status": "complete",
+  "manifest_sha256": "aa249b4696114e7ed28e72646ff70f14ca2cac426e885267a60696899cdbf2aa",
+  "selection_sha256": "1f6a7913a0f848feb9de479b6038fa28caed5d5ee1ad3e6b9afdfe12dc21ce33",
+  "hardware": {
+    "gpus": [
+      {
+        "index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      }
+    ],
+    "topology": "\t\u001b[4mGPU0\tGPU1\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\t0-15,32-47\t0\t\tN/A\nGPU1\tSYS\t X \t16-31,48-63\t1\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n"
+  },
+  "valid_blocks": 50,
+  "tuning_requests": 480,
+  "heldout_requests": 2250,
+  "warmup_requests": 150,
+  "correctness_status": "Fast-mode exact equivalence remains unresolved; see token comparisons.",
+  "primary_protocol": "fixed",
+  "secondary_protocol": "natural",
+  "natural_protocol_note": "Same fixed-length-tuned configurations; output differences can change EOS and length.",
+  "results": [
+    {
+      "protocol": "fixed",
+      "family": "all",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 6.271060411028021,
+        "p50_latency_s": 6.244655340997269,
+        "p95_latency_s": 6.359251503407722,
+        "committed_tok_per_s": 40.822442014720394,
+        "mean_first_delivery_s": 0.049822918951821824,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 6.271060411028021,
+        "mean_latency_ci95_s": [
+          6.264032553304767,
+          6.28072976252444
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "all",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 3.1607081796159813,
+        "p50_latency_s": 2.9291785069799516,
+        "p95_latency_s": 4.844929826486623,
+        "committed_tok_per_s": 80.99450675357932,
+        "mean_first_delivery_s": 0.11424115630448796,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 4.011904309210893,
+        "draft_acceptance_rate": 0.4456872037914692,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.9840681438012224,
+        "speedup_ci95": [
+          1.8894450398176765,
+          2.091842082439749
+        ],
+        "latency_reduction": 0.49598505317255537,
+        "latency_reduction_ci95": [
+          0.47074406562053195,
+          0.5219524416322034
+        ],
+        "mean_latency_s": 3.1607081796159813,
+        "mean_latency_ci95_s": [
+          2.997345677982589,
+          3.3191911222313046
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "all",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 2.2083635103339327,
+        "p50_latency_s": 1.9977863429812714,
+        "p95_latency_s": 3.6831896226183747,
+        "committed_tok_per_s": 115.92294420826103,
+        "mean_first_delivery_s": 0.09641840127715841,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 4.305207448092744,
+        "draft_acceptance_rate": 0.40765721087085893,
+        "mean_cache_hit_rate": 0.776927748835354
+      },
+      "comparison_to_ar": {
+        "speedup": 2.839686664664984,
+        "speedup_ci95": [
+          2.664704468142923,
+          3.048524067172125
+        ],
+        "latency_reduction": 0.6478484712967525,
+        "latency_reduction_ci95": [
+          0.6247238626387523,
+          0.6719724109160023
+        ],
+        "mean_latency_s": 2.2083635103339327,
+        "mean_latency_ci95_s": [
+          2.0573251808214796,
+          2.35386689028048
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "chat",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 6.239000643192325,
+        "p50_latency_s": 6.23754283299786,
+        "p95_latency_s": 6.251229099388001,
+        "committed_tok_per_s": 41.032212471292816,
+        "mean_first_delivery_s": 0.032317207879619676,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 6.239000643192325,
+        "mean_latency_ci95_s": [
+          6.23627079386462,
+          6.241706465535837
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "chat",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 3.352558240017388,
+        "p50_latency_s": 3.3209761360194534,
+        "p95_latency_s": 4.968526423996082,
+        "committed_tok_per_s": 76.35959815530968,
+        "mean_first_delivery_s": 0.09608417834388092,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 3.8117097826227893,
+        "draft_acceptance_rate": 0.4017747320330346,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.8609671172065803,
+        "speedup_ci95": [
+          1.661685276579896,
+          2.1241348417467396
+        ],
+        "latency_reduction": 0.46264499208290255,
+        "latency_reduction_ci95": [
+          0.3982013236231178,
+          0.529220094524859
+        ],
+        "mean_latency_s": 3.352558240017388,
+        "mean_latency_ci95_s": [
+          2.937218097127817,
+          3.7534856714003135
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "chat",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.3822442356734537,
+        "p50_latency_s": 2.556120125023881,
+        "p95_latency_s": 3.954316116595874,
+        "committed_tok_per_s": 107.4616935436217,
+        "mean_first_delivery_s": 0.08251919337688014,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 4.0602522063877675,
+        "draft_acceptance_rate": 0.3629132875857767,
+        "mean_cache_hit_rate": 0.7544849004183766
+      },
+      "comparison_to_ar": {
+        "speedup": 2.6189592778796578,
+        "speedup_ci95": [
+          2.2658501487298595,
+          3.1212684479817727
+        ],
+        "latency_reduction": 0.6181689389192746,
+        "latency_reduction_ci95": [
+          0.5586645478024231,
+          0.6796174321961461
+        ],
+        "mean_latency_s": 2.3822442356734537,
+        "mean_latency_ci95_s": [
+          1.9987683582191822,
+          2.7533591451144894
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "code",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 6.244632969605969,
+        "p50_latency_s": 6.243456350988708,
+        "p95_latency_s": 6.258300406002673,
+        "committed_tok_per_s": 40.99520360059742,
+        "mean_first_delivery_s": 0.03437504391139373,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 6.244632969605969,
+        "mean_latency_ci95_s": [
+          6.241789844672394,
+          6.247368367641623
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "code",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.3332992385595572,
+        "p50_latency_s": 2.3177938789885957,
+        "p95_latency_s": 2.756355387798976,
+        "committed_tok_per_s": 109.71588888789056,
+        "mean_first_delivery_s": 0.09801763421646319,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 5.002775713884533,
+        "draft_acceptance_rate": 0.6567278287461774,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 2.6763103790583846,
+        "speedup_ci95": [
+          2.5663542915678463,
+          2.793781852387288
+        ],
+        "latency_reduction": 0.6263512603677032,
+        "latency_reduction_ci95": [
+          0.6103421872467101,
+          0.6420622464932966
+        ],
+        "mean_latency_s": 2.3332992385595572,
+        "mean_latency_ci95_s": [
+          2.2355670297111905,
+          2.4335189714106438
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "code",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 1.433876437872881,
+        "p50_latency_s": 1.4186894520244095,
+        "p95_latency_s": 1.898114654206438,
+        "committed_tok_per_s": 178.53700168179725,
+        "mean_first_delivery_s": 0.08006886002421379,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 5.506211542906267,
+        "draft_acceptance_rate": 0.6290476190476191,
+        "mean_cache_hit_rate": 0.8855996331031195
+      },
+      "comparison_to_ar": {
+        "speedup": 4.355070496081044,
+        "speedup_ci95": [
+          4.101309008355722,
+          4.6279047105980835
+        ],
+        "latency_reduction": 0.7703825917628979,
+        "latency_reduction_ci95": [
+          0.75617540693011,
+          0.7839194921664194
+        ],
+        "mean_latency_s": 1.433876437872881,
+        "mean_latency_ci95_s": [
+          1.3495224640640313,
+          1.5225265105997912
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "doc",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 6.329547620285768,
+        "p50_latency_s": 6.3069397719809785,
+        "p95_latency_s": 6.434505139617249,
+        "committed_tok_per_s": 40.445228530951795,
+        "mean_first_delivery_s": 0.08277650506445207,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 6.329547620285768,
+        "mean_latency_ci95_s": [
+          6.310009447964094,
+          6.357413994182308
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "doc",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 3.7962670602709987,
+        "p50_latency_s": 3.7837915580021217,
+        "p95_latency_s": 4.731767601391766,
+        "committed_tok_per_s": 67.43466566910213,
+        "mean_first_delivery_s": 0.14862165635311977,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 3.2212274311253597,
+        "draft_acceptance_rate": 0.3525764895330113,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.6673083109790305,
+        "speedup_ci95": [
+          1.5717769527861398,
+          1.7844915462920101
+        ],
+        "latency_reduction": 0.4002309030578707,
+        "latency_reduction_ci95": [
+          0.36377741224863414,
+          0.4396162861747943
+        ],
+        "mean_latency_s": 3.7962670602709987,
+        "mean_latency_ci95_s": [
+          3.5427622213749097,
+          4.031874218703562
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "fixed",
+      "family": "doc",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.8089698574554642,
+        "p50_latency_s": 2.924019471014617,
+        "p95_latency_s": 3.5727068803913427,
+        "committed_tok_per_s": 91.13661341738297,
+        "mean_first_delivery_s": 0.1266671504303813,
+        "mean_output_tokens": 256.0,
+        "mean_tokens_per_step": 3.349158594984195,
+        "draft_acceptance_rate": 0.31621986773803595,
+        "mean_cache_hit_rate": 0.6906987129845662
+      },
+      "comparison_to_ar": {
+        "speedup": 2.2533341194410172,
+        "speedup_ci95": [
+          2.095850497534121,
+          2.445763112757772
+        ],
+        "latency_reduction": 0.5562131725728854,
+        "latency_reduction_ci95": [
+          0.522866730530886,
+          0.5911296579031271
+        ],
+        "mean_latency_s": 2.8089698574554642,
+        "mean_latency_ci95_s": [
+          2.5860578127427494,
+          3.021852246433572
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "all",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 5.419090328887881,
+        "p50_latency_s": 6.236161948996596,
+        "p95_latency_s": 6.317996338006924,
+        "committed_tok_per_s": 40.8137380833663,
+        "mean_first_delivery_s": 0.04842790294252336,
+        "mean_output_tokens": 221.17333333333335,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 5.419090328887881,
+        "mean_latency_ci95_s": [
+          5.1122006385193846,
+          5.704217662008376
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "all",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 2.7369049415732736,
+        "p50_latency_s": 2.4925429510185495,
+        "p95_latency_s": 4.390781663780217,
+        "committed_tok_per_s": 80.81147794858917,
+        "mean_first_delivery_s": 0.11183635113822916,
+        "mean_output_tokens": 221.17333333333335,
+        "mean_tokens_per_step": 3.9839950688157635,
+        "draft_acceptance_rate": 0.44263073327490504,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.9800067757460327,
+        "speedup_ci95": [
+          1.8819274407612083,
+          2.0946989459491725
+        ],
+        "latency_reduction": 0.4949512232738612,
+        "latency_reduction_ci95": [
+          0.4686298853160314,
+          0.5226044287012409
+        ],
+        "mean_latency_s": 2.7369049415732736,
+        "mean_latency_ci95_s": [
+          2.517389414493324,
+          2.948577184847038
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "all",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 375,
+        "mean_latency_s": 1.9021593812544209,
+        "p50_latency_s": 1.6109416029939894,
+        "p95_latency_s": 3.260785804706393,
+        "committed_tok_per_s": 116.27486924227964,
+        "mean_first_delivery_s": 0.09228276817624767,
+        "mean_output_tokens": 221.17333333333335,
+        "mean_tokens_per_step": 4.265107889647715,
+        "draft_acceptance_rate": 0.4042490506743486,
+        "mean_cache_hit_rate": 0.7659903642002858
+      },
+      "comparison_to_ar": {
+        "speedup": 2.8489149659552413,
+        "speedup_ci95": [
+          2.6638202633625623,
+          3.070437218798575
+        ],
+        "latency_reduction": 0.6489891723866528,
+        "latency_reduction_ci95": [
+          0.6245992966384819,
+          0.6743134840873406
+        ],
+        "mean_latency_s": 1.9021593812544209,
+        "mean_latency_ci95_s": [
+          1.7271926755826048,
+          2.0770145212366558
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 375,
+        "requests_matching_paired_ar": 375,
+        "requests_matching_ar_round0": 375,
+        "prompts_matching_ar_round0_in_all_rounds": 75,
+        "repeatable_prompts": 75,
+        "total_prompts": 75,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "chat",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 4.902789575127652,
+        "p50_latency_s": 6.018870544998208,
+        "p95_latency_s": 6.240404739399674,
+        "committed_tok_per_s": 41.02970297165211,
+        "mean_first_delivery_s": 0.03225292354193516,
+        "mean_output_tokens": 201.16,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 4.902789575127652,
+        "mean_latency_ci95_s": [
+          4.157003611421178,
+          5.571520974048931
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "chat",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.7103459311921614,
+        "p50_latency_s": 2.4847271059989,
+        "p95_latency_s": 4.956941765215015,
+        "committed_tok_per_s": 74.21930820156179,
+        "mean_first_delivery_s": 0.09541785013489425,
+        "mean_output_tokens": 201.16,
+        "mean_tokens_per_step": 3.8408706490959754,
+        "draft_acceptance_rate": 0.38395384280426736,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.808916536706121,
+        "speedup_ci95": [
+          1.590878371182567,
+          2.103660866164529
+        ],
+        "latency_reduction": 0.4471828966631526,
+        "latency_reduction_ci95": [
+          0.3714164337661333,
+          0.524638207542789
+        ],
+        "mean_latency_s": 2.7103459311921614,
+        "mean_latency_ci95_s": [
+          2.170551055438031,
+          3.2299063762091733
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "chat",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 1.9274657066399232,
+        "p50_latency_s": 1.7723522159794811,
+        "p95_latency_s": 3.8874530196015256,
+        "committed_tok_per_s": 104.36502154462426,
+        "mean_first_delivery_s": 0.07670270118233748,
+        "mean_output_tokens": 201.16,
+        "mean_tokens_per_step": 4.065409059776545,
+        "draft_acceptance_rate": 0.3452862926547137,
+        "mean_cache_hit_rate": 0.7104850747415842
+      },
+      "comparison_to_ar": {
+        "speedup": 2.5436455539717464,
+        "speedup_ci95": [
+          2.1486161393013847,
+          3.116048415159852
+        ],
+        "latency_reduction": 0.6068634647470591,
+        "latency_reduction_ci95": [
+          0.5345841530800117,
+          0.6790807241448598
+        ],
+        "mean_latency_s": 1.9274657066399232,
+        "mean_latency_ci95_s": [
+          1.4964271225479606,
+          2.363932537413528
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "code",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 6.121733643733896,
+        "p50_latency_s": 6.243132592993788,
+        "p95_latency_s": 6.25758963819244,
+        "committed_tok_per_s": 40.99492310595356,
+        "mean_first_delivery_s": 0.03432239882927388,
+        "mean_output_tokens": 250.96,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 6.121733643733896,
+        "mean_latency_ci95_s": [
+          5.895691489279014,
+          6.245748348763585
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "code",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.2856932055114303,
+        "p50_latency_s": 2.2258499980089255,
+        "p95_latency_s": 2.7527380619896578,
+        "committed_tok_per_s": 109.79601260347054,
+        "mean_first_delivery_s": 0.097216003944166,
+        "mean_output_tokens": 250.96,
+        "mean_tokens_per_step": 4.986093223344456,
+        "draft_acceptance_rate": 0.6557547414912964,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 2.678283169837809,
+        "speedup_ci95": [
+          2.5626514306778314,
+          2.8014208406708545
+        ],
+        "latency_reduction": 0.6266264854807874,
+        "latency_reduction_ci95": [
+          0.6097791576199343,
+          0.6430382806037008
+        ],
+        "mean_latency_s": 2.2856932055114303,
+        "mean_latency_ci95_s": [
+          2.1750680256821444,
+          2.3964476654679223
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "code",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 1.4045014249372763,
+        "p50_latency_s": 1.3541136069979984,
+        "p95_latency_s": 1.8974177295924164,
+        "committed_tok_per_s": 178.6826239860936,
+        "mean_first_delivery_s": 0.07952912616846151,
+        "mean_output_tokens": 250.96,
+        "mean_tokens_per_step": 5.484962112901706,
+        "draft_acceptance_rate": 0.6276982779529469,
+        "mean_cache_hit_rate": 0.8865834452326226
+      },
+      "comparison_to_ar": {
+        "speedup": 4.358652497634374,
+        "speedup_ci95": [
+          4.094666107239894,
+          4.6435129250398965
+        ],
+        "latency_reduction": 0.7705712945588705,
+        "latency_reduction_ci95": [
+          0.7557798428956353,
+          0.7846458023977467
+        ],
+        "mean_latency_s": 1.4045014249372763,
+        "mean_latency_ci95_s": [
+          1.31590140472083,
+          1.4974674521338718
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "doc",
+      "mode": "ar",
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 5.232747767802095,
+        "p50_latency_s": 5.751892695989227,
+        "p95_latency_s": 6.372099670208991,
+        "committed_tok_per_s": 40.399424810952446,
+        "mean_first_delivery_s": 0.07870838645636104,
+        "mean_output_tokens": 211.4,
+        "mean_tokens_per_step": 1.0,
+        "draft_acceptance_rate": null,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 5.232747767802095,
+        "mean_latency_ci95_s": [
+          4.683978819335037,
+          5.689213887495535
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "doc",
+      "mode": "sd",
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "gpu_count": 1,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 3.214675688016228,
+        "p50_latency_s": 3.321103119989857,
+        "p95_latency_s": 4.417587599798571,
+        "committed_tok_per_s": 65.76091043586877,
+        "mean_first_delivery_s": 0.14287519933562726,
+        "mean_output_tokens": 211.4,
+        "mean_tokens_per_step": 3.1250213340068593,
+        "draft_acceptance_rate": 0.3377142857142857,
+        "mean_cache_hit_rate": null
+      },
+      "comparison_to_ar": {
+        "speedup": 1.6277684829324777,
+        "speedup_ci95": [
+          1.5415446781612665,
+          1.7361589113687421
+        ],
+        "latency_reduction": 0.3856620210519941,
+        "latency_reduction_ci95": [
+          0.3513000212194798,
+          0.42401585836096367
+        ],
+        "mean_latency_s": 3.214675688016228,
+        "mean_latency_ci95_s": [
+          2.84949034235102,
+          3.5408187084963716
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    },
+    {
+      "protocol": "natural",
+      "family": "doc",
+      "mode": "ssd",
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "gpu_count": 2,
+      "statistics": {
+        "requests": 125,
+        "mean_latency_s": 2.3745110121860633,
+        "p50_latency_s": 2.4314395819965284,
+        "p95_latency_s": 3.245063834200846,
+        "committed_tok_per_s": 89.02885643195113,
+        "mean_first_delivery_s": 0.12061647717794403,
+        "mean_output_tokens": 211.4,
+        "mean_tokens_per_step": 3.244952496264892,
+        "draft_acceptance_rate": 0.301056338028169,
+        "mean_cache_hit_rate": 0.7009025726266512
+      },
+      "comparison_to_ar": {
+        "speedup": 2.2037159402283133,
+        "speedup_ci95": [
+          2.060361873057372,
+          2.3842312155108143
+        ],
+        "latency_reduction": 0.5462210070974954,
+        "latency_reduction_ci95": [
+          0.5146483668212274,
+          0.5805775910049279
+        ],
+        "mean_latency_s": 2.3745110121860633,
+        "mean_latency_ci95_s": [
+          2.0919655352677102,
+          2.630924523695931
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      },
+      "correctness": {
+        "total_requests": 125,
+        "requests_matching_paired_ar": 125,
+        "requests_matching_ar_round0": 125,
+        "prompts_matching_ar_round0_in_all_rounds": 25,
+        "repeatable_prompts": 25,
+        "total_prompts": 25,
+        "first_differences": []
+      },
+      "latency_regression": false
+    }
+  ]
+}

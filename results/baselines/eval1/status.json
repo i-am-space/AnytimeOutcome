@@ -1,0 +1,17 @@
+{
+  "status": "budget_exhausted",
+  "at": "2026-10-22T07:53:49.510749+00:00",
+  "reason": "Two-hour window exhausted; valid blocks retained, interrupted block excluded.",
+  "deadline_unix": 1792655629.5102727,
+  "scope": "fixed-256 only; 75 prompts and 5 repetitions; natural EOS deferred",
+  "valid_fixed_blocks": 2,
+  "required_fixed_blocks": 15,
+  "fixed_scored_requests": 150,
+  "completed": [
+    "heldout/fixed/r0/ssd_k7_f3",
+    "heldout/fixed/r0/ar"
+  ],
+  "full_campaign_complete": false,
+  "natural_eos": "deferred",
+  "tuning_requests": 480
+}

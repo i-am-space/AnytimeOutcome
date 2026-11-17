@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "requests": 48,
+  "valid_blocks": 2,
+  "gpu_count": 1,
+  "mean_latency_s": 6.284057597793435,
+  "committed_tok_s": 40.73800979957457,
+  "repeatable": true,
+  "contextual_only": true,
+  "headline_performance_evidence": false,
+  "numerics": "shared-fixed16-v1; fresh AR; historical original AR separate",
+  "queue_sha256": "769b2541410fab594a54aee0ad7828f81095f64e8d7b2b52c75df0ebfa249b23",
+  "at": "2026-11-17T19:03:33.858076+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "update_pages": 16,
+  "historical_pages": 40,
+  "full_report_pages": 56,
+  "page_text_checks": "passed",
+  "page_bounds": "passed",
+  "historical_labels": "passed",
+  "source_hashes": "passed",
+  "graphs": [
+    "actual_overlap.png",
+    "baseline_fixed.png",
+    "baseline_natural.png",
+    "baseline_tuning.png",
+    "family_latency.png",
+    "uniform_publication_effect.png"
+  ],
+  "evidence_captured_at_ist": "2026-11-17T21:34:37.878514+05:30",
+  "notes": [
+    "Original October files unchanged",
+    "No experimental campaign or execution source modified",
+    "Overlap diagnostics are not performance rankings",
+    "Exactness is scoped to shared AR"
+  ]
+}

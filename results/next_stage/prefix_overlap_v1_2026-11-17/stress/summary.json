@@ -1,0 +1,410 @@
+{
+  "queue_sha256": "a62796e39f1bbc29312dc2d19034cdda36a616ac23416a8efa9ed5274fb0bd74",
+  "definition_sha256": "8af38a6545077651ba1c4b77155cf1d0c7830fda3b2f0c487b3b3d54751101cc",
+  "phase": "stress",
+  "valid_blocks": 4,
+  "requests": 12,
+  "statistics": [
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "ar",
+        "mode": "ar",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2
+      },
+      "gpu_count": 1,
+      "requests": 3,
+      "mean_latency_s": 6.264979631348979,
+      "p50_latency_s": 6.247032681014389,
+      "p95_latency_s": 6.299781565822196,
+      "committed_tok_per_s": 40.862064214704866,
+      "mean_first_delivery_s": 0.0435084086493589,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 1.0,
+      "draft_acceptance_rate": null,
+      "mean_cache_hit_rate": null,
+      "mean_wait_s": 0.0,
+      "mean_final_drain_s": 0.0,
+      "mean_publication_wall_s": null,
+      "mean_interrupt_drain_s": null,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {},
+      "accepted_draft_tokens": 0,
+      "verified_draft_tokens": 0,
+      "max_target_allocated_bytes": 17704483840,
+      "max_target_reserved_bytes": 17834180608,
+      "max_draft_allocated_bytes": 0,
+      "max_draft_reserved_bytes": 0,
+      "output_lengths": [
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 6.242263660009485,
+          "p50_latency_s": 6.242263660009485,
+          "p95_latency_s": 6.242263660009485,
+          "committed_tok_per_s": 41.010763713817724,
+          "mean_first_delivery_s": 0.03247808798914775,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 6.247032681014389,
+          "p50_latency_s": 6.247032681014389,
+          "p95_latency_s": 6.247032681014389,
+          "committed_tok_per_s": 40.979455858782366,
+          "mean_first_delivery_s": 0.03312017297139391,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 6.305642553023063,
+          "p50_latency_s": 6.305642553023063,
+          "p95_latency_s": 6.305642553023063,
+          "committed_tok_per_s": 40.598558806234266,
+          "mean_first_delivery_s": 0.06492696498753503,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        }
+      }
+    },
+    {
+      "protocol": "fixed",
+      "config": {
+        "label": "overlap_k10",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "gpu_count": 2,
+      "requests": 3,
+      "mean_latency_s": 4.168156028666999,
+      "p50_latency_s": 3.864434582006652,
+      "p95_latency_s": 5.760645538655808,
+      "committed_tok_per_s": 61.41804631096555,
+      "mean_first_delivery_s": 0.12052651900254811,
+      "mean_output_tokens": 256.0,
+      "mean_tokens_per_step": 3.4500028972910326,
+      "draft_acceptance_rate": 0.4206041828040279,
+      "mean_cache_hit_rate": 0.7990337534405332,
+      "mean_wait_s": 2.0623296729754657,
+      "mean_final_drain_s": 0.011998249353685727,
+      "mean_publication_wall_s": 0.0013143212142857142,
+      "mean_interrupt_drain_s": 0.006335891638655462,
+      "partial_handoffs": 183,
+      "ready_length_histogram": {
+        "4": 174,
+        "5": 9,
+        "10": 55
+      },
+      "accepted_draft_tokens": 543,
+      "verified_draft_tokens": 1291,
+      "max_target_allocated_bytes": 19481812992,
+      "max_target_reserved_bytes": 19633537024,
+      "max_draft_allocated_bytes": 6501208064,
+      "max_draft_reserved_bytes": 6666846208,
+      "output_lengths": [
+        256,
+        256,
+        256
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 5.971335644950159,
+          "p50_latency_s": 5.971335644950159,
+          "p95_latency_s": 5.971335644950159,
+          "committed_tok_per_s": 42.87148055669826,
+          "mean_first_delivery_s": 0.10801815398735926,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 2.5576923076923075,
+          "draft_acceptance_rate": 0.2515527950310559,
+          "mean_cache_hit_rate": 0.6346153846153846
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 2.6686978590441868,
+          "p50_latency_s": 2.6686978590441868,
+          "p95_latency_s": 2.6686978590441868,
+          "committed_tok_per_s": 95.92693272954033,
+          "mean_first_delivery_s": 0.10929917701287195,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.338983050847458,
+          "draft_acceptance_rate": 0.7519083969465649,
+          "mean_cache_hit_rate": 0.9491525423728814
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 3.864434582006652,
+          "p50_latency_s": 3.864434582006652,
+          "p95_latency_s": 3.864434582006652,
+          "committed_tok_per_s": 66.24513743665679,
+          "mean_first_delivery_s": 0.14426222600741312,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 3.453333333333333,
+          "draft_acceptance_rate": 0.4779220779220779,
+          "mean_cache_hit_rate": 0.8133333333333334
+        }
+      }
+    },
+    {
+      "protocol": "natural",
+      "config": {
+        "label": "ar",
+        "mode": "ar",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2
+      },
+      "gpu_count": 1,
+      "requests": 3,
+      "mean_latency_s": 5.631064878679656,
+      "p50_latency_s": 6.2366382899926975,
+      "p95_latency_s": 6.239142435637769,
+      "committed_tok_per_s": 40.90404537966196,
+      "mean_first_delivery_s": 0.04281051932290817,
+      "mean_output_tokens": 230.33333333333334,
+      "mean_tokens_per_step": 1.0,
+      "draft_acceptance_rate": null,
+      "mean_cache_hit_rate": null,
+      "mean_wait_s": 0.0,
+      "mean_final_drain_s": 0.0,
+      "mean_publication_wall_s": null,
+      "mean_interrupt_drain_s": null,
+      "partial_handoffs": 0,
+      "ready_length_histogram": {},
+      "accepted_draft_tokens": 0,
+      "verified_draft_tokens": 0,
+      "max_target_allocated_bytes": 19554171904,
+      "max_target_reserved_bytes": 19683868672,
+      "max_draft_allocated_bytes": 0,
+      "max_draft_reserved_bytes": 0,
+      "output_lengths": [
+        256,
+        256,
+        179
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 6.2366382899926975,
+          "p50_latency_s": 6.2366382899926975,
+          "p95_latency_s": 6.2366382899926975,
+          "committed_tok_per_s": 41.04775491161277,
+          "mean_first_delivery_s": 0.03180057997815311,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 6.239420674042776,
+          "p50_latency_s": 6.239420674042776,
+          "p95_latency_s": 6.239420674042776,
+          "committed_tok_per_s": 41.029450228449996,
+          "mean_first_delivery_s": 0.03256286302348599,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 4.417135672003496,
+          "p50_latency_s": 4.417135672003496,
+          "p95_latency_s": 4.417135672003496,
+          "committed_tok_per_s": 40.52399864793157,
+          "mean_first_delivery_s": 0.06406811496708542,
+          "mean_output_tokens": 179.0,
+          "mean_tokens_per_step": 1.0,
+          "draft_acceptance_rate": null,
+          "mean_cache_hit_rate": null
+        }
+      }
+    },
+    {
+      "protocol": "natural",
+      "config": {
+        "label": "overlap_k10",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "gpu_count": 2,
+      "requests": 3,
+      "mean_latency_s": 4.210101236666863,
+      "p50_latency_s": 3.101438024023082,
+      "p95_latency_s": 6.284023432998219,
+      "committed_tok_per_s": 54.70968995408011,
+      "mean_first_delivery_s": 0.09579984766120712,
+      "mean_output_tokens": 230.33333333333334,
+      "mean_tokens_per_step": 3.5188767330831703,
+      "draft_acceptance_rate": 0.3951612903225806,
+      "mean_cache_hit_rate": 0.7950667688459031,
+      "mean_wait_s": 2.3073668974102475,
+      "mean_final_drain_s": 0.04222655467068156,
+      "mean_publication_wall_s": 0.00024561330805687205,
+      "mean_interrupt_drain_s": 0.0014657251090047392,
+      "partial_handoffs": 160,
+      "ready_length_histogram": {
+        "4": 70,
+        "5": 90,
+        "10": 51
+      },
+      "accepted_draft_tokens": 490,
+      "verified_draft_tokens": 1240,
+      "max_target_allocated_bytes": 19481812992,
+      "max_target_reserved_bytes": 19633537024,
+      "max_draft_allocated_bytes": 6501208064,
+      "max_draft_reserved_bytes": 6666846208,
+      "output_lengths": [
+        256,
+        256,
+        179
+      ],
+      "per_family": {
+        "chat": {
+          "requests": 1,
+          "mean_latency_s": 6.637644033995457,
+          "p50_latency_s": 6.637644033995457,
+          "p95_latency_s": 6.637644033995457,
+          "committed_tok_per_s": 38.56790130487061,
+          "mean_first_delivery_s": 0.08406151999952272,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 2.607843137254902,
+          "draft_acceptance_rate": 0.24296296296296296,
+          "mean_cache_hit_rate": 0.6274509803921569
+        },
+        "code": {
+          "requests": 1,
+          "mean_latency_s": 2.8912216519820504,
+          "p50_latency_s": 2.8912216519820504,
+          "p95_latency_s": 2.8912216519820504,
+          "committed_tok_per_s": 88.54388587761909,
+          "mean_first_delivery_s": 0.08528760896297172,
+          "mean_output_tokens": 256.0,
+          "mean_tokens_per_step": 4.571428571428571,
+          "draft_acceptance_rate": 0.7434944237918215,
+          "mean_cache_hit_rate": 0.9464285714285714
+        },
+        "doc": {
+          "requests": 1,
+          "mean_latency_s": 3.101438024023082,
+          "p50_latency_s": 3.101438024023082,
+          "p95_latency_s": 3.101438024023082,
+          "committed_tok_per_s": 57.71516264826313,
+          "mean_first_delivery_s": 0.11805041402112693,
+          "mean_output_tokens": 179.0,
+          "mean_tokens_per_step": 3.3773584905660377,
+          "draft_acceptance_rate": 0.42567567567567566,
+          "mean_cache_hit_rate": 0.8113207547169812
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "HumanEval/36",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-148",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "fixed",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/36",
+      "round": 0,
+      "protocol": "natural",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-148",
+      "round": 0,
+      "protocol": "natural",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-496",
+      "round": 0,
+      "protocol": "natural",
+      "config": "overlap_k10",
+      "exact": true,
+      "first_difference": null
+    }
+  ],
+  "correctness_passed": true,
+  "exact_matches": 6,
+  "repeatability": {
+    "fixed/ar": true,
+    "fixed/overlap_k10": true,
+    "natural/ar": true,
+    "natural/overlap_k10": true
+  },
+  "paired_intervals": {},
+  "performance_evidence": false,
+  "limitations": [
+    "Exactness is against shared-fixed16-v1 AR, not original historical AR.",
+    "Profiled and synthetic boundary timings are diagnostic only.",
+    "Target graph retains padded K+1 work; all final draft draining is included.",
+    "Publication wall time includes outstanding GPU completion in complete-cache SSD."
+  ],
+  "overlap_coverage": {
+    "fixed_r0_overlap_k10": {
+      "partial_prefixes": 238.0,
+      "snapshots_with_pending_tail": 11.0,
+      "responses_before_tail_done": 10.0,
+      "deferred_drain_s": 0.32985780079616234
+    },
+    "natural_r0_overlap_k10": {
+      "partial_prefixes": 211.0,
+      "snapshots_with_pending_tail": 121.0,
+      "responses_before_tail_done": 90.0,
+      "deferred_drain_s": 3.3676957158604637
+    }
+  },
+  "shared_correctness": true
+}

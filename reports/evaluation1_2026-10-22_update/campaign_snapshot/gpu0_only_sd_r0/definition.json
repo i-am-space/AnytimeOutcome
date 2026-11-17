@@ -1,0 +1,11 @@
+{
+  "scope": "GPU0 exclusive; unrelated GPU1 compute explicitly allowed by user",
+  "valid_for_original_dedicated_campaign": false,
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "job_sha256": "75074b96bd34a2b244032565d748c4ab7774fa7f30e283bfa479d0611cbe1fc6",
+  "supervisor_sha256": "2f5846fa0f7bae518bfc05416328f3ef3bdaeb2ab0e9532df79fa1aed11435ca",
+  "requested_outputs": 256,
+  "requests": 75,
+  "repetitions": 1,
+  "at": "2026-10-22T06:18:35.622057+00:00"
+}

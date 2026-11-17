@@ -1,0 +1,125 @@
+{
+  "status": "implemented_and_validated",
+  "reference": "shared-fixed16-v1, original historical AR separate",
+  "performance_evidence": false,
+  "default_changed": false,
+  "cpu_tests_passed": 183,
+  "cpu_tests_skipped": 16,
+  "excluded_cpu_test": "tests/test_paged_attention.py",
+  "phases": [
+    {
+      "phase": "correctness",
+      "blocks": 18,
+      "requests": 108,
+      "exact_matches": 96,
+      "responses_before_tail": 633.0,
+      "overlap_coverage": {
+        "fixed_r0_overlap_k7": {
+          "partial_prefixes": 0.0,
+          "snapshots_with_pending_tail": 431.0,
+          "responses_before_tail_done": 0.0,
+          "deferred_drain_s": 0.004121233709156513
+        },
+        "fixed_r0_overlap_k10": {
+          "partial_prefixes": 453.0,
+          "snapshots_with_pending_tail": 453.0,
+          "responses_before_tail_done": 323.0,
+          "deferred_drain_s": 1.1540508896578103
+        },
+        "natural_r0_overlap_k7": {
+          "partial_prefixes": 0.0,
+          "snapshots_with_pending_tail": 413.0,
+          "responses_before_tail_done": 0.0,
+          "deferred_drain_s": 0.0038184603326953948
+        },
+        "natural_r0_overlap_k10": {
+          "partial_prefixes": 436.0,
+          "snapshots_with_pending_tail": 436.0,
+          "responses_before_tail_done": 310.0,
+          "deferred_drain_s": 1.1302003937307745
+        }
+      }
+    },
+    {
+      "phase": "stress",
+      "blocks": 4,
+      "requests": 12,
+      "exact_matches": 6,
+      "responses_before_tail": 100.0,
+      "overlap_coverage": {
+        "fixed_r0_overlap_k10": {
+          "partial_prefixes": 238.0,
+          "snapshots_with_pending_tail": 11.0,
+          "responses_before_tail_done": 10.0,
+          "deferred_drain_s": 0.32985780079616234
+        },
+        "natural_r0_overlap_k10": {
+          "partial_prefixes": 211.0,
+          "snapshots_with_pending_tail": 121.0,
+          "responses_before_tail_done": 90.0,
+          "deferred_drain_s": 3.3676957158604637
+        }
+      }
+    }
+  ],
+  "valid_receipt_sha256": {
+    "correctness/fixed_r0_complete_k7/attempt_0/receipt.json": "ca561067527899d2667bfd4480aaaea6dcf80fd29b61811208f381666bc9dbd5",
+    "correctness/natural_r0_complete_k10/attempt_0/receipt.json": "5764bbd7d515b02455071b01c7f507e7ba4126fdcb338f9ce101fcc6fb695c6d",
+    "correctness/natural_r0_ar/attempt_0/receipt.json": "e4e4d91a82d0fd5a682e05ca051a386c8e08f5f0953aade2f4636ed6d63d74e0",
+    "correctness/fixed_r0_uniform_k10/attempt_0/receipt.json": "03b604b204cdbfebc839e34bab7000a1892c3b8132a2e56983b9eb8e76976a5a",
+    "correctness/fixed_r0_bounded_k10/attempt_0/receipt.json": "0a5fdd588f3ae702213ceeff36c281a91e4e82dee270af790cc07c9b4513bc64",
+    "correctness/natural_r0_overlap_k7/attempt_0/receipt.json": "f1e2d3813f65e688e25cdd3d94a1d220c5c3a4acfb0fab83312e25ecaa0e9503",
+    "correctness/natural_r0_bounded_k7/attempt_0/receipt.json": "25a3bc6c6b056421e789282847c8768fbd849641983795252d0b4027c900599a",
+    "correctness/natural_r0_overlap_k10/attempt_0/receipt.json": "e4dd8539ba1c096ad27917e75b53cdd9ee13fde54888e1887783919586004ac4",
+    "correctness/fixed_r0_complete_k10/attempt_0/receipt.json": "45d8660aba503748971e953292c5efe8b41508597f649863ef610c02ca2909c1",
+    "correctness/natural_r0_uniform_k7/attempt_0/receipt.json": "ed55e480180d756e8ea6f0955ee8d72d62be79011556b233b78cfbafacba82a8",
+    "correctness/fixed_r0_overlap_k7/attempt_0/receipt.json": "daa87b382872ec2eebd723381ed305489ef3c267450fd9f5dfa782cb3cc54603",
+    "correctness/fixed_r0_bounded_k7/attempt_0/receipt.json": "206cdb854ebbfbc6ae1bfe14ab97adfa4da1c2d3ad9484a557eb420b5607e85d",
+    "correctness/fixed_r0_overlap_k10/attempt_0/receipt.json": "fe70664bdb6bd4421c757fafd6743ab455963811a2df0d39cf2f806cc0246164",
+    "correctness/natural_r0_bounded_k10/attempt_0/receipt.json": "561ca40a57c39c4b395551f9342c46d5a4ce77c59c4c35b78f44ba983f1ecb5f",
+    "correctness/fixed_r0_uniform_k7/attempt_0/receipt.json": "c3a87327b033bc2f52fe4c062f693e92045bb7f781e444b015013cd1824b3f1d",
+    "correctness/natural_r0_uniform_k10/attempt_0/receipt.json": "f1628060de60820c69db1ac5ef31bff86278a0a8d31b349a7fa850d348958646",
+    "correctness/fixed_r0_ar/attempt_0/receipt.json": "32bb897a266dd23c7b674e5c9ba92913a8e9b25012b125df6b41041b014dafc7",
+    "correctness/natural_r0_complete_k7/attempt_0/receipt.json": "855fe9295ef48b511a4fd92739e93266c549fd11230030f2b5da3a6547b8c14e",
+    "stress/natural_r0_ar/attempt_0/receipt.json": "a576f6f971ed4761e69b1c80a97d3b03b564e24dcded54d04fd7bfc0f62be9cd",
+    "stress/fixed_r0_overlap_k10/attempt_0/receipt.json": "907c3d9dee7bce3520a686eee69a363ecdeb75488c155e2508b92208d33334b7",
+    "stress/natural_r0_overlap_k10/attempt_0/receipt.json": "8ad6f8925ad78b7fbe3e93c865a032669adf02f0791714c769fedb21376a8b49",
+    "stress/fixed_r0_ar/attempt_0/receipt.json": "09474c8ee703c033e10e9192cb9f6d0a05cbf93dce82ec2acc62b46b16612586"
+  },
+  "total_requests": 120,
+  "exact_speculative_comparisons": 102,
+  "observed_foreign_gpu_jobs": [
+    {
+      "pid": 2534355,
+      "gpu_uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+    },
+    {
+      "pid": 2541824,
+      "gpu_uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+    },
+    {
+      "pid": 2543324,
+      "gpu_uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+    },
+    {
+      "pid": 2545483,
+      "gpu_uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+    },
+    {
+      "pid": 2557855,
+      "gpu_uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd"
+    }
+  ],
+  "pending": "Dedicated-GPU tuning and held-out performance comparison; no speedup claim from shared-GPU diagnostics",
+  "gpu_targeted_tests_passed": 16,
+  "completed_at": "2026-11-17T14:09:00.132322+00:00",
+  "artifact_sha256": {
+    "cpu_tests.log": "701919d9addf3ece4245fc291b50836f7d14e8d6cb3cc2b0bbe6fd9e26e49f7e",
+    "gpu_tests.log": "fd7b710175fcb33f59e85e85fdc6706c555c5ef94c456a819a5025f616f1eb3d",
+    "ar_reference_continuity.json": "ffcfbb0957eb1e79bd7cd1dcbb82d9211c1a2c319b0cb30423cdc7160d8c28eb",
+    "correctness/summary.json": "313e35ddae8c85e03826847fdd75f6534bedcb637367e3a498ae8b7b1ef4f4f4",
+    "stress/summary.json": "3f102f216ddd324deefed522e8f07658463cde2e55677e155b49f471c227ce79",
+    "queue.json": "ceef037cf78cd56c02a6df39970da88797cb9f66d53cfc4b72aa3ae787017d4e",
+    "source.zip": "1bb613f86bba9228c289cf04bdb317a1b5e843da21a171e229253f24ec8371d1"
+  }
+}

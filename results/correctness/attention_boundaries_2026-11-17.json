@@ -1,0 +1,2613 @@
+{
+  "diagnostic_only": true,
+  "gpu": "NVIDIA L40S",
+  "seed": 0,
+  "execution": {
+    "sha256": "3d49cb89530efcda1837e1e49c64057fa1fd92063fc27de9eed9c1d2673f9f26",
+    "files": {
+      "third_party/ssd/ssd/__init__.py": "f1a221b38f55b42ef0619cba48a411acbbd1965c4845b4643f77443b7ce77950",
+      "third_party/ssd/ssd/config.py": "3b45f44f1bf99c0c2b6a115e7fba1e029cee3019d6c3c650a409cef54816b244",
+      "third_party/ssd/ssd/engine/ar_compatible.py": "ad063e76d8be2558cd757d604e0bbd1db182556ec05e1616e72208a373b849f7",
+      "third_party/ssd/ssd/engine/block_manager.py": "6433d2b370fbcda21c12618dd128401e815ae528b11c6d6ea72f54ccd865e658",
+      "third_party/ssd/ssd/engine/draft_runner.py": "f2652788b3c25bacf885288df9fe683a17d06251c4f8e06bb9c2cfb3dfd8a654",
+      "third_party/ssd/ssd/engine/helpers/cudagraph_helpers.py": "834e522f0b90045058e5bbc7bf9b2503b78082eff4f297125ae21b494b3fc42b",
+      "third_party/ssd/ssd/engine/helpers/mask_helpers.py": "8ada4e709a6ab310ee920a7176b3684f89860022fc659442f6cb02ed5fb87d88",
+      "third_party/ssd/ssd/engine/helpers/runner_helpers.py": "288e81d295828e683fe351e4c8b1427173a21a54fd66aaa3f51e3b63b527bfc0",
+      "third_party/ssd/ssd/engine/helpers/speculate_types.py": "461e21355ab4b9e0d9d9c11e22f0b5707b4a9a1e0aeeaa2d92d86c421ed4414b",
+      "third_party/ssd/ssd/engine/llm_engine.py": "b0f5deaee73170ce79b1360810613abdce57445b31e085ecdb0241e4d98cb4be",
+      "third_party/ssd/ssd/engine/model_runner.py": "3d920518470c615324e701ffd109b5a55825c9919ce35ae10feb7a6571559f8b",
+      "third_party/ssd/ssd/engine/scheduler.py": "15e8a4b52c0d699b0593c6a8ea94b100d51669b224c797df8f58b6921541ba55",
+      "third_party/ssd/ssd/engine/sequence.py": "d97aa6e04907c79b8857a8db13bccaa9acc7c73310a62e7e6ee24bb0e8e1cc8a",
+      "third_party/ssd/ssd/engine/speculator_async.py": "b275ccb04fbcf66ca5d1a8497b2ce08c6f16b2ab872b864179d4e02d930d07fe",
+      "third_party/ssd/ssd/engine/speculator_sync.py": "87aeb76ec574b51d69b541c80ea2daa02463d824df4613e06783a2fd747fda12",
+      "third_party/ssd/ssd/engine/step.py": "a807f405bb902d6e372b8887ce99be513dbc1f27d8c1f35e3732d6b138e2622c",
+      "third_party/ssd/ssd/engine/verifier.py": "baa4c88f64833c40899d09a2636bacaa9e6d64a015048b57cbcc018f146b9f3a",
+      "third_party/ssd/ssd/layers/activation.py": "13d88b460e7610df28c6a7c719dd8bf21c5c59ae0f85c94d505d499215618a82",
+      "third_party/ssd/ssd/layers/attention.py": "2fdb46bc8393c10597d52bba4747d08a10cce36d1f2ece696c7f0854bba40dcc",
+      "third_party/ssd/ssd/layers/embed_head.py": "b896a56b908d75c8f30462b0b1a4ce634276ddb41165fdaa0220c55a2ddf7257",
+      "third_party/ssd/ssd/layers/layernorm.py": "fd273e4759397a52b6bdc826b1982f4142f944df734f8ffe46dfcf06780159ac",
+      "third_party/ssd/ssd/layers/linear.py": "73626f5cdcb1d022927a02c513a4d310d95ac69146f82e7f34424c9605fc9eab",
+      "third_party/ssd/ssd/layers/paged_attention_triton.py": "8f5c642a1b659a5029abe82ee06cad2d4e2a63529175e8b31b873edcc7b6105c",
+      "third_party/ssd/ssd/layers/rotary_embedding.py": "1bcca21cf5e4d81c11a5c55d59a6033874c4e6a0003cc4ae8e1aa6165976a723",
+      "third_party/ssd/ssd/layers/sampler.py": "9688d32807c09eb2f16c600b24256552bc90657b432f36f1042c89a5fd368e71",
+      "third_party/ssd/ssd/llm.py": "496950f31428f674b70e8e137e029aa16dd82fdc8d8b8cc76f9ebdce86f7f653",
+      "third_party/ssd/ssd/models/eagle3_draft_llama3.py": "0d6e713a419cf884fc85984f9a2a6de520119032075a7c99158e0df7e2faca84",
+      "third_party/ssd/ssd/models/llama3.py": "bf838bb14de26569f7cf7949f318a45547ec055e51c165a2d9662a929b4305b0",
+      "third_party/ssd/ssd/models/qwen3.py": "535495bf69933fd9c677275453b801189e2c3c78a94fcc5133fc65b88c9f69c7",
+      "third_party/ssd/ssd/paths.py": "72c52420daaf6d457c60235617efc3f8b1e3ae208a35f3bc45438adc9d7e01ac",
+      "third_party/ssd/ssd/sampling_params.py": "7f79868c4ca115bb18e017411a6c5545f354aa858aa0b8076aafb756d0785032",
+      "third_party/ssd/ssd/utils/async_helpers/async_spec_helpers.py": "1996b014a2047d73b460d0cd7d1a3c0ab9a4b0fe834de2fb855672c37482da94",
+      "third_party/ssd/ssd/utils/async_helpers/nccl_pack.py": "efe12bb28ad7286c792129ffc44932bfa136f4bb5669a5a940a8d19e1c7ae3ef",
+      "third_party/ssd/ssd/utils/async_helpers/tests.py": "6491ced36a2a6f06d8cf411204b1190d2ca0bc700cd0becf79c3f4cd8abcd87e",
+      "third_party/ssd/ssd/utils/context.py": "9d55d4b8d64964dc48a1c76bc257f4cd3526b57276e4abf12a67731e1d5b8233",
+      "third_party/ssd/ssd/utils/loader.py": "3d6d68d46a17ab658f0ec47e3e3efa99b210002c57591afab301d360072129a0",
+      "third_party/ssd/ssd/utils/misc.py": "e56aa9fe2fbe1a193fdc76b7b730b942da2f886fecc75210edefd9d093bd5d1c",
+      "third_party/ssd/ssd/utils/nvtx.py": "beb34bf2d8edcaf34487f5fd65b89b254f05be54b17b85473090a5d08432ac59",
+      "third_party/ssd/ssd/utils/verify.py": "d2bca39bf241fca70d7b2596b2d46228516d6882bb9114bf27f31bdc84d713e0",
+      "profiling/run_engine.py": "e51e9439d6e295621f04fe6534eab7ed05df2e437e7ac99a5dca4dd1955f3750",
+      "profiling/workloads.py": "d5f63210bf04a1f5d5e6ea7a2be6269c7d8fd4f9d225e96b9084cfb80f4fc806",
+      "profiling/baseline_common.py": "ebe2715dc98a742b5f646cada016bd17a310874bc68eff48758cc6b017d8f48c",
+      "profiling/run_baselines.py": "812e7b2f5105ec3a60e1b64dbd1fcf55c3bfe2f5438610c60857aad7a10a6f98",
+      "profiling/analyze_baselines.py": "770bf742454a4dd07ee6cb1991ec02d6825d28ea919d6daa4c947d4958f6fa69",
+      "profiling/watch_baselines.py": "ca80ff23280e88389d887b4b233eae594d19696e4453556f6491bf6f163742b5"
+    }
+  },
+  "diagnostic_sha256": "3cafbc506324a8206fb59fe0dc2753e04965e71950c714d04e5abc799d031864",
+  "parallel_ar_attention_sha256": "0da040fa98cf1581c48b3641bafa2826b9afdc5fadfc3840cf1d1c5beeb2e45b",
+  "software": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+    "executable": "/home/vishalrao/miniconda3/bin/python3.13",
+    "packages": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6",
+      "triton": "3.6.0",
+      "flashinfer-python": "0.6.4",
+      "numpy": "2.2.6"
+    },
+    "environment": {
+      "CUDA_HOME": "/usr/local/cuda-12.9",
+      "SSD_CUDA_ARCH": "8.9",
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+      "NVIDIA_TF32_OVERRIDE": null,
+      "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": null,
+      "CUBLAS_WORKSPACE_CONFIG": null,
+      "CUDA_LAUNCH_BLOCKING": null,
+      "OMP_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    }
+  },
+  "splits": 32,
+  "cases": [
+    {
+      "width": 5,
+      "first_visible": 250,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 255,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 256,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 257,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 2042,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 2047,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 2370,
+        "elements": 20480,
+        "max_abs": 0.00048828125,
+        "mean_abs": 1.02250422060024e-05
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1184,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1186,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 2048,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 1188,
+        "elements": 20480,
+        "max_abs": 0.0009765625,
+        "mean_abs": 5.497915844898671e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1188,
+          "max_abs": 0.0009765625
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 2049,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 5,
+      "first_visible": 4080,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 20480,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 250,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 255,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 256,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 257,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 2042,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 2047,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 2390,
+        "elements": 28672,
+        "max_abs": 0.00048828125,
+        "mean_abs": 7.579029832933364e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1188,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1202,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 2048,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 1136,
+        "elements": 28672,
+        "max_abs": 0.00048828125,
+        "mean_abs": 3.3603636049000277e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1136,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 2049,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 7,
+      "first_visible": 4080,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 28672,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 250,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 255,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 256,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 257,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 2042,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 8430,
+        "elements": 32768,
+        "max_abs": 0.00048828125,
+        "mean_abs": 2.2862113397081885e-05
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1180,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1176,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 2,
+          "unequal": 1210,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 3,
+          "unequal": 1219,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 4,
+          "unequal": 1210,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 5,
+          "unequal": 1205,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 6,
+          "unequal": 1230,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 2047,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 2374,
+        "elements": 32768,
+        "max_abs": 0.00048828125,
+        "mean_abs": 6.07375704930746e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1129,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1245,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 2048,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 1209,
+        "elements": 32768,
+        "max_abs": 0.00048828125,
+        "mean_abs": 3.3709020499372855e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1209,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 2049,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 8,
+      "first_visible": 4080,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 32768,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 250,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 255,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 256,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 257,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 2042,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 8484,
+        "elements": 36864,
+        "max_abs": 0.0009765625,
+        "mean_abs": 2.037589405922012e-05
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1190,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1163,
+          "max_abs": 0.0009765625
+        },
+        {
+          "row": 2,
+          "unequal": 1209,
+          "max_abs": 0.0009765625
+        },
+        {
+          "row": 3,
+          "unequal": 1232,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 4,
+          "unequal": 1251,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 5,
+          "unequal": 1172,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 6,
+          "unequal": 1267,
+          "max_abs": 0.0009765625
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 2047,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 2376,
+        "elements": 36864,
+        "max_abs": 0.00048828125,
+        "mean_abs": 5.605874725410507e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1203,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 1173,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 2048,
+      "single_vs_batch": {
+        "exact": false,
+        "unequal": 1182,
+        "elements": 36864,
+        "max_abs": 0.00048828125,
+        "mean_abs": 2.654728531423542e-06
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 1182,
+          "max_abs": 0.00048828125
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 2049,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    },
+    {
+      "width": 9,
+      "first_visible": 4080,
+      "single_vs_batch": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "single_vs_parallel": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "parallel_graph_vs_eager": {
+        "exact": true,
+        "unequal": 0,
+        "elements": 36864,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "rows": [
+        {
+          "row": 0,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 1,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 2,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 3,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 4,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 5,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 6,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 7,
+          "unequal": 0,
+          "max_abs": 0.0
+        },
+        {
+          "row": 8,
+          "unequal": 0,
+          "max_abs": 0.0
+        }
+      ]
+    }
+  ],
+  "status": "complete"
+}

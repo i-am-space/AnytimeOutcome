@@ -1,0 +1,47 @@
+{
+  "valid": false,
+  "job_sha256": "6920d005a49c578b3ef060ce95950ce6cf6743f12066372e8c9d13fec2dafcc0",
+  "execution_sha256": "21297c3791fb2390502a3737c4db0f0d7f46ad327dcd64ab1f11dc89a4e2f666",
+  "output_sha256": null,
+  "returncode": -15,
+  "error": null,
+  "monitoring": {
+    "started_at": "2026-11-16T21:21:41.573657+00:00",
+    "samples": 144,
+    "external_processes": [
+      {
+        "at": "2026-11-16T21:24:29.236540+00:00",
+        "processes": [
+          {
+            "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+            "pid": 1949098,
+            "name": "/scratch/krishak/uv-cache/builds-v0/.tmpZCFwV2/bin/python"
+          }
+        ]
+      },
+      {
+        "at": "2026-11-16T21:24:29.887961+00:00",
+        "processes": [
+          {
+            "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+            "pid": 1949098,
+            "name": "/scratch/krishak/uv-cache/builds-v0/.tmpZCFwV2/bin/python"
+          }
+        ]
+      }
+    ],
+    "error": null,
+    "finished_at": "2026-11-16T21:24:30.053870+00:00"
+  },
+  "hardware_allocation": {
+    "gpu_count": 1,
+    "roles": [
+      {
+        "role": "target",
+        "physical_index": 0,
+        "logical_index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+      }
+    ]
+  }
+}

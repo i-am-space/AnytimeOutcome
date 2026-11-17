@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 results/**/smoke_*.json
 results/**/probe_*
+results/**/.*.lock
+results/**/*.tmp

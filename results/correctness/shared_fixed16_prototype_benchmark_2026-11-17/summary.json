@@ -1,0 +1,303 @@
+{
+  "definition_sha256": "74be473ba341bde2bc39a95b87db7828881e2c95abe7195f76b6105a93175589",
+  "scope": "Dedicated prototype engineering benchmark; not held-out headline evidence",
+  "reference_contract": "shared-fixed16-v1; new AR arithmetic, original AR retained separately",
+  "methods": {
+    "original_ar": {
+      "requests": 15,
+      "rounds": 5,
+      "mean_s": 5.619496314735928,
+      "p50_s": 5.549404821009375,
+      "p95_s": 5.858379466217594,
+      "committed_tok_s": 45.55568429303792,
+      "first_delivery_mean_s": 0.09449865300363551
+    },
+    "shared_ar": {
+      "requests": 15,
+      "rounds": 5,
+      "mean_s": 6.281100802125487,
+      "p50_s": 6.243868573015789,
+      "p95_s": 6.42654757828277,
+      "committed_tok_s": 40.757187006674236,
+      "first_delivery_mean_s": 0.06250583932851442
+    },
+    "shared_sd": {
+      "requests": 15,
+      "rounds": 5,
+      "mean_s": 3.4910204218002034,
+      "p50_s": 3.74718659199425,
+      "p95_s": 4.491519685601816,
+      "committed_tok_s": 73.33099468607213,
+      "first_delivery_mean_s": 0.1375754931999836
+    },
+    "shared_ssd": {
+      "requests": 15,
+      "rounds": 5,
+      "mean_s": 2.5000892193987965,
+      "p50_s": 2.836204317980446,
+      "p95_s": 3.3431012123008257,
+      "committed_tok_s": 102.39634570383893,
+      "first_delivery_mean_s": 0.18164392913264843
+    }
+  },
+  "valid_blocks": 20,
+  "paired_exact": 30,
+  "comparisons": [
+    {
+      "round": 0,
+      "method": "shared_sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 0,
+      "method": "shared_sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 0,
+      "method": "shared_sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 0,
+      "method": "shared_ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 0,
+      "method": "shared_ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 0,
+      "method": "shared_ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 1,
+      "method": "shared_ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 2,
+      "method": "shared_sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 3,
+      "method": "shared_ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "round": 4,
+      "method": "shared_ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null
+    }
+  ],
+  "correctness_passed": true,
+  "within_method_repeatability": {
+    "original_ar": true,
+    "shared_ar": true,
+    "shared_sd": true,
+    "shared_ssd": true
+  },
+  "paired_speed_ratio_intervals": {
+    "shared_sd_vs_shared_ar": {
+      "low": 1.7816237132037944,
+      "high": 1.8134968324391876,
+      "samples": 10000,
+      "seed": 0,
+      "unit": "round",
+      "limitation": "One fixed prompt per family; no estimate of prompt generalization"
+    },
+    "shared_sd_vs_original_ar": {
+      "low": 1.600806864294986,
+      "high": 1.621201321710854,
+      "samples": 10000,
+      "seed": 0,
+      "unit": "round",
+      "limitation": "One fixed prompt per family; no estimate of prompt generalization"
+    },
+    "shared_ssd_vs_shared_ar": {
+      "low": 2.4606687289989044,
+      "high": 2.5750950092226486,
+      "samples": 10000,
+      "seed": 0,
+      "unit": "round",
+      "limitation": "One fixed prompt per family; no estimate of prompt generalization"
+    },
+    "shared_ssd_vs_original_ar": {
+      "low": 2.1920440601714586,
+      "high": 2.3056368575391297,
+      "samples": 10000,
+      "seed": 0,
+      "unit": "round",
+      "limitation": "One fixed prompt per family; no estimate of prompt generalization"
+    }
+  },
+  "limitations": [
+    "Only three already-investigated prompts; not held-out generalization evidence.",
+    "Starting K/F configurations were not retuned for this backend.",
+    "Original AR has different arithmetic; shared comparisons use an explicitly new reference."
+  ]
+}

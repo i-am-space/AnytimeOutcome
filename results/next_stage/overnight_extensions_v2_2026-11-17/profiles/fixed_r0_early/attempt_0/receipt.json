@@ -1,0 +1,52 @@
+{
+  "valid": true,
+  "definition_sha256": "237c292d43a2a829beced26592b5d3925f6040a4f1cf1d987b51a021a993b600",
+  "command": [
+    "nsys",
+    "profile",
+    "--cuda-event-trace=false",
+    "--trace=cuda,nvtx,osrt",
+    "--cuda-graph-trace=node",
+    "--gpu-metrics-devices=all",
+    "--gpu-metrics-frequency=20000",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=stop",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "-o",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/profiles/fixed_r0_early/attempt_0/trace",
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_overnight_extensions_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17",
+    "--phase",
+    "profiles",
+    "--job",
+    "fixed_r0_early",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/profiles/fixed_r0_early/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 80,
+  "external_processes": [],
+  "error": null,
+  "output_sha256": "de5505e62e34d542efef55cc296ce917a437e7b0a5f6e894e37668f5f839d172",
+  "artifacts": {
+    "trace.sqlite": "d115ce6769224a72ada71b1a19b8c70c4eed607e17fc4044892f3d115ba1971b",
+    "trace.nsys-rep": "f071c6f14dac4087e7ac15187ceb0a6362ad7e14095ff845bc425203530f2681",
+    "result.json": "de5505e62e34d542efef55cc296ce917a437e7b0a5f6e894e37668f5f839d172",
+    "analysis/early_analysis.json": "a8793dbf424c6dc2ae610011795134e95bf65a354e96de22b09f3ced9ecbee47",
+    "analysis/early_timeline.png": "aa5cf25356fe680b9e14161e80f3b5c26d7a2a1711ad0261629d184e33ccc966"
+  },
+  "at": "2026-11-17T08:20:12.615714+00:00",
+  "ownership_monitor": {
+    "strategy": "launcher group or inherited per-run token",
+    "run_token": "731810dc097847fab6a67cb9fae3f621",
+    "owned_gpu_pids": [
+      2380546,
+      2380726
+    ]
+  }
+}

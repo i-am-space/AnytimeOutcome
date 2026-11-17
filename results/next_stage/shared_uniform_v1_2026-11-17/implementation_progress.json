@@ -1,0 +1,49 @@
+{
+  "implementation": "uniform minimum-depth publication; opt-in shared-fixed16-v1",
+  "cpu_tests": {
+    "passed": 122,
+    "skipped": 15,
+    "excluded": [
+      "tests/test_paged_attention.py"
+    ]
+  },
+  "normal_gate": {
+    "path": "/home/vishalrao/AnytimeOutcome/results/correctness/uniform_publication_v1_2026-11-17",
+    "valid_blocks": 8,
+    "requests": 72,
+    "paired_exact": 54,
+    "paired_total": 54,
+    "natural_partial_handoffs": 0
+  },
+  "stress_gate": {
+    "path": "/home/vishalrao/AnytimeOutcome/results/correctness/uniform_publication_stress_v1_2026-11-17",
+    "artificial_delay_ms": 4,
+    "valid_blocks": 4,
+    "paired_exact": 6,
+    "paired_total": 6,
+    "partial_handoffs": 356,
+    "natural_eos_output_length": 179,
+    "performance_evidence": false
+  },
+  "performance": {
+    "status": "baseline tuning running; first 24-request block validated; comparison queued",
+    "tmux_session": "ao-next-stage",
+    "baseline_required": {
+      "tuning_requests": 480,
+      "heldout_requests": 2250,
+      "valid_blocks": 50
+    },
+    "comparison_required": {
+      "requests": 270,
+      "valid_blocks": 30,
+      "rounds": 5
+    },
+    "estimate_dedicated_gpu_hours": [
+      3,
+      5
+    ],
+    "publication_depth_rule": "min(4, selected SSD K - 1)",
+    "valid_baseline_blocks_at_last_check": 1
+  },
+  "exactness_scope": "new shared AR reference only; original AR historical exactness remains unresolved"
+}

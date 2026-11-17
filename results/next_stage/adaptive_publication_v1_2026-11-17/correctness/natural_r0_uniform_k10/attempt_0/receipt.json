@@ -1,0 +1,31 @@
+{
+  "valid": false,
+  "definition_sha256": "e0bb6f8ac91f762b86e79177141a857a0f32d2752eec4df4921b76ff3091257b",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_adaptive_publication.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/adaptive_publication_v1_2026-11-17",
+    "--phase",
+    "correctness",
+    "--job",
+    "natural_r0_uniform_k10",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/adaptive_publication_v1_2026-11-17/correctness/natural_r0_uniform_k10/attempt_0"
+  ],
+  "returncode": -15,
+  "samples": 37,
+  "external_processes": [
+    {
+      "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+      "pid": 2492968,
+      "name": "/scratch/krishak/uv-cache/builds-v0/.tmp8htHOu/bin/python"
+    }
+  ],
+  "error": null,
+  "output_sha256": "4def1fe23ba0e0c1356cd1eaa621b97a8c2488cbd8c4f187c06070dd90342a68",
+  "artifacts": {},
+  "at": "2026-11-17T12:13:50.123036+00:00"
+}

@@ -1,0 +1,20 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:01,  3.69it/s]Loading model files:  40%|████      | 2/5 [00:01<00:01,  1.72it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.65it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.49it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.50it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.59it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 81, 256, 8, 128])
+[LLMEngine] finished llm_engine init
+natural ar: specbench-148 complete
+natural ar: HumanEval/36 complete
+natural ar: specbench-553 complete
+natural ar: specbench-109 complete
+natural ar: specbench-152 complete
+natural ar: HumanEval/146 complete
+natural ar: HumanEval/67 complete
+natural ar: specbench-496 complete
+natural ar: specbench-253 complete
+[LLMEngine] Exiting (hard=True)

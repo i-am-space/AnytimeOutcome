@@ -1,0 +1,1914 @@
+{
+  "definition_sha256": "0ffe7cccb8545edfcc22f30543baa7a20b7ce02b4d382af1d6f689dd57d9ae89",
+  "valid_blocks": 30,
+  "requests": 270,
+  "tables": {
+    "fixed": {
+      "ar": {
+        "requests": 45,
+        "gpu_count": 1,
+        "mean_s": 6.29222345140297,
+        "p50_s": 6.256821943999967,
+        "p95_s": 6.474374705203809,
+        "committed_tok_s": 40.68514126638652,
+        "first_delivery_s": 0.06690897929171721,
+        "mean_wait_s": 0,
+        "mean_final_drain_s": 0,
+        "mean_publication_s": null,
+        "mean_interrupt_drain_s": null,
+        "partial_publications": 0,
+        "verified_draft_tokens": 0,
+        "accepted_draft_tokens": 0,
+        "tokens_per_verification": 0.0,
+        "max_target_allocated_bytes": 38057095680,
+        "max_draft_allocated_bytes": 0,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 6.240051165801318,
+          "code": 6.281549210470015,
+          "doc": 6.3550699779375766
+        }
+      },
+      "complete": {
+        "requests": 45,
+        "gpu_count": 2,
+        "mean_s": 2.3201481064891496,
+        "p50_s": 2.5445141210220754,
+        "p95_s": 3.3637329553836026,
+        "committed_tok_s": 110.33778373199608,
+        "first_delivery_s": 0.12054887751324309,
+        "mean_wait_s": 0.4401940966057332,
+        "mean_final_drain_s": 0.00013636299991048872,
+        "mean_publication_s": 0.0030042448664556964,
+        "mean_interrupt_drain_s": 0.0,
+        "partial_publications": 0,
+        "verified_draft_tokens": 22120,
+        "accepted_draft_tokens": 8470,
+        "tokens_per_verification": 3.680379746835443,
+        "max_target_allocated_bytes": 37681810944,
+        "max_draft_allocated_bytes": 33418350592,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 2.9536345563382684,
+          "code": 1.2552461968637847,
+          "doc": 2.751563566265395
+        }
+      },
+      "early": {
+        "requests": 45,
+        "gpu_count": 2,
+        "mean_s": 2.3595593505758896,
+        "p50_s": 2.593388523993781,
+        "p95_s": 3.452661819796776,
+        "committed_tok_s": 108.49483397716567,
+        "first_delivery_s": 0.11697969986513877,
+        "mean_wait_s": 0.4819241014716681,
+        "mean_final_drain_s": 0.002130225578892148,
+        "mean_publication_s": 0.0003162729727848101,
+        "mean_interrupt_drain_s": 0.002898865255379747,
+        "partial_publications": 0,
+        "verified_draft_tokens": 22120,
+        "accepted_draft_tokens": 8470,
+        "tokens_per_verification": 3.680379746835443,
+        "max_target_allocated_bytes": 37681810944,
+        "max_draft_allocated_bytes": 33422599680,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 3.007257828929384,
+          "code": 1.2483982457973373,
+          "doc": 2.8230219770009475
+        }
+      }
+    },
+    "natural": {
+      "ar": {
+        "requests": 45,
+        "gpu_count": 1,
+        "mean_s": 5.995099871712349,
+        "p50_s": 6.243666716996813,
+        "p95_s": 6.298292569402838,
+        "committed_tok_s": 40.71843944801322,
+        "first_delivery_s": 0.060446733489192814,
+        "mean_wait_s": 0,
+        "mean_final_drain_s": 0,
+        "mean_publication_s": null,
+        "mean_interrupt_drain_s": null,
+        "partial_publications": 0,
+        "verified_draft_tokens": 0,
+        "accepted_draft_tokens": 0,
+        "tokens_per_verification": 0.0,
+        "max_target_allocated_bytes": 38057095680,
+        "max_draft_allocated_bytes": 0,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          226,
+          256,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          256,
+          179,
+          256,
+          256,
+          226,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          179,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 6.241110561667786,
+          "code": 6.261093114205869,
+          "doc": 5.483095939263391
+        }
+      },
+      "complete": {
+        "requests": 45,
+        "gpu_count": 2,
+        "mean_s": 2.2357987953104184,
+        "p50_s": 2.541236081975512,
+        "p95_s": 3.3546073973935564,
+        "committed_tok_s": 109.1829513564161,
+        "first_delivery_s": 0.12714828528890695,
+        "mean_wait_s": 0.425800817122864,
+        "mean_final_drain_s": 0.0001338089544636508,
+        "mean_publication_s": 0.0030015657003289475,
+        "mean_interrupt_drain_s": 0.0,
+        "partial_publications": 0,
+        "verified_draft_tokens": 21280,
+        "accepted_draft_tokens": 8020,
+        "tokens_per_verification": 3.638157894736842,
+        "max_target_allocated_bytes": 37681810944,
+        "max_draft_allocated_bytes": 33418349568,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          226,
+          256,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          256,
+          179,
+          256,
+          256,
+          226,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          179,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 2.951217545598047,
+          "code": 1.29427089386348,
+          "doc": 2.461907946469728
+        }
+      },
+      "early": {
+        "requests": 45,
+        "gpu_count": 2,
+        "mean_s": 2.2764224524661483,
+        "p50_s": 2.5929802280152217,
+        "p95_s": 3.415140863804845,
+        "committed_tok_s": 107.23453849554805,
+        "first_delivery_s": 0.1271615303541896,
+        "mean_wait_s": 0.45756571508956967,
+        "mean_final_drain_s": 0.002068191134215643,
+        "mean_publication_s": 0.00031418968092105265,
+        "mean_interrupt_drain_s": 0.002888307100657895,
+        "partial_publications": 2,
+        "verified_draft_tokens": 21278,
+        "accepted_draft_tokens": 8020,
+        "tokens_per_verification": 3.638157894736842,
+        "max_target_allocated_bytes": 37681810944,
+        "max_draft_allocated_bytes": 33422599168,
+        "output_lengths": [
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          226,
+          256,
+          179,
+          256,
+          256,
+          256,
+          226,
+          256,
+          256,
+          179,
+          256,
+          256,
+          256,
+          256,
+          256,
+          179,
+          256,
+          256,
+          226,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          256,
+          226,
+          179,
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 3.0048180663356714,
+          "code": 1.2945273613324388,
+          "doc": 2.5299219297303353
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "complete",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 1,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 2,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 3,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/67",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-152",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-253",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 4,
+      "method": "early",
+      "id": "specbench-553",
+      "exact": true,
+      "first_difference": null
+    }
+  ],
+  "exact_matches": 180,
+  "correctness_passed": true,
+  "within_method_repeatability": {
+    "fixed/ar": true,
+    "fixed/complete": true,
+    "fixed/early": true,
+    "natural/ar": true,
+    "natural/complete": true,
+    "natural/early": true
+  },
+  "paired_speed_ratio_intervals": {
+    "fixed": {
+      "low": 0.9741590371451093,
+      "high": 0.9909832157236751,
+      "seed": 0,
+      "samples": 10000,
+      "unit": "paired rounds and prompts within families",
+      "ratio": "complete-cache latency / early latency"
+    },
+    "natural": {
+      "low": 0.9623441289507274,
+      "high": 1.0041980415561873,
+      "seed": 0,
+      "samples": 10000,
+      "unit": "paired rounds and prompts within families",
+      "ratio": "complete-cache latency / early latency"
+    }
+  },
+  "limitations": [
+    "Previously investigated engineering prompts; not held-out headline results",
+    "retuned shared baseline",
+    "Fixed target K+1 graph retained; padded tail is calculated but cannot be accepted.",
+    "New AR arithmetic; no original-AR exactness claim.",
+    "Uniform checkpoint waiting, NCCL handoff, and final obsolete-work draining are included."
+  ]
+}

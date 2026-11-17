@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "samples": 65,
+  "contamination": [],
+  "error": null,
+  "returncode": 0,
+  "at": "2026-11-16T18:46:13.103715+00:00",
+  "monitored_gpu_uuids": [
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+  ],
+  "background_process_changes": [
+    {
+      "at": "2026-11-16T18:44:52.773134+00:00",
+      "processes": []
+    }
+  ]
+}

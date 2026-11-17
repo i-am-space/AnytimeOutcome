@@ -1,0 +1,52 @@
+{
+  "valid": false,
+  "definition_sha256": "237c292d43a2a829beced26592b5d3925f6040a4f1cf1d987b51a021a993b600",
+  "command": [
+    "nsys",
+    "profile",
+    "--cuda-event-trace=false",
+    "--trace=cuda,nvtx,osrt",
+    "--cuda-graph-trace=node",
+    "--gpu-metrics-devices=all",
+    "--gpu-metrics-frequency=20000",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=stop",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "-o",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/profiles/fixed_r0_complete/attempt_0/trace",
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_overnight_extensions_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17",
+    "--phase",
+    "profiles",
+    "--job",
+    "fixed_r0_complete",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/profiles/fixed_r0_complete/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 75,
+  "external_processes": [
+    {
+      "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+      "pid": 2383147,
+      "name": "[No data]"
+    }
+  ],
+  "error": null,
+  "output_sha256": "469339d841360f3e66ece1001e737b696f3ea8ea8d14d5c85b253464b25b23c2",
+  "artifacts": {},
+  "at": "2026-11-17T08:21:37.775486+00:00",
+  "ownership_monitor": {
+    "strategy": "launcher group or inherited per-run token",
+    "run_token": "15cd217a967841e5995ec900e7c86397",
+    "owned_gpu_pids": [
+      2382958,
+      2383147
+    ]
+  }
+}

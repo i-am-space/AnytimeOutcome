@@ -1,0 +1,11 @@
+{
+  "pdf_pages": 16,
+  "pdf_text_within_bounds": true,
+  "independent_text_boxes_do_not_overlap": true,
+  "pptx_slides": 16,
+  "pptx_xml_and_relationships_valid": true,
+  "native_editable_text": true,
+  "speaker_notes": 16,
+  "source_hashes_verified": 5,
+  "removed_named_comparator_verified": true
+}

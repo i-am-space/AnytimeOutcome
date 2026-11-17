@@ -9,6 +9,7 @@ class SpeculateResult:
     speculations: torch.Tensor
     logits_q: torch.Tensor
     cache_hits: torch.Tensor | None = None
+    valid_length: int | None = None
 
 
 @dataclass

@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-11-16T20:25:37.211000+00:00",
+  "matches_definition": true,
+  "hardware": {
+    "gpus": [
+      {
+        "index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      }
+    ],
+    "topology": "\t\u001b[4mGPU0\tGPU1\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\t0-15,32-47\t0\t\tN/A\nGPU1\tSYS\t X \t16-31,48-63\t1\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n"
+  }
+}

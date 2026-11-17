@@ -1,0 +1,137 @@
+{
+  "manifest_sha256": "aa249b4696114e7ed28e72646ff70f14ca2cac426e885267a60696899cdbf2aa",
+  "execution_sha256": "21297c3791fb2390502a3737c4db0f0d7f46ad327dcd64ab1f11dc89a4e2f666",
+  "objective": "mean fixed-256 full-request latency on 24 balanced tuning prompts, two repetitions",
+  "winners": {
+    "ar": {
+      "mode": "ar",
+      "k": null,
+      "f": null
+    },
+    "sd": {
+      "mode": "sd",
+      "k": 6,
+      "f": null
+    },
+    "ssd": {
+      "mode": "ssd",
+      "k": 7,
+      "f": 3
+    }
+  },
+  "scores": [
+    {
+      "config": {
+        "mode": "ar",
+        "k": null,
+        "f": null
+      },
+      "mean_latency_s": 6.272581512959732,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "sd",
+        "k": 4,
+        "f": null
+      },
+      "mean_latency_s": 3.096379252792152,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "sd",
+        "k": 6,
+        "f": null
+      },
+      "mean_latency_s": 3.0352415596911064,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "sd",
+        "k": 8,
+        "f": null
+      },
+      "mean_latency_s": 3.1417897701254938,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 4,
+        "f": 1
+      },
+      "mean_latency_s": 2.4330934793318497,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 4,
+        "f": 3
+      },
+      "mean_latency_s": 2.285736182460217,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 1
+      },
+      "mean_latency_s": 2.283109009209511,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 7,
+        "f": 3
+      },
+      "mean_latency_s": 2.1176189739562687,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 10,
+        "f": 1
+      },
+      "mean_latency_s": 2.975337001354395,
+      "requests": 48
+    },
+    {
+      "config": {
+        "mode": "ssd",
+        "k": 10,
+        "f": 3
+      },
+      "mean_latency_s": 2.9664618735647914,
+      "requests": 48
+    }
+  ],
+  "tuning_receipt_sha256": {
+    "tune/fixed/r0/ar": "5c185742e37c29608b7ee8ebca4327f965970a5d22e6b5d2da3d3265cdc4e398",
+    "tune/fixed/r1/ar": "2017e49bc271c4861a4143127846dcaaf4c5ab9fee550257b52edce40d246353",
+    "tune/fixed/r0/sd_k4": "9400cf6746483114414f29a995c3ffb901eab04e98ce39e0a7ae5df41a26f2ce",
+    "tune/fixed/r1/sd_k4": "842e3069f6e86980d90b5f90cc9e8a505f65f19bbdff07c09e0f5febbbc0af4d",
+    "tune/fixed/r0/sd_k6": "80991f37fe7c66579dc6b7661ba634e186c33b3233d1ec5c04048ba6652f0f01",
+    "tune/fixed/r1/sd_k6": "54f5f92253978d8474a0e78be130649b830421a8411a8878eb4eb154680ae2b3",
+    "tune/fixed/r0/sd_k8": "023a6d7a011dbcc00934cf0ffdb32dbeaaf6873858684e3c06d55b4c9d2d1207",
+    "tune/fixed/r1/sd_k8": "7a9e754c11c573daa774a123e2bebf76be4fa4bf462ba4a79468e24b109e05dd",
+    "tune/fixed/r0/ssd_k4_f1": "ebd3a95fdd48554d3fe36b4f3f72830eb56477dd240008cd002d1d0c8e2b7486",
+    "tune/fixed/r1/ssd_k4_f1": "1d35e3d6387fcf1e3786d1c8d312b7f78411c02a1af9a41f81ddc3a2c329ba50",
+    "tune/fixed/r0/ssd_k4_f3": "d8c50ea019010a4663cd469134b872e0a6e61e3c221da5683698ec514d3420ff",
+    "tune/fixed/r1/ssd_k4_f3": "ab7bbd086d59518947a2d190c037c552f34e18c45f9e2b8433af0999dae80847",
+    "tune/fixed/r0/ssd_k7_f1": "e6db7708f02a63f1e451537cf55c546fb67a7975893b954d1b02fe665c9055b9",
+    "tune/fixed/r1/ssd_k7_f1": "1162748a100f6f1fc51ebdf7cc36baf0e502c5b9f65432ba78a92f340ab068e3",
+    "tune/fixed/r0/ssd_k7_f3": "5eb4f25f17f0fbd1941e5176b1dbb0d3cbf56c04344699c15a26f55fa6020d72",
+    "tune/fixed/r1/ssd_k7_f3": "3bef7eb05abcd2e27bbe7628193ce365f597b065112d444c95e238f14aff259b",
+    "tune/fixed/r0/ssd_k10_f1": "e8416298b69b1aba7267dda9afb897400ade8c0a4fe3af5c0c3daaddc70cb0cc",
+    "tune/fixed/r1/ssd_k10_f1": "11fb5ed19f7bbf2569827f1b28d48ed1b6488034f4ca133237c004ef71d879e1",
+    "tune/fixed/r0/ssd_k10_f3": "502b3f63deb75823739eced1ea57f42897eaea8702608f537ecf20dae4d4a966",
+    "tune/fixed/r1/ssd_k10_f3": "15bd9981db5bcd0b08c7fa3877d906b5c360aab97c89ec170d7f3cdb798b1c5b"
+  },
+  "selection_sha256": "1f6a7913a0f848feb9de479b6038fa28caed5d5ee1ad3e6b9afdfe12dc21ce33"
+}

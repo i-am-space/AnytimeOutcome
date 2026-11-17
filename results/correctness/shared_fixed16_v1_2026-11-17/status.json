@@ -1,0 +1,5 @@
+{
+  "status": "stopped",
+  "at": "2026-11-16T20:03:53.560748+00:00",
+  "error": "Invalid worker fixed_ar; inspect its log and receipt"
+}

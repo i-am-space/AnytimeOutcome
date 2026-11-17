@@ -1,0 +1,41 @@
+{
+  "diagnostic_only": true,
+  "method": "original_ar",
+  "passed": true,
+  "requests": [
+    {
+      "id": "HumanEval/36",
+      "before": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      },
+      "after": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      }
+    },
+    {
+      "id": "specbench-553",
+      "before": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      },
+      "after": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      }
+    },
+    {
+      "id": "specbench-148",
+      "before": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      },
+      "after": {
+        "calls_captured": 268,
+        "unique_graphs": 19
+      }
+    }
+  ],
+  "source_sha256": "17341878aaf00d1ab9e7a84d2aa8e3c5fdf5c31bc8913c8776edfdbe283e71be"
+}

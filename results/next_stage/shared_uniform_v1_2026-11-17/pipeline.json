@@ -1,0 +1,9 @@
+{
+  "supervisor_sha256": "bc1365fc7186ee4e4392c370fe03e5688f4e8e94d56e5372b4e283efd4dbd44b",
+  "gate": "/home/vishalrao/AnytimeOutcome/results/correctness/uniform_publication_v1_2026-11-17",
+  "stress_gate": "results/correctness/uniform_publication_stress_v1_2026-11-17",
+  "source": "/home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_v1_2026-11-17_v2",
+  "baseline": "/home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/baselines",
+  "publication": "/home/vishalrao/AnytimeOutcome/results/next_stage/shared_uniform_v1_2026-11-17/publication",
+  "publication_depth_rule": "min(4, selected SSD K - 1)"
+}

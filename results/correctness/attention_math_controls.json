@@ -1,0 +1,2843 @@
+{
+  "diagnostic_only": true,
+  "eager": true,
+  "attention": "sdpa_math",
+  "torch_version": "2.10.0+cu128",
+  "requests": [
+    {
+      "id": "specbench-148",
+      "divergence_zero_based": 13,
+      "teacher_forced_predictions_equal_saved_ar": false,
+      "first_teacher_forced_difference": 13,
+      "single": {
+        "argmax": 16585,
+        "top": [
+          {
+            "token_id": 53852,
+            "text": " integrating",
+            "logit": 30.5
+          },
+          {
+            "token_id": 16585,
+            "text": " careful",
+            "logit": 30.5
+          },
+          {
+            "token_id": 264,
+            "text": " a",
+            "logit": 30.125
+          },
+          {
+            "token_id": 3807,
+            "text": " several",
+            "logit": 27.75
+          },
+          {
+            "token_id": 34171,
+            "text": " combining",
+            "logit": 26.25
+          },
+          {
+            "token_id": 26301,
+            "text": " selecting",
+            "logit": 26.125
+          },
+          {
+            "token_id": 12831,
+            "text": " considering",
+            "logit": 25.625
+          },
+          {
+            "token_id": 8660,
+            "text": " understanding",
+            "logit": 25.625
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 16585,
+          "top": [
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.5
+            },
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.5
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.75
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.25
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.125
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.625
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.25
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.25
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 16585,
+          "top": [
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.625
+            },
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.5
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.75
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.125
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.125
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.625
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.1875,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.25
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 16585,
+          "top": [
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.625
+            },
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.5
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.75
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.125
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.125
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.625
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.1875,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 16585,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.5
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.25
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          }
+        }
+      },
+      "schedule_replay": {
+        "argmax": 53852,
+        "top": [
+          {
+            "token_id": 53852,
+            "text": " integrating",
+            "logit": 30.875
+          },
+          {
+            "token_id": 16585,
+            "text": " careful",
+            "logit": 30.75
+          },
+          {
+            "token_id": 264,
+            "text": " a",
+            "logit": 30.375
+          },
+          {
+            "token_id": 3807,
+            "text": " several",
+            "logit": 27.875
+          },
+          {
+            "token_id": 34171,
+            "text": " combining",
+            "logit": 26.5
+          },
+          {
+            "token_id": 26301,
+            "text": " selecting",
+            "logit": 26.375
+          },
+          {
+            "token_id": 12831,
+            "text": " considering",
+            "logit": 25.875
+          },
+          {
+            "token_id": 8660,
+            "text": " understanding",
+            "logit": 25.875
+          }
+        ],
+        "captured_top8_logits_reproduced_exactly": false,
+        "kv_prefix_comparison_to_ar": [
+          {
+            "layer": 0,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 4.878397248830879e-06
+          },
+          {
+            "layer": 0,
+            "kind": "value",
+            "max_abs": 0.000244140625,
+            "mean_abs": 1.841115349066058e-08
+          },
+          {
+            "layer": 1,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.00026809185510501266
+          },
+          {
+            "layer": 1,
+            "kind": "value",
+            "max_abs": 0.0009765625,
+            "mean_abs": 1.4148039554129355e-05
+          },
+          {
+            "layer": 2,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0005159488646313548
+          },
+          {
+            "layer": 2,
+            "kind": "value",
+            "max_abs": 0.001953125,
+            "mean_abs": 3.4506283554947004e-05
+          },
+          {
+            "layer": 3,
+            "kind": "key",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0007123037939891219
+          },
+          {
+            "layer": 3,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 6.636670150328428e-05
+          },
+          {
+            "layer": 4,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0009541389881633222
+          },
+          {
+            "layer": 4,
+            "kind": "value",
+            "max_abs": 0.0048828125,
+            "mean_abs": 0.00010082665539812297
+          },
+          {
+            "layer": 5,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.0015558218583464622
+          },
+          {
+            "layer": 5,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 0.00010480389028089121
+          },
+          {
+            "layer": 6,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0008640413288958371
+          },
+          {
+            "layer": 6,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.00014035118510946631
+          },
+          {
+            "layer": 7,
+            "kind": "key",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0010863696224987507
+          },
+          {
+            "layer": 7,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.0002095794479828328
+          },
+          {
+            "layer": 8,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.001241958001628518
+          },
+          {
+            "layer": 8,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.0003324432182125747
+          },
+          {
+            "layer": 9,
+            "kind": "key",
+            "max_abs": 0.09375,
+            "mean_abs": 0.001327968668192625
+          },
+          {
+            "layer": 9,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.0003684084804262966
+          },
+          {
+            "layer": 10,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0013547500129789114
+          },
+          {
+            "layer": 10,
+            "kind": "value",
+            "max_abs": 0.021484375,
+            "mean_abs": 0.0005688847159035504
+          },
+          {
+            "layer": 11,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0015740833478048444
+          },
+          {
+            "layer": 11,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.00040713895577937365
+          },
+          {
+            "layer": 12,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0014605112373828888
+          },
+          {
+            "layer": 12,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.00045672294800169766
+          },
+          {
+            "layer": 13,
+            "kind": "key",
+            "max_abs": 0.109375,
+            "mean_abs": 0.001641645678319037
+          },
+          {
+            "layer": 13,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.000416614260757342
+          },
+          {
+            "layer": 14,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0015101742465049028
+          },
+          {
+            "layer": 14,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.0006075639394111931
+          },
+          {
+            "layer": 15,
+            "kind": "key",
+            "max_abs": 0.09375,
+            "mean_abs": 0.0015473330859094858
+          },
+          {
+            "layer": 15,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.0005935008521191776
+          },
+          {
+            "layer": 16,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0015949055086821318
+          },
+          {
+            "layer": 16,
+            "kind": "value",
+            "max_abs": 0.03515625,
+            "mean_abs": 0.0008241355535574257
+          },
+          {
+            "layer": 17,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0016419581370428205
+          },
+          {
+            "layer": 17,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.0007377539295703173
+          },
+          {
+            "layer": 18,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.001642480376176536
+          },
+          {
+            "layer": 18,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.0008478021482005715
+          },
+          {
+            "layer": 19,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0016627863515168428
+          },
+          {
+            "layer": 19,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.001054453430697322
+          },
+          {
+            "layer": 20,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.001857014955021441
+          },
+          {
+            "layer": 20,
+            "kind": "value",
+            "max_abs": 0.046875,
+            "mean_abs": 0.0010265680029988289
+          },
+          {
+            "layer": 21,
+            "kind": "key",
+            "max_abs": 0.09375,
+            "mean_abs": 0.001560055185109377
+          },
+          {
+            "layer": 21,
+            "kind": "value",
+            "max_abs": 0.044189453125,
+            "mean_abs": 0.0011771335266530514
+          },
+          {
+            "layer": 22,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0016094523016363382
+          },
+          {
+            "layer": 22,
+            "kind": "value",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0015646113315597177
+          },
+          {
+            "layer": 23,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.001567389816045761
+          },
+          {
+            "layer": 23,
+            "kind": "value",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0015259842621162534
+          },
+          {
+            "layer": 24,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0014389280695468187
+          },
+          {
+            "layer": 24,
+            "kind": "value",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0019706902094185352
+          },
+          {
+            "layer": 25,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0014654382830485702
+          },
+          {
+            "layer": 25,
+            "kind": "value",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0018284396501258016
+          },
+          {
+            "layer": 26,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0014752775896340609
+          },
+          {
+            "layer": 26,
+            "kind": "value",
+            "max_abs": 0.0859375,
+            "mean_abs": 0.002276589861139655
+          },
+          {
+            "layer": 27,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.001416845596395433
+          },
+          {
+            "layer": 27,
+            "kind": "value",
+            "max_abs": 0.09375,
+            "mean_abs": 0.002463476499542594
+          },
+          {
+            "layer": 28,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0013938166666775942
+          },
+          {
+            "layer": 28,
+            "kind": "value",
+            "max_abs": 0.0703125,
+            "mean_abs": 0.0024846019223332405
+          },
+          {
+            "layer": 29,
+            "kind": "key",
+            "max_abs": 0.0625,
+            "mean_abs": 0.0014800506178289652
+          },
+          {
+            "layer": 29,
+            "kind": "value",
+            "max_abs": 0.1875,
+            "mean_abs": 0.00439441716298461
+          },
+          {
+            "layer": 30,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0014917190419510007
+          },
+          {
+            "layer": 30,
+            "kind": "value",
+            "max_abs": 0.21484375,
+            "mean_abs": 0.004484659992158413
+          },
+          {
+            "layer": 31,
+            "kind": "key",
+            "max_abs": 0.09375,
+            "mean_abs": 0.0016020869370549917
+          },
+          {
+            "layer": 31,
+            "kind": "value",
+            "max_abs": 0.21875,
+            "mean_abs": 0.005334720481187105
+          },
+          {
+            "layer": 32,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0015548899536952376
+          },
+          {
+            "layer": 32,
+            "kind": "value",
+            "max_abs": 0.3125,
+            "mean_abs": 0.006621594540774822
+          },
+          {
+            "layer": 33,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0017576682148501277
+          },
+          {
+            "layer": 33,
+            "kind": "value",
+            "max_abs": 0.375,
+            "mean_abs": 0.010282021015882492
+          },
+          {
+            "layer": 34,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0017273586709052324
+          },
+          {
+            "layer": 34,
+            "kind": "value",
+            "max_abs": 0.3125,
+            "mean_abs": 0.008184989914298058
+          },
+          {
+            "layer": 35,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.001616296824067831
+          },
+          {
+            "layer": 35,
+            "kind": "value",
+            "max_abs": 0.1661376953125,
+            "mean_abs": 0.005452482029795647
+          }
+        ],
+        "conclusion": "Logical target schedule replay; no speculative engine state management"
+      }
+    },
+    {
+      "id": "HumanEval/36",
+      "divergence_zero_based": 181,
+      "teacher_forced_predictions_equal_saved_ar": false,
+      "first_teacher_forced_difference": 181,
+      "single": {
+        "argmax": 334,
+        "top": [
+          {
+            "token_id": 334,
+            "text": "**",
+            "logit": 37.0
+          },
+          {
+            "token_id": 476,
+            "text": " or",
+            "logit": 37.0
+          },
+          {
+            "token_id": 2726,
+            "text": " OR",
+            "logit": 30.125
+          },
+          {
+            "token_id": 3070,
+            "text": " **",
+            "logit": 23.625
+          },
+          {
+            "token_id": 97219,
+            "text": "**,",
+            "logit": 23.0
+          },
+          {
+            "token_id": 323,
+            "text": " and",
+            "logit": 20.625
+          },
+          {
+            "token_id": 9,
+            "text": "*",
+            "logit": 20.375
+          },
+          {
+            "token_id": 63,
+            "text": "`",
+            "logit": 19.75
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 334,
+          "top": [
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 37.0
+            },
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 23.0
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.625
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.375
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.75
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 334,
+          "top": [
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 37.0
+            },
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 23.0
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.75
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.375
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.875
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.125,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.75
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.875
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 334,
+          "top": [
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 37.0
+            },
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 23.0
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.75
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.375
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.875
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.125,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.75
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.875
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          }
+        }
+      },
+      "schedule_replay": {
+        "argmax": 334,
+        "top": [
+          {
+            "token_id": 334,
+            "text": "**",
+            "logit": 37.0
+          },
+          {
+            "token_id": 476,
+            "text": " or",
+            "logit": 37.0
+          },
+          {
+            "token_id": 2726,
+            "text": " OR",
+            "logit": 30.0
+          },
+          {
+            "token_id": 3070,
+            "text": " **",
+            "logit": 23.625
+          },
+          {
+            "token_id": 97219,
+            "text": "**,",
+            "logit": 22.875
+          },
+          {
+            "token_id": 323,
+            "text": " and",
+            "logit": 20.625
+          },
+          {
+            "token_id": 9,
+            "text": "*",
+            "logit": 20.25
+          },
+          {
+            "token_id": 63,
+            "text": "`",
+            "logit": 19.75
+          }
+        ],
+        "captured_top8_logits_reproduced_exactly": false,
+        "kv_prefix_comparison_to_ar": [
+          {
+            "layer": 0,
+            "kind": "key",
+            "max_abs": 1.0,
+            "mean_abs": 1.0942656444967724e-05
+          },
+          {
+            "layer": 0,
+            "kind": "value",
+            "max_abs": 0.00048828125,
+            "mean_abs": 5.344632469928001e-08
+          },
+          {
+            "layer": 1,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0008341287029907107
+          },
+          {
+            "layer": 1,
+            "kind": "value",
+            "max_abs": 0.001953125,
+            "mean_abs": 3.0816801881883293e-05
+          },
+          {
+            "layer": 2,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.001596897724084556
+          },
+          {
+            "layer": 2,
+            "kind": "value",
+            "max_abs": 0.001953125,
+            "mean_abs": 8.500102558173239e-05
+          },
+          {
+            "layer": 3,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0022211475297808647
+          },
+          {
+            "layer": 3,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 0.0001625957665964961
+          },
+          {
+            "layer": 4,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0029343331698328257
+          },
+          {
+            "layer": 4,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.0002535508538130671
+          },
+          {
+            "layer": 5,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.004732798784971237
+          },
+          {
+            "layer": 5,
+            "kind": "value",
+            "max_abs": 0.0048828125,
+            "mean_abs": 0.0002717672032304108
+          },
+          {
+            "layer": 6,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.002746497979387641
+          },
+          {
+            "layer": 6,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.0003650520811788738
+          },
+          {
+            "layer": 7,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.003480826038867235
+          },
+          {
+            "layer": 7,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.0005888771847821772
+          },
+          {
+            "layer": 8,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.00417943112552166
+          },
+          {
+            "layer": 8,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.0009319355012848973
+          },
+          {
+            "layer": 9,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.004417502786964178
+          },
+          {
+            "layer": 9,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.0010440906044095755
+          },
+          {
+            "layer": 10,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0045326100662350655
+          },
+          {
+            "layer": 10,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.0016443635104224086
+          },
+          {
+            "layer": 11,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.005097442772239447
+          },
+          {
+            "layer": 11,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.0011783330701291561
+          },
+          {
+            "layer": 12,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.004981392528861761
+          },
+          {
+            "layer": 12,
+            "kind": "value",
+            "max_abs": 0.03125,
+            "mean_abs": 0.0013636259827762842
+          },
+          {
+            "layer": 13,
+            "kind": "key",
+            "max_abs": 0.3125,
+            "mean_abs": 0.0053658876568078995
+          },
+          {
+            "layer": 13,
+            "kind": "value",
+            "max_abs": 0.05078125,
+            "mean_abs": 0.0012629522243514657
+          },
+          {
+            "layer": 14,
+            "kind": "key",
+            "max_abs": 0.197509765625,
+            "mean_abs": 0.00524282269179821
+          },
+          {
+            "layer": 14,
+            "kind": "value",
+            "max_abs": 0.109375,
+            "mean_abs": 0.001915329834446311
+          },
+          {
+            "layer": 15,
+            "kind": "key",
+            "max_abs": 0.2509765625,
+            "mean_abs": 0.005615514703094959
+          },
+          {
+            "layer": 15,
+            "kind": "value",
+            "max_abs": 0.3125,
+            "mean_abs": 0.001925273914821446
+          },
+          {
+            "layer": 16,
+            "kind": "key",
+            "max_abs": 0.625,
+            "mean_abs": 0.006055023986846209
+          },
+          {
+            "layer": 16,
+            "kind": "value",
+            "max_abs": 0.25,
+            "mean_abs": 0.002988093998283148
+          },
+          {
+            "layer": 17,
+            "kind": "key",
+            "max_abs": 0.875,
+            "mean_abs": 0.006131954491138458
+          },
+          {
+            "layer": 17,
+            "kind": "value",
+            "max_abs": 0.3046875,
+            "mean_abs": 0.0027670126873999834
+          },
+          {
+            "layer": 18,
+            "kind": "key",
+            "max_abs": 2.15625,
+            "mean_abs": 0.007030642591416836
+          },
+          {
+            "layer": 18,
+            "kind": "value",
+            "max_abs": 0.7734375,
+            "mean_abs": 0.003691517049446702
+          },
+          {
+            "layer": 19,
+            "kind": "key",
+            "max_abs": 2.5625,
+            "mean_abs": 0.007446529343724251
+          },
+          {
+            "layer": 19,
+            "kind": "value",
+            "max_abs": 1.1484375,
+            "mean_abs": 0.005028312560170889
+          },
+          {
+            "layer": 20,
+            "kind": "key",
+            "max_abs": 3.4375,
+            "mean_abs": 0.008386087603867054
+          },
+          {
+            "layer": 20,
+            "kind": "value",
+            "max_abs": 2.17578125,
+            "mean_abs": 0.005268145818263292
+          },
+          {
+            "layer": 21,
+            "kind": "key",
+            "max_abs": 3.890625,
+            "mean_abs": 0.008708064444363117
+          },
+          {
+            "layer": 21,
+            "kind": "value",
+            "max_abs": 2.37890625,
+            "mean_abs": 0.007012449204921722
+          },
+          {
+            "layer": 22,
+            "kind": "key",
+            "max_abs": 3.8079833984375,
+            "mean_abs": 0.00895994808524847
+          },
+          {
+            "layer": 22,
+            "kind": "value",
+            "max_abs": 3.234375,
+            "mean_abs": 0.009634971618652344
+          },
+          {
+            "layer": 23,
+            "kind": "key",
+            "max_abs": 4.33203125,
+            "mean_abs": 0.01001871656626463
+          },
+          {
+            "layer": 23,
+            "kind": "value",
+            "max_abs": 3.9609375,
+            "mean_abs": 0.00955180823802948
+          },
+          {
+            "layer": 24,
+            "kind": "key",
+            "max_abs": 4.6875,
+            "mean_abs": 0.009658589027822018
+          },
+          {
+            "layer": 24,
+            "kind": "value",
+            "max_abs": 3.2890625,
+            "mean_abs": 0.011334963142871857
+          },
+          {
+            "layer": 25,
+            "kind": "key",
+            "max_abs": 4.609375,
+            "mean_abs": 0.010496869683265686
+          },
+          {
+            "layer": 25,
+            "kind": "value",
+            "max_abs": 3.5390625,
+            "mean_abs": 0.012203877791762352
+          },
+          {
+            "layer": 26,
+            "kind": "key",
+            "max_abs": 5.5625,
+            "mean_abs": 0.010763273574411869
+          },
+          {
+            "layer": 26,
+            "kind": "value",
+            "max_abs": 4.15625,
+            "mean_abs": 0.01501388382166624
+          },
+          {
+            "layer": 27,
+            "kind": "key",
+            "max_abs": 4.296875,
+            "mean_abs": 0.010327781550586224
+          },
+          {
+            "layer": 27,
+            "kind": "value",
+            "max_abs": 5.50390625,
+            "mean_abs": 0.017101354897022247
+          },
+          {
+            "layer": 28,
+            "kind": "key",
+            "max_abs": 5.453125,
+            "mean_abs": 0.010898297652602196
+          },
+          {
+            "layer": 28,
+            "kind": "value",
+            "max_abs": 6.015625,
+            "mean_abs": 0.01882089301943779
+          },
+          {
+            "layer": 29,
+            "kind": "key",
+            "max_abs": 8.59375,
+            "mean_abs": 0.01137124840170145
+          },
+          {
+            "layer": 29,
+            "kind": "value",
+            "max_abs": 4.8857421875,
+            "mean_abs": 0.025258701294660568
+          },
+          {
+            "layer": 30,
+            "kind": "key",
+            "max_abs": 3.9453125,
+            "mean_abs": 0.011368298903107643
+          },
+          {
+            "layer": 30,
+            "kind": "value",
+            "max_abs": 7.25,
+            "mean_abs": 0.03178143873810768
+          },
+          {
+            "layer": 31,
+            "kind": "key",
+            "max_abs": 3.7109375,
+            "mean_abs": 0.011770108714699745
+          },
+          {
+            "layer": 31,
+            "kind": "value",
+            "max_abs": 7.4375,
+            "mean_abs": 0.03585921972990036
+          },
+          {
+            "layer": 32,
+            "kind": "key",
+            "max_abs": 4.390625,
+            "mean_abs": 0.010560971684753895
+          },
+          {
+            "layer": 32,
+            "kind": "value",
+            "max_abs": 11.2265625,
+            "mean_abs": 0.042904097586870193
+          },
+          {
+            "layer": 33,
+            "kind": "key",
+            "max_abs": 4.28125,
+            "mean_abs": 0.01145503856241703
+          },
+          {
+            "layer": 33,
+            "kind": "value",
+            "max_abs": 11.9129638671875,
+            "mean_abs": 0.05951128900051117
+          },
+          {
+            "layer": 34,
+            "kind": "key",
+            "max_abs": 3.8203125,
+            "mean_abs": 0.011536192148923874
+          },
+          {
+            "layer": 34,
+            "kind": "value",
+            "max_abs": 18.28125,
+            "mean_abs": 0.05957827344536781
+          },
+          {
+            "layer": 35,
+            "kind": "key",
+            "max_abs": 4.4921875,
+            "mean_abs": 0.010688712820410728
+          },
+          {
+            "layer": 35,
+            "kind": "value",
+            "max_abs": 18.1953125,
+            "mean_abs": 0.0460113100707531
+          }
+        ],
+        "conclusion": "Logical target schedule replay; no speculative engine state management"
+      }
+    },
+    {
+      "id": "specbench-553",
+      "divergence_zero_based": 170,
+      "teacher_forced_predictions_equal_saved_ar": false,
+      "first_teacher_forced_difference": 4,
+      "single": {
+        "argmax": 21892,
+        "top": [
+          {
+            "token_id": 21892,
+            "text": " identification",
+            "logit": 29.0
+          },
+          {
+            "token_id": 28360,
+            "text": " IDs",
+            "logit": 29.0
+          },
+          {
+            "token_id": 13469,
+            "text": " handles",
+            "logit": 27.875
+          },
+          {
+            "token_id": 47216,
+            "text": " identifiers",
+            "logit": 27.375
+          },
+          {
+            "token_id": 3034,
+            "text": " ID",
+            "logit": 27.125
+          },
+          {
+            "token_id": 2692,
+            "text": " account",
+            "logit": 26.75
+          },
+          {
+            "token_id": 9618,
+            "text": " accounts",
+            "logit": 26.25
+          },
+          {
+            "token_id": 15988,
+            "text": " nick",
+            "logit": 25.375
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 21892,
+          "top": [
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 27.875
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.375
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.125
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 27.875
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 27.875
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 21892,
+          "top": [
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.375
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.125
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.625
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.125
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.1875,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.625
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.125
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 27.875
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 21892,
+          "top": [
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.375
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.125
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.625
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.125
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.1875,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.625
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.125
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 21892,
+            "top": [
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 27.875
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.125
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        }
+      },
+      "schedule_replay": {
+        "argmax": 21892,
+        "top": [
+          {
+            "token_id": 21892,
+            "text": " identification",
+            "logit": 29.0
+          },
+          {
+            "token_id": 28360,
+            "text": " IDs",
+            "logit": 29.0
+          },
+          {
+            "token_id": 13469,
+            "text": " handles",
+            "logit": 28.125
+          },
+          {
+            "token_id": 47216,
+            "text": " identifiers",
+            "logit": 27.5
+          },
+          {
+            "token_id": 3034,
+            "text": " ID",
+            "logit": 27.125
+          },
+          {
+            "token_id": 2692,
+            "text": " account",
+            "logit": 26.625
+          },
+          {
+            "token_id": 9618,
+            "text": " accounts",
+            "logit": 26.25
+          },
+          {
+            "token_id": 15988,
+            "text": " nick",
+            "logit": 25.375
+          }
+        ],
+        "captured_top8_logits_reproduced_exactly": false,
+        "kv_prefix_comparison_to_ar": [
+          {
+            "layer": 0,
+            "kind": "key",
+            "max_abs": 1.0,
+            "mean_abs": 3.0951755434216466e-06
+          },
+          {
+            "layer": 0,
+            "kind": "value",
+            "max_abs": 0.0009765625,
+            "mean_abs": 1.9293775466167062e-08
+          },
+          {
+            "layer": 1,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0002822019159793854
+          },
+          {
+            "layer": 1,
+            "kind": "value",
+            "max_abs": 0.001953125,
+            "mean_abs": 1.185938799608266e-05
+          },
+          {
+            "layer": 2,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.0005486818263307214
+          },
+          {
+            "layer": 2,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 3.32319104927592e-05
+          },
+          {
+            "layer": 3,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0007680535782128572
+          },
+          {
+            "layer": 3,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 6.433190719690174e-05
+          },
+          {
+            "layer": 4,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0009851516224443913
+          },
+          {
+            "layer": 4,
+            "kind": "value",
+            "max_abs": 0.00537109375,
+            "mean_abs": 9.577404125593603e-05
+          },
+          {
+            "layer": 5,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.001607133774086833
+          },
+          {
+            "layer": 5,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.00010205392754869536
+          },
+          {
+            "layer": 6,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0009687223937362432
+          },
+          {
+            "layer": 6,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.0001390359248034656
+          },
+          {
+            "layer": 7,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0011548158945515752
+          },
+          {
+            "layer": 7,
+            "kind": "value",
+            "max_abs": 0.01171875,
+            "mean_abs": 0.00021840310364495963
+          },
+          {
+            "layer": 8,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0013575286138802767
+          },
+          {
+            "layer": 8,
+            "kind": "value",
+            "max_abs": 0.0244140625,
+            "mean_abs": 0.00033193815033882856
+          },
+          {
+            "layer": 9,
+            "kind": "key",
+            "max_abs": 0.15625,
+            "mean_abs": 0.0014649169752374291
+          },
+          {
+            "layer": 9,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.00036151689710095525
+          },
+          {
+            "layer": 10,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.001432795892469585
+          },
+          {
+            "layer": 10,
+            "kind": "value",
+            "max_abs": 0.046875,
+            "mean_abs": 0.0005503286956809461
+          },
+          {
+            "layer": 11,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.001647925702854991
+          },
+          {
+            "layer": 11,
+            "kind": "value",
+            "max_abs": 0.0390625,
+            "mean_abs": 0.0003833256778307259
+          },
+          {
+            "layer": 12,
+            "kind": "key",
+            "max_abs": 0.3125,
+            "mean_abs": 0.0016118178609758615
+          },
+          {
+            "layer": 12,
+            "kind": "value",
+            "max_abs": 0.06640625,
+            "mean_abs": 0.00045349885476753116
+          },
+          {
+            "layer": 13,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0017558342078700662
+          },
+          {
+            "layer": 13,
+            "kind": "value",
+            "max_abs": 0.0859375,
+            "mean_abs": 0.00041107379365712404
+          },
+          {
+            "layer": 14,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.001738145248964429
+          },
+          {
+            "layer": 14,
+            "kind": "value",
+            "max_abs": 0.1015625,
+            "mean_abs": 0.0006198922637850046
+          },
+          {
+            "layer": 15,
+            "kind": "key",
+            "max_abs": 0.40625,
+            "mean_abs": 0.001827100059017539
+          },
+          {
+            "layer": 15,
+            "kind": "value",
+            "max_abs": 0.15625,
+            "mean_abs": 0.0006244565011002123
+          },
+          {
+            "layer": 16,
+            "kind": "key",
+            "max_abs": 0.4072265625,
+            "mean_abs": 0.0019255665829405189
+          },
+          {
+            "layer": 16,
+            "kind": "value",
+            "max_abs": 0.125,
+            "mean_abs": 0.0009304072009399533
+          },
+          {
+            "layer": 17,
+            "kind": "key",
+            "max_abs": 0.4375,
+            "mean_abs": 0.001972686033695936
+          },
+          {
+            "layer": 17,
+            "kind": "value",
+            "max_abs": 0.125,
+            "mean_abs": 0.0008450527093373239
+          },
+          {
+            "layer": 18,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.0020785857923328876
+          },
+          {
+            "layer": 18,
+            "kind": "value",
+            "max_abs": 0.109375,
+            "mean_abs": 0.0009683686075732112
+          },
+          {
+            "layer": 19,
+            "kind": "key",
+            "max_abs": 0.375,
+            "mean_abs": 0.0019819149747490883
+          },
+          {
+            "layer": 19,
+            "kind": "value",
+            "max_abs": 0.1640625,
+            "mean_abs": 0.001246947911567986
+          },
+          {
+            "layer": 20,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.002101066755130887
+          },
+          {
+            "layer": 20,
+            "kind": "value",
+            "max_abs": 0.2060546875,
+            "mean_abs": 0.0012138288002461195
+          },
+          {
+            "layer": 21,
+            "kind": "key",
+            "max_abs": 0.48046875,
+            "mean_abs": 0.0019624545238912106
+          },
+          {
+            "layer": 21,
+            "kind": "value",
+            "max_abs": 0.24609375,
+            "mean_abs": 0.0014193402603268623
+          },
+          {
+            "layer": 22,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.0020412832964211702
+          },
+          {
+            "layer": 22,
+            "kind": "value",
+            "max_abs": 0.3515625,
+            "mean_abs": 0.0020631069783121347
+          },
+          {
+            "layer": 23,
+            "kind": "key",
+            "max_abs": 0.4375,
+            "mean_abs": 0.002087108790874481
+          },
+          {
+            "layer": 23,
+            "kind": "value",
+            "max_abs": 0.3359375,
+            "mean_abs": 0.001867330283857882
+          },
+          {
+            "layer": 24,
+            "kind": "key",
+            "max_abs": 0.515625,
+            "mean_abs": 0.0019739402923732996
+          },
+          {
+            "layer": 24,
+            "kind": "value",
+            "max_abs": 0.46875,
+            "mean_abs": 0.0022887124214321375
+          },
+          {
+            "layer": 25,
+            "kind": "key",
+            "max_abs": 0.46875,
+            "mean_abs": 0.0019834183622151613
+          },
+          {
+            "layer": 25,
+            "kind": "value",
+            "max_abs": 0.53125,
+            "mean_abs": 0.002245283219963312
+          },
+          {
+            "layer": 26,
+            "kind": "key",
+            "max_abs": 0.8173828125,
+            "mean_abs": 0.0020327968522906303
+          },
+          {
+            "layer": 26,
+            "kind": "value",
+            "max_abs": 0.75,
+            "mean_abs": 0.002814807230606675
+          },
+          {
+            "layer": 27,
+            "kind": "key",
+            "max_abs": 0.859375,
+            "mean_abs": 0.0018839541589841247
+          },
+          {
+            "layer": 27,
+            "kind": "value",
+            "max_abs": 1.09375,
+            "mean_abs": 0.003143725683912635
+          },
+          {
+            "layer": 28,
+            "kind": "key",
+            "max_abs": 0.625,
+            "mean_abs": 0.00194368080701679
+          },
+          {
+            "layer": 28,
+            "kind": "value",
+            "max_abs": 1.21875,
+            "mean_abs": 0.0033164615742862225
+          },
+          {
+            "layer": 29,
+            "kind": "key",
+            "max_abs": 0.78125,
+            "mean_abs": 0.0020715626887977123
+          },
+          {
+            "layer": 29,
+            "kind": "value",
+            "max_abs": 1.65625,
+            "mean_abs": 0.005313137546181679
+          },
+          {
+            "layer": 30,
+            "kind": "key",
+            "max_abs": 1.125,
+            "mean_abs": 0.002076520351693034
+          },
+          {
+            "layer": 30,
+            "kind": "value",
+            "max_abs": 1.779296875,
+            "mean_abs": 0.0060350969433784485
+          },
+          {
+            "layer": 31,
+            "kind": "key",
+            "max_abs": 1.0,
+            "mean_abs": 0.0021834378130733967
+          },
+          {
+            "layer": 31,
+            "kind": "value",
+            "max_abs": 1.80859375,
+            "mean_abs": 0.007034733891487122
+          },
+          {
+            "layer": 32,
+            "kind": "key",
+            "max_abs": 0.9375,
+            "mean_abs": 0.0020813336595892906
+          },
+          {
+            "layer": 32,
+            "kind": "value",
+            "max_abs": 2.40625,
+            "mean_abs": 0.008621676824986935
+          },
+          {
+            "layer": 33,
+            "kind": "key",
+            "max_abs": 0.96875,
+            "mean_abs": 0.0022991204168647528
+          },
+          {
+            "layer": 33,
+            "kind": "value",
+            "max_abs": 2.78125,
+            "mean_abs": 0.013030796311795712
+          },
+          {
+            "layer": 34,
+            "kind": "key",
+            "max_abs": 2.0966796875,
+            "mean_abs": 0.002319895662367344
+          },
+          {
+            "layer": 34,
+            "kind": "value",
+            "max_abs": 5.515625,
+            "mean_abs": 0.011687067337334156
+          },
+          {
+            "layer": 35,
+            "kind": "key",
+            "max_abs": 1.75,
+            "mean_abs": 0.002161948475986719
+          },
+          {
+            "layer": 35,
+            "kind": "value",
+            "max_abs": 3.75,
+            "mean_abs": 0.00858311727643013
+          }
+        ],
+        "conclusion": "Logical target schedule replay; no speculative engine state management"
+      }
+    }
+  ]
+}

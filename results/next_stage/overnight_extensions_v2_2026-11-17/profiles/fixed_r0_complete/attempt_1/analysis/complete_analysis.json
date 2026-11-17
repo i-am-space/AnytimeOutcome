@@ -1,0 +1,899 @@
+{
+ "name": "complete",
+ "window_ms": 8208.127856,
+ "devices": {
+  "0": {
+   "busy_ms": 7376.686513,
+   "idle_ms": 831.441343,
+   "busy_pct": 89.87051179530262,
+   "n_kernels": 383531,
+   "kernels_per_ms": 46.72575850772664,
+   "category_ms": {
+    "gemm (tensor core)": 4830.552258,
+    "nccl": 2065.666611,
+    "other elementwise": 162.443852,
+    "memcpy/memset": 114.130942,
+    "attention (paged, Triton)": 101.602794,
+    "rmsnorm/rope/silu (fused Triton)": 84.879509,
+    "kv-cache store": 9.647452,
+    "gemv (cuBLAS)": 5.163588,
+    "reductions (argmax etc.)": 3.199095,
+    "attention (prefill SDPA)": 1.74526,
+    "sampling/argmax": 0.113089
+   },
+   "top_kernels": [
+    {
+     "name": "gemm:cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_t",
+     "count": 30450,
+     "total_ms": 4732.353428,
+     "mean_us": 155.413905681445
+    },
+    {
+     "name": "ncclDevKernel_SendRecv",
+     "count": 1065,
+     "total_ms": 2065.666611,
+     "mean_us": 1939.5930619718308
+    },
+    {
+     "name": "vectorized_elementwise_kernel",
+     "count": 125786,
+     "total_ms": 116.262432,
+     "mean_us": 0.9242875359737969
+    },
+    {
+     "name": "[memcpy]",
+     "count": 113933,
+     "total_ms": 114.02739,
+     "mean_us": 1.0008284693635732
+    },
+    {
+     "name": "_paged_attn_split_kernel",
+     "count": 7560,
+     "total_ms": 81.785533,
+     "mean_us": 10.818192195767196
+    },
+    {
+     "name": "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn",
+     "count": 144,
+     "total_ms": 40.550525,
+     "mean_us": 281.60086805555557
+    },
+    {
+     "name": "elementwise_kernel",
+     "count": 22899,
+     "total_ms": 33.656442,
+     "mean_us": 1.4697778068911307
+    },
+    {
+     "name": "triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+     "count": 15549,
+     "total_ms": 30.532766,
+     "mean_us": 1.9636482088880314
+    },
+    {
+     "name": "gemm:cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_t",
+     "count": 36,
+     "total_ms": 27.444673,
+     "mean_us": 762.3520277777777
+    },
+    {
+     "name": "_combine_kernel",
+     "count": 7560,
+     "total_ms": 19.817261,
+     "mean_us": 2.62133082010582
+    },
+    {
+     "name": "triton_per_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+     "count": 15336,
+     "total_ms": 18.754087,
+     "mean_us": 1.222879955659885
+    },
+    {
+     "name": "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_64x3_tn",
+     "count": 72,
+     "total_ms": 14.303077,
+     "mean_us": 198.65384722222223
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_split_0",
+     "count": 7668,
+     "total_ms": 13.497122,
+     "mean_us": 1.7601880542514345
+    },
+    {
+     "name": "triton_poi_fused__to_copy_add_cat_index_mul_split_sub_unsqueeze_view_0",
+     "count": 7668,
+     "total_ms": 12.051533,
+     "mean_us": 1.571665753781951
+    },
+    {
+     "name": "ampere_bf16_s16816gemm_bf16_64x128_ldg8_f2f_stages_64x3_tn",
+     "count": 108,
+     "total_ms": 11.003786,
+     "mean_us": 101.8869074074074
+    }
+   ],
+   "gpu_time_by_launch_phase_ms": {
+    "verify/target_fwd": 5189.665044,
+    "ncclGroupEnd": 2065.666611,
+    "SD/prefill_target": 111.144642,
+    "verify/accept": 8.46739,
+    "SD/speculate": 1.870094,
+    "SSD/handshake_send": 0.95396,
+    "cub::DeviceScan::InclusiveScan": 0.942307,
+    "SD/verify": 0.401377,
+    "SD/prefill_draft_send": 0.016032,
+    "(unattributed)": 0.007169,
+    "request:HumanEval/36": 0.003744,
+    "request:specbench-148": 0.003072,
+    "request:specbench-496": 0.003008
+   },
+   "idle_by_phase_ms": {
+    "verify/target_fwd": 502.172324,
+    "verify/accept": 107.352822,
+    "SSD/handshake_send": 51.279889,
+    "SD/postprocess": 43.955828,
+    "SD/verify": 33.473753,
+    "SD/speculate": 28.698246,
+    "SD/prefill_target": 25.672124,
+    "SSD/recv_draft_logits": 11.0938,
+    "SSD/wait_draft_tokens": 10.198305,
+    "cub::DeviceScan::InclusiveScan": 6.267597,
+    "(none)": 5.18634,
+    "engine/step": 4.028926,
+    "SD/prefill_draft_send": 1.085672,
+    "request:HumanEval/36": 0.792835,
+    "request:specbench-148": 0.092385,
+    "request:specbench-496": 0.090497
+   },
+   "idle_gap_histogram": {
+    "0.1-1ms": {
+     "count": 274,
+     "total_ms": 47.21866899999997
+    },
+    "20-100us": {
+     "count": 5646,
+     "total_ms": 201.96444400000044
+    },
+    "5-20us": {
+     "count": 10242,
+     "total_ms": 130.2006789999998
+    },
+    "<5us": {
+     "count": 336816,
+     "total_ms": 23.154487999872345
+    },
+    ">1ms": {
+     "count": 210,
+     "total_ms": 428.9030630000001
+    }
+   }
+  },
+  "1": {
+   "busy_ms": 6154.230737,
+   "idle_ms": 2053.897119,
+   "busy_pct": 74.97727673066598,
+   "n_kernels": 1122218,
+   "kernels_per_ms": 136.72033619452918,
+   "category_ms": {
+    "gemm (tensor core)": 3394.084362,
+    "gemv (cuBLAS)": 735.029722,
+    "attention (flashinfer tree)": 686.337209,
+    "rmsnorm/rope/silu (fused Triton)": 519.053829,
+    "other elementwise": 355.802177,
+    "reductions (argmax etc.)": 133.28633,
+    "nccl": 104.84828,
+    "attention (paged, Triton)": 97.953118,
+    "kv-cache store": 65.488167,
+    "memcpy/memset": 46.27052,
+    "sampling/argmax": 15.428059,
+    "attention (prefill SDPA)": 0.875909
+   },
+   "top_kernels": [
+    {
+     "name": "gemm:cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x2_t",
+     "count": 164780,
+     "total_ms": 2229.804888,
+     "mean_us": 13.532011700449084
+    },
+    {
+     "name": "gemv:!T7, void>::type internal::gemvx::kernel<int, int, __nv_bflo",
+     "count": 43508,
+     "total_ms": 735.029722,
+     "mean_us": 16.894128022432653
+    },
+    {
+     "name": "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn",
+     "count": 1498,
+     "total_ms": 726.985524,
+     "mean_us": 485.30408811749
+    },
+    {
+     "name": "BatchPrefillWithPagedKVCacheKernel",
+     "count": 41160,
+     "total_ms": 686.337209,
+     "mean_us": 16.674859305150633
+    },
+    {
+     "name": "gemm:cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_t",
+     "count": 23730,
+     "total_ms": 433.48302,
+     "mean_us": 18.26729962073325
+    },
+    {
+     "name": "triton_per_fused__to_copy_add_mean_mul_pow_rsqrt_0",
+     "count": 233684,
+     "total_ms": 303.29879,
+     "mean_us": 1.297901396758015
+    },
+    {
+     "name": "elementwise_kernel",
+     "count": 99460,
+     "total_ms": 174.755147,
+     "mean_us": 1.7570394832093306
+    },
+    {
+     "name": "splitKreduce_kernel",
+     "count": 88284,
+     "total_ms": 111.762045,
+     "mean_us": 1.2659377123827646
+    },
+    {
+     "name": "ncclDevKernel_SendRecv",
+     "count": 1064,
+     "total_ms": 104.84828,
+     "mean_us": 98.54161654135339
+    },
+    {
+     "name": "PersistentVariableLengthMergeStatesKernel",
+     "count": 41160,
+     "total_ms": 91.862064,
+     "mean_us": 2.2318285714285717
+    },
+    {
+     "name": "triton_poi_fused__to_copy_add_cat_index_mul_split_sub_unsqueeze_view_0",
+     "count": 57904,
+     "total_ms": 77.675772,
+     "mean_us": 1.3414577922077922
+    },
+    {
+     "name": "triton_poi_fused__to_copy_add_cat_index_mul_split_sub_unsqueeze_view_1",
+     "count": 57904,
+     "total_ms": 74.064623,
+     "mean_us": 1.2790933786957723
+    },
+    {
+     "name": "_paged_attn_split_kernel",
+     "count": 16660,
+     "total_ms": 65.729442,
+     "mean_us": 3.9453446578631453
+    },
+    {
+     "name": "store_kvcache_kernel",
+     "count": 57904,
+     "total_ms": 65.488167,
+     "mean_us": 1.1309782916551532
+    },
+    {
+     "name": "triton_poi_fused_mul_silu_split_0",
+     "count": 57904,
+     "total_ms": 64.014644,
+     "mean_us": 1.1055306023763471
+    }
+   ],
+   "gpu_time_by_launch_phase_ms": {
+    "draft/jit_speculate(miss)": 923.1807,
+    "draft/tree_step_0": 646.787964,
+    "draft/tree_step_6": 645.668206,
+    "draft/tree_step_5": 644.840122,
+    "draft/tree_step_4": 643.571286,
+    "draft/tree_step_3": 642.098792,
+    "draft/tree_step_2": 640.025394,
+    "draft/tree_step_1": 637.358492,
+    "draft/build_tree(glue)": 586.632015,
+    "ncclGroupEnd": 104.84828,
+    "draft/prefill": 12.610722,
+    "draft/service_request": 10.965505,
+    "draft/decode_tree": 9.005308,
+    "cub::DeviceSelect::Flagged": 1.747815,
+    "cub::DeviceScan::InclusiveSumByKey": 1.314983,
+    "cub::DeviceReduce::Sum": 1.01332,
+    "cub::DeviceScan::InclusiveScan": 0.979009,
+    "draft/send_response": 0.919107,
+    "draft/populate_cache": 0.636102,
+    "draft/idle_wait_cmd": 0.253408,
+    "(unattributed)": 0.001152
+   },
+   "idle_by_phase_ms": {
+    "draft/tree_step_0": 353.169939,
+    "draft/build_tree(glue)": 299.686627,
+    "draft/jit_speculate(miss)": 278.073074,
+    "draft/service_request": 140.529707,
+    "draft/tree_step_4": 128.830849,
+    "draft/tree_step_1": 127.783433,
+    "draft/tree_step_3": 125.491175,
+    "draft/tree_step_2": 125.108224,
+    "draft/tree_step_6": 125.086191,
+    "draft/tree_step_5": 121.981601,
+    "draft/prefill": 71.608752,
+    "draft/decode_tree": 60.242082,
+    "draft/send_response": 43.157574,
+    "draft/idle_wait_cmd": 27.805938,
+    "(none)": 12.177522,
+    "cub::DeviceScan::InclusiveScan": 5.896511,
+    "cub::DeviceSelect::Flagged": 5.853703,
+    "cub::DeviceReduce::Sum": 1.149383,
+    "draft/populate_cache": 0.160353,
+    "ncclSend": 0.072832,
+    "cub::DeviceScan::InclusiveSumByKey": 0.031649
+   },
+   "idle_gap_histogram": {
+    ">1ms": {
+     "count": 23,
+     "total_ms": 39.15150799999999
+    },
+    "0.1-1ms": {
+     "count": 2458,
+     "total_ms": 1005.7203310000006
+    },
+    "20-100us": {
+     "count": 15090,
+     "total_ms": 524.694762000001
+    },
+    "5-20us": {
+     "count": 36566,
+     "total_ms": 395.44890499999985
+    },
+    "<5us": {
+     "count": 1064569,
+     "total_ms": 88.88161299933108
+    }
+   }
+  }
+ },
+ "nvtx_phases": {
+  "timed_region": {
+   "count": 1,
+   "total_ms": 8208.127856,
+   "mean_ms": 8208.127856
+  },
+  "engine/step": {
+   "count": 213,
+   "total_ms": 8187.055217,
+   "mean_ms": 38.43687895305164
+  },
+  "SD/verify": {
+   "count": 210,
+   "total_ms": 5851.720748,
+   "mean_ms": 27.865336895238094
+  },
+  "draft/decode_tree": {
+   "count": 210,
+   "total_ms": 5061.305651,
+   "mean_ms": 24.10145548095238
+  },
+  "draft/tree_step_*": {
+   "count": 1470,
+   "total_ms": 4972.469238,
+   "mean_ms": 3.382632134693878
+  },
+  "SD/speculate": {
+   "count": 210,
+   "total_ms": 2167.378952,
+   "mean_ms": 10.320852152380953
+  },
+  "draft/service_request": {
+   "count": 210,
+   "total_ms": 1411.431795,
+   "mean_ms": 6.721103785714285
+  },
+  "draft/jit_speculate(miss)": {
+   "count": 55,
+   "total_ms": 1201.235757,
+   "mean_ms": 21.840650127272728
+  },
+  "draft/build_tree(glue)": {
+   "count": 210,
+   "total_ms": 899.965972,
+   "mean_ms": 4.285552247619048
+  },
+  "verify/target_fwd": {
+   "count": 210,
+   "total_ms": 567.095097,
+   "mean_ms": 2.700452842857143
+  },
+  "SD/prefill_target": {
+   "count": 3,
+   "total_ms": 136.793973,
+   "mean_ms": 45.597991
+  },
+  "verify/accept": {
+   "count": 210,
+   "total_ms": 112.110801,
+   "mean_ms": 0.5338609571428571
+  },
+  "draft/idle_wait_cmd": {
+   "count": 215,
+   "total_ms": 110.74596,
+   "mean_ms": 0.515097488372093
+  },
+  "draft/prefill": {
+   "count": 3,
+   "total_ms": 83.189587,
+   "mean_ms": 27.729862333333333
+  },
+  "SSD/handshake_send": {
+   "count": 210,
+   "total_ms": 59.441295,
+   "mean_ms": 0.28305378571428574
+  },
+  "draft/send_response": {
+   "count": 210,
+   "total_ms": 47.209098,
+   "mean_ms": 0.22480522857142857
+  },
+  "ncclGroupEnd": {
+   "count": 2130,
+   "total_ms": 28.345661,
+   "mean_ms": 0.0133078220657277
+  },
+  "SD/postprocess": {
+   "count": 210,
+   "total_ms": 20.122744,
+   "mean_ms": 0.09582259047619049
+  },
+  "draft/populate_cache": {
+   "count": 210,
+   "total_ms": 13.375762,
+   "mean_ms": 0.06369410476190476
+  },
+  "SSD/recv_draft_logits": {
+   "count": 210,
+   "total_ms": 13.033044,
+   "mean_ms": 0.06206211428571429
+  },
+  "cub::DeviceScan::InclusiveScan": {
+   "count": 849,
+   "total_ms": 10.616687,
+   "mean_ms": 0.012504931684334511
+  },
+  "SSD/wait_draft_tokens": {
+   "count": 210,
+   "total_ms": 10.234197,
+   "mean_ms": 0.04873427142857143
+  },
+  "cub::DeviceSelect::Flagged": {
+   "count": 830,
+   "total_ms": 8.747774,
+   "mean_ms": 0.010539486746987951
+  },
+  "cub::DeviceScan::InclusiveSumByKey": {
+   "count": 420,
+   "total_ms": 4.717348,
+   "mean_ms": 0.011231780952380952
+  },
+  "cub::DeviceReduce::Sum": {
+   "count": 830,
+   "total_ms": 4.577907,
+   "mean_ms": 0.005515550602409639
+  },
+  "ncclRecv": {
+   "count": 1065,
+   "total_ms": 2.386816,
+   "mean_ms": 0.0022411417840375587
+  },
+  "ncclSend": {
+   "count": 1065,
+   "total_ms": 2.326565,
+   "mean_ms": 0.0021845680751173707
+  },
+  "SD/prefill_draft_send": {
+   "count": 3,
+   "total_ms": 1.344199,
+   "mean_ms": 0.4480663333333333
+  },
+  "ncclGroupStart": {
+   "count": 2130,
+   "total_ms": 0.991517,
+   "mean_ms": 0.0004655009389671362
+  }
+ },
+ "gpu_metrics": {
+  "0": {
+   "overall": {
+    "sm_active_pct": 58.31220570050134,
+    "sm_issue_pct": 2.745109983491816,
+    "tensor_active_pct": 2.342346842429079,
+    "dram_read_pct": 53.162559925926374,
+    "dram_write_pct": 1.1609273822649715,
+    "pcie_rx_pct": 0.8581879983674563,
+    "pcie_tx_pct": 1.0253958004641786
+   },
+   "by_phase": {
+    "engine/step": {
+     "sm_active_pct": 0.0,
+     "sm_issue_pct": 0.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.41237113402061853,
+     "dram_write_pct": 0.020618556701030927,
+     "pcie_rx_pct": 0.5567010309278351,
+     "pcie_tx_pct": 1.0,
+     "samples": 194
+    },
+    "SD/prefill_draft_send": {
+     "sm_active_pct": 0.43478260869565216,
+     "sm_issue_pct": 0.43478260869565216,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.5217391304347826,
+     "dram_write_pct": 0.08695652173913043,
+     "pcie_rx_pct": 0.7391304347826086,
+     "pcie_tx_pct": 1.0,
+     "samples": 23
+    },
+    "ncclGroupEnd": {
+     "sm_active_pct": 1.0,
+     "sm_issue_pct": 1.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.9925650557620818,
+     "dram_write_pct": 0.16728624535315986,
+     "pcie_rx_pct": 4.83271375464684,
+     "pcie_tx_pct": 1.420074349442379,
+     "samples": 269
+    },
+    "SD/prefill_target": {
+     "sm_active_pct": 64.00219298245614,
+     "sm_issue_pct": 6.137061403508772,
+     "tensor_active_pct": 37.21893274853801,
+     "dram_read_pct": 49.27923976608187,
+     "dram_write_pct": 4.659356725146199,
+     "pcie_rx_pct": 0.7021198830409356,
+     "pcie_tx_pct": 1.0,
+     "samples": 2736
+    },
+    "SD/speculate": {
+     "sm_active_pct": 0.9875509714559847,
+     "sm_issue_pct": 0.9875269848884625,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.2903813864236028,
+     "dram_write_pct": 0.009834492684096906,
+     "pcie_rx_pct": 1.603717917965939,
+     "pcie_tx_pct": 1.0637083233389302,
+     "samples": 41690
+    },
+    "SSD/handshake_send": {
+     "sm_active_pct": 0.8915906788247214,
+     "sm_issue_pct": 0.8915906788247214,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.9209726443768997,
+     "dram_write_pct": 0.005065856129685917,
+     "pcie_rx_pct": 0.9047619047619048,
+     "pcie_tx_pct": 1.0,
+     "samples": 987
+    },
+    "SSD/wait_draft_tokens": {
+     "sm_active_pct": 0.9936305732484076,
+     "sm_issue_pct": 0.9936305732484076,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.7006369426751592,
+     "dram_write_pct": 0.006369426751592357,
+     "pcie_rx_pct": 0.9936305732484076,
+     "pcie_tx_pct": 1.0,
+     "samples": 157
+    },
+    "SSD/recv_draft_logits": {
+     "sm_active_pct": 0.9746192893401016,
+     "sm_issue_pct": 0.9746192893401016,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.9593908629441624,
+     "dram_write_pct": 0.7868020304568528,
+     "pcie_rx_pct": 26.34010152284264,
+     "pcie_tx_pct": 3.7563451776649748,
+     "samples": 197
+    },
+    "verify/target_fwd": {
+     "sm_active_pct": 8.600749933041692,
+     "sm_issue_pct": 0.5543255066511918,
+     "tensor_active_pct": 0.25935184358539415,
+     "dram_read_pct": 7.589500937416302,
+     "dram_write_pct": 0.18998303722881885,
+     "pcie_rx_pct": 0.6666369074189804,
+     "pcie_tx_pct": 1.0755289706276225,
+     "samples": 11201
+    },
+    "SD/verify": {
+     "sm_active_pct": 89.43763289132872,
+     "sm_issue_pct": 3.6955000579889434,
+     "tensor_active_pct": 2.704082421618278,
+     "dram_read_pct": 82.05673251633355,
+     "dram_write_pct": 1.6857675803146868,
+     "pcie_rx_pct": 0.5237271426914601,
+     "pcie_tx_pct": 1.000019329647814,
+     "samples": 103468
+    },
+    "verify/accept": {
+     "sm_active_pct": 1.819277108433735,
+     "sm_issue_pct": 0.9558232931726908,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.3471664435519857,
+     "dram_write_pct": 0.28826416778224007,
+     "pcie_rx_pct": 0.9625167336010709,
+     "pcie_tx_pct": 1.0,
+     "samples": 2241
+    },
+    "SD/postprocess": {
+     "sm_active_pct": 0.0,
+     "sm_issue_pct": 0.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.27114427860696516,
+     "dram_write_pct": 0.004975124378109453,
+     "pcie_rx_pct": 0.07213930348258707,
+     "pcie_tx_pct": 1.0,
+     "samples": 402
+    },
+    "cub::DeviceScan::InclusiveScan": {
+     "sm_active_pct": 1.0,
+     "sm_issue_pct": 1.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.848,
+     "dram_write_pct": 0.008,
+     "pcie_rx_pct": 1.0,
+     "pcie_tx_pct": 1.0,
+     "samples": 125
+    },
+    "ncclSend": {
+     "sm_active_pct": 1.0,
+     "sm_issue_pct": 1.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.0,
+     "dram_write_pct": 0.0,
+     "pcie_rx_pct": 1.0,
+     "pcie_tx_pct": 1.0,
+     "samples": 33
+    },
+    "(none)": {
+     "sm_active_pct": 0.6976744186046512,
+     "sm_issue_pct": 0.6976744186046512,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.42118863049095606,
+     "dram_write_pct": 0.007751937984496124,
+     "pcie_rx_pct": 0.8552971576227391,
+     "pcie_tx_pct": 1.0,
+     "samples": 387
+    }
+   }
+  },
+  "1": {
+   "overall": {
+    "sm_active_pct": 48.087627390184025,
+    "sm_issue_pct": 3.7363990229104354,
+    "tensor_active_pct": 3.7786806854246744,
+    "dram_read_pct": 42.84719269497627,
+    "dram_write_pct": 1.3879666912360427,
+    "pcie_rx_pct": 0.5462686021649479,
+    "pcie_tx_pct": 1.2097696773289637
+   },
+   "by_phase": {
+    "(none)": {
+     "sm_active_pct": 60.98316981734067,
+     "sm_issue_pct": 4.878280290340592,
+     "tensor_active_pct": 6.44372656935471,
+     "dram_read_pct": 54.55132806891601,
+     "dram_write_pct": 1.7733907633405122,
+     "pcie_rx_pct": 0.41277817659727206,
+     "pcie_tx_pct": 1.4745951982132888,
+     "samples": 12537
+    },
+    "draft/prefill": {
+     "sm_active_pct": 9.097531607465383,
+     "sm_issue_pct": 1.7706201083684527,
+     "tensor_active_pct": 3.5460565924142085,
+     "dram_read_pct": 4.93257074051776,
+     "dram_write_pct": 0.609271523178808,
+     "pcie_rx_pct": 0.7934978928356412,
+     "pcie_tx_pct": 1.0006020469596628,
+     "samples": 1661
+    },
+    "ncclGroupEnd": {
+     "sm_active_pct": 1.3574007220216606,
+     "sm_issue_pct": 1.0216606498194947,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.2418772563176896,
+     "dram_write_pct": 0.06859205776173286,
+     "pcie_rx_pct": 0.9458483754512635,
+     "pcie_tx_pct": 10.862815884476534,
+     "samples": 277
+    },
+    "draft/idle_wait_cmd": {
+     "sm_active_pct": 1.873997168475696,
+     "sm_issue_pct": 0.8985370457763096,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.3954695611137329,
+     "dram_write_pct": 0.052855120339782916,
+     "pcie_rx_pct": 0.9042000943841435,
+     "pcie_tx_pct": 1.0,
+     "samples": 2119
+    },
+    "draft/service_request": {
+     "sm_active_pct": 2.571813890761969,
+     "sm_issue_pct": 1.4558327714093056,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.0785569790964262,
+     "dram_write_pct": 0.10687795010114633,
+     "pcie_rx_pct": 0.9423465947403911,
+     "pcie_tx_pct": 3.0724881995954147,
+     "samples": 2966
+    },
+    "draft/jit_speculate(miss)": {
+     "sm_active_pct": 58.40203138658785,
+     "sm_issue_pct": 4.531906922532573,
+     "tensor_active_pct": 0.45960121550181077,
+     "dram_read_pct": 53.239437206010905,
+     "dram_write_pct": 0.5237064479873454,
+     "pcie_rx_pct": 0.3890854597677226,
+     "pcie_tx_pct": 1.0249760646047539,
+     "samples": 24023
+    },
+    "draft/send_response": {
+     "sm_active_pct": 0.8847539015606243,
+     "sm_issue_pct": 0.8847539015606243,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.9099639855942377,
+     "dram_write_pct": 0.12004801920768307,
+     "pcie_rx_pct": 0.8571428571428571,
+     "pcie_tx_pct": 16.18607442977191,
+     "samples": 833
+    },
+    "draft/build_tree(glue)": {
+     "sm_active_pct": 44.99649954832881,
+     "sm_issue_pct": 2.4345641373080396,
+     "tensor_active_pct": 1.3014340560072268,
+     "dram_read_pct": 39.35145663956639,
+     "dram_write_pct": 1.2113821138211383,
+     "pcie_rx_pct": 0.6495031616982837,
+     "pcie_tx_pct": 1.2405713640469738,
+     "samples": 17712
+    },
+    "cub::DeviceScan::InclusiveScan": {
+     "sm_active_pct": 1.0,
+     "sm_issue_pct": 1.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.9017857142857143,
+     "dram_write_pct": 0.044642857142857144,
+     "pcie_rx_pct": 1.0,
+     "pcie_tx_pct": 1.0,
+     "samples": 112
+    },
+    "draft/decode_tree": {
+     "sm_active_pct": 10.071589627959414,
+     "sm_issue_pct": 1.7142051860202931,
+     "tensor_active_pct": 0.34667418263810595,
+     "dram_read_pct": 5.400225479143179,
+     "dram_write_pct": 2.9047350620067642,
+     "pcie_rx_pct": 0.9977452085682075,
+     "pcie_tx_pct": 1.0,
+     "samples": 1774
+    },
+    "draft/tree_step_0": {
+     "sm_active_pct": 4.115622125870451,
+     "sm_issue_pct": 0.4434371304690579,
+     "tensor_active_pct": 0.2351859151228485,
+     "dram_read_pct": 3.680988043621075,
+     "dram_write_pct": 1.2182367625804755,
+     "pcie_rx_pct": 0.7855735120220733,
+     "pcie_tx_pct": 1.0149783208513994,
+     "samples": 7611
+    },
+    "draft/tree_step_1": {
+     "sm_active_pct": 52.74682477967859,
+     "sm_issue_pct": 4.074131674442716,
+     "tensor_active_pct": 5.3410445826853294,
+     "dram_read_pct": 46.465720580611716,
+     "dram_write_pct": 2.39917055469155,
+     "pcie_rx_pct": 0.5324002073613271,
+     "pcie_tx_pct": 1.0478875064800415,
+     "samples": 15432
+    },
+    "draft/tree_step_2": {
+     "sm_active_pct": 52.63265036351619,
+     "sm_issue_pct": 4.130337078651685,
+     "tensor_active_pct": 5.425115664243226,
+     "dram_read_pct": 46.99107732980833,
+     "dram_write_pct": 1.507468605419696,
+     "pcie_rx_pct": 0.5132848645076008,
+     "pcie_tx_pct": 1.01526768010575,
+     "samples": 15130
+    },
+    "draft/tree_step_3": {
+     "sm_active_pct": 52.564026986310346,
+     "sm_issue_pct": 4.146656186546145,
+     "tensor_active_pct": 5.407021680749328,
+     "dram_read_pct": 46.908626449204164,
+     "dram_write_pct": 1.525316041134473,
+     "pcie_rx_pct": 0.5099233641186873,
+     "pcie_tx_pct": 1.0075980873780048,
+     "samples": 15267
+    },
+    "draft/tree_step_4": {
+     "sm_active_pct": 52.266809588774116,
+     "sm_issue_pct": 4.146170337166245,
+     "tensor_active_pct": 5.378028974209056,
+     "dram_read_pct": 46.66419801208342,
+     "dram_write_pct": 1.5221854089521212,
+     "pcie_rx_pct": 0.5455726628987202,
+     "pcie_tx_pct": 1.0112388748132268,
+     "samples": 15393
+    },
+    "draft/tree_step_5": {
+     "sm_active_pct": 52.734864847175864,
+     "sm_issue_pct": 4.205314483932194,
+     "tensor_active_pct": 5.433667124811834,
+     "dram_read_pct": 47.087113030957525,
+     "dram_write_pct": 1.5388441651940572,
+     "pcie_rx_pct": 0.5341318149093527,
+     "pcie_tx_pct": 1.017933110805681,
+     "samples": 15279
+    },
+    "draft/tree_step_6": {
+     "sm_active_pct": 52.51590405423022,
+     "sm_issue_pct": 4.21183678790249,
+     "tensor_active_pct": 5.4208056315995305,
+     "dram_read_pct": 46.92712814496154,
+     "dram_write_pct": 1.5160995958805892,
+     "pcie_rx_pct": 0.5081475687654804,
+     "pcie_tx_pct": 1.0001303611002477,
+     "samples": 15342
+    },
+    "draft/populate_cache": {
+     "sm_active_pct": 61.78810408921933,
+     "sm_issue_pct": 5.037174721189591,
+     "tensor_active_pct": 3.6394052044609664,
+     "dram_read_pct": 53.41635687732342,
+     "dram_write_pct": 2.907063197026022,
+     "pcie_rx_pct": 0.9219330855018587,
+     "pcie_tx_pct": 1.0,
+     "samples": 269
+    },
+    "cub::DeviceReduce::Sum": {
+     "sm_active_pct": 2.4468085106382977,
+     "sm_issue_pct": 1.5106382978723405,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.127659574468085,
+     "dram_write_pct": 0.0,
+     "pcie_rx_pct": 1.0,
+     "pcie_tx_pct": 1.0,
+     "samples": 94
+    },
+    "cub::DeviceSelect::Flagged": {
+     "sm_active_pct": 3.6923076923076925,
+     "sm_issue_pct": 1.8994082840236686,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 1.621301775147929,
+     "dram_write_pct": 0.14792899408284024,
+     "pcie_rx_pct": 0.9763313609467456,
+     "pcie_tx_pct": 1.0,
+     "samples": 169
+    },
+    "cub::DeviceScan::InclusiveSumByKey": {
+     "sm_active_pct": 65.95698924731182,
+     "sm_issue_pct": 2.795698924731183,
+     "tensor_active_pct": 1.4623655913978495,
+     "dram_read_pct": 44.225806451612904,
+     "dram_write_pct": 15.655913978494624,
+     "pcie_rx_pct": 0.9354838709677419,
+     "pcie_tx_pct": 1.0,
+     "samples": 93
+    },
+    "ncclRecv": {
+     "sm_active_pct": 1.0,
+     "sm_issue_pct": 1.0,
+     "tensor_active_pct": 0.0,
+     "dram_read_pct": 0.8918918918918919,
+     "dram_write_pct": 0.08108108108108109,
+     "pcie_rx_pct": 1.0,
+     "pcie_tx_pct": 1.0,
+     "samples": 37
+    }
+   }
+  }
+ }
+}

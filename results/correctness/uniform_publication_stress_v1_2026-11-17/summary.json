@@ -1,0 +1,193 @@
+{
+  "definition_sha256": "97a087cb97f6ee6fb64e3b909c7172a7d0f531020534376d494545d0730e3668",
+  "valid_blocks": 4,
+  "requests": 12,
+  "tables": {
+    "fixed": {
+      "ar": {
+        "requests": 3,
+        "gpu_count": 1,
+        "mean_s": 6.300171442999272,
+        "p50_s": 6.247653095982969,
+        "p95_s": 6.393539732706268,
+        "committed_tok_s": 40.63381485982676,
+        "first_delivery_s": 0.07822001265594736,
+        "mean_wait_s": 0,
+        "mean_final_drain_s": 0,
+        "mean_publication_s": null,
+        "mean_interrupt_drain_s": null,
+        "partial_publications": 0,
+        "verified_draft_tokens": 0,
+        "accepted_draft_tokens": 0,
+        "tokens_per_verification": 0.0,
+        "max_target_allocated_bytes": 19554171904,
+        "max_draft_allocated_bytes": 0,
+        "output_lengths": [
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 6.24311187400599,
+          "code": 6.247653095982969,
+          "doc": 6.409749359008856
+        }
+      },
+      "early": {
+        "requests": 3,
+        "gpu_count": 2,
+        "mean_s": 3.504561884338424,
+        "p50_s": 3.3264482879894786,
+        "p95_s": 4.548818913605646,
+        "committed_tok_s": 73.04764716640938,
+        "first_delivery_s": 0.10317999266165619,
+        "mean_wait_s": 1.370689819896749,
+        "mean_final_drain_s": 0.009601206004541988,
+        "mean_publication_s": 0.000964337520661157,
+        "mean_interrupt_drain_s": 0.002678039020661157,
+        "partial_publications": 186,
+        "verified_draft_tokens": 1136,
+        "accepted_draft_tokens": 534,
+        "tokens_per_verification": 3.206611570247934,
+        "max_target_allocated_bytes": 19480877056,
+        "max_draft_allocated_bytes": 6323186688,
+        "output_lengths": [
+          256,
+          256,
+          256
+        ],
+        "per_family_mean_s": {
+          "chat": 4.684637872007443,
+          "code": 2.5025994930183515,
+          "doc": 3.3264482879894786
+        }
+      }
+    },
+    "natural": {
+      "ar": {
+        "requests": 3,
+        "gpu_count": 1,
+        "mean_s": 5.748097391003587,
+        "p50_s": 6.2413137829862535,
+        "p95_s": 6.401763003802626,
+        "committed_tok_s": 40.07123012456794,
+        "first_delivery_s": 0.1565303013291365,
+        "mean_wait_s": 0,
+        "mean_final_drain_s": 0,
+        "mean_publication_s": null,
+        "mean_interrupt_drain_s": null,
+        "partial_publications": 0,
+        "verified_draft_tokens": 0,
+        "accepted_draft_tokens": 0,
+        "tokens_per_verification": 0.0,
+        "max_target_allocated_bytes": 19554171904,
+        "max_draft_allocated_bytes": 0,
+        "output_lengths": [
+          256,
+          256,
+          179
+        ],
+        "per_family_mean_s": {
+          "chat": 6.2413137829862535,
+          "code": 6.419590695004445,
+          "doc": 4.583387695020065
+        }
+      },
+      "early": {
+        "requests": 3,
+        "gpu_count": 2,
+        "mean_s": 3.1899612033351636,
+        "p50_s": 2.4965453629847616,
+        "p95_s": 4.401276811392744,
+        "committed_tok_s": 72.20568485049773,
+        "first_delivery_s": 0.1037594793306198,
+        "mean_wait_s": 1.230959465339159,
+        "mean_final_drain_s": 0.009733049325101698,
+        "mean_publication_s": 0.0009453224594594595,
+        "mean_interrupt_drain_s": 0.00268212818018018,
+        "partial_publications": 170,
+        "verified_draft_tokens": 1044,
+        "accepted_draft_tokens": 476,
+        "tokens_per_verification": 3.144144144144144,
+        "max_target_allocated_bytes": 19480877056,
+        "max_draft_allocated_bytes": 6323185152,
+        "output_lengths": [
+          256,
+          256,
+          179
+        ],
+        "per_family_mean_s": {
+          "chat": 4.612913638993632,
+          "code": 2.4965453629847616,
+          "doc": 2.460424608027097
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "HumanEval/36",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-148",
+      "exact": true,
+      "first_difference": null
+    },
+    {
+      "protocol": "natural",
+      "round": 0,
+      "method": "early",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference": null
+    }
+  ],
+  "exact_matches": 6,
+  "correctness_passed": true,
+  "within_method_repeatability": {
+    "fixed/ar": true,
+    "fixed/early": true,
+    "natural/ar": true,
+    "natural/early": true
+  },
+  "paired_speed_ratio_intervals": {},
+  "limitations": [
+    "Artificial 4 ms/tree-step delay: safety stress test; no performance claim",
+    "Stress test only; fixed K7 F3 P4",
+    "Fixed target K+1 graph retained; padded tail is calculated but cannot be accepted.",
+    "New AR arithmetic; no original-AR exactness claim.",
+    "Uniform checkpoint waiting, NCCL handoff, and final obsolete-work draining are included."
+  ]
+}

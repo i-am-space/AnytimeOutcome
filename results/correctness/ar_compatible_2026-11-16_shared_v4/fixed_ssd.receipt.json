@@ -1,0 +1,67 @@
+{
+  "valid": true,
+  "samples": 175,
+  "contamination": [],
+  "error": null,
+  "returncode": 0,
+  "at": "2026-11-16T18:57:36.924942+00:00",
+  "monitored_gpu_uuids": [
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd"
+  ],
+  "background_process_changes": [
+    {
+      "at": "2026-11-16T18:54:01.308883+00:00",
+      "processes": []
+    }
+  ],
+  "shared_gpu_correctness_only": true,
+  "external_process_changes": [
+    {
+      "at": "2026-11-16T18:54:01.308868+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T18:55:50.715780+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1820067,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T18:55:55.878822+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T18:56:05.154720+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1820675,
+          "name": "/scratch/kushagra/megaLaya/kernels/julia-cuda/dist/julia-cuda-sm_89"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T18:56:11.263975+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1820806,
+          "name": "/scratch/kushagra/megaLaya/kernels/julia-cuda/dist/julia-cuda-sm_89"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T18:56:18.648615+00:00",
+      "processes": []
+    }
+  ],
+  "admission_memory_free_mib": {
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de": 45458,
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd": 45458
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "phase": "tune",
+  "config": {
+    "mode": "ssd",
+    "k": 7,
+    "f": 3
+  },
+  "repeat": 1,
+  "protocol": "fixed",
+  "order_seed": 1001,
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "execution_sha256": "3f5ca1112ffdd8258141e1092ef3d156ff4a82d79b727b626a5b09542b29fad6",
+  "selection_sha256": null,
+  "prompt_ids": [
+    "HumanEval/146",
+    "specbench-556",
+    "specbench-496",
+    "specbench-255",
+    "specbench-505",
+    "specbench-315",
+    "specbench-110",
+    "HumanEval/97",
+    "specbench-147",
+    "HumanEval/68",
+    "specbench-109",
+    "specbench-260",
+    "specbench-133",
+    "HumanEval/67",
+    "HumanEval/71",
+    "specbench-270",
+    "HumanEval/94",
+    "HumanEval/50",
+    "specbench-131",
+    "HumanEval/54",
+    "specbench-253",
+    "specbench-158",
+    "specbench-117",
+    "specbench-152"
+  ],
+  "id": "tune/fixed/r1/ssd_k7_f3",
+  "job_sha256": "83071da984d6107707213caa9d68e0560acbc854896e0834e85868295af79709"
+}

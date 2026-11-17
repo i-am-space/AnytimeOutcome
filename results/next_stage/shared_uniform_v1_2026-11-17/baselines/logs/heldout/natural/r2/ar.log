@@ -1,0 +1,25 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  5.27it/s]Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.23it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.95it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.65it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.57it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.75it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 569, 256, 8, 128])
+[LLMEngine] finished llm_engine init
+{
+  "mode": "ar",
+  "k": null,
+  "f": null,
+  "backup": null,
+  "output_len": 256,
+  "n_requests": 75,
+  "mean_latency_s": 5.416600584571327,
+  "committed_tok_per_s": 40.83249814714502,
+  "decode_tok_per_s": 41.201694452381496,
+  "mean_tokens_per_step": 1.0,
+  "mean_step_ms": 24.387190545860207,
+  "gpu": "NVIDIA L40S"
+}
+[LLMEngine] Exiting (hard=True)

@@ -13,6 +13,11 @@ class Config:
     gpu_memory_utilization: float = 0.7
     enable_prefix_cache: bool = True
     draft_gpu_memory_utilization: float | None = None  # None = upstream default (0.75 sync / 0.8 async)
+    early_publish_tokens: int = 0  # 0: complete-cache SSD; positive: uniform minimum ready depth
+    publication_policy: str = 'uniform'  # uniform (v1), bounded, adaptive, or overlap
+    publication_max_inflight: int = 2  # unfinished draft steps, bounded/adaptive only
+    drain_draft_on_finish: bool = False
+    target_numerics: str = 'batched'  # 'ar_compatible' opts into AR-shaped target verification.
     num_gpus: int = 1
     enforce_eager: bool = False
     hf_config: AutoConfig | None = None
@@ -52,10 +57,35 @@ class Config:
 
     def __post_init__(self):
         model = self.model 
+        if self.publication_policy not in ('uniform', 'bounded', 'adaptive', 'overlap'):
+            raise ValueError('Unknown publication policy')
+        if not 1 <= self.publication_max_inflight <= 15:
+            raise ValueError('Publication queue bound must be between 1 and 15')
+        if self.publication_policy != 'uniform' and not self.early_publish_tokens:
+            raise ValueError('Publication policy requires early publication enabled')
+        if self.target_numerics not in ('batched', 'ar_compatible', 'shared_fixed16'):
+            raise ValueError('Unknown target numerical backend')
+        if self.target_numerics == 'shared_fixed16':
+            if self.max_num_seqs != 1 or self.num_gpus - int(self.draft_async) != 1 or self.use_eagle:
+                raise ValueError('Shared fixed16 requires batch one, one target GPU, and plain Qwen3')
+            if not 1 <= self.speculate_k <= 15:
+                raise ValueError('Shared fixed16 supports at most 15 speculative tokens')
+        if self.drain_draft_on_finish and (not self.draft_async or self.max_num_seqs != 1 or self.use_eagle):
+            raise ValueError("Draft drain accounting requires plain async batch-one SSD")
+        if self.early_publish_tokens:
+            if (not self.speculate or not self.draft_async or self.use_eagle or
+                    self.max_num_seqs != 1 or not self.jit_speculate or
+                    not 1 <= self.early_publish_tokens <= self.speculate_k):
+                raise ValueError('Early publication requires async batch-one SSD, JIT misses, and 1 <= P <= K')
+            self.drain_draft_on_finish = True
         assert os.path.isdir(model)
 
         assert 1 <= self.num_gpus <= 8 # this codebase only works on one node 
         self.hf_config = AutoConfig.from_pretrained(model)
+        if self.target_numerics == 'ar_compatible' and self.speculate:
+            from ssd.engine.ar_compatible import validate_ar_compatible
+            validate_ar_compatible(self, self.hf_config.model_type,
+                                   self.num_gpus - 1 if self.draft_async else self.num_gpus)
         self.max_model_len = min(
             self.max_model_len, self.hf_config.max_position_embeddings) 
         if self.speculate: 

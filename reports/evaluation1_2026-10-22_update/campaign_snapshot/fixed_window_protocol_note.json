@@ -1,0 +1,6 @@
+{
+  "scope_change": "Two-hour request: preserve all completed tuning and prioritize all 15 fixed-256 held-out blocks; defer natural EOS.",
+  "preserved": "Same original 75 held-out prompts, five repetitions, method-order seeds, prompt-order seeds, workers and validity rules.",
+  "ordering_disclosure": "Protocols are no longer alternated in this reduced window. Any later natural-EOS evaluation must disclose that it ran in a separate window.",
+  "full_campaign_claim": "Do not mark original two-protocol campaign complete until all required valid evidence exists; retain this scope-change disclosure."
+}

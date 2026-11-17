@@ -1,0 +1,43 @@
+{
+  "valid": false,
+  "definition_sha256": "1c631a92cebda7788e971102f88cc1d2bddb8e1627ad1a7b38db2c4407f731f1",
+  "command": [
+    "nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt",
+    "--cuda-graph-trace=node",
+    "--gpu-metrics-devices=all",
+    "--gpu-metrics-frequency=20000",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=stop",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "-o",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v1_2026-11-17/profiles/fixed_r0_early/attempt_210/trace",
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_overnight_extensions.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v1_2026-11-17",
+    "--phase",
+    "profiles",
+    "--job",
+    "fixed_r0_early",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v1_2026-11-17/profiles/fixed_r0_early/attempt_210"
+  ],
+  "returncode": 143,
+  "samples": 6,
+  "external_processes": [
+    {
+      "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+      "pid": 2175010,
+      "name": "/home/vishalrao/miniconda3/bin/python"
+    }
+  ],
+  "error": null,
+  "output_sha256": null,
+  "artifacts": {},
+  "at": "2026-11-17T03:25:32.219329+00:00"
+}

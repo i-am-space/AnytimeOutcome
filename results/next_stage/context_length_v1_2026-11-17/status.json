@@ -1,0 +1,6 @@
+{
+  "status": "waiting_for_predecessor",
+  "after": "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v1_2026-11-17",
+  "reason": "Requires successful completed campaign and exclusive global campaign lock",
+  "at": "2026-11-17T19:32:19.902269+00:00"
+}

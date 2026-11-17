@@ -202,3 +202,112 @@ method counts gives about 3.2 hours for scored generation if natural-EOS outputs
 tokens. Allow additional time for 50 model loads/compilations, 150 warmups, and slower grid settings.
 Natural EOS may finish sooner. Dedicated timings and other K/F settings may differ from those
 earlier runs; wall-clock completion cannot be bounded while other users occupy the GPUs.
+
+## AR-compatible verification experiments
+
+`target_numerics='ar_compatible'` is an opt-in target verification path for greedy,
+batch-one Qwen3 with one target GPU. AR's prefill and single-token arithmetic stay
+unchanged. Verification evaluates linear operations, norms, rotary embedding,
+activation, attention and vocabulary projection with AR's per-token shapes.
+Attention uses the actual visible prefix length for each row. Installation occurs
+before CUDA graph capture; no global torch operation is monkey-patched and the
+drafter retains its original operations, including its cached rotary module.
+
+This trades away batched GEMMs. It is an experimental correctness path, **not a
+validated acceleration fix**. Matching a fresh AR run and reproducing historical
+saved AR outputs are reported separately. A failed historical-reference check
+keeps the overall gate failed even if every new candidate matches fresh AR.
+
+```bash
+source profiling/env.sh
+python profiling/run_ar_compatible_gate.py \
+  --outdir results/correctness/ar_compatible_new \
+  --allow-shared-gpus
+```
+
+Correctness runs may share GPUs when memory permits; external processes are
+recorded and never terminated. Shared-run timings are diagnostic only. The
+dedicated-access rules for the frozen performance campaign remain unchanged.
+The gate uses the three historical failures plus two tuning prompts per family,
+256-token fixed and natural-EOS protocols, CUDA graphs, explicit 0.10 KV fractions,
+and the original three chat warmups. `--kv-fraction` enables declared allocation
+controls. `--gpu0-only-contextual --modes ar sd` checks single-GPU paths while GPU1
+is occupied. `--reuse-from` imports only complete receipts with identical model,
+execution, software, inputs, warmups and numerical settings; source files remain
+unchanged and their hashes are pinned in the new definition.
+
+The original `results/baselines/eval1` artifacts are preserved. Engine changes
+invalidate their execution fingerprint; use a new campaign version before
+benchmarking changed inference code. The shared benchmark driver accepts
+`--target-numerics ar_compatible` for non-manifest diagnostic runs, and rejects
+using it with the old frozen campaign.
+
+```bash
+CUDA_VISIBLE_DEVICES='' python -m pytest tests/test_ar_compatible.py \
+  tests/test_ar_compatible_gate.py -q
+```
+
+### Isolate the fast verifier's numerical differences
+
+After sourcing `profiling/env.sh`, run this target-only diagnostic on GPU0:
+
+```bash
+CUDA_VISIBLE_DEVICES=GPU-4dc32c12-52e7-d133-d641-ac04543af1de \
+  python -O profiling/diagnose_fast_numerics.py --linear-candidates \
+  --out results/correctness/fast_numerics_new_attempt.json
+```
+
+It preserves existing artifacts and production defaults. It compares identical
+token histories and KV prefixes at the three saved current divergences, records
+the first differing operation, and tests matrix-operation alternatives. It uses
+eager dispatch with compiled pointwise operations; timings are not benchmark
+evidence. Use a fresh output filename. Findings, limitations and the next tests
+are documented in `docs/ar_compatible_verification.md`.
+
+### Shared fast numerical reference prototype
+
+`shared-fixed16-v1` explicitly changes target decode arithmetic for AR, SD and
+SSD together. Original AR remains a separate control. The prototype lives in
+diagnostic workers; engine defaults and the original frozen campaign are unchanged.
+See `docs/shared_fast_backend.md` for correctness evidence and limitations.
+
+```bash
+python -O profiling/run_ar_compatible_gate.py --candidate shared_fixed16 \
+  --allow-shared-gpus --outdir results/correctness/shared_fixed16_new_attempt
+
+python -O profiling/benchmark_shared_numerics.py \
+  --gate results/correctness/shared_fixed16_v1_2026-11-17_v2 \
+  --outdir results/correctness/shared_fixed16_prototype_benchmark_2026-11-17
+```
+
+The latter requires a completed shared-backend correctness gate. It runs a
+separately declared three-prompt, five-round engineering benchmark, requires both
+GPUs to remain dedicated, invalidates contaminated blocks, and stops scheduling
+when another compute job appears. Repeating the same command resumes compatible
+valid blocks. It cannot substitute for the held-out campaign or its retuning.
+
+### Uniform early publication and the new shared-reference campaign
+
+The engine now exposes `--target-numerics shared_fixed16`; this is the approved
+new AR reference, with original AR retained separately. `--early-publish-tokens
+4` opts SSD into completed-prefix handoff. Both new SSD comparison arms include
+`--drain-draft-on-finish`. See [the protocol](../docs/uniform_early_publication.md)
+for constraints, CUDA-event/epoch ownership, padded verification work, and the
+separate artificial interruption check.
+
+After sourcing `profiling/env.sh`, the unattended sequence is:
+
+```bash
+python profiling/run_next_stage.py \
+  --gate results/correctness/uniform_publication_v1_2026-11-17 \
+  --stress-gate results/correctness/uniform_publication_stress_v1_2026-11-17 \
+  --root results/next_stage/shared_uniform_v1_2026-11-17
+```
+
+It validates normal/stress correctness, creates a new shared-reference baseline
+campaign, waits for dedicated GPUs, reruns all tuning and held-out blocks, then
+runs the five-round publication comparison using the new tuning selection.
+Partial, interrupted and contaminated blocks do not count. Incompatible code,
+model or environment changes stop resume. An artificial-delay speedup is never
+reported as a performance result. Natural requests may find all K tokens ready;
+zero partial handoffs must be reported without a claimed waiting benefit.

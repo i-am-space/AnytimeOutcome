@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "at": "2026-11-17T12:16:34.096656+00:00",
+  "partial_handoffs": {
+    "bounded": 590,
+    "adaptive": 590
+  }
+}

@@ -245,6 +245,15 @@ class ModelRunner:
             kwargs['debug_mode'] = config.debug_mode
             
         self.model = model_class(**kwargs)
+        if config.target_numerics == "shared_fixed16" and not self.is_draft:
+            if hf_config.model_type != "qwen3":
+                raise ValueError("Shared fixed16 is validated for Qwen3 only")
+            from ssd.engine.shared_numerics import install_shared
+            install_shared(self.model)
+        if config.target_numerics == 'ar_compatible' and not self.is_draft and config.speculate:
+            from ssd.engine.ar_compatible import install_ar_compatible, validate_ar_compatible
+            validate_ar_compatible(config, hf_config.model_type, self.num_tp_gpus)
+            install_ar_compatible(self.model)
 
         model_type = "DRAFT " if self.is_draft else "TARGET "
         if self.verbose:

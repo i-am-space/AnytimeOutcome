@@ -34,6 +34,11 @@ METRICS = {
     "decode_total_tokens": 0,
     "target_step_times": [],
     "target_verify_times": [],
+    "draft_wait_times": [],
+    "publication_records": [],
+    "verified_lengths": [],
+    "final_drain_times": [],
+    "draft_peak_memory": [],
 }
 
 
@@ -60,6 +65,10 @@ class LLMEngine:
         self.events = []
 
         ctx = mp.get_context("spawn")
+        self.publication_epoch = ctx.Value("q", 0) if config.early_publish_tokens else None
+        # Verification EWMA (4 slots), then checkpoint telemetry (4 slots).
+        self.publication_feedback = (ctx.Array('d', 12 if config.publication_policy == 'overlap' else 8)
+                                     if config.publication_policy != 'uniform' else None)
         self.num_tp_gpus = config.num_gpus if not self.config.draft_async else config.num_gpus - 1
 
         if config.speculate and config.draft_async:
@@ -84,7 +93,7 @@ class LLMEngine:
             init_q = ctx.Queue()
             draft_rank = config.num_gpus - 1
             self.draft_ps = ctx.Process(
-                target=DraftRunner, args=(config, draft_rank, init_q))
+                target=DraftRunner, args=(config, draft_rank, init_q, self.publication_epoch, self.publication_feedback))
             self.draft_ps.start()
             print(
                 f'Draft runner created on rank {draft_rank} (async)!', flush=True)
@@ -185,6 +194,9 @@ class LLMEngine:
             os._exit(0)
 
     def add_request(self, prompt: str | list[int], sampling_params: SamplingParams):
+        if self.config.target_numerics in ('ar_compatible', 'shared_fixed16') or self.config.early_publish_tokens:
+            if sampling_params.temperature != 0 or sampling_params.draft_temperature not in (None, 0):
+                raise ValueError('AR-compatible verification is validated for greedy decoding only')
         if isinstance(prompt, str):
             prompt = self.tokenizer.encode(prompt)
         seq = Sequence(prompt, sampling_params)
@@ -286,6 +298,9 @@ class LLMEngine:
                     draft_runner_rank=self.num_tp_gpus,
                     tokenizer=self.tokenizer,
                     verbose=config.verbose,
+                    request_epoch=self.publication_epoch,
+                    publication_metadata=config.drain_draft_on_finish,
+                    metrics=METRICS,
                 )
             else:
                 speculator = SpeculatorSync(
@@ -303,6 +318,7 @@ class LLMEngine:
                 jit_speculate=config.jit_speculate,
                 tokenizer=self.tokenizer,
                 metrics=METRICS,
+                publication_feedback=self.publication_feedback if config.publication_policy == 'adaptive' else None,
             )
             return SpecDecodeStep(
                 scheduler=self.scheduler,
@@ -326,6 +342,9 @@ class LLMEngine:
         use_tqdm: bool = True,
         stream_callback=None,
     ) -> list[str]:
+        if self.publication_feedback is not None:
+            with self.publication_feedback.get_lock():
+                self.publication_feedback[:] = [0.] * len(self.publication_feedback)
         for k in METRICS:
             METRICS[k] = [] if isinstance(METRICS[k], list) else 0
 
@@ -372,6 +391,8 @@ class LLMEngine:
                 outputs[seq_id] = token_ids
                 if use_tqdm:
                     pbar.update(1)
+        if self.config.draft_async and self.config.drain_draft_on_finish:
+            inference_step.speculator.drain()
         outputs = [outputs[seq_id] for seq_id in sorted(outputs)]
         outputs = [{"text": self.tokenizer.decode(
             token_ids), "token_ids": token_ids} for token_ids in outputs]

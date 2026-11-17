@@ -1,0 +1,40 @@
+{
+  "targeted_tests": {
+    "passed": 47,
+    "failed": 0,
+    "files": [
+      "tests/test_context_length_sweep.py",
+      "tests/test_publication_campaign.py",
+      "tests/test_profiler_ownership.py"
+    ]
+  },
+  "actual_tokenizer_inputs": {
+    "sweep-chat-256": 256,
+    "sweep-chat-512": 512,
+    "sweep-chat-1024": 1024,
+    "sweep-chat-2048": 2048,
+    "sweep-code-256": 256,
+    "sweep-code-512": 512,
+    "sweep-code-1024": 1024,
+    "sweep-code-2048": 2048,
+    "sweep-doc-256": 256,
+    "sweep-doc-512": 512,
+    "sweep-doc-1024": 1024,
+    "sweep-doc-2048": 2048
+  },
+  "isolated_warmup_inputs": 12,
+  "saved_trace_parser_smoke": {
+    "path": "results/next_stage/overnight_extensions_v2_2026-11-17/profiles/fixed_r0_complete/attempt_1/trace.sqlite",
+    "full_trees": 210,
+    "matched_rounds": 210,
+    "uncorrelated_trees": 0
+  },
+  "queued_unprofiled_blocks": 21,
+  "queued_unprofiled_requests": 252,
+  "queued_profile_blocks": 12,
+  "queued_profiled_requests": 36,
+  "source_fingerprints": "Sweep and predecessor both validated; active campaign execution unchanged",
+  "dependency_ready": false,
+  "gpu_workers_started": 0,
+  "at": "2026-11-17T18:34:00.576070+00:00"
+}

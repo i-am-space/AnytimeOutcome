@@ -1,0 +1,728 @@
+{
+  "diagnostic_only": true,
+  "requests": [
+    {
+      "id": "specbench-148",
+      "first_divergence_zero_based": 13,
+      "saved_sd_equals_ssd": true,
+      "ar_token_id": 53852,
+      "speculative_token_id": 16585,
+      "captures": {
+        "ssd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 13,
+          "witnesses": [
+            {
+              "input_start_output_index": 11,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 16585,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 53852,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.75
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.625
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.25
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 16585,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.125
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "sd_eager": {
+          "reproduces_saved_output": true,
+          "output_length": 192,
+          "first_mismatch_with_ar": 13,
+          "witnesses": [
+            {
+              "input_start_output_index": 10,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 16585,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 53852,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.75
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.625
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.25
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 16585,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.125
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "ar": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": null,
+          "witnesses": [
+            {
+              "input_start_output_index": 12,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 53852,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.75
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.625
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.25
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 13,
+          "witnesses": [
+            {
+              "input_start_output_index": 10,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 16585,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.5
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 53852,
+                "top": [
+                  {
+                    "token_id": 53852,
+                    "text": " integrating",
+                    "logit": 30.75
+                  },
+                  {
+                    "token_id": 16585,
+                    "text": " careful",
+                    "logit": 30.625
+                  },
+                  {
+                    "token_id": 264,
+                    "text": " a",
+                    "logit": 30.25
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "HumanEval/36",
+      "first_divergence_zero_based": 181,
+      "saved_sd_equals_ssd": true,
+      "ar_token_id": 476,
+      "speculative_token_id": 334,
+      "captures": {
+        "ssd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 181,
+          "witnesses": [
+            {
+              "input_start_output_index": 178,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 334,
+                "top": [
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 476,
+                "top": [
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 36.75
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.0
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 334,
+                "top": [
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.125
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "sd_eager": {
+          "reproduces_saved_output": true,
+          "output_length": 192,
+          "first_mismatch_with_ar": 181,
+          "witnesses": [
+            {
+              "input_start_output_index": 178,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 334,
+                "top": [
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 476,
+                "top": [
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 36.75
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.0
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 334,
+                "top": [
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.125
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "ar": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": null,
+          "witnesses": [
+            {
+              "input_start_output_index": 180,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 476,
+                "top": [
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 36.75
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 29.875
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 181,
+          "witnesses": [
+            {
+              "input_start_output_index": 178,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 334,
+                "top": [
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.125
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 476,
+                "top": [
+                  {
+                    "token_id": 476,
+                    "text": " or",
+                    "logit": 37.0
+                  },
+                  {
+                    "token_id": 334,
+                    "text": "**",
+                    "logit": 36.75
+                  },
+                  {
+                    "token_id": 2726,
+                    "text": " OR",
+                    "logit": 30.0
+                  }
+                ],
+                "argmax_agrees": false,
+                "max_abs_logit_delta": 0.25
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "specbench-553",
+      "first_divergence_zero_based": 170,
+      "saved_sd_equals_ssd": true,
+      "ar_token_id": 28360,
+      "speculative_token_id": 21892,
+      "captures": {
+        "ssd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 170,
+          "witnesses": [
+            {
+              "input_start_output_index": 169,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ],
+                "argmax_agrees": true,
+                "max_abs_logit_delta": 0.1875
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "sd_eager": {
+          "reproduces_saved_output": true,
+          "output_length": 192,
+          "first_mismatch_with_ar": 170,
+          "witnesses": [
+            {
+              "input_start_output_index": 169,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ],
+                "argmax_agrees": true,
+                "max_abs_logit_delta": 0.1875
+              },
+              "same_hidden_single_row_head": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ],
+                "max_abs_logit_delta": 0.0625
+              }
+            }
+          ]
+        },
+        "ar": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": null,
+          "witnesses": [
+            {
+              "input_start_output_index": 169,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 28360,
+                "top": [
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.125
+                  },
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 28.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sd": {
+          "reproduces_saved_output": true,
+          "output_length": 256,
+          "first_mismatch_with_ar": 170,
+          "witnesses": [
+            {
+              "input_start_output_index": 169,
+              "same_committed_history": true,
+              "actual_forward": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ]
+              },
+              "same_prefix_sequential_replay": {
+                "argmax": 21892,
+                "top": [
+                  {
+                    "token_id": 21892,
+                    "text": " identification",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 28360,
+                    "text": " IDs",
+                    "logit": 29.0
+                  },
+                  {
+                    "token_id": 13469,
+                    "text": " handles",
+                    "logit": 27.875
+                  }
+                ],
+                "argmax_agrees": true,
+                "max_abs_logit_delta": 0.1875
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

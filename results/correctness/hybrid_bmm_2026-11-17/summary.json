@@ -1,0 +1,374 @@
+{
+  "at": "2026-11-16T19:57:12.754380+00:00",
+  "definition_sha256": "d0813e1ec54179c1450da2a4ba53c69a0c203169914dd7d53659283ea899e61d",
+  "passed": false,
+  "candidate_comparisons": 36,
+  "exact_matches": 36,
+  "shared_gpu_correctness_only": true,
+  "reused_results": {
+    "fixed_ar": {
+      "path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/fixed_ar.json",
+      "sha256": "99c870a942a333db600cc739cd605e8def3d867d60f1a4fcc0743c29b9e3428b",
+      "receipt_path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/fixed_ar.receipt.json",
+      "receipt_sha256": "95986667462d0e465fed3d46f4840ae70ddd86c5cb74cc00246be8eae24cc99e",
+      "source_definition_path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/definition.json",
+      "source_definition_sha256": "f3ba8648817029d845fff08659a23eb2f6df6f5d734e066f81676d58a578bb72"
+    },
+    "natural_ar": {
+      "path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/natural_ar.json",
+      "sha256": "53b5e0b03fd0643c598a129b0171b67b52168ad65295bf8dacfe8e767b6aae8a",
+      "receipt_path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/natural_ar.receipt.json",
+      "receipt_sha256": "6b6d0929ad9a35cfaaff33c239a062228812f728466d13837ea5461fb008c2d9",
+      "source_definition_path": "/home/vishalrao/AnytimeOutcome/results/correctness/ar_compatible_2026-11-16_gpu0_v2/definition.json",
+      "source_definition_sha256": "f3ba8648817029d845fff08659a23eb2f6df6f5d734e066f81676d58a578bb72"
+    }
+  },
+  "unchanged_ar_reference": [
+    {
+      "id": "specbench-148",
+      "exact_match": false,
+      "first_difference": 12
+    },
+    {
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-553",
+      "exact_match": false,
+      "first_difference": 170
+    }
+  ],
+  "comparisons": [
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "sd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "fixed",
+      "mode": "ssd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 179,
+      "actual_length": 179
+    },
+    {
+      "protocol": "natural",
+      "mode": "sd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 226,
+      "actual_length": 226
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-148",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/36",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-553",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-109",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-152",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/146",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "HumanEval/67",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 256,
+      "actual_length": 256
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-496",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 179,
+      "actual_length": 179
+    },
+    {
+      "protocol": "natural",
+      "mode": "ssd",
+      "id": "specbench-253",
+      "exact_match": true,
+      "first_difference": null,
+      "ar_length": 226,
+      "actual_length": 226
+    }
+  ],
+  "limitations": [
+    "Small deterministic greedy correctness gate; not a universal proof.",
+    "Not a completed performance campaign or an acceleration claim.",
+    "Original frozen fast-mode campaign is unchanged; it still has exact-output failures."
+  ]
+}

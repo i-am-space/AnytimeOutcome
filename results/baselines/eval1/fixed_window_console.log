@@ -1,0 +1,441 @@
+handoff: Preserving the current full-campaign block before changing the queue.
+Waiting for the existing block receipt before handoff: /home/vishalrao/AnytimeOutcome/results/baselines/eval1/raw/heldout/fixed/r0/ar.receipt.json
+Full-campaign watcher stopped; fixed-length-only supervisor taking over.
+running: Starting or validating heldout/fixed/r0/ssd_k7_f3
+Resume: validated heldout/fixed/r0/ssd_k7_f3
+running: Starting or validating heldout/fixed/r0/ar
+Resume: validated heldout/fixed/r0/ar
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3797622, 'name': '.venv/bin/python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+Running heldout/fixed/r0/sd_k6
+waiting_for_gpus: Block invalidated by contention/monitoring failure: heldout/fixed/r0/sd_k6
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+stopped: Interrupted; valid blocks retained.
+handoff: Preserving the current full-campaign block before changing the queue.
+running: Starting or validating heldout/fixed/r0/ssd_k7_f3
+Resume: validated heldout/fixed/r0/ssd_k7_f3
+running: Starting or validating heldout/fixed/r0/ar
+Resume: validated heldout/fixed/r0/ar
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+running: Starting or validating heldout/fixed/r0/sd_k6
+waiting_for_gpus: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 3803018, 'name': 'python'}]
+budget_exhausted: Two-hour window exhausted; valid blocks retained, interrupted block excluded.

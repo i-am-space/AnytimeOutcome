@@ -1,0 +1,1396 @@
+{
+  "diagnostic_only": true,
+  "eager": true,
+  "torch_version": "2.10.0+cu128",
+  "requests": [
+    {
+      "id": "specbench-148",
+      "divergence_zero_based": 13,
+      "teacher_forced_predictions_equal_saved_ar": true,
+      "single": {
+        "argmax": 53852,
+        "top": [
+          {
+            "token_id": 53852,
+            "text": " integrating",
+            "logit": 30.75
+          },
+          {
+            "token_id": 16585,
+            "text": " careful",
+            "logit": 30.625
+          },
+          {
+            "token_id": 264,
+            "text": " a",
+            "logit": 30.25
+          },
+          {
+            "token_id": 3807,
+            "text": " several",
+            "logit": 27.875
+          },
+          {
+            "token_id": 34171,
+            "text": " combining",
+            "logit": 26.375
+          },
+          {
+            "token_id": 26301,
+            "text": " selecting",
+            "logit": 26.25
+          },
+          {
+            "token_id": 12831,
+            "text": " considering",
+            "logit": 25.75
+          },
+          {
+            "token_id": 8660,
+            "text": " understanding",
+            "logit": 25.75
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 53852,
+          "top": [
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.75
+            },
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.625
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.25
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.875
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.375
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.25
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.75
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.75
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.75
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.25
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.875
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.375
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.25
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.75
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.75
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.75
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.25
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.875
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.375
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.25
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.75
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.75
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 53852,
+          "top": [
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.625
+            },
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.5
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.75
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.125
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.125
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.625
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.625
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.75
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.25
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.875
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.375
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.25
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.75
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.75
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 53852,
+          "top": [
+            {
+              "token_id": 53852,
+              "text": " integrating",
+              "logit": 30.625
+            },
+            {
+              "token_id": 16585,
+              "text": " careful",
+              "logit": 30.5
+            },
+            {
+              "token_id": 264,
+              "text": " a",
+              "logit": 30.125
+            },
+            {
+              "token_id": 3807,
+              "text": " several",
+              "logit": 27.75
+            },
+            {
+              "token_id": 26301,
+              "text": " selecting",
+              "logit": 26.125
+            },
+            {
+              "token_id": 34171,
+              "text": " combining",
+              "logit": 26.125
+            },
+            {
+              "token_id": 12831,
+              "text": " considering",
+              "logit": 25.625
+            },
+            {
+              "token_id": 8660,
+              "text": " understanding",
+              "logit": 25.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.625
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.5
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.125
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.75
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.125
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.125
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.625
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 53852,
+            "top": [
+              {
+                "token_id": 53852,
+                "text": " integrating",
+                "logit": 30.75
+              },
+              {
+                "token_id": 16585,
+                "text": " careful",
+                "logit": 30.625
+              },
+              {
+                "token_id": 264,
+                "text": " a",
+                "logit": 30.25
+              },
+              {
+                "token_id": 3807,
+                "text": " several",
+                "logit": 27.875
+              },
+              {
+                "token_id": 34171,
+                "text": " combining",
+                "logit": 26.375
+              },
+              {
+                "token_id": 26301,
+                "text": " selecting",
+                "logit": 26.25
+              },
+              {
+                "token_id": 12831,
+                "text": " considering",
+                "logit": 25.75
+              },
+              {
+                "token_id": 8660,
+                "text": " understanding",
+                "logit": 25.75
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "HumanEval/36",
+      "divergence_zero_based": 181,
+      "teacher_forced_predictions_equal_saved_ar": true,
+      "single": {
+        "argmax": 476,
+        "top": [
+          {
+            "token_id": 476,
+            "text": " or",
+            "logit": 37.0
+          },
+          {
+            "token_id": 334,
+            "text": "**",
+            "logit": 36.75
+          },
+          {
+            "token_id": 2726,
+            "text": " OR",
+            "logit": 29.875
+          },
+          {
+            "token_id": 3070,
+            "text": " **",
+            "logit": 23.625
+          },
+          {
+            "token_id": 97219,
+            "text": "**,",
+            "logit": 22.875
+          },
+          {
+            "token_id": 323,
+            "text": " and",
+            "logit": 20.625
+          },
+          {
+            "token_id": 9,
+            "text": "*",
+            "logit": 20.25
+          },
+          {
+            "token_id": 63,
+            "text": "`",
+            "logit": 19.625
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 476,
+          "top": [
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 36.75
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 29.875
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 22.875
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.625
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.25
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.625
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 476,
+            "top": [
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 36.75
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 29.875
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 22.875
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.25
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.625
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 476,
+            "top": [
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 36.75
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 29.875
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 22.875
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.25
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.625
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 334,
+          "top": [
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 37.0
+            },
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 30.0
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 23.0
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.625
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.375
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.75
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.0
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 476,
+            "top": [
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 36.75
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 29.875
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 22.875
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.25
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.625
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 334,
+          "top": [
+            {
+              "token_id": 334,
+              "text": "**",
+              "logit": 37.0
+            },
+            {
+              "token_id": 476,
+              "text": " or",
+              "logit": 37.0
+            },
+            {
+              "token_id": 2726,
+              "text": " OR",
+              "logit": 30.0
+            },
+            {
+              "token_id": 3070,
+              "text": " **",
+              "logit": 23.625
+            },
+            {
+              "token_id": 97219,
+              "text": "**,",
+              "logit": 23.0
+            },
+            {
+              "token_id": 323,
+              "text": " and",
+              "logit": 20.625
+            },
+            {
+              "token_id": 9,
+              "text": "*",
+              "logit": 20.375
+            },
+            {
+              "token_id": 63,
+              "text": "`",
+              "logit": 19.75
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 334,
+            "top": [
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 37.0
+              },
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 30.0
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 23.0
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.375
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.75
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 476,
+            "top": [
+              {
+                "token_id": 476,
+                "text": " or",
+                "logit": 37.0
+              },
+              {
+                "token_id": 334,
+                "text": "**",
+                "logit": 36.75
+              },
+              {
+                "token_id": 2726,
+                "text": " OR",
+                "logit": 29.875
+              },
+              {
+                "token_id": 3070,
+                "text": " **",
+                "logit": 23.625
+              },
+              {
+                "token_id": 97219,
+                "text": "**,",
+                "logit": 22.875
+              },
+              {
+                "token_id": 323,
+                "text": " and",
+                "logit": 20.625
+              },
+              {
+                "token_id": 9,
+                "text": "*",
+                "logit": 20.25
+              },
+              {
+                "token_id": 63,
+                "text": "`",
+                "logit": 19.625
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "specbench-553",
+      "divergence_zero_based": 170,
+      "teacher_forced_predictions_equal_saved_ar": true,
+      "single": {
+        "argmax": 28360,
+        "top": [
+          {
+            "token_id": 28360,
+            "text": " IDs",
+            "logit": 29.125
+          },
+          {
+            "token_id": 21892,
+            "text": " identification",
+            "logit": 29.0
+          },
+          {
+            "token_id": 13469,
+            "text": " handles",
+            "logit": 28.0
+          },
+          {
+            "token_id": 47216,
+            "text": " identifiers",
+            "logit": 27.375
+          },
+          {
+            "token_id": 3034,
+            "text": " ID",
+            "logit": 27.25
+          },
+          {
+            "token_id": 2692,
+            "text": " account",
+            "logit": 26.75
+          },
+          {
+            "token_id": 9618,
+            "text": " accounts",
+            "logit": 26.25
+          },
+          {
+            "token_id": 15988,
+            "text": " nick",
+            "logit": 25.375
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.375
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.5
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.5
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.5
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.5
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

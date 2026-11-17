@@ -1,0 +1,32 @@
+{
+  "valid": true,
+  "job_sha256": "8ba1cd0d4a74e626448617cbfcb0380c402cbb97ddb4f87bc99afb3e82dabd6b",
+  "execution_sha256": "3f5ca1112ffdd8258141e1092ef3d156ff4a82d79b727b626a5b09542b29fad6",
+  "output_sha256": "1bc2e038400f9a41b2a4f5bd3072c76794ae35e89d744365ddb3659289d7a28c",
+  "returncode": 0,
+  "error": null,
+  "monitoring": {
+    "started_at": "2026-10-22T05:35:49.458984+00:00",
+    "samples": 91,
+    "external_processes": [],
+    "error": null,
+    "finished_at": "2026-10-22T05:37:26.612776+00:00"
+  },
+  "hardware_allocation": {
+    "gpu_count": 1,
+    "roles": [
+      {
+        "role": "target",
+        "physical_index": 0,
+        "logical_index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+      },
+      {
+        "role": "draft",
+        "physical_index": 0,
+        "logical_index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de"
+      }
+    ]
+  }
+}

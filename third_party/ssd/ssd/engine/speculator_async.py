@@ -1,4 +1,5 @@
 import torch
+from time import perf_counter
 from ssd.utils.nvtx import nvtx_range
 import torch.distributed as dist
 from transformers import AutoTokenizer
@@ -26,6 +27,9 @@ class SpeculatorAsync(SpeculatorBase):
         draft_runner_rank: int,
         tokenizer: AutoTokenizer,
         verbose: bool,
+        request_epoch=None,
+        publication_metadata=False,
+        metrics=None,
     ):
         super().__init__(lookahead, device)
         self.async_fan_out = async_fan_out
@@ -39,6 +43,10 @@ class SpeculatorAsync(SpeculatorBase):
         self.tokenizer = tokenizer
         self.verbose = verbose
         self.K = lookahead
+        self.request_epoch = request_epoch
+        self.publication_metadata = publication_metadata
+        self.metrics = metrics
+        self.valid_length = lookahead
 
         # Pre-allocate handshake send/recv buffers (reused every step)
         self._alloc_handshake_bufs(1)
@@ -56,11 +64,31 @@ class SpeculatorAsync(SpeculatorBase):
         self._num_tokens_buf = torch.empty(B, dtype=torch.int64, device=d)
         self._temps_buf = torch.empty(B, dtype=torch.float32, device=d)
         self._block_tables_buf = torch.full((B, self.max_blocks), -1, dtype=torch.int32, device=d)
-        self._fused_response = torch.empty(B + B * self.K, dtype=torch.int64, device=d)
+        self._fused_response = torch.empty(B + B * self.K + (5 if self.publication_metadata else 0), dtype=torch.int64, device=d)
         self._logits_q = torch.empty(B, self.K, self.vocab_size, dtype=self.draft_dtype, device=d)
         self._extend_counts = torch.zeros(B, dtype=torch.int64, device=d)
 
+    def _notify(self):
+        if self.request_epoch is not None:
+            with self.request_epoch.get_lock():
+                self.request_epoch.value += 1
+
+    def drain(self):
+        started = perf_counter()
+        self._notify()
+        dist.send(torch.tensor([3], dtype=torch.int64, device=self.device),
+                  dst=self.draft_runner_rank, group=self.async_pg)
+        ack = torch.empty(3, dtype=torch.int64, device=self.device)
+        dist.recv(ack, src=self.draft_runner_rank, group=self.async_pg)
+        if self.request_epoch is not None and int(ack[0].item()) != self.request_epoch.value:
+            raise RuntimeError("Stale draft drain acknowledgment")
+        if self.metrics is not None:
+            self.metrics["final_drain_times"].append(perf_counter() - started)
+            self.metrics["draft_peak_memory"].append(dict(allocated_bytes=int(ack[1].item()),
+                                                       reserved_bytes=int(ack[2].item())))
+
     def prefill(self, seqs: list[Sequence], verify_result: VerifyResult) -> SpeculateResult:
+        self._notify()
         eagle_acts = verify_result.eagle_acts
         input_id_list = [seq.token_ids for seq in seqs]
 
@@ -126,7 +154,7 @@ class SpeculatorAsync(SpeculatorBase):
             seq.last_token = seq.token_ids[-1]
             seq.num_draft_cached_tokens += len(speculations_tokens[i]) + 1
 
-        return SpeculateResult(speculations, logits_q, cache_hits)
+        return SpeculateResult(speculations, logits_q, cache_hits, self.valid_length)
 
     def _speculation_request(self, seqs: list[Sequence], eagle: bool):
         B = len(seqs)
@@ -146,6 +174,8 @@ class SpeculatorAsync(SpeculatorBase):
                 self._block_tables_buf[i, :bt_len] = torch.tensor(bt, dtype=torch.int32, device=self.device)
             self._block_tables_buf[i, bt_len:] = -1
 
+        self._notify()
+        wait_started = perf_counter()
         # Send cmd + meta + fused payload (temps fused into int64 burst)
         torch.cuda.nvtx.range_push("SSD/handshake_send")
         dist.send(self._cmd, dst=self.draft_runner_rank, group=self.async_pg)
@@ -185,8 +215,19 @@ class SpeculatorAsync(SpeculatorBase):
         with nvtx_range("SSD/wait_draft_tokens"):
             dist.recv(self._fused_response, src=self.draft_runner_rank, group=self.async_pg)
         cache_hits = self._fused_response[:B]
-        speculations = self._fused_response[B:].view(B, self.K)
+        speculations = self._fused_response[B:B + B*self.K].view(B, self.K)
+        self.valid_length = self.K
+        if self.publication_metadata:
+            length, epoch, generation, drain_ns, publication_ns = self._fused_response[-5:].tolist()
+            if not 1 <= length <= self.K or (self.request_epoch is not None and epoch != self.request_epoch.value):
+                raise RuntimeError("Incomplete or stale draft publication")
+            self.valid_length = length
+            if self.metrics is not None:
+                self.metrics["publication_records"].append(dict(valid_length=length, epoch=epoch,
+                    generation=generation, drain_s=drain_ns/1e9, publication_s=publication_ns/1e9))
         with nvtx_range("SSD/recv_draft_logits"):
             dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
 
+        if self.metrics is not None:
+            self.metrics["draft_wait_times"].append(perf_counter() - wait_started)
         return speculations, self._logits_q, cache_hits

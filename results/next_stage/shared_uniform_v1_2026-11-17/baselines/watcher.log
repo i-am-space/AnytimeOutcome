@@ -1,0 +1,4 @@
+2026-11-16T21:10:11.375330+00:00 running: Both GPUs idle; starting/resuming validated blocks.
+2026-11-16T21:24:30.086462+00:00 waiting_for_gpus: Dedicated window lost; incomplete/contaminated block will be rerun.
+2026-11-16T21:25:02.269995+00:00 running: Both GPUs idle; starting/resuming validated blocks.
+2026-11-17T00:20:23.533444+00:00 complete: All valid blocks and the final report are complete.

@@ -1,0 +1,13 @@
+WARNING: Device-side CUDA Event completion trace is currently enabled.
+         This may increase runtime overhead and the likelihood of false
+         dependencies across CUDA Streams. If you wish to avoid this, please
+         disable the feature with --cuda-event-trace=false.
+Draft runner created on rank 1 (async)!
+/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 4 leaked semaphore objects to clean up at shutdown: {'/loky-2317059-70sumz_a', '/loky-2317059-_0e32zpc', '/loky-2317059-nuf11bsz', '/loky-2317059-bga6uebj'}
+  warnings.warn(
+Hint: CUDA_VISIBLE_DEVICES is set. You may want to use '--gpu-metrics-devices=cuda-visible' instead of '--gpu-metrics-devices=all'
+GPU 0: General Metrics for NVIDIA AD10x (any frequency)
+GPU 1: General Metrics for NVIDIA AD10x (any frequency)
+Processing events...
+Generated:
+	No reports were generated

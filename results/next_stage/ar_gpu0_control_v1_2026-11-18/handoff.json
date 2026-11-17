@@ -1,0 +1,15 @@
+{
+  "previous_controller_pid": 2579878,
+  "previous_argv": [
+    "python",
+    "-O",
+    "profiling/run_publication_campaign.py",
+    "--watch",
+    "--outdir",
+    "results/next_stage/publication_performance_v1_2026-11-17",
+    ""
+  ],
+  "tmux_window": "@2",
+  "main_campaign_resume": "Automatic after GPU0 AR control, using unchanged campaign directory",
+  "headline_performance_evidence": false
+}

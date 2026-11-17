@@ -1,0 +1,76 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=False, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:01,  3.98it/s]Loading model files:  40%|████      | 2/5 [00:01<00:01,  1.82it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.77it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.61it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.55it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.67it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 81, 256, 8, 128])
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_ar_compatible_gate.py", line 389, in <module>
+    if __name__=='__main__': main()
+                             ~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_ar_compatible_gate.py", line 351, in main
+    worker(args); return
+    ~~~~~~^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_ar_compatible_gate.py", line 182, in worker
+    model=LLM(definition['models']['target']['path'],
+        draft=definition['models']['draft']['path'],
+    ...<7 lines>...
+            'ar_compatible' if config['numerics']=='hybrid_bmm' else
+            'batched' if config['numerics']=='shared_fixed16' else config['numerics']))
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/llm_engine.py", line 93, in __init__
+    self.model_runner = ModelRunner(
+                        ~~~~~~~~~~~^
+        config, 0, self.events, is_draft=False, num_tp_gpus=self.num_tp_gpus)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 118, in __init__
+    model_type = self.setup_and_warmup_model_and_cudagraphs(config, self.hf_config, init_q, is_draft)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 284, in setup_and_warmup_model_and_cudagraphs
+    decode_graph_vars, decode_graph_pool, decode_graphs, decode_graph_bs_list = capture_cudagraph(self)  # decode cudagraph, draft needs in spec and target in normal
+                                                                                ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/helpers/cudagraph_helpers.py", line 510, in capture_cudagraph
+    outputs[:bs] = model_runner.model(
+                   ~~~~~~~~~~~~~~~~~~^
+        input_ids[:bs], positions[:bs])    # warmup
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 316, in forward
+    hidden_states = self.model(input_ids, positions)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 260, in forward
+    hidden_states, residual = layer(positions, hidden_states, residual)
+                              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 205, in forward
+    hidden_states = self.self_attn(positions, hidden_states)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 106, in forward
+    o = self.attn(q, k, v)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/profiling/shared_numerics.py", line 91, in attention
+    raise ValueError('Shared fixed16 attention requires one logical request')
+ValueError: Shared fixed16 attention requires one logical request

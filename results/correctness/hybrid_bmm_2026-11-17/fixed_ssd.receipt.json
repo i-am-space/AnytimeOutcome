@@ -1,0 +1,123 @@
+{
+  "valid": true,
+  "samples": 134,
+  "contamination": [],
+  "error": null,
+  "returncode": 0,
+  "at": "2026-11-16T19:51:48.191055+00:00",
+  "monitored_gpu_uuids": [
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd"
+  ],
+  "background_process_changes": [
+    {
+      "at": "2026-11-16T19:49:03.397545+00:00",
+      "processes": []
+    }
+  ],
+  "shared_gpu_correctness_only": true,
+  "external_process_changes": [
+    {
+      "at": "2026-11-16T19:49:03.397509+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:49:05.876424+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1862885,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:50:05.270698+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:50:09.125370+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1864716,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:50:23.501376+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:50:27.611253+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1865380,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:50:43.416260+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1865380,
+          "name": "[No data]"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:50:44.457915+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:50:48.333570+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1865842,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:51:00.106693+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:51:04.001702+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1866221,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:51:15.824376+00:00",
+      "processes": []
+    },
+    {
+      "at": "2026-11-16T19:51:19.616832+00:00",
+      "processes": [
+        {
+          "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+          "pid": 1866704,
+          "name": "/scratch/kushagra/megaLaya/.venv/bin/python"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-16T19:51:30.005799+00:00",
+      "processes": []
+    }
+  ],
+  "admission_memory_free_mib": {
+    "GPU-4dc32c12-52e7-d133-d641-ac04543af1de": 45458,
+    "GPU-4890b987-943e-ab85-5519-27aab934f5bd": 45458
+  }
+}

@@ -19,3 +19,9 @@ Local changes:
 - **Optional prefix-cache control** (`ssd/config.py`, `engine/block_manager.py`, `engine/scheduler.py`):
   `enable_prefix_cache=True` preserves normal behavior. The Evaluation 1 campaign disables target
   and draft prompt-cache lookup so every timed request includes full prefill with warm model weights.
+- **Experimental AR-compatible verification** (`ssd/engine/ar_compatible.py`, `model_runner.py`):
+  `target_numerics='ar_compatible'` uses per-token target operation shapes, installed before CUDA
+  graph capture. Default `'batched'` behavior and AR operations are preserved. This first version
+  supports greedy, batch-one non-EAGLE Qwen3 on one target GPU, including two-GPU asynchronous
+  speculation. It prioritizes numerical consistency and sacrifices batched matrix multiplication;
+  it is not a demonstrated acceleration. Tests: `tests/test_ar_compatible*.py`.

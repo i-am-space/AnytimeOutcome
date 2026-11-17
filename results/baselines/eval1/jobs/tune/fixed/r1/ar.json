@@ -1,0 +1,42 @@
+{
+  "phase": "tune",
+  "config": {
+    "mode": "ar",
+    "k": null,
+    "f": null
+  },
+  "repeat": 1,
+  "protocol": "fixed",
+  "order_seed": 1001,
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "execution_sha256": "3f5ca1112ffdd8258141e1092ef3d156ff4a82d79b727b626a5b09542b29fad6",
+  "selection_sha256": null,
+  "prompt_ids": [
+    "HumanEval/146",
+    "specbench-556",
+    "specbench-496",
+    "specbench-255",
+    "specbench-505",
+    "specbench-315",
+    "specbench-110",
+    "HumanEval/97",
+    "specbench-147",
+    "HumanEval/68",
+    "specbench-109",
+    "specbench-260",
+    "specbench-133",
+    "HumanEval/67",
+    "HumanEval/71",
+    "specbench-270",
+    "HumanEval/94",
+    "HumanEval/50",
+    "specbench-131",
+    "HumanEval/54",
+    "specbench-253",
+    "specbench-158",
+    "specbench-117",
+    "specbench-152"
+  ],
+  "id": "tune/fixed/r1/ar",
+  "job_sha256": "ffaf93d3e5450955787d784a1f97cf5928a7d13032dd3b8bee579a53b2d74f19"
+}

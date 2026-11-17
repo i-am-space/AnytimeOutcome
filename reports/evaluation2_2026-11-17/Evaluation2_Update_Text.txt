@@ -1,0 +1,581 @@
+PAGE 1
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Performance evidence and Evaluation 2
+Implementation, initial results, lessons, and remaining experiments | Update to the 22 October report
+STATUS: CORE HANDOFF IMPLEMENTED / LATENCY BENEFIT STILL TO BE ESTABLISHED
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+01
+What we have built
+A shared fast numerical reference, a completed reproducible baseline campaign,
+uniform and adaptive publication prototypes, and a stable-prefix handoff that can deliver
+a response while deeper queued drafting finishes.
+What the completed results show
+SD is 1.98× and SSD is 2.84× faster than shared AR on the fixed-output baseline. SSD
+uses two GPUs. These are baseline algorithm results. Our first tuned uniform-publication
+variant was about 1% slower than complete SSD.
+What is established for the new overlap path
+102/102 speculative outputs matched fresh shared AR in its correctness gate. Normal
+K=10 runs recorded 633 actual responses before tail completion. This demonstrates the
+mechanism on tested inputs; dedicated performance validation remains pending.
+Evaluation 2
+Nov 9–21
+10-minute presentation + 5-minute questions
+30 marks: 8 + 8 + 8 + 6
+Campaign snapshot
+As of 17 Nov, 21:34 IST, the new performance
+campaign is waiting for dedicated GPUs. A
+contaminated attempt was discarded. No new
+winner or held-out result exists.
+Reading this report
+Pages 1–16 contain the current update. Pages
+17–56 preserve the 22 October report as a labelled
+historical appendix. Its old pending-status
+statements describe that earlier date.
+Evidence: B1; U1; O1–O2; L1. Snapshot is dated, not a live dashboard. Full source hashes accompany this PDF.
+
+
+PAGE 2
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+How our work maps to Evaluation 2
+The rubric asks what has been built, what has been learned, and what remains to be established.
+ASSESSMENT MAP / COVERAGE OF THE CRITERIA, NOT A PREDICTED GRADE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+02
+Criterion
+Marks
+Evidence we can present
+Remaining evidence
+Implementation & Progress
+8
+Working uniform, bounded/adaptive, and overlap paths;
+completion events, valid lengths, independent snapshots, safe
+KV reuse and draining; reproducible campaign.
+Unequal continuation-depth allocation remains to
+implement.
+Initial Results & Analysis
+8
+480 tuning + 2,250 baseline test requests; 1,500 publication
+comparisons; exactness and actual overlap counters; useful
+negative result.
+A dedicated latency comparison for the latest
+overlap version.
+Comparisons / Trade-offs /
+Ablations
+8
+K/F tuning; complete vs uniform; fixed vs natural EOS; task
+families; bounded/adaptive diagnostics.
+Tune K/P/queue bound; compare frozen winners;
+isolate drain, copy, verification and memory costs.
+Presentation & Technical
+Clarity
+6
+A simple execution diagram, graphs with GPU counts, explicit
+numerical reference, and separation of measured results from
+plans.
+Keep claims scoped; use the 10-minute outline on
+page 15.
+Total: 30 marks. The evidence supports an implementation-and-initial-results presentation. A successful final acceleration claim is still open.
+Evidence: Rubric supplied by the user; B1; U1; O1–O2; D1–D2. No score estimate is implied.
+
+
+PAGE 3
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Progress since the mid-submission
+Comparison with the saved Evaluation 1 report dated 22 October 2026.
+ENGINEERING AND EXPERIMENTAL PROGRESS / RESEARCH GAIN IS STILL OPEN
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+03
+Area
+22 October snapshot
+17 November update
+Profiling
+Machine roofline and Nsight mechanism analysis already
+available.
+Used those observations to implement and instrument publication
+policies; old profiles remain historical.
+Baseline measurements
+480 tuning requests; 150 dedicated held-out requests; five
+repetitions incomplete.
+Fresh shared-backend campaign complete: 480 tuning + 2,250
+held-out requests, five repetitions, two protocols.
+Output agreement
+Fast SD/SSD differed from original AR on all three saved
+prompts.
+Shared numerical reference introduced; 1,500/1,500 speculative
+baseline outputs match that shared AR.
+Core project feature
+Early publication and unequal-depth scheduling were future
+work.
+Uniform, bounded/adaptive, and stable-prefix overlap are
+implemented and tested.
+Project result
+No measured anytime-publication benefit.
+Uniform variant about 1% slower; actual overlap demonstrated; latest
+latency benefit unmeasured.
+Main work still open
+Build and evaluate the scheduler.
+Finish overlap performance study, implement unequal depths, run
+final ablations and update conclusions.
+Evidence: H1 pages 1–3; B1; U1; O1–O2. Historical and shared-reference timings must not be pooled.
+
+
+PAGE 4
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+What stable-prefix publication changes
+The target can receive a completed prefix while already-queued deeper work finishes.
+IMPLEMENTED / SAFE SNAPSHOT + SEPARATE HANDOFF STREAM
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+04
+Path
+When the target can receive a continuation
+What happens to queued tail work
+Complete-cache SSD
+After the complete continuation is available.
+Finish before the complete handoff.
+First uniform / bounded
+prototypes
+Choose a stopping point, then finish already-submitted work
+before exposure.
+Drain before handoff; submitted work may erase the
+intended earlier return.
+Stable-prefix overlap
+Copy the completed eligible prefix into independent snapshot
+buffers and deliver it on a handoff stream.
+May finish concurrently with transfer / target
+verification; drain before graph or KV reuse.
+Prefix event
+complete
+→
+Copy valid prefix
+to snapshot
+→
+Send snapshot
+on handoff stream
+→
+Target verifies
+the valid prefix
+→
+Join tail before
+buffer / KV reuse
+Example: K=10, minimum prefix P=4
+Four or more tokens are complete → a completion event authorizes a snapshot → send only its declared valid tokens → the target verifies while the
+submitted tail finishes. This is an execution example, not a measured timeline.
+Safety and limits
+Epoch/context checks reject stale state. Rejection, cache misses, next-tree reuse and request-end barriers remain explicit. Full-request latency includes
+final draining. There is no kernel preemption, and verification still computes a padded K+1 graph.
+Evidence: D1; O1–O2. A separate stream enables overlap opportunities; actual event counters establish whether overlap occurred.
+
+
+PAGE 5
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Correctness uses an explicit reference
+Identical model weights do not guarantee identical greedy outputs under different finite-precision execution paths.
+EXACTNESS IS AGAINST SHARED-FIXED16-V1 AR / ORIGINAL AR REMAINS DISTINCT
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+05
+Why the original outputs differed
+Single-query and batched execution used different numerical paths. BF16 rounding and
+reduction-order differences can change nearly tied logits, flip the next greedy token, and
+then change the rest of the response. The original implementation also exhibited
+discrepancies.
+What we changed
+AR, SD and SSD use shared fixed-shape target arithmetic and batch-independent
+attention. The shared AR reference is versioned explicitly. It can generate different words
+from original AR; matching it does not repair historical-original-AR equivalence.
+Completed check
+Exact
+matches
+SD/SSD baseline held-out requests
+1,500 / 1,500
+Uniform-publication comparison
+1,500 / 1,500
+Bounded/adaptive diagnostic
+84 / 84
+Overlap normal gate
+96 / 96
+Overlap artificial-delay gate
+6 / 6
+Testing: latest CPU suite: 201 passed, 16 CUDA-specific skips; standalone paged-attention GPU test excluded from that CPU invocation. Separate
+targeted GPU validation: 16 passed. Campaign-focused tests: 18 passed. These are separate invocations, not an additive test total.
+All exactness statements are limited to the tested workload. The overlap diagnostics permit recorded unrelated GPU activity and cannot establish performance
+rankings.
+Evidence: B1; U1; A1; O1–O2; D3; T1–T3. Historical original-AR agreement is not claimed.
+
+
+PAGE 6
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+The completed baseline experiment
+A declared tuning split, frozen winners, and repeated comparisons on matching test inputs.
+BATCH ONE / BF16 / NO PROFILER / DEDICATED GPU BLOCKS
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+06
+Component
+Declared setup and meaning
+Models and hardware
+Qwen3-8B target / Qwen3-0.6B drafter. Two 48 GB L40S GPUs over PCIe across NUMA sockets; no NVLink. AR and SD use GPU0
+only; SSD uses both GPUs.
+Balanced workload
+24 tuning prompts: 8 chat, 8 code, 8 document. Test split: 75 prompts, 25 per family. Three separate warmup prompts. Exclude the
+three historically investigated test prompts.
+Frozen inputs
+Seed 0; exact saved input token IDs and chat template; complete inputs ≤2,048 tokens; model capacity 4,096. Models, tokenizer
+and execution fingerprints recorded.
+Output protocols
+Primary: exactly 256 output tokens, ignoring EOS. Secondary: stop at natural EOS, cap 256. Secondary results reuse
+fixed-output-selected settings.
+Execution and timing
+CUDA graphs and JIT miss fallback on; target and draft KV fractions 0.70. Three unscored warmups per fresh worker. Prefix caching
+off. Timer includes prefills and final drain.
+Statistics
+Five rounds per method/protocol. Paired 95% confidence intervals: 10,000 seeded bootstrap samples over rounds and prompt IDs
+within families.
+Evidence: B1–B3. Batch size one means one user request at a time; K is draft depth, F is outcome-cache fan-out.
+
+
+PAGE 7
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Tuning selected SD K=6 and SSD K=7/F=3
+Each setting: 24 balanced tuning prompts × two repetitions, fixed 256-token output.
+COMPLETED PERFORMANCE MEASUREMENTS / SHARED AR REFERENCE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+07
+Selection rule
+Lowest mean full-request tuning latency. Exact ties
+favor smaller K, then F. Winners were frozen before
+test measurements.
+What the grid shows
+Larger K was not always better. K=10 increased SSD
+latency in this baseline grid; F=3 helped at K=4 and
+K=7.
+Meaning for the project
+Our publication variants must beat a tuned strong
+SSD baseline. Improving a slow K=10 control alone is
+insufficient.
+Evidence: B2. Green marks the winner within each method. AR contributes 48 additional tuning requests; total tuning requests = 480.
+
+
+PAGE 8
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Baseline results: fixed 256-token output
+Primary evaluation: identical output length; 75 prompts × five rounds per method.
+COMPLETED EVIDENCE / SHARED AR REFERENCE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+08
+Paired speedup vs shared AR
+SD: 1.98× (95% CI 1.89–2.09).
+SSD: 2.84× (2.66–3.05).
+Interpretation
+These are baseline-algorithm results against shared
+AR. SSD receives an extra GPU. They do not
+establish the contribution of our publication feature.
+Method
+GPUs
+Mean / p50 / p95 (s)
+Tokens/s
+First delivery (ms)
+Output tokens
+Shared AR
+1
+6.271 / 6.245 / 6.359
+40.82
+49.8
+256.0
+SD K6
+1
+3.161 / 2.929 / 4.845
+80.99
+114.2
+256.0
+SSD K7/F3
+2
+2.208 / 1.998 / 3.683
+115.92
+96.4
+256.0
+p50 is the median request; p95 is the latency at or below which 95% of requests finish. First delivery is later with speculation even when the whole request finishes sooner.
+Evidence: B1. Each row has 375 requests. Speculative outputs match shared AR; every method is repeatable on all 75 tested prompts.
+
+
+PAGE 9
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Baseline results: natural EOS, cap 256
+Secondary evaluation: the same fixed-output-selected configurations; no EOS retuning.
+COMPLETED EVIDENCE / SHARED AR REFERENCE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+09
+Paired speedup vs shared AR
+SD: 1.98× (95% CI 1.88–2.09).
+SSD: 2.85× (2.66–3.07).
+Interpretation
+These are baseline-algorithm results against shared
+AR. SSD receives an extra GPU. They do not
+establish the contribution of our publication feature.
+Method
+GPUs
+Mean / p50 / p95 (s)
+Tokens/s
+First delivery (ms)
+Output tokens
+Shared AR
+1
+5.419 / 6.236 / 6.318
+40.81
+48.4
+221.2
+SD K6
+1
+2.737 / 2.493 / 4.391
+80.81
+111.8
+221.2
+SSD K7/F3
+2
+1.902 / 1.611 / 3.261
+116.27
+92.3
+221.2
+p50 is the median request; p95 is the latency at or below which 95% of requests finish. First delivery is later with speculation even when the whole request finishes sooner.
+Evidence: B1. Each row has 375 requests. Speculative outputs match shared AR; every method is repeatable on all 75 tested prompts.
+
+
+PAGE 10
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+The workload changes the size of the gain
+Fixed-output results, 25 prompts per family × five rounds for every method.
+COMPLETED PERFORMANCE MEASUREMENTS / SHARED AR REFERENCE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+10
+Measured SSD speedup
+Chat: 2.62×.
+Code: 4.36×.
+Document: 2.25×.
+All use two GPUs versus AR’s one.
+What accompanies the difference
+SSD draft acceptance: code 62.9%, chat 36.3%,
+document 31.6%. Code also has more tokens
+committed per verification.
+Meaning for evaluation
+Report every family. A balanced overall average can
+still hide a policy that helps predictable code but
+harms other tasks.
+Evidence: B1. No family has a baseline mean-latency regression versus shared AR. Acceptance is descriptive, not a controlled causal ablation.
+
+
+PAGE 11
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Uniform publication did not reduce latency
+A separate matched comparison: 75 prompts × five rounds × two SSD arms × two protocols = 1,500 requests.
+COMPLETED PERFORMANCE MEASUREMENTS / SHARED AR REFERENCE
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+11
+Fixed-output result
+Complete: 2.2006 s.
+Uniform: 2.2230 s.
+Uniform is 1.02% slower; paired 95% CI for
+slowdown: 0.71–1.32%.
+Natural-EOS result
+Complete: 1.9045 s.
+Uniform: 1.9203 s.
+Uniform is 0.83% slower.
+What this establishes
+At K=7, tuning chose P=7 among positive
+thresholds. No partial handoffs occurred. The
+experiment measured management overhead
+without an earlier prefix benefit.
+Evidence: U1–U2. All 1,500 outputs match shared AR. CI uses paired rounds/prompts within families; all final draining is included.
+P is the minimum number of completed continuation tokens eligible for publication. The positive-threshold
+tuning grid was P=1,2,4,7; complete SSD (P=0) was faster than every positive setting.
+
+
+PAGE 12
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+The latest handoff really overlaps queued work
+Normal correctness gate: overlap SSD at K=10, F=3, P=4, queue bound two.
+CORRECTNESS AND MECHANISM EVIDENCE / NO SPEEDUP CLAIM
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+12
+Observed mechanism
+323 fixed-output + 310 natural-EOS responses
+completed before the submitted tail event: 633
+actual handoffs.
+Coverage
+Normal and stress phases: 22 valid blocks, 120
+requests, 102/102 speculative outputs match shared
+AR. Rejection, 2,048-token inputs, EOS and final
+draining are exercised.
+Limit
+K=7 produced no response-before-tail events. These
+0.10-KV diagnostic runs are not dedicated repeated
+performance evidence.
+Evidence: O1–O2; D1. Counts are internal handoffs across requests, not 633 independent prompts. Artificial-delay stress adds 100, shown separately in source data.
+
+
+PAGE 13
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+What profiling and experiments taught us
+The historical traces motivated the implementation; current measurements determine its benefit.
+OBSERVATIONS, INTERPRETATION, AND DESIGN CONSEQUENCES
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+13
+Observation
+Interpretation
+Consequence for the project
+Original target decode and small verify phases lie left of
+the measured roofline ridge.
+At the measured widths, weight/data movement
+limits useful throughput; prefill can be
+compute-oriented.
+Do not describe all verification as compute-bound.
+Separate phases and profile the changed backend
+again.
+Historical target wait: 9.2 ms on hits, 30.0 ms on misses;
+often five of seven depths were already ready.
+A ready prefix could reduce waiting. The old trace
+does not separate every wait cause.
+Measure transfer, completion, acceptance and draining
+separately; old values are not current-backend timings.
+The selected K7/P7 uniform policy produced no partial
+handoffs and a small slowdown.
+Checkpoint and publication overhead can remain
+even when there is nothing useful to publish
+earlier.
+Keep complete-cache SSD as the strong control and
+tune publication parameters independently.
+Bounded/adaptive diagnostics often exposed more
+queued depth after draining.
+Extra submitted work can postpone the handoff;
+adaptive decisions were not broadly exercised.
+Independent snapshots and handoff streams remove
+one dependency; broader policy coverage remains
+necessary.
+Actual overlap occurs at K10; no latest dedicated latency
+result exists.
+A mechanism can work while total request time
+still increases.
+Include extra verification rounds, snapshots, memory
+and final drain in the comparison.
+Evidence: Historical profiling: H1. Current publication: U1; A1; O1–O2; D4. No old timing is substituted into the new campaign.
+
+
+PAGE 14
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Remaining comparisons and ablations
+First establish whether the latest publication path beats the strongest matched complete SSD.
+DECLARED PLAN / NO FUTURE MEASUREMENTS ARE PLOTTED
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+14
+Next comparison
+Purpose and trade-off
+Status
+Complete vs uniform vs overlap
+Tune K=4/7/10 for complete; K=7/10 and P=2/4/7 for publication; overlap queue
+bound 1/2. Hold F=3.
+Prepared: 22 configurations, 1,056
+tuning requests.
+Frozen winners, five repeats
+AR + three SSD winners; 75 matching test prompts, fixed and natural protocols. Add
+complete K7 anchor if needed.
+Pending: 3,000–3,750 test requests.
+Equal K/P, queue 1 vs 2
+Separate benefit from different draft depth; quantify excess queued work, target
+wait, and draining.
+Declared tuning cells support analysis;
+add matched repeats before a causal
+claim.
+Mechanism and resource costs
+Measure acceptance, tokens/verification, cache hits, actual overlap, memory,
+snapshots and final drain, alongside request latency.
+Instrumentation exists; dedicated
+measurements pending.
+Unequal depth / scheduling
+Spend deeper effort on useful likely outcomes, keep others shallow; compare against
+tuned uniform allocation.
+Not yet implemented. Main remaining
+proposal feature.
+Execution: one worker at a time; both GPUs dedicated; 0.70 KV fractions; warm full-prefill requests; no profiler. Contamination invalidates the whole block and
+scheduling waits. Never stop unrelated jobs.
+The 75 test prompts remain separate from configuration tuning, but were used in previous evaluations. They are not a newly unseen workload. New workloads and
+variable-length verification are further studies.
+Evidence: D2; L1. Expected dedicated execution time: roughly 4–6 hours, plus unpredictable GPU waiting; not a completion promise.
+
+
+PAGE 15
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+A clear 10-minute Evaluation 2 story
+Presentation scope: implementation, initial results, analysis, and remaining plan; followed by five minutes of questions.
+TECHNICAL CLARITY / EXPLAIN THE RESULT AND ITS LIMITS
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+15
+Time
+What to show
+Message
+1 minute
+Problem and mid-submission comparison
+Can safely using ready draft work reduce full-request latency?
+2 minutes
+Implementation diagram and safety
+We built completed-prefix snapshots and overlapped handoff with queued work,
+while preserving safe reuse.
+2 minutes
+Tuning and baseline graphs
+The comparison is reproducible; SD and SSD are strong baselines with explicit GPU
+allocations.
+2 minutes
+Uniform result + actual overlap counts
+The first policy was slightly slower; the new mechanism overlaps, and its latency
+benefit remains open.
+2 minutes
+Profiling lessons and remaining experiments
+Earlier handoff must outweigh extra rounds and coordination; unequal-depth
+scheduling is still to build.
+1 minute
+Three precise claims
+Built: safe overlapping handoff. Learned: early availability alone is insufficient. Open:
+reliable latency improvement.
+Do not claim: that SSD’s 2.84× speedup is our publication contribution; that shared AR reproduces original AR; that the overlap correctness run
+establishes a speedup; or that the proposed ≥10% gain is already achieved.
+Evidence: User-supplied Evaluation 2 rubric; B1; U1; O1–O2. Current evidence supports implementation and initial analysis.
+
+
+PAGE 16
+ANYTIME OUTCOME-CACHE CONSTRUCTION
+Evidence register and historical appendix
+The PDF is a dated evidence snapshot. Raw source paths and SHA-256 fingerprints accompany it.
+CURRENT UPDATE: PAGES 1–16 / HISTORICAL OCTOBER REPORT: PAGES 17–56
+EVALUATION 2 UPDATE / 17 NOVEMBER 2026 / SHARED-FIXED16-V1
+16
+IDs
+Saved evidence
+Supports
+B1–B3
+shared_uniform_v1_2026-11-17/baselines/{summary,selection,manifest}.json
+Completed baseline counts, tuning, statistics,
+exactness and workload.
+U1–U2
+overnight_extensions_v2_2026-11-17/{heldout,depth_tune}/summary.json
+Matched uniform-publication result and
+positive-threshold tuning.
+A1
+adaptive_publication_v1_2026-11-17/correctness/summary.json
+Bounded/adaptive diagnostic coverage; no headline
+speedup.
+O1–O2
+prefix_overlap_v1_2026-11-17/{correctness,stress}/summary.json
+Exactness, actual overlap counts and
+performance-evidence flags.
+D1–D4
+docs/{prefix_publication,publication_performance_campaign,shared_fast_backend,adaptive_public
+ation}.md
+Implementation ownership, reference contract and
+remaining campaign.
+T1–T3 / L1
+Saved CPU/GPU test logs and publication-performance status.json
+Test evidence and dated pending status; status is not
+a live promise.
+H1
+22 October Anytime_SSD_Performance_Report.pdf
+Original mid-submission evidence, preserved as the
+following appendix.
+Source-path prefix: experiment folders above are under results/next_stage/. The October appendix retains its original measurements, captions and numbering.
+Every appendix page is labelled historical; its unfinished-run statements are superseded where this update supplies newer evidence.
+Evidence: evidence_manifest.json records exact original paths, frozen snapshots, capture time and SHA-256 hashes.

@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "definition_sha256": "e3fc5789a31ba0e4b5eedc1fcc26781d3538695a77228b6d2ea7efda18c427e2",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_overnight_extensions_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17",
+    "--phase",
+    "correctness",
+    "--job",
+    "fixed_r0_early_k4",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/correctness/fixed_r0_early_k4/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 52,
+  "external_processes": [],
+  "error": null,
+  "output_sha256": "2fdaa89ccea76910574849721da5e00481cdef025486a3bb05eb91608f85b6a8",
+  "artifacts": {},
+  "at": "2026-11-17T08:37:06.161538+00:00",
+  "ownership_monitor": {
+    "strategy": "launcher group or inherited per-run token",
+    "run_token": "ef202e6f7e194549bf8e0ed980814f62",
+    "owned_gpu_pids": [
+      2392183,
+      2392348
+    ]
+  }
+}

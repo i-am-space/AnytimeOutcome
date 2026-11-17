@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "phase": "profiles",
+  "reason": "Profiler monitor mistook detached run-owned workers for foreign GPU jobs; replaced by version 2",
+  "at": "2026-11-17T08:05:39.841486+00:00",
+  "replacement_queue": "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17"
+}

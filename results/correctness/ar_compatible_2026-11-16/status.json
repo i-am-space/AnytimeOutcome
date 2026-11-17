@@ -1,0 +1,5 @@
+{
+  "status": "stopped",
+  "at": "2026-11-16T18:37:50.918628+00:00",
+  "error": "Invalid worker fixed_sd; inspect its log and receipt"
+}

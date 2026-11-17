@@ -1,0 +1,200 @@
+{
+  "created_at": "2026-11-17T12:01:51.551186+00:00",
+  "execution": {
+    "sha256": "98aef5e9d9dab42c16e0b9e096dc5e411bd3f12c3cfa9cff6cd8ca576f5841aa",
+    "files": {
+      "third_party/ssd/ssd/__init__.py": "f1a221b38f55b42ef0619cba48a411acbbd1965c4845b4643f77443b7ce77950",
+      "third_party/ssd/ssd/config.py": "6a7caa773b3534466c54db1cd7083895da9dbcef276458939a4afe87c65840a2",
+      "third_party/ssd/ssd/engine/ar_compatible.py": "ad063e76d8be2558cd757d604e0bbd1db182556ec05e1616e72208a373b849f7",
+      "third_party/ssd/ssd/engine/block_manager.py": "6433d2b370fbcda21c12618dd128401e815ae528b11c6d6ea72f54ccd865e658",
+      "third_party/ssd/ssd/engine/draft_runner.py": "b92ee4b3cce6dc4de9e7c251ee1ad924be0c88c7b1852b7443bb897054efd9b5",
+      "third_party/ssd/ssd/engine/helpers/cudagraph_helpers.py": "834e522f0b90045058e5bbc7bf9b2503b78082eff4f297125ae21b494b3fc42b",
+      "third_party/ssd/ssd/engine/helpers/mask_helpers.py": "8ada4e709a6ab310ee920a7176b3684f89860022fc659442f6cb02ed5fb87d88",
+      "third_party/ssd/ssd/engine/helpers/runner_helpers.py": "288e81d295828e683fe351e4c8b1427173a21a54fd66aaa3f51e3b63b527bfc0",
+      "third_party/ssd/ssd/engine/helpers/speculate_types.py": "24023191a969a011f569615971bd8a582915ad54da6f7b8e8144a63f7869925a",
+      "third_party/ssd/ssd/engine/llm_engine.py": "2b36ffdc8ef1c05d5b0284d52a2b4336036f7ccfa66d0890a47ec2962155bac3",
+      "third_party/ssd/ssd/engine/model_runner.py": "29d6c76ad547d1b46665fb53c1e006c50256782f8233570d5cafd1dee01ff56d",
+      "third_party/ssd/ssd/engine/publication_policy.py": "d15eeef911009214c3e8809e09af38b25216dc1e942f2b38e7a4f81ad3b61506",
+      "third_party/ssd/ssd/engine/scheduler.py": "15e8a4b52c0d699b0593c6a8ea94b100d51669b224c797df8f58b6921541ba55",
+      "third_party/ssd/ssd/engine/sequence.py": "d97aa6e04907c79b8857a8db13bccaa9acc7c73310a62e7e6ee24bb0e8e1cc8a",
+      "third_party/ssd/ssd/engine/shared_attention.py": "0a6909d296840a3a988e9398aad9def7ae540e3266dec74464734d65189252c4",
+      "third_party/ssd/ssd/engine/shared_numerics.py": "7b3a5fb89610f1e115b06820d0987762568ac4e01ecdb6c1976cd56a6244e658",
+      "third_party/ssd/ssd/engine/speculator_async.py": "e09e051c821deb47d9e869a0c2d7038392b5be5b4a5dd237af0c6143d0029e18",
+      "third_party/ssd/ssd/engine/speculator_sync.py": "87aeb76ec574b51d69b541c80ea2daa02463d824df4613e06783a2fd747fda12",
+      "third_party/ssd/ssd/engine/step.py": "a807f405bb902d6e372b8887ce99be513dbc1f27d8c1f35e3732d6b138e2622c",
+      "third_party/ssd/ssd/engine/verifier.py": "ecb11bac809d892cde9e371b31c9ecc5354662ebe090c08748e22ea3efdbeb99",
+      "third_party/ssd/ssd/layers/activation.py": "13d88b460e7610df28c6a7c719dd8bf21c5c59ae0f85c94d505d499215618a82",
+      "third_party/ssd/ssd/layers/attention.py": "2fdb46bc8393c10597d52bba4747d08a10cce36d1f2ece696c7f0854bba40dcc",
+      "third_party/ssd/ssd/layers/embed_head.py": "b896a56b908d75c8f30462b0b1a4ce634276ddb41165fdaa0220c55a2ddf7257",
+      "third_party/ssd/ssd/layers/layernorm.py": "fd273e4759397a52b6bdc826b1982f4142f944df734f8ffe46dfcf06780159ac",
+      "third_party/ssd/ssd/layers/linear.py": "73626f5cdcb1d022927a02c513a4d310d95ac69146f82e7f34424c9605fc9eab",
+      "third_party/ssd/ssd/layers/paged_attention_triton.py": "8f5c642a1b659a5029abe82ee06cad2d4e2a63529175e8b31b873edcc7b6105c",
+      "third_party/ssd/ssd/layers/rotary_embedding.py": "1bcca21cf5e4d81c11a5c55d59a6033874c4e6a0003cc4ae8e1aa6165976a723",
+      "third_party/ssd/ssd/layers/sampler.py": "9688d32807c09eb2f16c600b24256552bc90657b432f36f1042c89a5fd368e71",
+      "third_party/ssd/ssd/llm.py": "496950f31428f674b70e8e137e029aa16dd82fdc8d8b8cc76f9ebdce86f7f653",
+      "third_party/ssd/ssd/models/eagle3_draft_llama3.py": "0d6e713a419cf884fc85984f9a2a6de520119032075a7c99158e0df7e2faca84",
+      "third_party/ssd/ssd/models/llama3.py": "bf838bb14de26569f7cf7949f318a45547ec055e51c165a2d9662a929b4305b0",
+      "third_party/ssd/ssd/models/qwen3.py": "535495bf69933fd9c677275453b801189e2c3c78a94fcc5133fc65b88c9f69c7",
+      "third_party/ssd/ssd/paths.py": "72c52420daaf6d457c60235617efc3f8b1e3ae208a35f3bc45438adc9d7e01ac",
+      "third_party/ssd/ssd/sampling_params.py": "7f79868c4ca115bb18e017411a6c5545f354aa858aa0b8076aafb756d0785032",
+      "third_party/ssd/ssd/utils/async_helpers/async_spec_helpers.py": "1996b014a2047d73b460d0cd7d1a3c0ab9a4b0fe834de2fb855672c37482da94",
+      "third_party/ssd/ssd/utils/async_helpers/nccl_pack.py": "efe12bb28ad7286c792129ffc44932bfa136f4bb5669a5a940a8d19e1c7ae3ef",
+      "third_party/ssd/ssd/utils/async_helpers/tests.py": "6491ced36a2a6f06d8cf411204b1190d2ca0bc700cd0becf79c3f4cd8abcd87e",
+      "third_party/ssd/ssd/utils/context.py": "9d55d4b8d64964dc48a1c76bc257f4cd3526b57276e4abf12a67731e1d5b8233",
+      "third_party/ssd/ssd/utils/loader.py": "3d6d68d46a17ab658f0ec47e3e3efa99b210002c57591afab301d360072129a0",
+      "third_party/ssd/ssd/utils/misc.py": "e56aa9fe2fbe1a193fdc76b7b730b942da2f886fecc75210edefd9d093bd5d1c",
+      "third_party/ssd/ssd/utils/nvtx.py": "beb34bf2d8edcaf34487f5fd65b89b254f05be54b17b85473090a5d08432ac59",
+      "third_party/ssd/ssd/utils/verify.py": "d2bca39bf241fca70d7b2596b2d46228516d6882bb9114bf27f31bdc84d713e0",
+      "profiling/run_engine.py": "c27fb64407d94386b006616f24eac2fa3b465e75afde4a9168ad05ea0a6002fe",
+      "profiling/workloads.py": "d5f63210bf04a1f5d5e6ea7a2be6269c7d8fd4f9d225e96b9084cfb80f4fc806",
+      "profiling/baseline_common.py": "ea8b2fe788c21c3523ebd10fc34e8ee4a004c8de8b0104f0815da20b6bb55285",
+      "profiling/run_baselines.py": "3838a256139d57e27ec7e415c329898e721adf3c449e4e434626f76474b55ab8",
+      "profiling/analyze_baselines.py": "770bf742454a4dd07ee6cb1991ec02d6825d28ea919d6daa4c947d4958f6fa69",
+      "profiling/watch_baselines.py": "ca80ff23280e88389d887b4b233eae594d19696e4453556f6491bf6f163742b5"
+    }
+  },
+  "software": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+    "executable": "/home/vishalrao/miniconda3/bin/python3.13",
+    "packages": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6",
+      "triton": "3.6.0",
+      "flashinfer-python": "0.6.4",
+      "numpy": "2.2.6"
+    },
+    "environment": {
+      "CUDA_HOME": "/usr/local/cuda-12.9",
+      "SSD_CUDA_ARCH": "8.9",
+      "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+      "NVIDIA_TF32_OVERRIDE": null,
+      "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": null,
+      "CUBLAS_WORKSPACE_CONFIG": null,
+      "CUDA_LAUNCH_BLOCKING": null,
+      "OMP_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    }
+  },
+  "queue_code": {
+    "profiling/run_adaptive_publication.py": "1930a02879101e8af88f9855fb121e89f53305929f4a3e3f77edeaa930111c10",
+    "profiling/run_overnight_extensions.py": "05dd95bd45fe20cd982c2d4dcda6afa0d6ba870c6d59a680f786d6431f8b14cf",
+    "profiling/run_publication_study.py": "ca5bd2ddae84287efc7de13199876cfff3d02655697b321271d6dc2f5533f3fb",
+    "profiling/benchmark_shared_numerics.py": "95961fd5e634998f254cfd26381885cf97b1f3100b749554673040b8876524bc"
+  },
+  "hardware": {
+    "gpus": [
+      {
+        "index": 0,
+        "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      },
+      {
+        "index": 1,
+        "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+        "name": "NVIDIA L40S",
+        "driver": "575.57.08"
+      }
+    ],
+    "topology": "\t\u001b[4mGPU0\tGPU1\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tSYS\t0-15,32-47\t0\t\tN/A\nGPU1\tSYS\t X \t16-31,48-63\t1\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n"
+  },
+  "models": {
+    "target": {
+      "path": "/scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local",
+      "sha256": "983869da0b234b5850fbe19d30f663778255750a0fc70add55dea9e6b7771af1",
+      "files": {
+        "config.json": {
+          "size": 728,
+          "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+        },
+        "generation_config.json": {
+          "size": 239,
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+        },
+        "merges.txt": {
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+        },
+        "model-00001-of-00005.safetensors": {
+          "size": 3996250744,
+          "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+        },
+        "model-00002-of-00005.safetensors": {
+          "size": 3993160032,
+          "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+        },
+        "model-00003-of-00005.safetensors": {
+          "size": 3959604768,
+          "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+        },
+        "model-00004-of-00005.safetensors": {
+          "size": 3187841392,
+          "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+        },
+        "model-00005-of-00005.safetensors": {
+          "size": 1244659840,
+          "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+        },
+        "model.safetensors.index.json": {
+          "size": 32878,
+          "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+        },
+        "tokenizer.json": {
+          "size": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "tokenizer_config.json": {
+          "size": 9732,
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      }
+    },
+    "draft": {
+      "path": "/scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca",
+      "sha256": "aa7f4e1305b3c95759e7d7e2ca862e6a54140e45bbb12e0d610ad61c99bdb745",
+      "files": {
+        "config.json": {
+          "size": 726,
+          "sha256": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+        },
+        "generation_config.json": {
+          "size": 239,
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+        },
+        "merges.txt": {
+          "size": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+        },
+        "model.safetensors": {
+          "size": 1503300328,
+          "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+        },
+        "tokenizer.json": {
+          "size": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "tokenizer_config.json": {
+          "size": 9732,
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      }
+    }
+  },
+  "reference_contract": "shared-fixed16-v1; same target arithmetic; original AR separate",
+  "source": {
+    "path": "/home/vishalrao/AnytimeOutcome/results/next_stage/overnight_extensions_v2_2026-11-17/queue.json",
+    "sha256": "04dae346635af00028ff8d3efb4a4a5ad86593d149f507bc509b3fa21b1760ff"
+  },
+  "policy_contract": "bounded-adaptive-v1; P4, queue<=2, EWMA alpha=.2, beta prior=.5/.5, gain margin=5%",
+  "scope": "Engineering correctness and timing diagnostics; not held-out headline performance",
+  "sha256": "6e21350d5d54c2d8481deeb816d1f248857ca8dc1b3b3afc154cd8121487291c"
+}

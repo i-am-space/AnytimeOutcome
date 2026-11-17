@@ -1,0 +1,951 @@
+{
+  "diagnostic_only": true,
+  "eager": true,
+  "torch_version": "2.10.0+cu128",
+  "requests": [
+    {
+      "id": "specbench-553",
+      "divergence_zero_based": 170,
+      "teacher_forced_predictions_equal_saved_ar": true,
+      "single": {
+        "argmax": 28360,
+        "top": [
+          {
+            "token_id": 28360,
+            "text": " IDs",
+            "logit": 29.125
+          },
+          {
+            "token_id": 21892,
+            "text": " identification",
+            "logit": 29.0
+          },
+          {
+            "token_id": 13469,
+            "text": " handles",
+            "logit": 28.0
+          },
+          {
+            "token_id": 47216,
+            "text": " identifiers",
+            "logit": 27.375
+          },
+          {
+            "token_id": 3034,
+            "text": " ID",
+            "logit": 27.25
+          },
+          {
+            "token_id": 2692,
+            "text": " account",
+            "logit": 26.75
+          },
+          {
+            "token_id": 9618,
+            "text": " accounts",
+            "logit": 26.25
+          },
+          {
+            "token_id": 15988,
+            "text": " nick",
+            "logit": 25.375
+          }
+        ]
+      },
+      "widths": {
+        "1": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.375
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.0,
+          "max_abs_hidden_delta_vs_single": 0.0,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "7": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.5
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.5
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        },
+        "8": {
+          "argmax": 28360,
+          "top": [
+            {
+              "token_id": 28360,
+              "text": " IDs",
+              "logit": 29.125
+            },
+            {
+              "token_id": 21892,
+              "text": " identification",
+              "logit": 29.0
+            },
+            {
+              "token_id": 13469,
+              "text": " handles",
+              "logit": 28.0
+            },
+            {
+              "token_id": 47216,
+              "text": " identifiers",
+              "logit": 27.5
+            },
+            {
+              "token_id": 3034,
+              "text": " ID",
+              "logit": 27.25
+            },
+            {
+              "token_id": 2692,
+              "text": " account",
+              "logit": 26.75
+            },
+            {
+              "token_id": 9618,
+              "text": " accounts",
+              "logit": 26.25
+            },
+            {
+              "token_id": 15988,
+              "text": " nick",
+              "logit": 25.375
+            }
+          ],
+          "max_abs_logit_delta_vs_single": 0.25,
+          "max_abs_hidden_delta_vs_single": 0.25,
+          "multi_hidden_single_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.5
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          },
+          "single_hidden_multi_row_head": {
+            "argmax": 28360,
+            "top": [
+              {
+                "token_id": 28360,
+                "text": " IDs",
+                "logit": 29.125
+              },
+              {
+                "token_id": 21892,
+                "text": " identification",
+                "logit": 29.0
+              },
+              {
+                "token_id": 13469,
+                "text": " handles",
+                "logit": 28.0
+              },
+              {
+                "token_id": 47216,
+                "text": " identifiers",
+                "logit": 27.375
+              },
+              {
+                "token_id": 3034,
+                "text": " ID",
+                "logit": 27.25
+              },
+              {
+                "token_id": 2692,
+                "text": " account",
+                "logit": 26.75
+              },
+              {
+                "token_id": 9618,
+                "text": " accounts",
+                "logit": 26.25
+              },
+              {
+                "token_id": 15988,
+                "text": " nick",
+                "logit": 25.375
+              }
+            ]
+          }
+        }
+      },
+      "schedule_replay": {
+        "argmax": 21892,
+        "top": [
+          {
+            "token_id": 21892,
+            "text": " identification",
+            "logit": 29.0
+          },
+          {
+            "token_id": 28360,
+            "text": " IDs",
+            "logit": 29.0
+          },
+          {
+            "token_id": 13469,
+            "text": " handles",
+            "logit": 27.875
+          },
+          {
+            "token_id": 47216,
+            "text": " identifiers",
+            "logit": 27.375
+          },
+          {
+            "token_id": 3034,
+            "text": " ID",
+            "logit": 27.125
+          },
+          {
+            "token_id": 2692,
+            "text": " account",
+            "logit": 26.625
+          },
+          {
+            "token_id": 9618,
+            "text": " accounts",
+            "logit": 26.125
+          },
+          {
+            "token_id": 15988,
+            "text": " nick",
+            "logit": 25.375
+          }
+        ],
+        "captured_top8_logits_reproduced_exactly": true,
+        "kv_prefix_comparison_to_ar": [
+          {
+            "layer": 0,
+            "kind": "key",
+            "max_abs": 1.0,
+            "mean_abs": 3.0951755434216466e-06
+          },
+          {
+            "layer": 0,
+            "kind": "value",
+            "max_abs": 0.0009765625,
+            "mean_abs": 1.9293775466167062e-08
+          },
+          {
+            "layer": 1,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.00029430308495648205
+          },
+          {
+            "layer": 1,
+            "kind": "value",
+            "max_abs": 0.001953125,
+            "mean_abs": 1.2330602658039425e-05
+          },
+          {
+            "layer": 2,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0005590575747191906
+          },
+          {
+            "layer": 2,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 3.38296486006584e-05
+          },
+          {
+            "layer": 3,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0007711563375778496
+          },
+          {
+            "layer": 3,
+            "kind": "value",
+            "max_abs": 0.00390625,
+            "mean_abs": 6.462486635427922e-05
+          },
+          {
+            "layer": 4,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0009820610284805298
+          },
+          {
+            "layer": 4,
+            "kind": "value",
+            "max_abs": 0.005859375,
+            "mean_abs": 9.614571172278374e-05
+          },
+          {
+            "layer": 5,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.0015646237879991531
+          },
+          {
+            "layer": 5,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.00010238282266072929
+          },
+          {
+            "layer": 6,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.0009564335341565311
+          },
+          {
+            "layer": 6,
+            "kind": "value",
+            "max_abs": 0.0078125,
+            "mean_abs": 0.00013882994244340807
+          },
+          {
+            "layer": 7,
+            "kind": "key",
+            "max_abs": 0.125,
+            "mean_abs": 0.0011674297275021672
+          },
+          {
+            "layer": 7,
+            "kind": "value",
+            "max_abs": 0.015625,
+            "mean_abs": 0.00022096303291618824
+          },
+          {
+            "layer": 8,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0013672664063051343
+          },
+          {
+            "layer": 8,
+            "kind": "value",
+            "max_abs": 0.02734375,
+            "mean_abs": 0.00033725437242537737
+          },
+          {
+            "layer": 9,
+            "kind": "key",
+            "max_abs": 0.140625,
+            "mean_abs": 0.0014846824342384934
+          },
+          {
+            "layer": 9,
+            "kind": "value",
+            "max_abs": 0.0234375,
+            "mean_abs": 0.000366274849511683
+          },
+          {
+            "layer": 10,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0014267786173149943
+          },
+          {
+            "layer": 10,
+            "kind": "value",
+            "max_abs": 0.046875,
+            "mean_abs": 0.0005550289060920477
+          },
+          {
+            "layer": 11,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0016354942927137017
+          },
+          {
+            "layer": 11,
+            "kind": "value",
+            "max_abs": 0.03564453125,
+            "mean_abs": 0.00038371639675460756
+          },
+          {
+            "layer": 12,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0016132540768012404
+          },
+          {
+            "layer": 12,
+            "kind": "value",
+            "max_abs": 0.0390625,
+            "mean_abs": 0.0004473710141610354
+          },
+          {
+            "layer": 13,
+            "kind": "key",
+            "max_abs": 0.1796875,
+            "mean_abs": 0.0017393602756783366
+          },
+          {
+            "layer": 13,
+            "kind": "value",
+            "max_abs": 0.1875,
+            "mean_abs": 0.00041359334136359394
+          },
+          {
+            "layer": 14,
+            "kind": "key",
+            "max_abs": 0.3125,
+            "mean_abs": 0.0017164518358185887
+          },
+          {
+            "layer": 14,
+            "kind": "value",
+            "max_abs": 0.125,
+            "mean_abs": 0.0006156698800623417
+          },
+          {
+            "layer": 15,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.0017892171163111925
+          },
+          {
+            "layer": 15,
+            "kind": "value",
+            "max_abs": 0.1875,
+            "mean_abs": 0.0006121459882706404
+          },
+          {
+            "layer": 16,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0018843651050701737
+          },
+          {
+            "layer": 16,
+            "kind": "value",
+            "max_abs": 0.125,
+            "mean_abs": 0.0009136692970059812
+          },
+          {
+            "layer": 17,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0019326889887452126
+          },
+          {
+            "layer": 17,
+            "kind": "value",
+            "max_abs": 0.25,
+            "mean_abs": 0.0008304273942485452
+          },
+          {
+            "layer": 18,
+            "kind": "key",
+            "max_abs": 0.3125,
+            "mean_abs": 0.0020018320064991713
+          },
+          {
+            "layer": 18,
+            "kind": "value",
+            "max_abs": 0.1875,
+            "mean_abs": 0.000926875276491046
+          },
+          {
+            "layer": 19,
+            "kind": "key",
+            "max_abs": 0.1875,
+            "mean_abs": 0.001915437518619001
+          },
+          {
+            "layer": 19,
+            "kind": "value",
+            "max_abs": 0.09375,
+            "mean_abs": 0.0011972493957728148
+          },
+          {
+            "layer": 20,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0020189390052109957
+          },
+          {
+            "layer": 20,
+            "kind": "value",
+            "max_abs": 0.1171875,
+            "mean_abs": 0.00115331937558949
+          },
+          {
+            "layer": 21,
+            "kind": "key",
+            "max_abs": 0.234375,
+            "mean_abs": 0.0018639212939888239
+          },
+          {
+            "layer": 21,
+            "kind": "value",
+            "max_abs": 0.14892578125,
+            "mean_abs": 0.0013418530579656363
+          },
+          {
+            "layer": 22,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.001923284842632711
+          },
+          {
+            "layer": 22,
+            "kind": "value",
+            "max_abs": 0.1875,
+            "mean_abs": 0.0019343781750649214
+          },
+          {
+            "layer": 23,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.00197768141515553
+          },
+          {
+            "layer": 23,
+            "kind": "value",
+            "max_abs": 0.1640625,
+            "mean_abs": 0.0017437288770452142
+          },
+          {
+            "layer": 24,
+            "kind": "key",
+            "max_abs": 0.23046875,
+            "mean_abs": 0.0018787237349897623
+          },
+          {
+            "layer": 24,
+            "kind": "value",
+            "max_abs": 0.23046875,
+            "mean_abs": 0.0021776780486106873
+          },
+          {
+            "layer": 25,
+            "kind": "key",
+            "max_abs": 0.25,
+            "mean_abs": 0.0018539187731221318
+          },
+          {
+            "layer": 25,
+            "kind": "value",
+            "max_abs": 0.28125,
+            "mean_abs": 0.0020910496823489666
+          },
+          {
+            "layer": 26,
+            "kind": "key",
+            "max_abs": 0.234375,
+            "mean_abs": 0.0019033916760236025
+          },
+          {
+            "layer": 26,
+            "kind": "value",
+            "max_abs": 0.203125,
+            "mean_abs": 0.002610589377582073
+          },
+          {
+            "layer": 27,
+            "kind": "key",
+            "max_abs": 0.21875,
+            "mean_abs": 0.0017427834682166576
+          },
+          {
+            "layer": 27,
+            "kind": "value",
+            "max_abs": 0.25,
+            "mean_abs": 0.002908495021983981
+          },
+          {
+            "layer": 28,
+            "kind": "key",
+            "max_abs": 0.21875,
+            "mean_abs": 0.0017921938560903072
+          },
+          {
+            "layer": 28,
+            "kind": "value",
+            "max_abs": 0.28125,
+            "mean_abs": 0.0030321930535137653
+          },
+          {
+            "layer": 29,
+            "kind": "key",
+            "max_abs": 0.34375,
+            "mean_abs": 0.0019323533633723855
+          },
+          {
+            "layer": 29,
+            "kind": "value",
+            "max_abs": 0.4375,
+            "mean_abs": 0.004945063963532448
+          },
+          {
+            "layer": 30,
+            "kind": "key",
+            "max_abs": 0.4375,
+            "mean_abs": 0.0018871865468099713
+          },
+          {
+            "layer": 30,
+            "kind": "value",
+            "max_abs": 0.625,
+            "mean_abs": 0.005515311378985643
+          },
+          {
+            "layer": 31,
+            "kind": "key",
+            "max_abs": 0.3359375,
+            "mean_abs": 0.0020109452307224274
+          },
+          {
+            "layer": 31,
+            "kind": "value",
+            "max_abs": 0.4814453125,
+            "mean_abs": 0.006527455057948828
+          },
+          {
+            "layer": 32,
+            "kind": "key",
+            "max_abs": 0.21875,
+            "mean_abs": 0.0019009148236364126
+          },
+          {
+            "layer": 32,
+            "kind": "value",
+            "max_abs": 0.603515625,
+            "mean_abs": 0.007958043366670609
+          },
+          {
+            "layer": 33,
+            "kind": "key",
+            "max_abs": 0.3125,
+            "mean_abs": 0.0021193085703998804
+          },
+          {
+            "layer": 33,
+            "kind": "value",
+            "max_abs": 0.875,
+            "mean_abs": 0.012167667038738728
+          },
+          {
+            "layer": 34,
+            "kind": "key",
+            "max_abs": 0.5,
+            "mean_abs": 0.002091799397021532
+          },
+          {
+            "layer": 34,
+            "kind": "value",
+            "max_abs": 1.375,
+            "mean_abs": 0.010449269786477089
+          },
+          {
+            "layer": 35,
+            "kind": "key",
+            "max_abs": 0.625,
+            "mean_abs": 0.0019578104838728905
+          },
+          {
+            "layer": 35,
+            "kind": "value",
+            "max_abs": 0.71875,
+            "mean_abs": 0.0074493796564638615
+          }
+        ],
+        "conclusion": "Logical target schedule replay; no speculative engine state management"
+      }
+    }
+  ]
+}

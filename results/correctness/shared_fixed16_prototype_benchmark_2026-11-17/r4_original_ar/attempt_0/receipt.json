@@ -1,0 +1,24 @@
+{
+  "valid": true,
+  "definition_sha256": "74be473ba341bde2bc39a95b87db7828881e2c95abe7195f76b6105a93175589",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/benchmark_shared_numerics.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_prototype_benchmark_2026-11-17",
+    "--blockdir",
+    "/home/vishalrao/AnytimeOutcome/results/correctness/shared_fixed16_prototype_benchmark_2026-11-17/r4_original_ar/attempt_0",
+    "--method",
+    "original_ar",
+    "--round",
+    "4"
+  ],
+  "samples": 39,
+  "external_processes": [],
+  "error": null,
+  "returncode": 0,
+  "at": "2026-11-16T20:28:29.722689+00:00",
+  "output_sha256": "02d9c03f0e4db2ba24834f252d0294bc2b105d4e03b830e88ead0e0535c12883"
+}

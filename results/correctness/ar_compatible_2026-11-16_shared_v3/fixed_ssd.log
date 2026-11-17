@@ -1,0 +1,212 @@
+Draft runner created on rank 1 (async)!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner about to wrapper.init()] graph_bs_list=[1]
+wrapper backend is auto
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|                               | 0/1 [00:00<?, ?it/s]Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.31it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.25it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.25it/s]
+Loading model files:  40%|████      | 2/5 [00:00<00:01,  1.84it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.69it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.49it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.43it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.57it/s]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/draft_runner.py", line 39, in __init__
+    super().__init__(self.draft_cfg, rank=rank, event=None, is_draft=True, num_tp_gpus=1, init_q=init_q)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 118, in __init__
+    model_type = self.setup_and_warmup_model_and_cudagraphs(config, self.hf_config, init_q, is_draft)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 273, in setup_and_warmup_model_and_cudagraphs
+    self.warmup_model()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 447, in warmup_model
+    self.run(seqs, True, hidden_states=hidden_states)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 667, in run
+    logits = self.run_model(input_ids, positions, is_prefill, last_only, hidden_states=hidden_states)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 622, in run_model
+    outputs = self.model(input_ids, positions)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 316, in forward
+    hidden_states = self.model(input_ids, positions)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 260, in forward
+    hidden_states, residual = layer(positions, hidden_states, residual)
+                              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/models/qwen3.py", line 202, in forward
+    hidden_states = self.input_layernorm(hidden_states)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1776, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1787, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/layernorm.py", line 96, in forward
+    return self.norm_forward(x)
+           ~~~~~~~~~~~~~~~~~^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 953, in compile_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 2202, in __call__
+    result = self._torchdynamo_orig_backend(
+        frame, cache_entry, self.hooks, frame_state, skip=1
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1945, in __call__
+    result = self._inner_convert(
+        frame, cache_entry, hooks, frame_state, skip=skip + 1
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 707, in __call__
+    result = _compile(
+        frame.f_code,
+    ...<16 lines>...
+        convert_frame_box=self._box,
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1815, in _compile
+    raise InternalTorchDynamoError(
+        f"{type(e).__qualname__}: {str(e)}"
+    ).with_traceback(e.__traceback__) from None
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1752, in _compile
+    guarded_code, tracer_output = compile_inner(code, one_graph, hooks)
+                                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_utils_internal.py", line 97, in wrapper_function
+    return function(*args, **kwargs)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1433, in compile_inner
+    return _compile_inner(code, one_graph, hooks)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1467, in _compile_inner
+    dynamo_output = compile_frame(
+        code,
+    ...<11 lines>...
+        package=package,
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1341, in compile_frame
+    bytecode, tracer_output = transform_code_object(code, transform)
+                              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/bytecode_transformation.py", line 1600, in transform_code_object
+    tracer_output = transformations(instructions, code_options)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 1313, in transform
+    tracer_output = trace_frame(
+        code,
+    ...<14 lines>...
+        package=package,
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 328, in _fn
+    return fn(*args, **kwargs)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 838, in trace_frame
+    run_tracer()
+    ~~~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/convert_frame.py", line 819, in run_tracer
+    tracer.run()
+    ~~~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1654, in run
+    while self.step():
+          ~~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1334, in step
+    self.dispatch_table[inst.opcode](self, inst)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 866, in wrapper
+    return inner_fn(self, inst)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 3807, in CALL
+    self._call(inst)
+    ~~~~~~~~~~^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 3798, in _call
+    self.call_function(fn, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1240, in call_function
+    self.push(fn.call_function(self, args, kwargs))  # type: ignore[arg-type]
+              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/misc.py", line 1148, in call_function
+    return self.obj.call_method(tx, self.name, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/tensor.py", line 685, in call_method
+    return dispatch_torch_function(
+        tx, func_var, tuple([self] + list(args)), kwargs
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/torch_function.py", line 543, in dispatch_torch_function
+    res = tx.symbolic_torch_function_state.call_torch_function_mode(
+        tx, fn, types, args, kwargs
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/torch_function.py", line 324, in call_torch_function_mode
+    return cur_mode.call_torch_function(tx, fn, types, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/torch_function.py", line 193, in call_torch_function
+    return call_torch_function(
+        tx,
+    ...<4 lines>...
+        kwargs,
+    )
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/torch_function.py", line 498, in call_torch_function
+    return torch_function_var.call_function(tx, tf_args, {})
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/functions.py", line 1450, in call_function
+    return super().call_function(tx, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/functions.py", line 685, in call_function
+    return super().call_function(tx, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/variables/functions.py", line 401, in call_function
+    return tx.inline_user_function_return(self, [*self.self_args(), *args], kwargs)  # type: ignore[attr-defined]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1262, in inline_user_function_return
+    return InliningInstructionTranslator.inline_call(self, fn, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 4718, in inline_call
+    return tracer.inline_call_()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 4935, in inline_call_
+    self.run()
+    ~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1654, in run
+    while self.step():
+          ~~~~~~~~~^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 1334, in step
+    self.dispatch_table[inst.opcode](self, inst)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 651, in inner
+    and _detect_and_normalize_assert_statement(self, truth_fn, push)
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 524, in _detect_and_normalize_assert_statement
+    assert_insts = get_assert_bytecode_sequence(with_msg)
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/_dynamo/symbolic_convert.py", line 496, in get_assert_bytecode_sequence
+    begin_idx = next(i for i, inst in enumerate(insts) if inst.startswith("POP_JUMP"))
+torch._dynamo.exc.InternalTorchDynamoError: StopIteration: 
+
+from user code:
+   File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/layers/layernorm.py", line 70, in norm_forward
+    x = x.float()
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/utils/_device.py", line 106, in __torch_function__
+    kwargs = kwargs or {}
+
+Set TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS="+dynamo"
+
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 79, 256, 8, 128])
+F=3, fan_out_list=[3, 3, 3, 3, 3, 3, 3, 3], fan_out_list_miss=[3, 3, 3, 3, 3, 3, 3, 3], MQ_LEN=24
+/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 3 leaked semaphore objects to clean up at shutdown: {'/loky-1815488-pp302122', '/loky-1815488-t2uublxt', '/loky-1815488-inkmwskb'}
+  warnings.warn(
+/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown: {'/ssd'}
+  warnings.warn(

@@ -1,0 +1,15 @@
+{
+  "execution_sha256": "3f5ca1112ffdd8258141e1092ef3d156ff4a82d79b727b626a5b09542b29fad6",
+  "manifest_sha256": "98067516713cafccaa0c22a8e0829f5617bf8fb60245c179763cd556196ba12f",
+  "tests_passed": 62,
+  "command": "source profiling/env.sh; python -m pytest tests -q",
+  "test_log": "validation_tests.txt",
+  "previous_unmeasured_preparation": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1_before_watcher_20261021T205342Z",
+  "identical_frozen_prompts_models_settings": true,
+  "watcher_check": {
+    "exit_code": 2,
+    "result": "waiting_for_gpus",
+    "log": "watcher_check.txt",
+    "benchmark_started": false
+  }
+}

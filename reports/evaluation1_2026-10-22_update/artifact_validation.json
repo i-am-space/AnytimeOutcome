@@ -1,0 +1,23 @@
+{
+  "Anytime_SSD_Performance_Report.pdf": {
+    "pages": 40,
+    "all_text_within_page": true,
+    "bytes": 2016661
+  },
+  "Evaluation1_Experimental_Plan_Slides.pdf": {
+    "pages": 16,
+    "all_text_within_page": true,
+    "bytes": 576534
+  },
+  "pptx": {
+    "slides": 16,
+    "zip_xml_relationships_valid": true,
+    "text_editable": true
+  },
+  "sources": {
+    "count": 110,
+    "all_sha256_verified": true,
+    "campaign_scored_requests": 630,
+    "contextual_sd_requests": 75
+  }
+}

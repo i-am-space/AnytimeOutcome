@@ -1,0 +1,46 @@
+Draft runner created on rank 1 (async)!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner about to wrapper.init()] graph_bs_list=[1]
+wrapper backend is auto
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|                               | 0/1 [00:00<?, ?it/s]Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.67it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.01it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.00it/s]
+Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.05it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.79it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.52it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.44it/s]Loading model files: 100%|██████████| 5/5 [00:03<00:00,  1.61it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 1074, 256, 8, 128])
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 559, 256, 8, 128])
+About to capture FI cudagraphs for bs=[1]
+F=3, fan_out_list=[3, 3, 3, 3, 3, 3, 3, 3], fan_out_list_miss=[3, 3, 3, 3, 3, 3, 3, 3], MQ_LEN=24
+DraftRunner set up, starting draft_loop
+[rank1]:[W1116 23:47:09.098033219 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 1 PG GUID 2 Rank 1] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+F=3, fan_out_list=[3, 3, 3, 3, 3, 3, 3, 3], fan_out_list_miss=[3, 3, 3, 3, 3, 3, 3, 3], MQ_LEN=24
+[LLMEngine] finished llm_engine init
+[rank0]:[W1116 23:47:09.899532610 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 2 PG GUID 2 Rank 0] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+[rank0]:[W1116 23:47:11.031748239 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 2 PG GUID 2 Rank 0] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+[rank1]:[W1116 23:47:11.087703440 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 1 PG GUID 2 Rank 1] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+{
+  "mode": "ssd",
+  "k": 7,
+  "f": 3,
+  "backup": "jit",
+  "output_len": 256,
+  "n_requests": 75,
+  "mean_latency_s": 2.2109106461750345,
+  "committed_tok_per_s": 115.78939223206078,
+  "decode_tok_per_s": 118.56072240485703,
+  "mean_tokens_per_step": 4.305207448092743,
+  "mean_step_ms": 31.378026534217074,
+  "gpu": "NVIDIA L40S"
+}
+[LLMEngine] Exiting (hard=True)
+[metrics] Avg draft step time (ms): 32.06

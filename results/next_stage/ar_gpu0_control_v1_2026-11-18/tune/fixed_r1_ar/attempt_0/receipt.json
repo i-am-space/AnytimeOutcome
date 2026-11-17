@@ -1,0 +1,38 @@
+{
+  "valid": true,
+  "definition_sha256": "f71f801f90343521ad55cfa40acd0ee79a402d2d30e03c7d03d9f930f686c1df",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_gpu0_ar_control.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/ar_gpu0_control_v1_2026-11-18",
+    "--phase",
+    "tune",
+    "--job",
+    "fixed_r1_ar",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/ar_gpu0_control_v1_2026-11-18/tune/fixed_r1_ar/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 142,
+  "external_processes": [],
+  "error": null,
+  "run_token": "734acd6e6ef94182b05f6aa12072bd72",
+  "dedicated_gpus": false,
+  "profiler": false,
+  "at": "2026-11-17T19:03:33.839089+00:00",
+  "output_sha256": "9386fa6bf52868f3a189927e0f461d994bb5d24fd4ed54daaf58a19e18ae861b",
+  "allocated_gpu_dedicated": true,
+  "contextual_only": true,
+  "headline_performance_evidence": false,
+  "monitor_scope": "physical GPU0 only",
+  "nonallocated_gpu_processes": [
+    {
+      "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+      "pid": 2691668,
+      "name": "VLLM::EngineCore"
+    }
+  ]
+}

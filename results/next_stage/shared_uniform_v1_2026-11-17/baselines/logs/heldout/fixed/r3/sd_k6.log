@@ -1,0 +1,40 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  5.29it/s]Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.25it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.96it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.65it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.57it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.76it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 569, 256, 8, 128])
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=6
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|          | 0/1 [00:00<?, ?it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s]Loading model files: 100%|██████████| 1/1 [00:00<00:00,  2.88it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 186, 256, 8, 128])
+Draft runner created on rank 0 (no async)
+[LLMEngine] finished llm_engine init
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=54 recovery=95456
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=124 recovery=8420
+[spec_prefill] target prefill
+[PREFILL] seq0 prompt_len=1014 recovery=334
+{
+  "mode": "sd",
+  "k": 6,
+  "f": null,
+  "backup": null,
+  "output_len": 256,
+  "n_requests": 75,
+  "mean_latency_s": 3.1546785290814783,
+  "committed_tok_per_s": 81.14931446740388,
+  "decode_tok_per_s": 82.93331517446498,
+  "mean_tokens_per_step": 4.011904309210894,
+  "mean_step_ms": 43.83357936219983,
+  "gpu": "NVIDIA L40S"
+}
+[LLMEngine] Exiting (hard=True)

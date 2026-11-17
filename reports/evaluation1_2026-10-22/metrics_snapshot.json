@@ -1,0 +1,225 @@
+{
+  "profiled": {
+    "AR": {
+      "mode": "ar",
+      "k": null,
+      "f": null,
+      "backup": null,
+      "output_len": 256,
+      "n_requests": 3,
+      "mean_latency_s": 5.822871720418334,
+      "committed_tok_per_s": 43.96456118075157,
+      "decode_tok_per_s": 44.91464163857965,
+      "mean_tokens_per_step": 1.0,
+      "mean_step_ms": 22.35841709189117,
+      "gpu": "NVIDIA L40S"
+    },
+    "SD": {
+      "mode": "sd",
+      "k": 6,
+      "f": null,
+      "backup": null,
+      "output_len": 256,
+      "n_requests": 3,
+      "mean_latency_s": 4.093351188270996,
+      "committed_tok_per_s": 62.54044381374779,
+      "decode_tok_per_s": 63.72366028873355,
+      "mean_tokens_per_step": 3.5666666666666664,
+      "mean_step_ms": 49.584192990388736,
+      "gpu": "NVIDIA L40S"
+    },
+    "SSD": {
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "backup": "jit",
+      "output_len": 256,
+      "n_requests": 3,
+      "mean_latency_s": 3.17789031433252,
+      "committed_tok_per_s": 80.5565877605722,
+      "decode_tok_per_s": 83.29268780047825,
+      "mean_tokens_per_step": 3.8497582316371175,
+      "mean_step_ms": 39.90267442761425,
+      "gpu": "NVIDIA L40S"
+    }
+  },
+  "machine_roofline": {
+    "bf16_tensor_tflops_measured": 211.07565464808556,
+    "bf16_tensor_tflops_median": 190.27854758019467,
+    "fp32_tflops_measured": 48.576809234639725,
+    "dram_copy_GBps": 656.0342897787276,
+    "dram_read_GBps": 746.7160189750539,
+    "l2_copy_GBps": 2978.9090676425903,
+    "ridge_bf16_flop_per_byte_measured": 282.6719251822253,
+    "gpu": "NVIDIA L40S",
+    "sms": 142,
+    "torch": "2.10.0+cu128",
+    "l2_bytes": 100663296
+  },
+  "critical_path": {
+    "name": "ssd_k7_f3",
+    "rounds": 230,
+    "miss_rate": 0.2782608695652174,
+    "mean_wait_ms_hit": 9.203999656626506,
+    "mean_wait_ms_miss": 29.989245296875,
+    "mean_verify_ms": 24.863832934782607,
+    "total_wait_ms": 3447.175642,
+    "total_verify_ms": 5718.681575,
+    "wait_share_of_hit_wait_from_unfinished_tree_ms": 7.966837138554218,
+    "ready_depth_at_request_hist": {
+      "1": 1,
+      "4": 8,
+      "5": 155,
+      "6": 2
+    }
+  },
+  "ncu": {
+    "ar_decode": {
+      "n_kernels": 540,
+      "total_kernel_time_us": 23064.128,
+      "flop": 16039413899.0,
+      "dram_B": 17987434216.0,
+      "bound_split_pct": {
+        "memory-bound": 95.31795869325734,
+        "compute-bound": 0.0,
+        "latency-bound": 4.682041306742661
+      },
+      "ai_flop_per_byte": 0.8917010456517908,
+      "achieved_dram_GBps": 779.8878941358632
+    },
+    "sd_verify": {
+      "n_kernels": 545,
+      "total_kernel_time_us": 22208.544,
+      "flop": 223714214343.0,
+      "dram_B": 16603782256.0,
+      "bound_split_pct": {
+        "memory-bound": 95.050985782769,
+        "compute-bound": 0.0,
+        "latency-bound": 4.94901421723099
+      },
+      "ai_flop_per_byte": 13.473689963752557,
+      "achieved_dram_GBps": 747.6303829733278
+    },
+    "sd_draft": {
+      "n_kernels": 470,
+      "total_kernel_time_us": 3103.296,
+      "flop": 1610508552.0,
+      "dram_B": 1547042560.0,
+      "bound_split_pct": {
+        "memory-bound": 70.66241828043474,
+        "compute-bound": 0.0,
+        "latency-bound": 29.33758171956526
+      },
+      "ai_flop_per_byte": 1.0410240762865632,
+      "achieved_dram_GBps": 498.51595207160386
+    },
+    "ssd_tree": {
+      "n_kernels": 320,
+      "total_kernel_time_us": 2244.0,
+      "flop": 56258155130.0,
+      "dram_B": 1032464896.0,
+      "bound_split_pct": {
+        "memory-bound": 62.699465240641715,
+        "compute-bound": 0.0,
+        "latency-bound": 37.300534759358285
+      },
+      "ai_flop_per_byte": 54.48916989619374,
+      "achieved_dram_GBps": 460.1002210338681
+    },
+    "ar_prefill": {
+      "n_kernels": 557,
+      "total_kernel_time_us": 51919.232,
+      "flop": 9033452878032.0,
+      "dram_B": 24732697200.0,
+      "bound_split_pct": {
+        "memory-bound": 10.793811433882535,
+        "compute-bound": 85.29032170583726,
+        "latency-bound": 3.9158668602802136
+      },
+      "ai_flop_per_byte": 365.24333779625135,
+      "achieved_dram_GBps": 476.3687028344333
+    }
+  },
+  "first_divergences": [
+    {
+      "id": "specbench-148",
+      "zero_based": 13
+    },
+    {
+      "id": "HumanEval/36",
+      "zero_based": 181
+    },
+    {
+      "id": "specbench-553",
+      "zero_based": 170
+    }
+  ],
+  "backend_controls": [
+    {
+      "backend": "math",
+      "id": "specbench-148",
+      "ar_length": 64,
+      "sd_length": 64,
+      "exact_match": true,
+      "first_difference": null,
+      "ar_first_difference_from_original": 13,
+      "sd_first_difference_from_original": 13
+    },
+    {
+      "backend": "flash",
+      "id": "HumanEval/36",
+      "ar_length": 256,
+      "sd_length": 256,
+      "exact_match": false,
+      "first_difference": 181,
+      "ar_first_difference_from_original": null,
+      "sd_first_difference_from_original": 181
+    },
+    {
+      "backend": "flash",
+      "id": "specbench-148",
+      "ar_length": 256,
+      "sd_length": 256,
+      "exact_match": false,
+      "first_difference": 52,
+      "ar_first_difference_from_original": 52,
+      "sd_first_difference_from_original": 97
+    },
+    {
+      "backend": "flash",
+      "id": "specbench-553",
+      "ar_length": 256,
+      "sd_length": 256,
+      "exact_match": false,
+      "first_difference": 125,
+      "ar_first_difference_from_original": 125,
+      "sd_first_difference_from_original": 209
+    }
+  ],
+  "serial_reference": [
+    {
+      "id": "specbench-148",
+      "output_length": 256,
+      "exact_match_to_original_ar": true,
+      "first_difference": null
+    },
+    {
+      "id": "HumanEval/36",
+      "output_length": 256,
+      "exact_match_to_original_ar": true,
+      "first_difference": null
+    },
+    {
+      "id": "specbench-553",
+      "output_length": 256,
+      "exact_match_to_original_ar": true,
+      "first_difference": null
+    }
+  ],
+  "pending": {
+    "tuning": 480,
+    "heldout": 2250,
+    "warmups": 150,
+    "blocks": 50
+  }
+}

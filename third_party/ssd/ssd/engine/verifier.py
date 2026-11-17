@@ -21,6 +21,7 @@ class Verifier(VerifierBase):
         jit_speculate: bool = False,
         tokenizer: AutoTokenizer = None,
         metrics: dict = None,
+        publication_feedback=None,
     ):
         super().__init__(lookahead, device)
         self.target_model_runner = target_model_runner
@@ -29,6 +30,7 @@ class Verifier(VerifierBase):
         self.jit_speculate = jit_speculate
         self.tokenizer = tokenizer
         self.metrics = metrics
+        self.publication_feedback = publication_feedback
 
     def prefill(self, seqs: list[Sequence], eagle: bool = False) -> VerifyResult:
         result = self.target_model_runner.call("run", seqs, True)
@@ -95,11 +97,17 @@ class Verifier(VerifierBase):
         temperatures_target = torch.tensor(temps_target, dtype=torch.float32, device=self.device)
         temperatures_draft = torch.tensor(temps_draft, dtype=torch.float32, device=self.device)
 
+        valid = speculate_result.valid_length
+        valid = self.lookahead if valid is None else valid
+        if not 1 <= valid <= self.lookahead:
+            raise RuntimeError("Invalid published continuation length")
+        if self.metrics is not None:
+            self.metrics["verified_lengths"].append(valid * batch_size)
         torch.cuda.nvtx.range_push("verify/accept")
         new_suffixes, recovery_tokens = verify(
-            logits_p=logits_p,
-            logits_q=speculate_result.logits_q,
-            speculations=speculate_result.speculations,
+            logits_p=logits_p[:, :valid+1],
+            logits_q=speculate_result.logits_q[:, :valid],
+            speculations=speculate_result.speculations[:, :valid+1],
             temperatures_target=temperatures_target,
             temperatures_draft=temperatures_draft,
             cache_hits=speculate_result.cache_hits,
@@ -109,7 +117,11 @@ class Verifier(VerifierBase):
         )
 
         torch.cuda.nvtx.range_pop()
-        self.metrics["target_verify_times"].append(perf_counter() - _tv0)
+        verification_s = perf_counter() - _tv0
+        self.metrics["target_verify_times"].append(verification_s)
+        if self.publication_feedback is not None:
+            from ssd.engine.publication_policy import observe_verification
+            observe_verification(self.publication_feedback, verification_s, len(new_suffixes[0]) - 1, valid)
 
         if _prof:
             torch.cuda.synchronize()

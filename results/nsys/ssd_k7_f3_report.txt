@@ -1,0 +1,132 @@
+
+===== ssd_k7_f3  timed window 9533.8 ms =====
+
+GPU0: busy 92.4%  (8810.3 ms busy / 723.5 ms idle), 153752 kernels (16.1/ms)
+  GPU time by category:
+    gemm (tensor core)                   5223.36 ms   59.3% of busy
+    nccl                                 3359.89 ms   38.1% of busy
+    rmsnorm/rope/silu (fused Triton)       93.75 ms    1.1% of busy
+    attention (paged, Triton)              69.55 ms    0.8% of busy
+    other elementwise                      38.87 ms    0.4% of busy
+    kv-cache store                         10.66 ms    0.1% of busy
+    memcpy/memset                           6.41 ms    0.1% of busy
+    gemv (cuBLAS)                           5.16 ms    0.1% of busy
+    reductions (argmax etc.)                3.47 ms    0.0% of busy
+    attention (prefill SDPA)                1.45 ms    0.0% of busy
+    sampling/argmax                         0.12 ms    0.0% of busy
+  GPU time by launching phase:
+    verify/target_fwd                    5337.61 ms
+    ncclGroupEnd                         3359.89 ms
+    SD/prefill_target                     101.49 ms
+    verify/accept                           9.33 ms
+    SD/speculate                            1.82 ms
+    SSD/handshake_send                      1.04 ms
+    cub::DeviceScan::InclusiveScan          1.03 ms
+    SD/verify                               0.44 ms
+    SD/prefill_draft_send                   0.02 ms
+    request:specbench-148                   0.00 ms
+  Idle time by open phase:
+    verify/target_fwd                     220.96 ms
+    SD/prefill_target                     206.37 ms
+    verify/accept                         111.91 ms
+    SSD/handshake_send                     59.62 ms
+    SD/speculate                           32.43 ms
+    SD/postprocess                         32.10 ms
+    SD/verify                              30.41 ms
+    SSD/wait_draft_tokens                  11.52 ms
+    engine/step                             7.99 ms
+    cub::DeviceScan::InclusiveScan          6.29 ms
+  Idle gap histogram: {'0.1-1ms': '515x/165.8ms', '20-100us': '5921x/212.3ms', '5-20us': '11389x/142.7ms', '<5us': '106264x/10.6ms', '>1ms': '8x/192.1ms'}
+
+GPU1: busy 72.8%  (6941.1 ms busy / 2592.7 ms idle), 1238609 kernels (129.9/ms)
+  GPU time by category:
+    gemm (tensor core)                   3711.95 ms   53.5% of busy
+    gemv (cuBLAS)                         855.76 ms   12.3% of busy
+    attention (flashinfer tree)           761.41 ms   11.0% of busy
+    rmsnorm/rope/silu (fused Triton)      576.22 ms    8.3% of busy
+    other elementwise                     389.21 ms    5.6% of busy
+    nccl                                  242.94 ms    3.5% of busy
+    reductions (argmax etc.)              146.26 ms    2.1% of busy
+    attention (paged, Triton)             114.96 ms    1.7% of busy
+    kv-cache store                         73.35 ms    1.1% of busy
+    memcpy/memset                          50.67 ms    0.7% of busy
+    sampling/argmax                        17.86 ms    0.3% of busy
+    attention (prefill SDPA)                0.78 ms    0.0% of busy
+  GPU time by launching phase:
+    draft/jit_speculate(miss)            1077.99 ms
+    draft/tree_step_0                     710.21 ms
+    draft/tree_step_4                     706.63 ms
+    draft/tree_step_6                     705.89 ms
+    draft/tree_step_5                     705.29 ms
+    draft/tree_step_3                     705.01 ms
+    draft/tree_step_2                     702.97 ms
+    draft/tree_step_1                     700.02 ms
+    draft/build_tree(glue)                644.25 ms
+    ncclGroupEnd                          242.94 ms
+  Idle time by open phase:
+    draft/jit_speculate(miss)             392.56 ms
+    draft/tree_step_0                     392.40 ms
+    draft/tree_step_5                     373.22 ms
+    draft/build_tree(glue)                325.49 ms
+    draft/tree_step_1                     174.43 ms
+    draft/service_request                 158.93 ms
+    draft/tree_step_4                     142.56 ms
+    draft/tree_step_3                     141.31 ms
+    draft/tree_step_2                     140.64 ms
+    draft/tree_step_6                     138.56 ms
+  Idle gap histogram: {'>1ms': '14x/357.9ms', '20-100us': '16073x/554.9ms', '0.1-1ms': '2661x/1149.0ms', '5-20us': '40080x/432.8ms', '<5us': '1175963x/98.0ms'}
+
+NVTX phases (CPU wall):
+  timed_region                       n=    1 total=  9533.78 ms mean=9533.782 ms
+  engine/step                        n=  233 total=  9530.63 ms mean=  40.904 ms
+  draft/decode_tree                  n=  229 total=  5824.22 ms mean=  25.433 ms
+  draft/tree_step_*                  n= 1609 total=  5747.33 ms mean=   3.572 ms
+  SD/verify                          n=  230 total=  5718.68 ms mean=  24.864 ms
+  SD/speculate                       n=  230 total=  3478.60 ms mean=  15.124 ms
+  draft/service_request              n=  230 total=  1700.71 ms mean=   7.394 ms
+  draft/jit_speculate(miss)          n=   64 total=  1470.51 ms mean=  22.977 ms
+  draft/build_tree(glue)             n=  230 total=   988.36 ms mean=   4.297 ms
+  draft/idle_wait_cmd                n=  232 total=   890.89 ms mean=   3.840 ms
+  SD/prefill_target                  n=    3 total=   307.82 ms mean= 102.608 ms
+  verify/target_fwd                  n=  230 total=   263.08 ms mean=   1.144 ms
+  verify/accept                      n=  230 total=   117.91 ms mean=   0.513 ms
+  SSD/handshake_send                 n=  230 total=    69.82 ms mean=   0.304 ms
+  draft/prefill                      n=    2 total=    54.49 ms mean=  27.243 ms
+  draft/send_response                n=  230 total=    46.72 ms mean=   0.203 ms
+  ncclGroupEnd                       n= 2315 total=    36.48 ms mean=   0.016 ms
+  draft/populate_cache               n=  229 total=    14.83 ms mean=   0.065 ms
+  SD/postprocess                     n=  230 total=    14.23 ms mean=   0.062 ms
+  SSD/wait_draft_tokens              n=  230 total=    12.50 ms mean=   0.054 ms
+  SSD/recv_draft_logits              n=  230 total=    11.73 ms mean=   0.051 ms
+  cub::DeviceScan::InclusiveScan     n=  926 total=    11.13 ms mean=   0.012 ms
+  cub::DeviceSelect::Flagged         n=  894 total=     9.15 ms mean=   0.010 ms
+  cub::DeviceScan::InclusiveSumByKey n=  460 total=     5.09 ms mean=   0.011 ms
+  cub::DeviceReduce::Sum             n=  894 total=     5.05 ms mean=   0.006 ms
+
+GPU0 hardware counters (sampled 20 kHz): sm_active_pct=53.7, sm_issue_pct=2.4, tensor_active_pct=2.1, dram_read_pct=50.1, dram_write_pct=0.9, pcie_rx_pct=1.6, pcie_tx_pct=1.0
+  SD/verify                          sm_active_pct= 93.2  sm_issue_pct=  3.4  tensor_active_pct=  2.9  dram_read_pct= 87.5  dram_write_pct=  1.6  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=106744)
+  SD/speculate                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.3  dram_write_pct=  0.0  pcie_rx_pct=  3.5  pcie_tx_pct=  1.1  (n=67680)
+  SD/prefill_target                  sm_active_pct= 26.6  sm_issue_pct=  2.6  tensor_active_pct= 14.5  dram_read_pct= 22.1  dram_write_pct=  1.8  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=6155)
+  verify/target_fwd                  sm_active_pct=  9.7  sm_issue_pct=  0.7  tensor_active_pct=  0.3  dram_read_pct=  9.0  dram_write_pct=  0.1  pcie_rx_pct=  0.8  pcie_tx_pct=  1.1  (n=5151)
+  verify/accept                      sm_active_pct=  1.9  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  1.4  dram_write_pct=  0.1  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=2357)
+  SSD/handshake_send                 sm_active_pct=  0.8  sm_issue_pct=  0.8  tensor_active_pct=  0.0  dram_read_pct=  0.9  dram_write_pct=  0.0  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=1157)
+  ncclGroupEnd                       sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.9  dram_write_pct=  0.0  pcie_rx_pct=  1.1  pcie_tx_pct=  1.0  (n=318)
+  SD/postprocess                     sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.6  dram_write_pct=  0.0  pcie_rx_pct=  0.7  pcie_tx_pct=  1.0  (n=281)
+  engine/step                        sm_active_pct=  0.0  sm_issue_pct=  0.0  tensor_active_pct=  0.0  dram_read_pct=  0.4  dram_write_pct=  0.0  pcie_rx_pct=  0.6  pcie_tx_pct=  1.0  (n=222)
+  SSD/wait_draft_tokens              sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.7  dram_write_pct=  0.0  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=210)
+  SSD/recv_draft_logits              sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.5  dram_write_pct=  0.0  pcie_rx_pct=  1.3  pcie_tx_pct=  1.0  (n=162)
+  cub::DeviceScan::InclusiveScan     sm_active_pct=  1.0  sm_issue_pct=  1.0  tensor_active_pct=  0.0  dram_read_pct=  0.8  dram_write_pct=  0.0  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=107)
+
+GPU1 hardware counters (sampled 20 kHz): sm_active_pct=45.8, sm_issue_pct=3.6, tensor_active_pct=3.6, dram_read_pct=40.9, dram_write_pct=1.3, pcie_rx_pct=0.6, pcie_tx_pct=1.2
+  draft/jit_speculate(miss)          sm_active_pct= 55.7  sm_issue_pct=  4.3  tensor_active_pct=  0.4  dram_read_pct= 50.8  dram_write_pct=  0.5  pcie_rx_pct=  0.4  pcie_tx_pct=  1.0  (n=29410)
+  draft/tree_step_5                  sm_active_pct= 41.0  sm_issue_pct=  3.3  tensor_active_pct=  4.2  dram_read_pct= 36.7  dram_write_pct=  1.2  pcie_rx_pct=  0.5  pcie_tx_pct=  1.1  (n=21630)
+  draft/build_tree(glue)             sm_active_pct= 44.9  sm_issue_pct=  2.4  tensor_active_pct=  1.3  dram_read_pct= 39.3  dram_write_pct=  1.2  pcie_rx_pct=  0.6  pcie_tx_pct=  1.1  (n=19470)
+  draft/idle_wait_cmd                sm_active_pct= 46.6  sm_issue_pct=  4.0  tensor_active_pct=  4.9  dram_read_pct= 41.8  dram_write_pct=  1.4  pcie_rx_pct=  0.8  pcie_tx_pct=  1.0  (n=17680)
+  draft/tree_step_1                  sm_active_pct= 50.5  sm_issue_pct=  3.9  tensor_active_pct=  5.2  dram_read_pct= 44.7  dram_write_pct=  2.3  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=17599)
+  draft/tree_step_3                  sm_active_pct= 52.2  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.7  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=16878)
+  draft/tree_step_4                  sm_active_pct= 52.1  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.6  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=16844)
+  draft/tree_step_6                  sm_active_pct= 52.3  sm_issue_pct=  4.2  tensor_active_pct=  5.4  dram_read_pct= 46.8  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=16804)
+  draft/tree_step_2                  sm_active_pct= 52.3  sm_issue_pct=  4.1  tensor_active_pct=  5.4  dram_read_pct= 46.8  dram_write_pct=  1.5  pcie_rx_pct=  0.5  pcie_tx_pct=  1.0  (n=16716)
+  draft/tree_step_0                  sm_active_pct=  4.5  sm_issue_pct=  0.5  tensor_active_pct=  0.3  dram_read_pct=  4.0  dram_write_pct=  1.2  pcie_rx_pct=  0.8  pcie_tx_pct=  1.1  (n=8512)
+  draft/service_request              sm_active_pct=  2.4  sm_issue_pct=  1.4  tensor_active_pct=  0.0  dram_read_pct=  1.1  dram_write_pct=  0.1  pcie_rx_pct=  0.9  pcie_tx_pct=  3.5  (n=3278)
+  draft/decode_tree                  sm_active_pct=  9.7  sm_issue_pct=  1.7  tensor_active_pct=  0.3  dram_read_pct=  5.1  dram_write_pct=  3.0  pcie_rx_pct=  1.0  pcie_tx_pct=  1.0  (n=1924)

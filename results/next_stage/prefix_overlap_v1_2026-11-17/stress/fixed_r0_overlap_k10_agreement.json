@@ -1,0 +1,26 @@
+[
+  {
+    "id": "HumanEval/36",
+    "round": 0,
+    "protocol": "fixed",
+    "config": "overlap_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "specbench-148",
+    "round": 0,
+    "protocol": "fixed",
+    "config": "overlap_k10",
+    "exact": true,
+    "first_difference": null
+  },
+  {
+    "id": "specbench-496",
+    "round": 0,
+    "protocol": "fixed",
+    "config": "overlap_k10",
+    "exact": true,
+    "first_difference": null
+  }
+]

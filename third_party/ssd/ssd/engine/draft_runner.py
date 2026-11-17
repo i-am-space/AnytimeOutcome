@@ -4,6 +4,7 @@ import torch
 from ssd.utils.nvtx import nvtx_range
 import torch.distributed as dist
 import dataclasses
+from contextlib import nullcontext
 
 from ssd.engine.model_runner import ModelRunner
 from ssd.config import Config
@@ -32,7 +33,14 @@ class DraftRunner(ModelRunner):
         )
         return draft_cfg
 
-    def __init__(self, cfg: Config, rank: int = 0, init_q = None):
+    def __init__(self, cfg: Config, rank: int = 0, init_q = None, request_epoch=None, publication_feedback=None):
+        self.request_epoch = request_epoch
+        self.publication_feedback = publication_feedback
+        self.served_epoch = 0
+        self.cache_generation = 0
+        self.cache_valid_length = cfg.speculate_k
+        self.cache_drain_s = 0.0
+        self.cache_publication_s = 0.0
         self.draft_cfg = self.create_draft_config(cfg)
         self.is_draft = True # this is is_draft, use self.config.draft for the draft model path 
         self.prev_num_tokens = None
@@ -109,9 +117,28 @@ class DraftRunner(ModelRunner):
         self.tree_cache_tokens = None
         self.tree_cache_logits = None
         self.tree_cache_activations = None
+        self.tree_cache_expected_tokens = None
+        self.cache_valid_length = self.config.speculate_k
 
     def _init_prealloc_buffers(self):
         # PERFORMANCE: pre-allocate constant tensors used every draft step to avoid repeated CUDA mallocs
+        self._publication_event = torch.cuda.Event() if self.config.early_publish_tokens else None
+        self._publication_checkpoint = None
+        self._handoff_stream = None
+        self._pending_tree = None
+        self._tail_event = None
+        if self.config.publication_policy != 'uniform':
+            from ssd.engine.publication_policy import PublicationCheckpoint
+            if self.config.publication_policy == 'overlap':
+                from ssd.engine.prefix_publication import PrefixCheckpoint
+                PublicationCheckpoint = PrefixCheckpoint
+                self._handoff_stream = torch.cuda.Stream(device=self.device, priority=-1)
+                self._compute_stream = torch.cuda.current_stream()
+                self._handoff_stream.wait_stream(self._compute_stream)
+            self._publication_checkpoint = PublicationCheckpoint(
+                self.config.early_publish_tokens, self.config.speculate_k,
+                self.config.publication_max_inflight, self.config.publication_policy == 'adaptive',
+                torch.cuda.Event, self.publication_feedback)
         K, MQ_LEN = self.config.speculate_k, self.config.MQ_LEN
         d = self.device
         self._step_pos_offsets = torch.arange(K, device=d, dtype=torch.int64)[:, None] * MQ_LEN
@@ -121,10 +148,35 @@ class DraftRunner(ModelRunner):
         self._arange_mq = torch.arange(MQ_LEN, device=d, dtype=torch.int64)
         self._arange_kp1 = torch.arange(K + 1, device=d, dtype=torch.int64)
         self._arange_2kp1 = torch.arange(2 * K + 1, device=d, dtype=torch.int64)
+        if self._handoff_stream is not None:
+            from ssd.engine.prefix_publication import PrefixSnapshot
+            self._prefix_snapshot = PrefixSnapshot(K, self.config.fan_out_list,
+                self.config.fan_out_list_miss, self.hf_config.vocab_size, self.hf_config.torch_dtype, d)
+            self._handoff_stream.wait_stream(self._compute_stream)
 
     def jit_speculate(self, *args, **kwargs):
+        # JIT uses model/graph buffers and KV pages that the old tree may still
+        # write. Hits use immutable snapshots and need no such barrier.
+        self._drain_published_tail()
         with nvtx_range("draft/jit_speculate(miss)"):
             return self._jit_speculate_impl(*args, **kwargs)
+
+    def _handoff_context(self):
+        stream = getattr(self, '_handoff_stream', None)
+        return torch.cuda.stream(stream) if stream is not None else nullcontext()
+
+    def _drain_published_tail(self):
+        tail = getattr(self, '_tail_event', None)
+        if tail is None:
+            return
+        started = time.perf_counter()
+        with nvtx_range('draft/deferred_tail_drain'):
+            tail.synchronize()
+        if self.publication_feedback is not None:
+            with self.publication_feedback.get_lock():
+                self.publication_feedback[11] += time.perf_counter() - started
+        self._tail_event = None
+        self._pending_tree = None
 
     def _jit_speculate_impl(self, 
                       request_keys: torch.Tensor, 
@@ -191,6 +243,7 @@ class DraftRunner(ModelRunner):
     def hit_cache_and_respond(self, request_keys, B, K, num_tokens, temperatures, draft_block_tables, target_recovery_activations=None):
         """Hits the cache (tensor-backed) and returns tensors to respond to the spec request."""
         global ttl, ttl_hit
+        self.response_valid_length = K
         # Draft model now returns full target vocab size logits (after d2t expansion)
         V = self.hf_config.vocab_size
 
@@ -221,6 +274,9 @@ class DraftRunner(ModelRunner):
             # Vectorized membership against tensor cache
             eq = (request_keys.unsqueeze(1) == self.tree_cache_keys.unsqueeze(0))  # [B,T,3]
             match = torch.all(eq, dim=2)  # [B,T]
+            if self.config.early_publish_tokens:
+                # A matching key must also name this exact committed context.
+                match &= num_tokens[:, None] == self.tree_cache_expected_tokens[None, :]
             cache_hits = match.any(dim=1)  # [B]
             ttl_hit += int(cache_hits.sum().item())
             
@@ -249,10 +305,13 @@ class DraftRunner(ModelRunner):
                 # [B], arbitrary if no match but masked out
                 idx = match.float().argmax(dim=1).to(torch.int64)
                 sel = cache_hits
+                if self.config.early_publish_tokens:
+                    self.response_valid_length = self.cache_valid_length
                 # tokens [T,K]
-                out_tokens[sel] = self.tree_cache_tokens[idx[sel]]
+                length = self.tree_cache_tokens.shape[1]
+                out_tokens[sel, :length] = self.tree_cache_tokens[idx[sel], :length]
                 # logits [T,K+1,V]
-                out_logits[sel] = self.tree_cache_logits[idx[sel]]
+                out_logits[sel, :length] = self.tree_cache_logits[idx[sel], :length]
                 if self.config.use_eagle:
                     out_activations[sel] = self.tree_cache_activations[idx[sel]]
             elif self.config.jit_speculate: 
@@ -364,10 +423,16 @@ class DraftRunner(ModelRunner):
 
         with nvtx_range("draft/send_response"):
             fused_response = torch.cat([cache_hits.reshape(-1), out_tokens.reshape(-1).to(torch.int64)])
+            if self.config.drain_draft_on_finish:
+                header = torch.tensor([self.response_valid_length, self.served_epoch, self.cache_generation,
+                    int(self.cache_drain_s * 1e9), int(self.cache_publication_s * 1e9)],
+                    dtype=torch.int64, device=self.device)
+                fused_response = torch.cat([fused_response, header])
             dist.send(fused_response, dst=0, group=self.async_pg)
             dist.send(out_logits[:, :K, :].contiguous(), dst=0, group=self.async_pg)
 
         partial_tree_decode_args = {
+            "valid_length": self.response_valid_length,
             "num_tokens": num_tokens,
             "seq_ids": seq_ids,
             "temperatures": temperatures,
@@ -702,6 +767,8 @@ class DraftRunner(ModelRunner):
         ).view(-1)
 
         tree_decode_args = {
+            "valid_length": partial_tree_decode_args.get("valid_length", K),
+            "base_num_tokens": partial_tree_decode_args["num_tokens"],
             "metadata_ints": _pre_metadata_ints,
             "input_ids": forked_rec_tokens,
             "positions": _pre_positions,
@@ -797,7 +864,21 @@ class DraftRunner(ModelRunner):
         _prof = os.environ.get("SSD_PROFILE", "0") == "1"
         payload["_all_greedy"] = bool((payload["temps"] == 0).all())
         _step_times = []
+        self.cache_generation += 1
+        self.cache_drain_s = 0.0
+        completed = K
+        checkpoint = getattr(self, '_publication_checkpoint', None)
+        overlap = getattr(self, '_handoff_stream', None) is not None
+        if checkpoint is not None:
+            checkpoint.begin(torch.cuda.current_stream())
         for depth in range(K):
+            if checkpoint is not None:
+                started = time.perf_counter()
+                pending = (lambda: self.request_epoch.value > self.served_epoch) if overlap else self.request_epoch.value > self.served_epoch
+                if checkpoint.before_step(depth, pending):
+                    self.cache_drain_s = time.perf_counter() - started
+                    completed = depth
+                    break
             if _prof or PROFILE_DRAFT:
                 torch.cuda.synchronize()
                 _st = time.perf_counter()
@@ -806,6 +887,21 @@ class DraftRunner(ModelRunner):
                     depth, current_input_ids, step_rope_positions, step_slot_maps,
                     step_context_lens, dbt, payload, spec_tokens, spec_logits, spec_activations
                 )
+            if checkpoint is not None:
+                checkpoint.submitted(depth + 1)
+            elif self.config.early_publish_tokens:
+                ready = self._publication_event
+                # Bound queued work to one step once P is available. This first
+                # implementation includes the checkpoint overhead in timings.
+                if depth + 1 >= self.config.early_publish_tokens:
+                    ready.record(torch.cuda.current_stream())
+                    draining = time.perf_counter()
+                    pending = self.request_epoch.value > self.served_epoch
+                    ready.synchronize()
+                    if pending or self.request_epoch.value > self.served_epoch:
+                        self.cache_drain_s = time.perf_counter() - draining
+                        completed = depth + 1
+                        break
             if _prof or PROFILE_DRAFT:
                 torch.cuda.synchronize()
                 _et = time.perf_counter()
@@ -816,11 +912,29 @@ class DraftRunner(ModelRunner):
             avg = sum(_step_times) / len(_step_times)
             print(f"[PROFILE draft] tree_decode: K={K} steps={' '.join(f'{t:.2f}' for t in _step_times)} avg={avg:.2f}ms total={sum(_step_times):.2f}ms", flush=True)
 
+        if checkpoint is not None:
+            if overlap:
+                completed = checkpoint.final_depth(self.request_epoch.value > self.served_epoch)
+                self._prefix_ready_event = checkpoint.events[completed]
+                self._tail_event = checkpoint.events[checkpoint.launched]
+                # Keep producer allocations alive until the tail completes. The
+                # handoff copies only completed columns, never this live tail.
+                self._pending_tree = (payload, spec_tokens, spec_logits, spec_activations)
+            checkpoint.finish()
+        self.cache_valid_length = completed
+        # Tail slots stay initialized but are never offered for acceptance.
         return spec_tokens, spec_logits, spec_activations
 
     def _populate_tree_cache(self, payload, tokens, logits, cache_hits, activations=None):
         """Populates the tensor-backed tree_cache with the results of the decoding.
         """
+        if getattr(self, '_handoff_stream', None) is not None:
+            parent_positions = self._fan_idx_hit if payload['cache_hits_list'][0] else self._fan_idx_miss
+            (self.tree_cache_keys, self.tree_cache_expected_tokens,
+             self.tree_cache_tokens, self.tree_cache_logits) = self._prefix_snapshot.copy(
+                payload, tokens, logits, self.cache_valid_length, parent_positions)
+            self.tree_cache_activations = None
+            return
         seq_ids_expanded = payload["seq_ids_expanded"].to(torch.int64)
         rec_flat = payload["rec_flat"].to(torch.int64)
 
@@ -831,6 +945,13 @@ class DraftRunner(ModelRunner):
         keys = torch.stack([seq_ids_expanded, k_flat, rec_flat], dim=1).contiguous()  # [N,3]
 
         assert self.tree_cache_keys.numel() == 0
+        if self.config.early_publish_tokens:
+            valid = k_flat <= payload["valid_length"]
+            keys = keys[valid]
+            tokens = tokens[valid]
+            logits = logits[valid]
+            self.tree_cache_expected_tokens = (
+                payload["base_num_tokens"].repeat_interleave(self.config.MQ_LEN) + k_flat + 1)[valid]
         self.tree_cache_keys = keys
         self.tree_cache_tokens = tokens
         self.tree_cache_logits = logits
@@ -874,12 +995,21 @@ class DraftRunner(ModelRunner):
         while True:
             # 1) Wait for the next command (may be PREFILL, SPEC_REQUEST, or EXIT)
             with nvtx_range("draft/idle_wait_cmd"):
-                cmd = self.recv_cmd()
+                with self._handoff_context():
+                    cmd = self.recv_cmd()
+            if self.request_epoch is not None:
+                self.served_epoch = self.request_epoch.value
 
             # PREFILL: run the draft prefill and then loop back
             if cmd == 1:
+                self._drain_published_tail()
+                self._reset_tree_cache_tensors()
+                if self.config.drain_draft_on_finish:
+                    torch.cuda.reset_peak_memory_stats()
                 with nvtx_range("draft/prefill"):
                     self.draft_async_prefill()
+                if self._handoff_stream is not None:
+                    self._handoff_stream.wait_stream(self._compute_stream)
                 continue
 
             # SPECULATE request: serve out-of-cache or random speculations
@@ -891,7 +1021,21 @@ class DraftRunner(ModelRunner):
                     _d0 = time.perf_counter()
 
                 with nvtx_range("draft/service_request"):
-                    glue_decode_input_ids, partial_tree_decode_args = self._service_spec_request()
+                    with self._handoff_context():
+                        glue_decode_input_ids, partial_tree_decode_args = self._service_spec_request()
+                        if self._handoff_stream is not None:
+                            response_done = torch.cuda.Event()
+                            response_done.record(self._handoff_stream)
+                            response_done.synchronize()
+                            if self._tail_event is not None and not self._tail_event.query():
+                                with self.publication_feedback.get_lock():
+                                    self.publication_feedback[10] += 1
+                            self._compute_stream.wait_event(response_done)
+                            from ssd.engine.prefix_publication import record_stream_tree
+                            record_stream_tree((glue_decode_input_ids, partial_tree_decode_args), self._compute_stream)
+                    # Target can verify the delivered snapshot while we drain.
+                    # Join before any model/graph buffer or KV page is reused.
+                    self._drain_published_tail()
 
                 if _prof or PROFILE_DRAFT:
                     torch.cuda.synchronize()
@@ -915,8 +1059,22 @@ class DraftRunner(ModelRunner):
                     _d3 = time.perf_counter()
 
                 # Populate the local cache so future spec-requests can hit
-                with nvtx_range("draft/populate_cache"):
-                    self._populate_tree_cache(tree_decode_args, tokens, logits, tree_decode_args["cache_hits"], activations)
+                publication_started = time.perf_counter()
+                with self._handoff_context():
+                    if self._handoff_stream is not None:
+                        self._handoff_stream.wait_event(self._prefix_ready_event)
+                        from ssd.engine.prefix_publication import record_stream_tree
+                        record_stream_tree(self._pending_tree, self._handoff_stream)
+                        with self.publication_feedback.get_lock():
+                            self.publication_feedback[8] += int(self.cache_valid_length < self.config.speculate_k)
+                            self.publication_feedback[9] += int(not self._tail_event.query())
+                    with nvtx_range("draft/populate_cache"):
+                        self._populate_tree_cache(tree_decode_args, tokens, logits, tree_decode_args["cache_hits"], activations)
+                    if self.config.drain_draft_on_finish:
+                        ready = torch.cuda.Event()
+                        ready.record(torch.cuda.current_stream())
+                        ready.synchronize()
+                        self.cache_publication_s = time.perf_counter() - publication_started
                 self._draft_step_times.append(time.perf_counter() - _ds0)
 
                 if _prof or PROFILE_DRAFT:
@@ -929,8 +1087,19 @@ class DraftRunner(ModelRunner):
 
                 continue
 
+            elif cmd == 3:
+                self._drain_published_tail()
+                # All queued writes finish before pages can be reused by another request.
+                torch.cuda.synchronize()
+                self._reset_tree_cache_tensors()
+                dist.send(torch.tensor([self.served_epoch, torch.cuda.max_memory_allocated(),
+                                       torch.cuda.max_memory_reserved()], dtype=torch.int64, device=self.device),
+                          dst=0, group=self.async_pg)
+                continue
+
             # EXIT: clean up and break out of the loop
             elif cmd == 2:
+                self._drain_published_tail()
                 if self._draft_step_times:
                     avg_ms = sum(self._draft_step_times) * 1000 / len(self._draft_step_times)
                     print(f"[metrics] Avg draft step time (ms): {avg_ms:.2f}", flush=True)

@@ -1,0 +1,24 @@
+running: Both GPUs idle; starting/resuming validated blocks.
+Running tune/fixed/r0/ssd_k7_f3
+Running tune/fixed/r0/ssd_k10_f1
+Running tune/fixed/r0/sd_k4
+Running tune/fixed/r0/ssd_k4_f3
+Running tune/fixed/r0/sd_k8
+Running tune/fixed/r0/ssd_k4_f1
+Running tune/fixed/r0/sd_k6
+Running tune/fixed/r0/ar
+Running tune/fixed/r0/ssd_k10_f3
+Running tune/fixed/r0/ssd_k7_f1
+Running tune/fixed/r1/ssd_k7_f1
+Running tune/fixed/r1/ssd_k10_f3
+Running tune/fixed/r1/ar
+Running tune/fixed/r1/sd_k6
+Running tune/fixed/r1/ssd_k4_f1
+Running tune/fixed/r1/sd_k8
+Running tune/fixed/r1/ssd_k4_f3
+Running tune/fixed/r1/sd_k4
+Running tune/fixed/r1/ssd_k10_f1
+Running tune/fixed/r1/ssd_k7_f3
+Running heldout/fixed/r0/ssd_k7_f3
+Running heldout/fixed/r0/ar
+Stopped; resume by launching this watcher again.

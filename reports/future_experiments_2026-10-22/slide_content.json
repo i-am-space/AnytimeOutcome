@@ -1,0 +1,4607 @@
+[
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Future experimentation plan",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "From the current baseline to a correct, measured anytime decoder.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "01  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 191,
+        "w": 280,
+        "h": 219,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 191,
+        "w": 5,
+        "h": 219,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "QUESTION",
+        "x": 54,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Can we stop waiting?",
+        "x": 54,
+        "y": 227,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Use a completed draft prefix before the entire continuation is ready.",
+        "x": 54,
+        "y": 287.76,
+        "w": 244,
+        "h": 74.12,
+        "size": 18,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 191,
+        "w": 280,
+        "h": 219,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 191,
+        "w": 5,
+        "h": 219,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "EXPERIMENT",
+        "x": 358,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Which policy helps?",
+        "x": 358,
+        "y": 227,
+        "w": 244,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Compare early publication, fixed depths, and adaptive scheduling.",
+        "x": 358,
+        "y": 260.88,
+        "w": 244,
+        "h": 74.12,
+        "size": 18,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 191,
+        "w": 280,
+        "h": 219,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 191,
+        "w": 5,
+        "h": 219,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "SUCCESS TARGET",
+        "x": 662,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "At least 10% lower latency",
+        "x": 662,
+        "y": 227,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Against the strongest matched baseline, with exact greedy output.",
+        "x": 662,
+        "y": 287.76,
+        "w": 244,
+        "h": 74.12,
+        "size": 18,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "The 10% improvement is a target to test, not a result already achieved.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "Scope: all remaining project experiments, based on the uploaded two-page proposal. This presentation is a plan, not a new results report. The user requested removal of a dedicated named fan-out comparator; the comparisons shown follow the proposal. Unequal fan-out alone is established work and is not claimed as our contribution. The proposed contribution concerns incremental publication and unequal continuation depths, judged against simple early handoff.",
+    "title": "Future experimentation plan"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "What is done, and what remains?",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Current evidence supports the experiment design; the project prototype is still ahead.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Saved campaign status + completed-results snapshot | Current evidence, not final claims",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "02  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 186,
+        "w": 280,
+        "h": 246,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 186,
+        "w": 5,
+        "h": 246,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "DONE",
+        "x": 54,
+        "y": 201,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Baseline foundation",
+        "x": 54,
+        "y": 222,
+        "w": 244,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Profiling and bottleneck analysis.\n480 tuning requests.\nSD K=6; SSD K=7/F=3.",
+        "x": 54,
+        "y": 255.88,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 186,
+        "w": 280,
+        "h": 246,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 186,
+        "w": 5,
+        "h": 246,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "PARTIAL",
+        "x": 358,
+        "y": 201,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Held-out comparison",
+        "x": 358,
+        "y": 222,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "75 AR + 75 SSD requests.\n75 SD requests for context.\nRepeated testing is unfinished.",
+        "x": 358,
+        "y": 282.76,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 186,
+        "w": 280,
+        "h": 246,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 186,
+        "w": 5,
+        "h": 246,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "LEFT",
+        "x": 662,
+        "y": 201,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "The core project",
+        "x": 662,
+        "y": 222,
+        "w": 244,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Exactness, safe early publication, scheduling, ablations, and final evaluation.",
+        "x": 662,
+        "y": 255.88,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Present fast-mode timings as performance evidence; exactness remains unresolved.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#B74750",
+        "bold": true
+      }
+    ],
+    "notes": "Current status is grounded in the saved baseline status and the immutable completed-results snapshot. All 480 tuning requests are valid. Dedicated held-out evidence consists of 75 AR and 75 SSD fixed-length requests, one repetition each. A separate 75-request SD run on clean GPU0 with GPU1 occupied is contextual and does not replace a dedicated campaign repetition. The two-hour window ended with the campaign incomplete. Profiling and microbenchmarks exist. Fast-mode exact agreement with unchanged AR still fails; the slow serial diagnostic reference is not an optimized correctness fix.",
+    "title": "What is done, and what remains?"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "The remaining work has four stages",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Each stage answers a question before the next stage adds complexity.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "03  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 196,
+        "w": 204,
+        "h": 230,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 196,
+        "w": 5,
+        "h": 230,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "01",
+        "x": 54,
+        "y": 211,
+        "w": 168,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Trust the baseline",
+        "x": 54,
+        "y": 232,
+        "w": 168,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Finish controlled runs and establish exact output.",
+        "x": 54,
+        "y": 292.76,
+        "w": 168,
+        "h": 66.44,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 264,
+        "y": 196,
+        "w": 204,
+        "h": 230,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 264,
+        "y": 196,
+        "w": 5,
+        "h": 230,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "02",
+        "x": 282,
+        "y": 211,
+        "w": 168,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Publish early",
+        "x": 282,
+        "y": 232,
+        "w": 168,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Test the simplest safe partial-draft handoff.",
+        "x": 282,
+        "y": 265.88,
+        "w": 168,
+        "h": 66.44,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 196,
+        "w": 204,
+        "h": 230,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 196,
+        "w": 5,
+        "h": 230,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "03",
+        "x": 510,
+        "y": 211,
+        "w": 168,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Allocate depth",
+        "x": 510,
+        "y": 232,
+        "w": 168,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Compare fixed and adaptive schedules.",
+        "x": 510,
+        "y": 292.76,
+        "w": 168,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 720,
+        "y": 196,
+        "w": 204,
+        "h": 230,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 720,
+        "y": 196,
+        "w": 5,
+        "h": 230,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "04",
+        "x": 738,
+        "y": 211,
+        "w": 168,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Validate broadly",
+        "x": 738,
+        "y": 232,
+        "w": 168,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Run final held-out tests, profiles, and replication.",
+        "x": 738,
+        "y": 292.76,
+        "w": 168,
+        "h": 66.44,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Keep the same executor so policy changes explain the differences.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "Correctness work and completion of unprofiled baseline measurements can proceed as separate tracks. No correctness-preserving acceleration claim is allowed until the unchanged target outputs match. After uniform early publication, continue the adaptive scheduler only if measured headroom remains. The timeline is ordered by evidence gates, not a promise of GPU availability or calendar dates.",
+    "title": "The remaining work has four stages"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "What will we compare?",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Simple controls first; stronger policies reveal whether extra complexity earns its cost.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "04  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 177,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Method or policy",
+        "x": 46,
+        "y": 184,
+        "w": 310,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Question it answers",
+        "x": 376,
+        "y": 184,
+        "w": 538,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 212,
+        "w": 888,
+        "h": 36,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "AR / synchronous SD (1 GPU)",
+        "x": 46,
+        "y": 220,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "What do standard decoding methods achieve?",
+        "x": 376,
+        "y": 220,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 248,
+        "w": 888,
+        "h": 36,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Tuned complete-cache SSD (2 GPUs)",
+        "x": 46,
+        "y": 256,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "What does asynchronous drafting already provide?",
+        "x": 376,
+        "y": 256,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 284,
+        "w": 888,
+        "h": 36,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Online global depth / fan-out",
+        "x": 46,
+        "y": 292,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Is simple adaptation enough?",
+        "x": 376,
+        "y": 292,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 320,
+        "w": 888,
+        "h": 36,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Uniform early publication",
+        "x": 46,
+        "y": 328,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Does earlier handoff alone help?",
+        "x": 376,
+        "y": 328,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 356,
+        "w": 888,
+        "h": 36,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Unequal fixed continuation depths",
+        "x": 46,
+        "y": 364,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Does changing depth allocation help?",
+        "x": 376,
+        "y": 364,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 392,
+        "w": 888,
+        "h": 36,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Probability-first / timing-rule adaptations",
+        "x": 46,
+        "y": 400,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Do simpler scheduling rules suffice?",
+        "x": 376,
+        "y": 400,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 428,
+        "w": 888,
+        "h": 36,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Our adaptive early-publication policy",
+        "x": 46,
+        "y": 436,
+        "w": 310,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Does online scheduling add further value?",
+        "x": 376,
+        "y": 436,
+        "w": 538,
+        "h": 22.92,
+        "size": 14,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 470,
+        "w": 888,
+        "h": 32,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Key comparison: adaptive early publication versus uniform early publication.",
+        "x": 48,
+        "y": 479,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "AR and synchronous SD are context controls using one GPU; SSD-based policy comparisons use the same two-GPU target/drafter allocation. Fixed global depth is covered by K tuning. Add an online global depth/fan-out comparator to test whether simple adaptation is sufficient. Uniform early publication with immediate handoff is the key comparator. Unequal fixed continuation depths isolate allocation. Probability-first and SwiftSpec-inspired timing policies are same-executor adaptations, not claims to reproduce their entire original systems. Candidate construction and ranking stay fixed initially. Match candidate/work budgets, memory constraints, hardware, and tuning effort across policy comparisons.",
+    "title": "What will we compare?"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "First gate: reproduce the target exactly",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "A faster answer only meets the proposal if its greedy token sequence also matches.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "05  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 191,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 191,
+        "w": 5,
+        "h": 238,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "OUTPUT",
+        "x": 54,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Compare every token",
+        "x": 54,
+        "y": 227,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Use unchanged AR as reference.\nExercise rejection, bonus tokens, EOS, and output caps.",
+        "x": 54,
+        "y": 287.76,
+        "w": 244,
+        "h": 113.80000000000001,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 191,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 191,
+        "w": 5,
+        "h": 238,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "STATE",
+        "x": 358,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Check branch history",
+        "x": 358,
+        "y": 227,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Verify partial prefixes and matching KV state.\nReject stale rounds and incomplete buffers.",
+        "x": 358,
+        "y": 287.76,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 191,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 191,
+        "w": 5,
+        "h": 238,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "PASS CONDITION",
+        "x": 662,
+        "y": 206,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Zero token mismatches",
+        "x": 662,
+        "y": 227,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Recheck after every policy change.\nA changed executor requires new baseline evidence.",
+        "x": 662,
+        "y": 287.76,
+        "w": 244,
+        "h": 113.80000000000001,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Numerical tolerance diagnostics explain discrepancies; they do not pass exactness.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#B74750",
+        "bold": true
+      }
+    ],
+    "notes": "The reference is the unchanged original target-only path. Investigate numerical shape effects under identical committed histories and distinguish rounding evidence from a fix. Test rejection at first and later tokens, all-accepted bonus handling, EOS in every relevant position, output caps, partial prefix use, and branch KV reconciliation. Stress round/generation IDs, stale buffers, buffer reuse, completion events, and in-flight kernel drain. The slow serial reference is diagnostic evidence only. If the fast shared executor changes, create a new execution fingerprint and rerun/reselect affected baselines; do not splice old timings into a new campaign.",
+    "title": "First gate: reproduce the target exactly"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Experiment 1: hand over a ready prefix",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Compare complete publication with uniform early publication.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "06  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Illustrative draft at the moment the target asks",
+        "x": 36,
+        "y": 184,
+        "w": 888,
+        "h": 28.04,
+        "size": 18,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 246,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "1",
+        "x": 270,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 328,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "2",
+        "x": 352,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 410,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "3",
+        "x": 434,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "4",
+        "x": 516,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 574,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "5",
+        "x": 598,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#697B8E",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 656,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "6",
+        "x": 680,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#697B8E",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 738,
+        "y": 229,
+        "w": 66,
+        "h": 50,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "7",
+        "x": 762,
+        "y": 241,
+        "w": 35,
+        "h": 30.6,
+        "size": 20,
+        "color": "#697B8E",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Draft depth",
+        "x": 36,
+        "y": 241,
+        "w": 190,
+        "h": 28.04,
+        "size": 18,
+        "color": "#26394B",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "4 tokens completed",
+        "x": 246,
+        "y": 292,
+        "w": 300,
+        "h": 28.04,
+        "size": 18,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "3 still unfinished",
+        "x": 574,
+        "y": 292,
+        "w": 340,
+        "h": 28.04,
+        "size": 18,
+        "color": "#697B8E",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 335,
+        "w": 432,
+        "h": 104,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 335,
+        "w": 5,
+        "h": 104,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "COMPLETE PUBLICATION",
+        "x": 54,
+        "y": 350,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Wait for the intended depth",
+        "x": 54,
+        "y": 371,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 335,
+        "w": 432,
+        "h": 104,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 335,
+        "w": 5,
+        "h": 104,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "EARLY PUBLICATION",
+        "x": 510,
+        "y": 350,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Use the ready prefix now",
+        "x": 510,
+        "y": 371,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Measure: target waiting, accepted tokens, full-request latency, and publication cost.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "Diagram is illustrative and contains no measured timing or predicted speedup. A continuation with four completed tokens may be useful even if the maximum intended depth is seven. Publish only after a CUDA completion event confirms writes; advertise an immutable valid length tied to round, branch, and generation IDs. At handoff use the actual outcome's completed prefix, or a fixed target-only fallback. Stop obsolete launches and include drain costs. Tune publication checkpoints such as 1, 2, 4, and 8 only where the configured depth permits; K=7 cannot publish depth 8.",
+    "title": "Experiment 1: hand over a ready prefix"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Experiment 2: give outcomes different depths",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Hold the candidate set fixed; change how far each continuation is drafted.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "07  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Uniform depth",
+        "x": 36,
+        "y": 185,
+        "w": 432,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome A",
+        "x": 36,
+        "y": 244,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 181,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 220,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 259,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 298,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "4",
+        "x": 424,
+        "y": 243,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome B",
+        "x": 36,
+        "y": 297,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 181,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 220,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 259,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 298,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "4",
+        "x": 424,
+        "y": 296,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome C",
+        "x": 36,
+        "y": 350,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 181,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 220,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 259,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "rect",
+        "x": 298,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "4",
+        "x": 424,
+        "y": 349,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "12 draft token-steps in this illustration",
+        "x": 36,
+        "y": 408,
+        "w": 432,
+        "h": 22.92,
+        "size": 14,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Unequal depth",
+        "x": 492,
+        "y": 185,
+        "w": 432,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome A",
+        "x": 492,
+        "y": 244,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 637,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 676,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 715,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 754,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 793,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 832,
+        "y": 238,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "6",
+        "x": 880,
+        "y": 243,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome B",
+        "x": 492,
+        "y": 297,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 637,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 676,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 715,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 754,
+        "y": 291,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "4",
+        "x": 880,
+        "y": 296,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Outcome C",
+        "x": 492,
+        "y": 350,
+        "w": 145,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 637,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "rect",
+        "x": 676,
+        "y": 344,
+        "w": 31,
+        "h": 31,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "2",
+        "x": 880,
+        "y": 349,
+        "w": 30,
+        "h": 25.48,
+        "size": 16,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "12 draft token-steps in this illustration",
+        "x": 492,
+        "y": 408,
+        "w": 432,
+        "h": 22.92,
+        "size": 14,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Compare fixed unequal depths first, then test whether online adaptation adds value.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "Outcome means an accepted-prefix length plus recovery/bonus token. The allocation diagram is an illustration, not a new result. Both examples use 12 draft token-steps, but equal logical work does not imply equal GPU runtime because batch shapes differ. Measure execution cost and constrain the same budget when comparing policies. Start with fixed unequal depths. Then use outcome frequencies, acceptance statistics, measured increment costs, and readiness estimates to choose which branch to extend. Bound controller work and revert to a baseline with sparse statistics. Unequal fan-out and adaptive drafting are existing ideas; the project must demonstrate benefit from publication and depth scheduling beyond the simpler comparators.",
+    "title": "Experiment 2: give outcomes different depths"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Ablations: what actually causes a gain?",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "An ablation changes one component while keeping the rest comparable.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "08  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 184,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Change only this",
+        "x": 46,
+        "y": 191,
+        "w": 410,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "What we learn",
+        "x": 476,
+        "y": 191,
+        "w": 438,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 219,
+        "w": 888,
+        "h": 43,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Complete \u2192 early publication",
+        "x": 46,
+        "y": 227,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Value of exposing partial work",
+        "x": 476,
+        "y": 227,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 262,
+        "w": 888,
+        "h": 43,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Uniform \u2192 unequal fixed depths",
+        "x": 46,
+        "y": 270,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Value of depth allocation",
+        "x": 476,
+        "y": 270,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 305,
+        "w": 888,
+        "h": 43,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Fixed unequal \u2192 adaptive depths",
+        "x": 46,
+        "y": 313,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Value of online decisions",
+        "x": 476,
+        "y": 313,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 348,
+        "w": 888,
+        "h": 43,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Readiness estimates off \u2192 on",
+        "x": 46,
+        "y": 356,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Value of predicting when work is useful",
+        "x": 476,
+        "y": 356,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 391,
+        "w": 888,
+        "h": 43,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Frozen \u2192 online outcome statistics",
+        "x": 46,
+        "y": 399,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Value of learning outcome frequencies",
+        "x": 476,
+        "y": 399,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 434,
+        "w": 888,
+        "h": 43,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Measure controller / publication costs",
+        "x": 46,
+        "y": 442,
+        "w": 410,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Whether overhead consumes the savings",
+        "x": 476,
+        "y": 442,
+        "w": 438,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      }
+    ],
+    "notes": "These are planned end-to-end experiments in the shared executor, with fair retuning on separate tuning data. Measure actual policy overhead. The first comparison isolates publication; the second isolates allocation; the third isolates online adaptation. Disabling readiness estimates isolates their value, while frozen versus online statistics tests learning. Profile controller, packing, synchronization and drain costs separately; an ideal zero-overhead controller is only a diagnostic upper bound, never a headline measured implementation.",
+    "title": "Ablations: what actually causes a gain?"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Trade-offs: earlier is not always faster",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Study the costs alongside the benefits, rather than increasing every budget.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "09  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 184,
+        "w": 432,
+        "h": 137,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 184,
+        "w": 5,
+        "h": 137,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "HANDOFF",
+        "x": 54,
+        "y": 199,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Earlier prefix \u2194 deeper draft",
+        "x": 54,
+        "y": 220,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Less waiting versus more tokens accepted per verification.",
+        "x": 54,
+        "y": 253.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 184,
+        "w": 432,
+        "h": 137,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 184,
+        "w": 5,
+        "h": 137,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "PUBLICATION",
+        "x": 510,
+        "y": 199,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Frequent updates \u2194 overhead",
+        "x": 510,
+        "y": 220,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "More handoff chances versus events, packing, and synchronization.",
+        "x": 510,
+        "y": 253.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 342,
+        "w": 432,
+        "h": 137,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 342,
+        "w": 5,
+        "h": 137,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "BUDGET",
+        "x": 54,
+        "y": 357,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Coverage \u2194 memory cost",
+        "x": 54,
+        "y": 378,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Better coverage versus memory and discarded draft work.",
+        "x": 54,
+        "y": 411.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 342,
+        "w": 432,
+        "h": 137,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 342,
+        "w": 5,
+        "h": 137,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "SCHEDULER",
+        "x": 510,
+        "y": 357,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Better choices \u2194 overhead",
+        "x": 510,
+        "y": 378,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Measure savings after controller and in-flight drain costs.",
+        "x": 510,
+        "y": 411.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      }
+    ],
+    "notes": "Sweep publication checkpoints, maximum depth, candidate/fan-out budgets and execution-shape buckets on tuning data. Compare equal total work/candidate budgets where meaningful, report actual GPU cost and memory, and freeze winners before final evaluation. Earlier handoff can reduce target waiting but also reduce useful tokens per verification. Frequent publication adds events, packing and synchronization. More branches increase coverage and consume memory or draft work. A controller can improve choices yet lose end-to-end after its decision overhead. Record discarded/obsolete draft token work and actual kernel-drain time.",
+    "title": "Trade-offs: earlier is not always faster"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Final workloads: test beyond the first 75 prompts",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Use separate tuning data and a new frozen held-out set for the project policies.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "10  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 186,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Task family",
+        "x": 46,
+        "y": 193,
+        "w": 245,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Target held-out size",
+        "x": 311,
+        "y": 193,
+        "w": 200,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "What it covers",
+        "x": 531,
+        "y": 193,
+        "w": 383,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 221,
+        "w": 888,
+        "h": 48,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Chat",
+        "x": 46,
+        "y": 229,
+        "w": 245,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "100 prompts",
+        "x": 311,
+        "y": 229,
+        "w": 200,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Conversation and questions",
+        "x": 531,
+        "y": 229,
+        "w": 383,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 269,
+        "w": 888,
+        "h": 48,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Code",
+        "x": 46,
+        "y": 277,
+        "w": 245,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "100 prompts",
+        "x": 311,
+        "y": 277,
+        "w": 200,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Programming tasks",
+        "x": 531,
+        "y": 277,
+        "w": 383,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 317,
+        "w": 888,
+        "h": 48,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Document-grounded",
+        "x": 46,
+        "y": 325,
+        "w": 245,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "100 prompts",
+        "x": 311,
+        "y": 325,
+        "w": 200,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Answers / summaries from supplied text",
+        "x": 531,
+        "y": 325,
+        "w": 383,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Input lengths: around 512 / 2K / 8K tokens, where naturally available.",
+        "x": 36,
+        "y": 393,
+        "w": 888,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Output caps: 128 and 512 tokens, stopping normally at EOS.",
+        "x": 36,
+        "y": 425,
+        "w": 888,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 460,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "8K inputs need a larger validated capacity than our current 4,096-token engine.",
+        "x": 48,
+        "y": 469,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#D98225",
+        "bold": true
+      }
+    ],
+    "notes": "The proposal targets 100 held-out prompts per family, 300 total. These are not 100 per context length and do not automatically imply a fully crossed 900-prompt grid. Use complete natural prompts around 512, 2K and 8K tokens where available; report coverage gaps without inventing or silently padding inputs. Record exact source IDs, splits, tokenizer/chat template and token IDs. Keep the new final held-out set separate from tuning and previously inspected campaign examples. Output caps are 128 and 512 with normal EOS; exact fixed-length throughput is supplementary. Current capacity is 4096: 8K inputs need a separately fingerprinted longer-capacity configuration with output headroom, memory checks and matching baselines. Do not truncate them into a claimed 8K test.",
+    "title": "Final workloads: test beyond the first 75 prompts"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Measure user experience and explain the cause",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Full-request latency is primary; the other metrics explain the trade-offs.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "11  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 188,
+        "w": 432,
+        "h": 128,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 188,
+        "w": 5,
+        "h": 128,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "PRIMARY",
+        "x": 54,
+        "y": 203,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Time to finish the request",
+        "x": 54,
+        "y": 224,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Include both model prefills and all execution overhead.",
+        "x": 54,
+        "y": 257.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 188,
+        "w": 432,
+        "h": 128,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 188,
+        "w": 5,
+        "h": 128,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "USER EXPERIENCE",
+        "x": 510,
+        "y": 203,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "First output and delivery gaps",
+        "x": 510,
+        "y": 224,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Check whether faster completion also feels responsive.",
+        "x": 510,
+        "y": 257.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 337,
+        "w": 432,
+        "h": 128,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 337,
+        "w": 5,
+        "h": 128,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "RESOURCES",
+        "x": 54,
+        "y": 352,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Output rate and peak memory",
+        "x": 54,
+        "y": 373,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Show output lengths and GPU counts beside speed.",
+        "x": 54,
+        "y": 406.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 337,
+        "w": 432,
+        "h": 128,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 492,
+        "y": 337,
+        "w": 5,
+        "h": 128,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "EXPLANATION",
+        "x": 510,
+        "y": 352,
+        "w": 396,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Readiness and wasted work",
+        "x": 510,
+        "y": 373,
+        "w": 396,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Log acceptance, fallback, scheduling, and drain costs.",
+        "x": 510,
+        "y": 406.88,
+        "w": 396,
+        "h": 45.96,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      }
+    ],
+    "notes": "Full-request timing includes both prefills, verification, waiting, fallback, controller/publication and necessary drain. Exclude model loading, compilation, warmup, logging and serialization. Report mean and p50/p95 request latency; first committed output; p50/p95 gaps between real committed deliveries; committed tokens/s with denominator defined; and peak GPU memory. Delivery gaps and peak memory need added instrumentation beyond the old campaign summary. Diagnostic metrics: actual outcome, ready-prefix coverage and depth at handoff, accepted tokens per verification, target waiting/slowdown, fallback and cache-hit rates, discarded work, controller overhead and drain. Repeat per-round hit/miss and GPU-completion analysis in separate profiles; the new unprofiled campaign did not record that waiting breakdown.",
+    "title": "Measure user experience and explain the cause"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Keep the comparisons controlled",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Qwen3-8B target + Qwen3-0.6B draft; BF16, greedy, batch size 1.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "12  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 184,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Control",
+        "x": 46,
+        "y": 191,
+        "w": 208,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Planned rule",
+        "x": 274,
+        "y": 191,
+        "w": 640,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 219,
+        "w": 888,
+        "h": 44,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Inputs and settings",
+        "x": 46,
+        "y": 227,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Freeze prompts, token IDs, model versions, and policies",
+        "x": 274,
+        "y": 227,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 263,
+        "w": 888,
+        "h": 44,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Repetitions",
+        "x": 46,
+        "y": 271,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "At least 5 warm repetitions; vary method order",
+        "x": 274,
+        "y": 271,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 307,
+        "w": 888,
+        "h": 44,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Fairness",
+        "x": 46,
+        "y": 315,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Same executor and budgets for SSD policy comparisons",
+        "x": 274,
+        "y": 315,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 351,
+        "w": 888,
+        "h": 44,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Uncertainty",
+        "x": 46,
+        "y": 359,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Paired 95% confidence intervals; show family regressions",
+        "x": 274,
+        "y": 359,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 395,
+        "w": 888,
+        "h": 44,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Hardware access",
+        "x": 46,
+        "y": 403,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Dedicated GPUs; discard contaminated blocks",
+        "x": 274,
+        "y": 403,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 439,
+        "w": 888,
+        "h": 44,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Profiling",
+        "x": 46,
+        "y": 447,
+        "w": 208,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Separate diagnostic traces from headline timings",
+        "x": 274,
+        "y": 447,
+        "w": 640,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      }
+    ],
+    "notes": "Use warm runs with at least five repetitions for every headline setting; the existing campaign uses three separate warmup requests for each fresh process/configuration block. Alternate or seed method order, preserve prompt pairing, and declare the workload aggregation before results. Use 95% paired confidence intervals; the existing analysis supports 10000 seeded hierarchical bootstrap draws over rounds and prompts within families. All methods share weights, precision, backend, capacity, token IDs and EOS rules. Prefix lookup stays disabled so scored requests perform full prefill. SSD policy comparisons match both GPU allocation and tuning budget. Pin GPU UUIDs, record environment hashes, monitor unrelated processes, invalidate contaminated blocks and resume only completed compatible evidence. Never blend different execution versions.",
+    "title": "Keep the comparisons controlled"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Optimize on L40S, then check portability",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Profile the bottleneck before choosing an implementation optimization.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "13  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 187,
+        "w": 280,
+        "h": 247,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 187,
+        "w": 5,
+        "h": 247,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "PRIMARY",
+        "x": 54,
+        "y": 202,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "2 \u00d7 L40S",
+        "x": 54,
+        "y": 223,
+        "w": 244,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Full two-GPU policy comparisons.\nCheck waiting and stream contention with Nsight.",
+        "x": 54,
+        "y": 256.88,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 187,
+        "w": 280,
+        "h": 247,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 187,
+        "w": 5,
+        "h": 247,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "OPTIMIZATION",
+        "x": 358,
+        "y": 202,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Reduce measured overhead",
+        "x": 358,
+        "y": 223,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Try buffers, shape buckets, streams, and packing.\nKeep only measured improvements.",
+        "x": 358,
+        "y": 283.76,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 187,
+        "w": 280,
+        "h": 247,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 187,
+        "w": 5,
+        "h": 247,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "PORTABILITY",
+        "x": 662,
+        "y": 202,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "RTX 3090 / RTX 2080",
+        "x": 662,
+        "y": 223,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Memory and kernel checks where available.\nSmaller-model tests on 2080.",
+        "x": 662,
+        "y": 283.76,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "One RTX 3090 alone cannot reproduce a disaggregated two-GPU SSD result.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#D98225",
+        "bold": true
+      }
+    ],
+    "notes": "Primary disaggregated experiments use the actual two L40S GPUs on the same server, across NUMA sockets over PCIe without NVLink. Do not inherit the proposal's unverified topology wording. After correctness, evaluate CUDA streams/events, preallocated buffers and execution-shape buckets. Add CUDA/Triton packing kernels or further CUDA graph capture only if profiles justify them. A/B measure correctness, latency, publication/control overhead, target interference and memory. Proposal lists only one RTX3090: use it for fitting, microbenchmarks or single-device controls; do not present those as replicated two-GPU SSD. Full SSD replication is conditional on a valid second device and documented topology. RTX2080 FP16 smaller-model tests are supplementary, subject to access; they do not replace main-model correctness.",
+    "title": "Optimize on L40S, then check portability"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Milestones are evidence gates",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Advance when a comparison is convincing, not simply when an implementation runs.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "14  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 188,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Stage",
+        "x": 46,
+        "y": 195,
+        "w": 245,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Evidence needed before moving on",
+        "x": 311,
+        "y": 195,
+        "w": 603,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 223,
+        "w": 888,
+        "h": 48,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Baseline closure",
+        "x": 46,
+        "y": 231,
+        "w": 245,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Exactness evidence + completed controlled comparison",
+        "x": 311,
+        "y": 231,
+        "w": 603,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 271,
+        "w": 888,
+        "h": 48,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Uniform early publication",
+        "x": 46,
+        "y": 279,
+        "w": 245,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Safe handoff + measured benefit or clear limit",
+        "x": 311,
+        "y": 279,
+        "w": 603,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 319,
+        "w": 888,
+        "h": 48,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Unequal / adaptive scheduling",
+        "x": 46,
+        "y": 327,
+        "w": 245,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Gain beyond simple early handoff after overhead",
+        "x": 311,
+        "y": 327,
+        "w": 603,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 367,
+        "w": 888,
+        "h": 48,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Evaluation 2",
+        "x": 46,
+        "y": 375,
+        "w": 245,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Working prototype + preliminary comparisons / ablations",
+        "x": 311,
+        "y": 375,
+        "w": 603,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 415,
+        "w": 888,
+        "h": 48,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Final evaluation",
+        "x": 46,
+        "y": 423,
+        "w": 245,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "Frozen held-out results + repeats + regression analysis",
+        "x": 311,
+        "y": 423,
+        "w": 603,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 470,
+        "w": 888,
+        "h": 32,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "If the advanced scheduler adds no value, deliver the correct simpler policy and explain why.",
+        "x": 48,
+        "y": 479,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "These gates update the proposal's week-based milestones without claiming missed weeks are done. Evaluation1 covers baseline status, unresolved correctness, bottleneck evidence and experimental design. Before Evaluation2 aim for a safe uniform early-publication prototype and, only if it has residual headroom, unequal-depth/adaptive scheduling with preliminary ablations. Final evaluation requires frozen held-out tests, repeated timings, confidence intervals, regressions and reproducible artifacts. If adaptive scheduling fails to improve on the simple early-handoff policy after its overhead, retain the correct simpler system and quantify the negative result.",
+    "title": "Milestones are evidence gates"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "What the finished project must demonstrate",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "A correct implementation and reproducible evidence of when it helps.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Proposal pp. 1\u20132 | Planned experiments; results pending",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "15  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 190,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 190,
+        "w": 5,
+        "h": 238,
+        "color": "#008C88"
+      },
+      {
+        "kind": "text",
+        "text": "CORRECTNESS",
+        "x": 54,
+        "y": 205,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Same greedy tokens",
+        "x": 54,
+        "y": 226,
+        "w": 244,
+        "h": 31.88,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Rejection, EOS, partial prefixes, stale buffers, and branch state all pass.",
+        "x": 54,
+        "y": 259.88,
+        "w": 244,
+        "h": 70.28,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 190,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 340,
+        "y": 190,
+        "w": 5,
+        "h": 238,
+        "color": "#4778AE"
+      },
+      {
+        "kind": "text",
+        "text": "PERFORMANCE TARGET",
+        "x": 358,
+        "y": 205,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#4778AE",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "At least 10% less latency",
+        "x": 358,
+        "y": 226,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Compare with the strongest matched baseline.\nDisclose slower task families.",
+        "x": 358,
+        "y": 286.76,
+        "w": 244,
+        "h": 92.04,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 190,
+        "w": 280,
+        "h": 238,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "rect",
+        "x": 644,
+        "y": 190,
+        "w": 5,
+        "h": 238,
+        "color": "#D98225"
+      },
+      {
+        "kind": "text",
+        "text": "DELIVERY",
+        "x": 662,
+        "y": 205,
+        "w": 244,
+        "h": 17.8,
+        "size": 10,
+        "color": "#D98225",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Reproducible artifact",
+        "x": 662,
+        "y": 226,
+        "w": 244,
+        "h": 58.76,
+        "size": 21,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Code, raw results, plots, traces, report, slides, and a working demo.",
+        "x": 662,
+        "y": 286.76,
+        "w": 244,
+        "h": 70.28,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 454,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "A quantified negative result is valid evidence; an unmeasured speedup claim is not.",
+        "x": 48,
+        "y": 463,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#008C88",
+        "bold": true
+      }
+    ],
+    "notes": "The proposal engineering target is at least 10% lower mean full-request latency on the declared balanced held-out mix than the strongest matched tested baseline; report paired uncertainty and every family regression. This is a target, not a forecast or guaranteed win. Correctness requires token-for-token greedy equality to unchanged target AR, not tolerance-aware logit checks. Deliver runnable code, manifest/configuration versions, raw measurements, plots/traces, report, presentation and demo. Proposed ownership: Ishaan baseline integration, KV/handoff and correctness; Vishal scheduling, statistics and ablations; Eshaan publication, execution optimization and profiling. Single-request greedy decoding remains core scope; stochastic sampling and multi-request serving are outside the required experiments.",
+    "title": "What the finished project must demonstrate"
+  },
+  {
+    "scenes": [
+      {
+        "kind": "rect",
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 8,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "ANYTIME OUTCOME-CACHE  /  FUTURE EXPERIMENTS",
+        "x": 36,
+        "y": 23,
+        "w": 850,
+        "h": 17.8,
+        "size": 10,
+        "color": "#008C88",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Backup: exact baseline queue still outstanding",
+        "x": 36,
+        "y": 49,
+        "w": 888,
+        "h": 42.12,
+        "size": 29,
+        "color": "#152E49",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "This closes Evaluation 1 evidence; the broader project experiments follow afterward.",
+        "x": 36,
+        "y": 129,
+        "w": 888,
+        "h": 24.2,
+        "size": 15,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 507,
+        "w": 888,
+        "h": 1,
+        "color": "#D7E0E8"
+      },
+      {
+        "kind": "text",
+        "text": "Saved campaign status | Counts exclude warmups and the contextual SD run",
+        "x": 36,
+        "y": 514,
+        "w": 770,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "16  /  22 OCT 2026",
+        "x": 806,
+        "y": 514,
+        "w": 120,
+        "h": 15,
+        "size": 8,
+        "color": "#697B8E",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 185,
+        "w": 888,
+        "h": 35,
+        "color": "#152E49"
+      },
+      {
+        "kind": "text",
+        "text": "Protocol",
+        "x": 46,
+        "y": 192,
+        "w": 210,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Dedicated evidence completed",
+        "x": 276,
+        "y": 192,
+        "w": 280,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "text",
+        "text": "Still required",
+        "x": 576,
+        "y": 192,
+        "w": 338,
+        "h": 21.64,
+        "size": 13,
+        "color": "#FFFFFF",
+        "bold": true
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 220,
+        "w": 888,
+        "h": 50,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Tuning",
+        "x": 46,
+        "y": 228,
+        "w": 210,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "480 / 480 requests",
+        "x": 276,
+        "y": 228,
+        "w": 280,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "None for the frozen fast version",
+        "x": 576,
+        "y": 228,
+        "w": 338,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 270,
+        "w": 888,
+        "h": 50,
+        "color": "#FFFFFF"
+      },
+      {
+        "kind": "text",
+        "text": "Fixed 256 tokens",
+        "x": 46,
+        "y": 278,
+        "w": 210,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "150 / 1,125 requests",
+        "x": 276,
+        "y": 278,
+        "w": 280,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "975 requests / 13 blocks",
+        "x": 576,
+        "y": 278,
+        "w": 338,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 320,
+        "w": 888,
+        "h": 50,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "Natural EOS, cap 256",
+        "x": 46,
+        "y": 328,
+        "w": 210,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "0 / 1,125 requests",
+        "x": 276,
+        "y": 328,
+        "w": 280,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "1,125 requests / 15 blocks",
+        "x": 576,
+        "y": 328,
+        "w": 338,
+        "h": 25.48,
+        "size": 16,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "text",
+        "text": "After completion: paired analysis, exact-output comparisons, and the final baseline report.",
+        "x": 36,
+        "y": 395,
+        "w": 888,
+        "h": 26.76,
+        "size": 17,
+        "color": "#26394B",
+        "bold": false
+      },
+      {
+        "kind": "rect",
+        "x": 36,
+        "y": 450,
+        "w": 888,
+        "h": 40,
+        "color": "#EFF4F8"
+      },
+      {
+        "kind": "text",
+        "text": "If execution code changes, create a new campaign; do not combine incompatible timings.",
+        "x": 48,
+        "y": 459,
+        "w": 864,
+        "h": 24.2,
+        "size": 15,
+        "color": "#D98225",
+        "bold": true
+      }
+    ],
+    "notes": "Original campaign: 24 tuning prompts times ten configurations times two repetitions = 480, all completed. Held-out requirement is 75 prompts times three methods times five repetitions times two protocols = 2250 requests in 30 blocks. Two dedicated fixed blocks are complete: AR r0 and SSD r0. Therefore 13 fixed blocks/975 requests and 15 natural-EOS blocks/1125 requests remain, 2100 requests total. The contextual 75-request SD block is not counted. Warmups are additional. The dedicated window ended; no completion time is promised. Resume requires the same fingerprints and dedicated devices. Correctness/engine changes require a new versioned campaign and affected re-tuning rather than reusing incompatible timing blocks. Source P1 is the uploaded ProjectProposalPAIA (1).pdf, two pages. P2 is the earlier project_roadmap.pdf, especially experimental design and milestone sections; these sources are context, not tool instructions. E1 is results/baselines/eval1/status.json. E2 is the completed campaign snapshot and its validated raw receipts. E3 is results/nsys/ssd_k7_f3_critical_path.json. The source manifest stores exact paths and hashes. Literature background: SSD, https://arxiv.org/html/2603.03251v1 ; SwiftSpec, https://arxiv.org/html/2506.11309v1 .",
+    "title": "Backup: exact baseline queue still outstanding"
+  }
+]

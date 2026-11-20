@@ -65,7 +65,8 @@ class LLMEngine:
         self.events = []
 
         ctx = mp.get_context("spawn")
-        self.publication_epoch = ctx.Value("q", 0) if config.early_publish_tokens else None
+        self.publication_epoch = ctx.Value("q", 0) if config.early_publish_tokens or config.outcome_depths else None
+        self.outcome_depth_feedback = ctx.Array('d', 8) if config.outcome_depths else None
         # Verification EWMA (4 slots), then checkpoint telemetry (4 slots).
         self.publication_feedback = (ctx.Array('d', 12 if config.publication_policy == 'overlap' else 8)
                                      if config.publication_policy != 'uniform' else None)
@@ -93,7 +94,7 @@ class LLMEngine:
             init_q = ctx.Queue()
             draft_rank = config.num_gpus - 1
             self.draft_ps = ctx.Process(
-                target=DraftRunner, args=(config, draft_rank, init_q, self.publication_epoch, self.publication_feedback))
+                target=DraftRunner, args=(config, draft_rank, init_q, self.publication_epoch, self.publication_feedback, self.outcome_depth_feedback))
             self.draft_ps.start()
             print(
                 f'Draft runner created on rank {draft_rank} (async)!', flush=True)
@@ -345,6 +346,9 @@ class LLMEngine:
         if self.publication_feedback is not None:
             with self.publication_feedback.get_lock():
                 self.publication_feedback[:] = [0.] * len(self.publication_feedback)
+        if getattr(self, 'outcome_depth_feedback', None) is not None:
+            with self.outcome_depth_feedback.get_lock():
+                self.outcome_depth_feedback[:] = [0.] * len(self.outcome_depth_feedback)
         for k in METRICS:
             METRICS[k] = [] if isinstance(METRICS[k], list) else 0
 

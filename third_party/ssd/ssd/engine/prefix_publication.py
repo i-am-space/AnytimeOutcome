@@ -15,12 +15,13 @@ class PrefixSnapshot:
         self.counts = [[sum(fan[:p+1]) for p in range(maximum+1)]
                        for fan in (fan_miss, fan_hit)]
         rows = sum(fan_hit)
+        self.lengths = torch.empty(rows, device=device, dtype=torch.int64)
         self.keys = torch.empty((rows, 3), device=device, dtype=torch.int64)
         self.expected = torch.empty(rows, device=device, dtype=torch.int64)
         self.tokens = torch.empty((rows, maximum), device=device, dtype=torch.int64)
         self.logits = torch.empty((rows, maximum, vocab), device=device, dtype=dtype)
 
-    def copy(self, payload, tokens, logits, length, parent_positions):
+    def copy(self, payload, tokens, logits, length, parent_positions, valid_lengths=None):
         if len(payload['cache_hits_list']) != 1:
             raise RuntimeError('Prefix snapshots require batch one')
         parent_length = payload['valid_length']
@@ -32,6 +33,8 @@ class PrefixSnapshot:
         self.keys[:count, 2].copy_(payload['rec_flat'][:count])
         torch.add(parent_positions[:count], payload['base_num_tokens'][0], out=self.expected[:count])
         self.expected[:count].add_(1)
+        if valid_lengths is not None:
+            torch.clamp(valid_lengths[:count], max=length, out=self.lengths[:count])
         # Later columns may still be changing on the producer stream.
         self.tokens[:count, :length].copy_(tokens[:count, :length])
         self.logits[:count, :length].copy_(logits[:count, :length])

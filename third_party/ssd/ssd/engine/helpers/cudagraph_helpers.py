@@ -158,14 +158,21 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
     K, F = model_runner.config.speculate_k, model_runner.config.async_fan_out
     # MQ_LEN = F * (K+1)
     MQ_LEN = sum(model_runner.config.fan_out_list)
+    compact = model_runner.config.outcome_depths is not None
+    if compact:
+        from ssd.engine.outcome_depth import active_rows_by_depth, compact_mask
+        rows_by_depth = model_runner.outcome_rows_by_depth
+        if input_ids.size(0) != len(rows_by_depth[step]):
+            raise RuntimeError('Compacted query count differs from captured outcome plan')
+    tree_steps = len(rows_by_depth) if compact else K
     orig_flat = input_ids.size(0)
-    assert orig_flat % MQ_LEN == 0, f"ERROR in run_fi_tree_decode_cudagraph: flat_batch_size should be divisible by MQ_LEN, got {orig_flat} and {MQ_LEN}"
-    orig_B = orig_flat // MQ_LEN
+    assert compact or orig_flat % MQ_LEN == 0, f"ERROR in run_fi_tree_decode_cudagraph: flat_batch_size should be divisible by MQ_LEN, got {orig_flat} and {MQ_LEN}"
+    orig_B = 1 if compact else orig_flat // MQ_LEN
 
     # Pick CUDA graph and wrapper bucket
     wrapper_bs = next(
         x for x in model_runner.graph_bs_list["fi_tree_decode"] if x >= orig_B)
-    graph = model_runner.graphs["fi_tree_decode"][wrapper_bs]
+    graph = model_runner.graphs["fi_tree_decode"][(1, orig_flat) if compact else wrapper_bs]
     wrapper = model_runner.prefill_wrappers[wrapper_bs]
 
     # Prepare padded inputs/context if needed
@@ -224,7 +231,13 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
     # CPU tensors let plan() skip its internal .to("cpu") GPU->CPU syncs.
     # For B<=8, CPU slicing also avoids GPU boolean indexing.
     if step == 0:
-        cache["cu_seqlens_q_cpu"] = torch.arange(B + 1, dtype=torch.int32) * MQ_LEN
+        if compact:
+            cache["cu_seqlens_q_by_step"] = [torch.tensor([0, len(rows)], dtype=torch.int32) for rows in rows_by_depth]
+        else:
+            # Retain the original single metadata allocation/transfer for complete SSD.
+            qo_cpu = torch.arange(B + 1, dtype=torch.int32) * MQ_LEN
+            cache["cu_seqlens_q_by_step"] = [qo_cpu] * K
+        cache["cu_seqlens_q_cpu"] = cache["cu_seqlens_q_by_step"][0]
         context_lens_list = context_lens.tolist()
         cache["block_tables"] = block_tables
         block_size = model_runner.block_size
@@ -233,7 +246,7 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
 
         if B <= 8:
             # PERFORMANCE: CPU-only kv_indices via slicing (no GPU boolean indexing)
-            for s in range(K):
+            for s in range(tree_steps):
                 step_cls = [int(cl) + s * MQ_LEN for cl in context_lens_list]
                 step_counts = [(cl + block_size - 1) // block_size for cl in step_cls]
                 if B == 1:
@@ -254,7 +267,7 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
             all_step_cls = context_lens.unsqueeze(1) + step_offsets.unsqueeze(0)
             all_counts = (all_step_cls + block_size - 1) // block_size
             all_masks = bt_upcast.unsqueeze(1) < all_counts.unsqueeze(2)
-            for s in range(K):
+            for s in range(tree_steps):
                 cache["precomputed_kv"].append(block_tables[all_masks[:, s, :]])
                 step_cls = [int(cl) + s * MQ_LEN for cl in context_lens_list]
                 step_counts = [(cl + block_size - 1) // block_size for cl in step_cls]
@@ -283,7 +296,7 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
         cache["cpu_packed_masks"] = []
         cache["cpu_packed_indptrs"] = []
 
-        for s in range(K):
+        for s in range(tree_steps):
             ttl_added_s = (s + 1) * MQ_LEN + (K + 1)
             packed_segs = []
             seg_packed_sizes = []
@@ -292,14 +305,16 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
                 cols_b = int(context_lens_list[b]) + s * MQ_LEN
                 prefix_len_b = cols_b - ttl_added_s
 
-                mask_b = np.zeros((MQ_LEN, cols_b), dtype=np.uint8)
-                mask_b[:, :prefix_len_b] = 1
-                glue = _glue_hit if int(cache_hits_list[b]) == 1 else _glue_miss
-                mask_b[:, prefix_len_b:prefix_len_b + K + 1] = glue
-                diag_start = prefix_len_b + K + 1
-                for blk in range(s + 1):
-                    mask_b[_rows_np, diag_start + blk * MQ_LEN + _rows_np] = 1
-
+                if compact:
+                    mask_b = compact_mask(K, F, s, prefix_len_b, rows_by_depth[s])
+                else:
+                    mask_b = np.zeros((MQ_LEN, cols_b), dtype=np.uint8)
+                    mask_b[:, :prefix_len_b] = 1
+                    glue = _glue_hit if int(cache_hits_list[b]) == 1 else _glue_miss
+                    mask_b[:, prefix_len_b:prefix_len_b + K + 1] = glue
+                    diag_start = prefix_len_b + K + 1
+                    for blk in range(s + 1):
+                        mask_b[_rows_np, diag_start + blk * MQ_LEN + _rows_np] = 1
                 packed = np.packbits(mask_b.ravel(), bitorder='little')
                 packed_segs.append(packed)
                 seg_packed_sizes.append(len(packed))
@@ -314,11 +329,15 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
                 torch.from_numpy(indptr.copy()).to(model_runner.device, non_blocking=True))
 
         # Pre-transfer KV metadata to GPU (eliminates per-step pageable H2D transfers)
-        cache["qo_indptr_gpu"] = cache["cu_seqlens_q_cpu"].to(model_runner.device, non_blocking=True)
+        if compact:
+            cache["qo_indptr_gpu"] = [v.to(model_runner.device, non_blocking=True) for v in cache["cu_seqlens_q_by_step"]]
+        else:
+            qo_gpu = cache["cu_seqlens_q_cpu"].to(model_runner.device, non_blocking=True)
+            cache["qo_indptr_gpu"] = [qo_gpu] * K
         cache["kv_indptr_gpu"] = []
         cache["kv_lpl_gpu"] = []
         cache["kv_lens_gpu"] = []
-        for s in range(K):
+        for s in range(tree_steps):
             ki, kl = cache["plan_cpu_args"][s]
             cache["kv_indptr_gpu"].append(ki.to(model_runner.device, non_blocking=True))
             cache["kv_lpl_gpu"].append(kl.to(model_runner.device, non_blocking=True))
@@ -337,7 +356,7 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
 
     kv_indices = cache["precomputed_kv"][step]
     kv_indptr_cpu, kv_lpl_cpu = cache["plan_cpu_args"][step]
-    qo_indptr_cpu = cache["cu_seqlens_q_cpu"]
+    qo_indptr_cpu = cache["cu_seqlens_q_by_step"][step]
 
     packed_mask = cache["cpu_packed_masks"][step]
     packed_indptr = cache["cpu_packed_indptrs"][step]
@@ -345,7 +364,7 @@ def run_fi_tree_decode_cudagraph(model_runner, input_ids, positions, last_only, 
     wrapper._mask_indptr_buf.copy_(packed_indptr, non_blocking=True)
 
     # GPU-to-GPU copies from pre-transferred tensors (no pageable H2D)
-    wrapper._qo_indptr_buf.copy_(cache["qo_indptr_gpu"], non_blocking=True)
+    wrapper._qo_indptr_buf.copy_(cache["qo_indptr_gpu"][step], non_blocking=True)
     wrapper._paged_kv_indptr_buf.copy_(cache["kv_indptr_gpu"][step], non_blocking=True)
     wrapper._paged_kv_last_page_len_buf.copy_(cache["kv_lpl_gpu"][step], non_blocking=True)
     wrapper._paged_kv_indices_buf[:len(kv_indices)].copy_(kv_indices, non_blocking=True)
@@ -820,7 +839,15 @@ def capture_fi_tree_decode_cudagraph(model_runner):
 
     print(f'About to capture FI cudagraphs for bs={graph_bs_list}', flush=True)
 
-    for bs in reversed(graph_bs_list):
+    compact = config.outcome_depths is not None
+    if compact:
+        from ssd.engine.outcome_depth import active_rows_by_depth
+        model_runner.outcome_rows_by_depth = active_rows_by_depth(K, F, config.outcome_depths)
+        counts = sorted({len(rows) for rows in model_runner.outcome_rows_by_depth}, reverse=True)
+        capture_shapes = [(1, count) for count in counts]
+    else:
+        capture_shapes = [(bs, bs * MQ_LEN) for bs in reversed(graph_bs_list)]
+    for bs, query_rows in capture_shapes:
         graph = torch.cuda.CUDAGraph()
 
         # Build a self-consistent fake plan for capture:
@@ -828,7 +855,7 @@ def capture_fi_tree_decode_cudagraph(model_runner):
         # - k_len = max_model_len for each request (use maximum context length)
 
         cu_seqlens_q = torch.arange(
-            bs + 1, dtype=torch.int32, device=model_runner.device) * MQ_LEN
+            bs + 1, dtype=torch.int32, device=model_runner.device) * (query_rows // bs)
         # Use max_num_blocks pages per request for maximum context length
         kv_indptr = torch.arange(
             bs + 1, dtype=torch.int32, device=model_runner.device) * max_num_blocks
@@ -840,7 +867,7 @@ def capture_fi_tree_decode_cudagraph(model_runner):
             last_page_len = model_runner.block_size
         kv_last_page_len = torch.full(
             (bs,), last_page_len, dtype=torch.int32, device=model_runner.device)
-        custom_mask = torch.ones(bs * MQ_LEN * config.max_model_len,
+        custom_mask = torch.ones(query_rows * config.max_model_len,
                                  dtype=torch.bool, device=model_runner.device)
 
         # Set the fi_tensors buffers with our fake data
@@ -861,32 +888,32 @@ def capture_fi_tree_decode_cudagraph(model_runner):
         # Set minimal context needed for run
         set_context(
             is_prefill=False,
-            slot_mapping=slot_mapping[:bs * MQ_LEN],
+            slot_mapping=slot_mapping[:query_rows],
             context_lens=context_lens[:bs],
             block_tables=block_tables[:bs]
         )
 
         # Warmup run
         if fi_hidden_states is not None:
-            outputs[:bs * MQ_LEN] = model_runner.model(
-                input_ids[:bs * MQ_LEN], positions[:bs * MQ_LEN], fi_hidden_states[:bs * MQ_LEN])
+            outputs[:query_rows] = model_runner.model(
+                input_ids[:query_rows], positions[:query_rows], fi_hidden_states[:query_rows])
         else:
-            outputs[:bs * MQ_LEN] = model_runner.model(
-                input_ids[:bs * MQ_LEN], positions[:bs * MQ_LEN])
-        logits[:bs * MQ_LEN] = model_runner.model.compute_logits(outputs[:bs * MQ_LEN], False)
+            outputs[:query_rows] = model_runner.model(
+                input_ids[:query_rows], positions[:query_rows])
+        logits[:query_rows] = model_runner.model.compute_logits(outputs[:query_rows], False)
 
         # Capture both model run and logits computation
         with torch.cuda.graph(graph, graph_pool):
             if fi_hidden_states is not None:
-                outputs[:bs * MQ_LEN] = model_runner.model(
-                    input_ids[:bs * MQ_LEN], positions[:bs * MQ_LEN], fi_hidden_states[:bs * MQ_LEN])
+                outputs[:query_rows] = model_runner.model(
+                    input_ids[:query_rows], positions[:query_rows], fi_hidden_states[:query_rows])
             else:
-                outputs[:bs * MQ_LEN] = model_runner.model(input_ids[:bs * MQ_LEN], positions[:bs * MQ_LEN])
-            logits[:bs * MQ_LEN] = model_runner.model.compute_logits(outputs[:bs * MQ_LEN], False)
+                outputs[:query_rows] = model_runner.model(input_ids[:query_rows], positions[:query_rows])
+            logits[:query_rows] = model_runner.model.compute_logits(outputs[:query_rows], False)
 
         if graph_pool is None:
             graph_pool = graph.pool()
-        graphs[bs] = graph
+        graphs[(1, query_rows) if compact else bs] = graph
 
         torch.cuda.synchronize()
         reset_context()

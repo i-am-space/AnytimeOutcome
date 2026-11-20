@@ -33,7 +33,8 @@ class DraftRunner(ModelRunner):
         )
         return draft_cfg
 
-    def __init__(self, cfg: Config, rank: int = 0, init_q = None, request_epoch=None, publication_feedback=None):
+    def __init__(self, cfg: Config, rank: int = 0, init_q = None, request_epoch=None, publication_feedback=None, outcome_depth_feedback=None):
+        self.outcome_depth_feedback = outcome_depth_feedback
         self.request_epoch = request_epoch
         self.publication_feedback = publication_feedback
         self.served_epoch = 0
@@ -118,6 +119,7 @@ class DraftRunner(ModelRunner):
         self.tree_cache_logits = None
         self.tree_cache_activations = None
         self.tree_cache_expected_tokens = None
+        self.tree_cache_valid_lengths = None
         self.cache_valid_length = self.config.speculate_k
 
     def _init_prealloc_buffers(self):
@@ -141,6 +143,13 @@ class DraftRunner(ModelRunner):
                 torch.cuda.Event, self.publication_feedback)
         K, MQ_LEN = self.config.speculate_k, self.config.MQ_LEN
         d = self.device
+        self._outcome_indices = None
+        if self.config.outcome_depths is not None:
+            from ssd.engine.outcome_depth import active_rows_by_depth, row_depths
+            self._outcome_indices = [torch.tensor(rows, dtype=torch.int64, device=d) for rows in
+                active_rows_by_depth(K, self.config.async_fan_out, self.config.outcome_depths)]
+            self._outcome_lengths = torch.tensor(row_depths(K, self.config.async_fan_out,
+                self.config.outcome_depths), dtype=torch.int64, device=d)
         self._step_pos_offsets = torch.arange(K, device=d, dtype=torch.int64)[:, None] * MQ_LEN
         self._step_rope_offsets = torch.arange(K, device=d, dtype=torch.int64)[:, None]
         self._fan_idx_hit = torch.arange(K + 1, device=d, dtype=torch.int64).repeat_interleave(self.config.fan_out_t)
@@ -274,7 +283,7 @@ class DraftRunner(ModelRunner):
             # Vectorized membership against tensor cache
             eq = (request_keys.unsqueeze(1) == self.tree_cache_keys.unsqueeze(0))  # [B,T,3]
             match = torch.all(eq, dim=2)  # [B,T]
-            if self.config.early_publish_tokens:
+            if self.config.early_publish_tokens or getattr(self.config, 'outcome_depths', None):
                 # A matching key must also name this exact committed context.
                 match &= num_tokens[:, None] == self.tree_cache_expected_tokens[None, :]
             cache_hits = match.any(dim=1)  # [B]
@@ -307,8 +316,16 @@ class DraftRunner(ModelRunner):
                 sel = cache_hits
                 if self.config.early_publish_tokens:
                     self.response_valid_length = self.cache_valid_length
-                # tokens [T,K]
-                length = self.tree_cache_tokens.shape[1]
+                if getattr(self, 'tree_cache_valid_lengths', None) is not None:
+                    self.response_valid_length = int(self.tree_cache_valid_lengths[idx[0]].item())
+                    if getattr(self, 'outcome_depth_feedback', None) is not None:
+                        rank = int(idx[0].item()) % self.config.async_fan_out
+                        with self.outcome_depth_feedback.get_lock():
+                            self.outcome_depth_feedback[3 + rank if rank < 3 else 7] += 1
+                            self.outcome_depth_feedback[6] += int(self.response_valid_length < K)
+                # Only offer the selected outcome's completed continuation.
+                length = (self.response_valid_length if getattr(self, 'tree_cache_valid_lengths', None) is not None
+                          else self.tree_cache_tokens.shape[1])
                 out_tokens[sel, :length] = self.tree_cache_tokens[idx[sel], :length]
                 # logits [T,K+1,V]
                 out_logits[sel, :length] = self.tree_cache_logits[idx[sel], :length]
@@ -805,6 +822,22 @@ class DraftRunner(ModelRunner):
 
     def _decode_tree_step(self, depth, current_input_ids, step_rope_positions, step_slot_maps, step_context_lens, dbt, payload, spec_tokens, spec_logits, spec_activations):
         """Execute a single tree decode step."""
+        if getattr(self, '_outcome_indices', None) is not None:
+            active = self._outcome_indices[depth]
+            set_context(is_prefill=False, slot_mapping=step_slot_maps[depth].index_select(0, active),
+                context_lens=step_context_lens[depth].to(torch.int32), block_tables=dbt)
+            try:
+                logits = self.run_model(current_input_ids.index_select(0, active),
+                    step_rope_positions[depth].index_select(0, active), is_prefill=False,
+                    last_only=False, tree_decode_step=depth, cache_hits=payload['cache_hits'])
+                next_tokens = (logits.argmax(dim=-1) if payload['_all_greedy'] else
+                    self.sampler(logits, payload['temps'].index_select(0, active), is_tree=True))
+                spec_logits[:, depth].index_copy_(0, active, logits)
+                spec_tokens[:, depth].index_copy_(0, active, next_tokens)
+                payload['_computed_query_rows'] += len(active)
+                return spec_tokens[:, depth]
+            finally:
+                reset_context()
         # Use precomputed values for this step
         set_context(
             is_prefill=False,
@@ -866,12 +899,15 @@ class DraftRunner(ModelRunner):
         _step_times = []
         self.cache_generation += 1
         self.cache_drain_s = 0.0
-        completed = K
+        limit = max(self.config.outcome_depths) if getattr(self.config, 'outcome_depths', None) is not None else K
+        payload['_computed_query_rows'] = 0
+        submitted_steps = 0
+        completed = limit
         checkpoint = getattr(self, '_publication_checkpoint', None)
         overlap = getattr(self, '_handoff_stream', None) is not None
         if checkpoint is not None:
             checkpoint.begin(torch.cuda.current_stream())
-        for depth in range(K):
+        for depth in range(limit):
             if checkpoint is not None:
                 started = time.perf_counter()
                 pending = (lambda: self.request_epoch.value > self.served_epoch) if overlap else self.request_epoch.value > self.served_epoch
@@ -887,6 +923,7 @@ class DraftRunner(ModelRunner):
                     depth, current_input_ids, step_rope_positions, step_slot_maps,
                     step_context_lens, dbt, payload, spec_tokens, spec_logits, spec_activations
                 )
+            submitted_steps = depth + 1
             if checkpoint is not None:
                 checkpoint.submitted(depth + 1)
             elif self.config.early_publish_tokens:
@@ -922,6 +959,11 @@ class DraftRunner(ModelRunner):
                 self._pending_tree = (payload, spec_tokens, spec_logits, spec_activations)
             checkpoint.finish()
         self.cache_valid_length = completed
+        if getattr(self, 'outcome_depth_feedback', None) is not None:
+            with self.outcome_depth_feedback.get_lock():
+                self.outcome_depth_feedback[0] += 1
+                self.outcome_depth_feedback[1] += payload['_computed_query_rows']
+                self.outcome_depth_feedback[2] += N * submitted_steps
         # Tail slots stay initialized but are never offered for acceptance.
         return spec_tokens, spec_logits, spec_activations
 
@@ -932,7 +974,10 @@ class DraftRunner(ModelRunner):
             parent_positions = self._fan_idx_hit if payload['cache_hits_list'][0] else self._fan_idx_miss
             (self.tree_cache_keys, self.tree_cache_expected_tokens,
              self.tree_cache_tokens, self.tree_cache_logits) = self._prefix_snapshot.copy(
-                payload, tokens, logits, self.cache_valid_length, parent_positions)
+                payload, tokens, logits, self.cache_valid_length, parent_positions,
+                self._outcome_lengths if getattr(self, '_outcome_indices', None) is not None else None)
+            if getattr(self, '_outcome_indices', None) is not None:
+                self.tree_cache_valid_lengths = self._prefix_snapshot.lengths[:self.tree_cache_keys.shape[0]]
             self.tree_cache_activations = None
             return
         seq_ids_expanded = payload["seq_ids_expanded"].to(torch.int64)
@@ -945,13 +990,15 @@ class DraftRunner(ModelRunner):
         keys = torch.stack([seq_ids_expanded, k_flat, rec_flat], dim=1).contiguous()  # [N,3]
 
         assert self.tree_cache_keys.numel() == 0
-        if self.config.early_publish_tokens:
+        if self.config.early_publish_tokens or getattr(self.config, 'outcome_depths', None):
             valid = k_flat <= payload["valid_length"]
             keys = keys[valid]
             tokens = tokens[valid]
             logits = logits[valid]
             self.tree_cache_expected_tokens = (
                 payload["base_num_tokens"].repeat_interleave(self.config.MQ_LEN) + k_flat + 1)[valid]
+        if getattr(self, '_outcome_indices', None) is not None:
+            self.tree_cache_valid_lengths = self._outcome_lengths.clamp(max=self.cache_valid_length)[valid]
         self.tree_cache_keys = keys
         self.tree_cache_tokens = tokens
         self.tree_cache_logits = logits

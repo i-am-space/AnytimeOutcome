@@ -13,6 +13,7 @@ class Config:
     gpu_memory_utilization: float = 0.7
     enable_prefix_cache: bool = True
     draft_gpu_memory_utilization: float | None = None  # None = upstream default (0.75 sync / 0.8 async)
+    outcome_depths: list[int] | None = None  # continuation length per recovery-token rank
     early_publish_tokens: int = 0  # 0: complete-cache SSD; positive: uniform minimum ready depth
     publication_policy: str = 'uniform'  # uniform (v1), bounded, adaptive, or overlap
     publication_max_inflight: int = 2  # unfinished draft steps, bounded/adaptive only
@@ -77,6 +78,19 @@ class Config:
                     self.max_num_seqs != 1 or not self.jit_speculate or
                     not 1 <= self.early_publish_tokens <= self.speculate_k):
                 raise ValueError('Early publication requires async batch-one SSD, JIT misses, and 1 <= P <= K')
+            self.drain_draft_on_finish = True
+        if self.outcome_depths is not None:
+            from ssd.engine.outcome_depth import validate_depths
+            validate_depths(self.outcome_depths, self.speculate_k, self.async_fan_out)
+            if (not self.speculate or not self.draft_async or self.max_num_seqs != 1 or
+                    self.use_eagle or not self.jit_speculate or self.enforce_eager or
+                    self.publication_policy not in ('uniform', 'overlap')):
+                raise ValueError('Outcome depths require graph-enabled, plain async batch-one SSD with JIT')
+            if self.early_publish_tokens > min(self.outcome_depths):
+                raise ValueError('Every outcome must reach minimum publication depth P')
+            for fan in (self.fan_out_list, self.fan_out_list_miss):
+                if fan is not None and fan != [self.async_fan_out] * (self.speculate_k + 1):
+                    raise ValueError('Outcome-depth v1 requires uniform recovery fan-out')
             self.drain_draft_on_finish = True
         assert os.path.isdir(model)
 

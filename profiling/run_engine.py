@@ -53,6 +53,7 @@ def parse():
                    help="fraction of free memory for KV cache; use ~0.08 under ncu (replay backs up written buffers)")
     p.add_argument("--draft_gpu_mem_util", type=float)
     p.add_argument('--target-numerics', choices=['batched', 'ar_compatible', 'shared_fixed16'], default='batched')
+    p.add_argument("--outcome-depths", type=int, nargs="+", help="continuation depth per recovery-token rank")
     p.add_argument("--early-publish-tokens", type=int, default=0)
     p.add_argument("--publication-policy", choices=['uniform', 'bounded', 'adaptive', 'overlap'], default='uniform')
     p.add_argument("--publication-max-inflight", type=int, default=2)
@@ -91,6 +92,7 @@ def measure_request(llm, item, sampling, *, synchronize, clock=time.perf_counter
         builtins.print = original_print
         if profile_capture:
             torch.cuda.nvtx.range_pop()
+    from ssd.engine.outcome_depth import STAT_NAMES
     steps = metrics['target_step_times']
     accepted = metrics['accepted_suffix_lens_with_recovery']
     hits = metrics['cache_hits']
@@ -103,6 +105,8 @@ def measure_request(llm, item, sampling, *, synchronize, clock=time.perf_counter
         accepted_draft_tokens=sum(n-1 for n in accepted),
         verified_draft_tokens=sum(metrics.get('verified_lengths', [])) if metrics.get('verified_lengths') else
                               len(accepted)*llm.config.speculate_k if accepted else 0,
+        outcome_depth_stats=(dict(zip(STAT_NAMES,
+            list(llm.outcome_depth_feedback[:]))) if getattr(llm, 'outcome_depth_feedback', None) is not None else None),
         draft_wait_s=sum(metrics.get('draft_wait_times', [])),
         publication_records=list(metrics.get('publication_records', [])),
         publication_policy_stats=(list(llm.publication_feedback[:])
@@ -140,6 +144,8 @@ def main():
     if manifest:
         if args.target_numerics != manifest.get('target_numerics', 'batched'):
             raise ValueError('Numerical backend differs from the versioned campaign')
+        if args.outcome_depths is not None:
+            raise ValueError("Unequal outcome depths require a separate versioned study")
         if args.early_publish_tokens:
             raise ValueError('Early publication is a separate study, not baseline tuning')
         if args.drain_draft_on_finish != (manifest.get('drain_draft_on_finish', False) and args.mode=='ssd'):
@@ -196,6 +202,7 @@ def main():
                                       args.gpu_mem_util if args.gpu_mem_util < 0.7 else None),
         enable_prefix_cache=not args.disable_prefix_cache,
         target_numerics=args.target_numerics,
+        outcome_depths=args.outcome_depths,
         early_publish_tokens=args.early_publish_tokens,
         publication_policy=args.publication_policy,
         publication_max_inflight=args.publication_max_inflight,

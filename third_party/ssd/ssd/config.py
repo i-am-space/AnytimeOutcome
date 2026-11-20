@@ -17,6 +17,10 @@ class Config:
     publication_policy: str = 'uniform'  # uniform (v1), bounded, adaptive, or overlap
     publication_max_inflight: int = 2  # unfinished draft steps, bounded/adaptive only
     drain_draft_on_finish: bool = False
+    greedy_transport: bool = False  # versioned IDs-only protocol; legacy stays default
+    handoff_service: str = 'inline'  # inline or independent CPU service thread
+    handoff_bypass_ready: bool = False
+    handoff_trace: bool = False  # intrusive diagnostic; never headline timing
     target_numerics: str = 'batched'  # 'ar_compatible' opts into AR-shaped target verification.
     num_gpus: int = 1
     enforce_eager: bool = False
@@ -57,6 +61,15 @@ class Config:
 
     def __post_init__(self):
         model = self.model 
+        if self.handoff_service not in ('inline', 'threaded'):
+            raise ValueError('Unknown handoff service')
+        if self.greedy_transport:
+            if (not self.speculate or not self.draft_async or self.max_num_seqs != 1 or
+                    self.use_eagle or not self.jit_speculate or self.sampler_x is not None):
+                raise ValueError('IDs-only transport requires plain batch-one async greedy SSD with JIT')
+            self.drain_draft_on_finish = True
+        elif self.handoff_service != 'inline' or self.handoff_bypass_ready or self.handoff_trace:
+            raise ValueError('New handoff options require IDs-only transport')
         if self.publication_policy not in ('uniform', 'bounded', 'adaptive', 'overlap'):
             raise ValueError('Unknown publication policy')
         if not 1 <= self.publication_max_inflight <= 15:

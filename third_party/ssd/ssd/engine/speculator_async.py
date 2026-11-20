@@ -30,6 +30,9 @@ class SpeculatorAsync(SpeculatorBase):
         request_epoch=None,
         publication_metadata=False,
         metrics=None,
+        greedy_transport=False,
+        request_clock=None,
+        trace_queue=None,
     ):
         super().__init__(lookahead, device)
         self.async_fan_out = async_fan_out
@@ -46,6 +49,8 @@ class SpeculatorAsync(SpeculatorBase):
         self.request_epoch = request_epoch
         self.publication_metadata = publication_metadata
         self.metrics = metrics
+        self.greedy_transport = greedy_transport
+        self.request_clock, self.trace_queue = request_clock, trace_queue
         self.valid_length = lookahead
 
         # Pre-allocate handshake send/recv buffers (reused every step)
@@ -65,12 +70,15 @@ class SpeculatorAsync(SpeculatorBase):
         self._temps_buf = torch.empty(B, dtype=torch.float32, device=d)
         self._block_tables_buf = torch.full((B, self.max_blocks), -1, dtype=torch.int32, device=d)
         self._fused_response = torch.empty(B + B * self.K + (5 if self.publication_metadata else 0), dtype=torch.int64, device=d)
-        self._logits_q = torch.empty(B, self.K, self.vocab_size, dtype=self.draft_dtype, device=d)
+        self._logits_q = None if self.greedy_transport else torch.empty(B, self.K, self.vocab_size, dtype=self.draft_dtype, device=d)
         self._extend_counts = torch.zeros(B, dtype=torch.int64, device=d)
 
     def _notify(self):
         if self.request_epoch is not None:
             with self.request_epoch.get_lock():
+                if getattr(self,'request_clock',None) is not None:
+                    import time
+                    self.request_clock.value = time.monotonic_ns()
                 self.request_epoch.value += 1
 
     def drain(self):
@@ -86,6 +94,16 @@ class SpeculatorAsync(SpeculatorBase):
             self.metrics["final_drain_times"].append(perf_counter() - started)
             self.metrics["draft_peak_memory"].append(dict(allocated_bytes=int(ack[1].item()),
                                                        reserved_bytes=int(ack[2].item())))
+            if getattr(self,'trace_queue',None) is not None:
+                from ssd.engine.handoff_state import classify_trace
+                received={r['generation']:r for r in self.metrics['handoff_target_events']}
+                for row in self.trace_queue.get(timeout=30):
+                    target=received.get(row['generation'])
+                    if target:
+                        row['draft_delivery_ns']=row.get('delivery_ns')
+                        row['delivery_ns']=target['target_received_ns']
+                        row['classification']=classify_trace(row)
+                    self.metrics['handoff_trace'].append(row)
 
     def prefill(self, seqs: list[Sequence], verify_result: VerifyResult) -> SpeculateResult:
         self._notify()
@@ -222,11 +240,16 @@ class SpeculatorAsync(SpeculatorBase):
             if not 1 <= length <= self.K or (self.request_epoch is not None and epoch != self.request_epoch.value):
                 raise RuntimeError("Incomplete or stale draft publication")
             self.valid_length = length
+            if self.trace_queue is not None and self.metrics is not None:
+                import time
+                self.metrics['handoff_target_events'].append(dict(epoch=epoch,generation=generation,
+                                                                 target_received_ns=time.monotonic_ns()))
             if self.metrics is not None:
                 self.metrics["publication_records"].append(dict(valid_length=length, epoch=epoch,
                     generation=generation, drain_s=drain_ns/1e9, publication_s=publication_ns/1e9))
-        with nvtx_range("SSD/recv_draft_logits"):
-            dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
+        if not self.greedy_transport:
+            with nvtx_range("SSD/recv_draft_logits"):
+                dist.recv(self._logits_q, src=self.draft_runner_rank, group=self.async_pg)
 
         if self.metrics is not None:
             self.metrics["draft_wait_times"].append(perf_counter() - wait_started)

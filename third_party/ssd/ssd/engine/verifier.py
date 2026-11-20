@@ -106,7 +106,7 @@ class Verifier(VerifierBase):
         torch.cuda.nvtx.range_push("verify/accept")
         new_suffixes, recovery_tokens = verify(
             logits_p=logits_p[:, :valid+1],
-            logits_q=speculate_result.logits_q[:, :valid],
+            logits_q=(speculate_result.logits_q[:, :valid] if speculate_result.logits_q is not None else None),
             speculations=speculate_result.speculations[:, :valid+1],
             temperatures_target=temperatures_target,
             temperatures_draft=temperatures_draft,

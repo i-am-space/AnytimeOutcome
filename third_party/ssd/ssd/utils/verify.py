@@ -62,6 +62,8 @@ def verify(
         ratio_rows = base_ratio_rows & (cache_hits.to(torch.bool) if cache_hits is not None else torch.zeros_like(base_ratio_rows, dtype=torch.bool))
 
     do_any_ratio = ratio_rows.any().item()
+    if do_any_ratio and logits_q is None:
+        raise ValueError('Draft logits are required for stochastic verification')
 
     # We need probs_p for recovery sampling whenever any temps_t>0 exists,
     # regardless of whether we end up doing ratio on any row.

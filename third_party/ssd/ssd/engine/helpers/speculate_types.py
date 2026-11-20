@@ -7,7 +7,7 @@ from abc import ABC, abstractmethod
 @dataclass
 class SpeculateResult:
     speculations: torch.Tensor
-    logits_q: torch.Tensor
+    logits_q: torch.Tensor | None
     cache_hits: torch.Tensor | None = None
     valid_length: int | None = None
 

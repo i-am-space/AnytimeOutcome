@@ -39,6 +39,8 @@ METRICS = {
     "verified_lengths": [],
     "final_drain_times": [],
     "draft_peak_memory": [],
+    "handoff_trace": [],
+    "handoff_target_events": [],
 }
 
 
@@ -66,9 +68,15 @@ class LLMEngine:
 
         ctx = mp.get_context("spawn")
         self.publication_epoch = ctx.Value("q", 0) if config.early_publish_tokens else None
+        if config.greedy_transport and self.publication_epoch is None:
+            self.publication_epoch = ctx.Value('q', 0)
+        self.handoff_request_clock = ctx.Value('q', 0) if config.greedy_transport else None
+        self.handoff_trace_queue = ctx.Queue() if config.handoff_trace else None
         # Verification EWMA (4 slots), then checkpoint telemetry (4 slots).
         self.publication_feedback = (ctx.Array('d', 12 if config.publication_policy == 'overlap' else 8)
                                      if config.publication_policy != 'uniform' else None)
+        if config.greedy_transport:
+            self.publication_feedback = ctx.Array('d',16)
         self.num_tp_gpus = config.num_gpus if not self.config.draft_async else config.num_gpus - 1
 
         if config.speculate and config.draft_async:
@@ -92,8 +100,13 @@ class LLMEngine:
         if config.speculate and config.draft_async:
             init_q = ctx.Queue()
             draft_rank = config.num_gpus - 1
-            self.draft_ps = ctx.Process(
-                target=DraftRunner, args=(config, draft_rank, init_q, self.publication_epoch, self.publication_feedback))
+            runner = DraftRunner
+            runner_args = (config, draft_rank, init_q, self.publication_epoch, self.publication_feedback)
+            if config.greedy_transport:
+                from ssd.engine.greedy_draft_runner import GreedyDraftRunner
+                runner = GreedyDraftRunner
+                runner_args += (self.handoff_request_clock, self.handoff_trace_queue)
+            self.draft_ps = ctx.Process(target=runner, args=runner_args)
             self.draft_ps.start()
             print(
                 f'Draft runner created on rank {draft_rank} (async)!', flush=True)
@@ -142,7 +155,14 @@ class LLMEngine:
         try:
             if self.config.speculate and self.config.draft_async:
                 # Use local method (no SHM) to send cmd=2
-                self.model_runner.send_draft_exit_signal()
+                if self.config.greedy_transport:
+                    import time
+                    with self.publication_epoch.get_lock():
+                        self.handoff_request_clock.value = time.monotonic_ns()
+                        self.publication_epoch.value += 1
+                    # ModelRunner.exit sends the single command after this notification.
+                else:
+                    self.model_runner.send_draft_exit_signal()
         except Exception:
             pass
         # 2) Tell all target ranks (including rank 0 self) to exit (non-blocking cleanup, no os._exit inside)
@@ -194,6 +214,8 @@ class LLMEngine:
             os._exit(0)
 
     def add_request(self, prompt: str | list[int], sampling_params: SamplingParams):
+        if getattr(self.config,'greedy_transport',False) and (sampling_params.temperature != 0 or sampling_params.draft_temperature not in (None, 0)):
+            raise ValueError('IDs-only transport cannot be used for stochastic decoding')
         if self.config.target_numerics in ('ar_compatible', 'shared_fixed16') or self.config.early_publish_tokens:
             if sampling_params.temperature != 0 or sampling_params.draft_temperature not in (None, 0):
                 raise ValueError('AR-compatible verification is validated for greedy decoding only')
@@ -301,6 +323,9 @@ class LLMEngine:
                     request_epoch=self.publication_epoch,
                     publication_metadata=config.drain_draft_on_finish,
                     metrics=METRICS,
+                    greedy_transport=config.greedy_transport,
+                    request_clock=self.handoff_request_clock,
+                    trace_queue=self.handoff_trace_queue,
                 )
             else:
                 speculator = SpeculatorSync(

@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-19T12:59:28.921406+00:00",
+  "tmux_session": "ao-greedy-handoff",
+  "command": "env -u LD_PRELOAD -u NVIDIA_TF32_OVERRIDE -u TORCH_ALLOW_TF32_CUBLAS_OVERRIDE -u CUBLAS_WORKSPACE_CONFIG -u CUDA_LAUNCH_BLOCKING -u OMP_NUM_THREADS -u MKL_NUM_THREADS -u PYTORCH_CUDA_ALLOC_CONF CUDA_HOME=/usr/local/cuda-12.9 SSD_CUDA_ARCH=8.9 CUDA_VISIBLE_DEVICES= bash -lc 'source /home/vishalrao/AnytimeOutcome/.worktrees/greedy-handoff-v1/profiling/env.sh\nexec /home/vishalrao/miniconda3/bin/python3.13 -O /home/vishalrao/AnytimeOutcome/.worktrees/greedy-handoff-v1/profiling/run_greedy_handoff_campaign.py --watch --outdir /home/vishalrao/AnytimeOutcome/results/next_stage/greedy_handoff_v1_2026-11-19 >> /home/vishalrao/AnytimeOutcome/results/next_stage/greedy_handoff_v1_2026-11-19/queue.log 2>&1'",
+  "worktree": "/home/vishalrao/AnytimeOutcome/.worktrees/greedy-handoff-v1",
+  "queue_sha256": "01f7285246ded3bded797ac98de076df365f70f601d955c3ac4d34891f30f28d",
+  "controller_cuda_visible_devices": "",
+  "global_lock": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/.campaign.lock"
+}

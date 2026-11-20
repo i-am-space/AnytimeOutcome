@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-17T20:11:11.747745+00:00",
+  "queue_sha256": "bc560af93991a9ca21cf162b05524cd4cb677832070689eca1ed708fb5c1d402",
+  "execution_sha256": "169b834855d0e7c53c70caf4550d43a1e48813eb0b88d456d4fab731d2806e9c",
+  "source_archive_sha256": "8eb4d7156cfc422c485e313e2a18ac7a1bd343944e202c66c0e20c8b102effcb",
+  "worktree": "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1",
+  "branch": "codex/outcome-depth-v1",
+  "base_commit": "1084d91d2ea3e65e01ba91dab42d69a1ae052f67",
+  "cpu_tests": {
+    "result": "251 passed, 21 skipped, 14 warnings in 14.24s",
+    "log_sha256": "82f8471508ee6b62130e5c02d96b7a47c6021da84b25e13f8983b161cca23100"
+  },
+  "gpu_kernel_tests": {
+    "result": "7 passed, 14 warnings in 4.91s",
+    "log_sha256": "a92c627d00d01b2797821970267aea81920b83bbd9b3acfd8a8336bf5f74d2d4",
+    "physical_gpu": 0,
+    "gpu_uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+    "scope": "Tiny real CUDA graphs/FlashInfer attention; head_dim128 GQA; complete/compact/rank/reverse/equal-work cases; not full-model generation",
+    "performance_evidence": false
+  },
+  "full_model_exactness": "queued_not_run",
+  "headline_performance": "queued_not_run",
+  "frozen_inputs_valid": true,
+  "predecessors_execution_unchanged": true,
+  "source_archive_verified": true,
+  "gate_requests": 168,
+  "tuning_requests": 672,
+  "heldout_requests": 5250
+}

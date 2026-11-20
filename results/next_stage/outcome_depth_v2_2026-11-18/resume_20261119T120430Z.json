@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-19T12:04:30.620440+00:00",
+  "previous_status": {
+    "status": "stopped",
+    "reason": "Campaign worker failed: /home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r3_overlap_k7/attempt_1/worker.log; None",
+    "at": "2026-11-18T16:22:56.712888+00:00"
+  },
+  "action": "Resume unchanged frozen campaign; wait for dedicated GPUs before scheduling workers",
+  "reason": "Previous worker failed during CUDA driver initialization",
+  "completed_blocks_preserved": true,
+  "execution_code_changed": false,
+  "command": "env -u LD_PRELOAD -u NVIDIA_TF32_OVERRIDE -u TORCH_ALLOW_TF32_CUBLAS_OVERRIDE -u CUBLAS_WORKSPACE_CONFIG -u CUDA_LAUNCH_BLOCKING -u OMP_NUM_THREADS -u MKL_NUM_THREADS -u PYTORCH_CUDA_ALLOC_CONF CUDA_HOME=/usr/local/cuda-12.9 SSD_CUDA_ARCH=8.9 CUDA_VISIBLE_DEVICES= bash -lc 'source /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/env.sh\nexec /home/vishalrao/miniconda3/bin/python3.13 -O /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_outcome_depth_reuse_ar.py --watch >> /home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v2_2026-11-18/queue.log 2>&1'"
+}

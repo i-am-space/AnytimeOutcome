@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-17T20:48:34.329092+00:00",
+  "historical_sources": [
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/queue_runtime_estimate_2026-11-18.json",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v1_2026-11-18/runtime_estimate.json"
+  ],
+  "removed_full_ar_tuning_blocks": 4,
+  "removed_full_ar_heldout_blocks": 20,
+  "added_short_ar_continuity_blocks": 1,
+  "saved_worker_blocks_net": 23,
+  "saved_scored_requests_net": 1593,
+  "remaining_blocks_min": 220,
+  "remaining_blocks_max": 230,
+  "remaining_scored_requests_min": 8841,
+  "remaining_scored_requests_max": 9591,
+  "remaining_fresh_scored_ar_requests": {
+    "publication_continuity": 3,
+    "unequal_correctness": 12,
+    "context_sweep": 36
+  },
+  "estimated_saved_hours": 2.802924207714487,
+  "estimated_total_hours": 7.5153003656902175,
+  "estimated_total_with_optional_anchor_hours": 8.022872325134662,
+  "assumptions": [
+    "No waiting, invalidated retries, or new-policy cost changes included.",
+    "Remove repeated AR timing arms from both publication and unequal-depth campaigns; keep correctness and new-input AR.",
+    "Add one three-prompt continuity block with historical AR overhead as a proxy.",
+    "SSD measurements remain fresh. Only AR timing references are historical."
+  ]
+}

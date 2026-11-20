@@ -1,0 +1,33 @@
+{
+  "valid": false,
+  "definition_sha256": "86ff515132e96e41625efdd617972cf77b531db446fdae341cb421bab9ce3466",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python3.13",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18",
+    "--phase",
+    "continuity",
+    "--job",
+    "fixed_r0_ar",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18/continuity/fixed_r0_ar/attempt_0"
+  ],
+  "returncode": -15,
+  "samples": 3,
+  "external_processes": [
+    {
+      "uuid": "GPU-4890b987-943e-ab85-5519-27aab934f5bd",
+      "pid": 2828993,
+      "name": "VLLM::EngineCore"
+    }
+  ],
+  "error": null,
+  "run_token": "a45d0f879e03447695f0ba9562c5dc4f",
+  "dedicated_gpus": true,
+  "profiler": false,
+  "at": "2026-11-17T23:26:30.954980+00:00",
+  "output_sha256": null
+}

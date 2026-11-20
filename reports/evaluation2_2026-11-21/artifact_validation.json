@@ -1,0 +1,52 @@
+{
+  "evidence_files_verified": 955,
+  "historical_valid_blocks_audited": 88,
+  "valid_blocks_audited": 253,
+  "output_audit": {
+    "baseline_heldout_exact": 1500,
+    "publication_heldout_exact": 2250,
+    "context_speculative_exact": 252,
+    "depth_heldout_exact": 3225
+  },
+  "plotted_values": "passed",
+  "pdfs": {
+    "Evaluation2_Learning_Guide.pdf": {
+      "pages": 45,
+      "all_pages_rendered": true,
+      "text_bounds": "passed",
+      "characters": 79886
+    },
+    "Evaluation2_Presentation.pdf": {
+      "pages": 21,
+      "all_pages_rendered": true,
+      "text_bounds": "passed",
+      "characters": 14150
+    },
+    "Evaluation2_Speaker_and_QA_Guide.pdf": {
+      "pages": 17,
+      "all_pages_rendered": true,
+      "text_bounds": "passed",
+      "characters": 22982
+    }
+  },
+  "pptx": {
+    "slides": 21,
+    "native_text_and_shapes": true,
+    "notes_slides": 21,
+    "xml_and_relationships": "passed",
+    "native_office_rendering": "not available on this host; PDF and editable PPTX share scene geometry"
+  },
+  "contact_sheets": [
+    "Evaluation2_Learning_Guide_contact_1.jpg",
+    "Evaluation2_Learning_Guide_contact_2.jpg",
+    "Evaluation2_Learning_Guide_contact_3.jpg",
+    "Evaluation2_Presentation_contact_1.jpg",
+    "Evaluation2_Presentation_contact_2.jpg",
+    "Evaluation2_Speaker_and_QA_Guide_contact_1.jpg",
+    "Evaluation2_Speaker_and_QA_Guide_contact_2.jpg"
+  ],
+  "main_talk_seconds": 600,
+  "qa_questions": 25,
+  "no_gpu_workers_started": true,
+  "frozen_cutoff_ist": "2026-11-21T00:17:05.842058+05:30"
+}

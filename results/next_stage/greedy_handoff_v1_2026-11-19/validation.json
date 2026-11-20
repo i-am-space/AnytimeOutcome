@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-19T12:59:28.917175+00:00",
+  "cpu_tests": {
+    "passed": 253,
+    "skipped": 19,
+    "log_sha256": "2b4440abcec1dda288c7d06c523ea6fcb57d486b16e23518311c02090b928ebf"
+  },
+  "source_archive_sha256": "fd5def5898267f11c7a5eca936a65fab5cd25594dd4d094bf8a1b84154eaa09a",
+  "all_frozen_code_matches_archive": true,
+  "original_engine_unmodified": true,
+  "original_and_candidate_import_paths_verified": true,
+  "legacy_diagnostic_hooks_import_verified": true,
+  "protocol_prepare_passed": true,
+  "cuda_full_model_validation": "queued; not yet run",
+  "performance_results": "pending",
+  "queue_sha256": "01f7285246ded3bded797ac98de076df365f70f601d955c3ac4d34891f30f28d"
+}

@@ -1,0 +1,34 @@
+{
+  "correctness_passed": true,
+  "requests": 3,
+  "checks": [
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "config": "ar",
+      "id": "HumanEval/146",
+      "exact": true,
+      "first_difference_zero_based": null,
+      "reference_origin": "saved_shared_ar"
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "config": "ar",
+      "id": "specbench-109",
+      "exact": true,
+      "first_difference_zero_based": null,
+      "reference_origin": "saved_shared_ar"
+    },
+    {
+      "protocol": "fixed",
+      "round": 0,
+      "config": "ar",
+      "id": "specbench-496",
+      "exact": true,
+      "first_difference_zero_based": null,
+      "reference_origin": "saved_shared_ar"
+    }
+  ],
+  "performance_evidence": false
+}

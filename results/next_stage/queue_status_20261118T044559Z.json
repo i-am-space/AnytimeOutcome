@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-18T04:45:59.966125+00:00",
+  "publication_completed_tuning_blocks": 21,
+  "publication_total_tuning_blocks": 42,
+  "completed_tuning_requests": 504,
+  "exact_matches": 504,
+  "mean_current_tuning_worker_s": 83.86362437974839,
+  "remaining_tuning_minutes": 29.352268532911935,
+  "publication_heldout_minutes_proxy": 90.1129527,
+  "context_minutes_proxy": 55.09964083623526,
+  "unequal_depth_minutes_proxy": 237.46224274850144,
+  "total_remaining_hours_proxy": 6.867118413627478,
+  "optional_anchor_hours": 0.5006275149999999,
+  "reserved_hours": [
+    7,
+    9
+  ],
+  "completion_window_if_uninterrupted_IST": [
+    "18 Nov 05:15 PM IST",
+    "18 Nov 07:15 PM IST"
+  ],
+  "remaining_blocks_min": 198,
+  "remaining_blocks_max": 208,
+  "assumptions": [
+    "All valid completed blocks preserved; in-progress block counted fully as remaining.",
+    "Publication tuning uses actual first-round worker wall times including model loading and warmup.",
+    "Held-out and context use previous measured worker times; unequal-depth costs not yet measured.",
+    "Reserved range allows longer new-feature execution and analysis. Waiting, retries and correctness failures can delay completion."
+  ]
+}

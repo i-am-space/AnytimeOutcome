@@ -1,0 +1,435 @@
+PAGE 1
+Your ten-minute presentation
+11 main slides · 600 seconds · 10 backup slides for questions
+How to rehearse
+Give the short conclusion first. For each figure: identify its baseline, state what is fixed,
+read the direction and magnitude, then name the limitation. The spoken scripts are starting
+points: pause to point to the plotted evidence.
+Safe central sentence
+We built safe incremental publication and unequal-depth drafting, established reproducible
+baselines, and measured when these mechanisms help or add overhead. Beating tuned
+complete SSD remains unestablished.
+Questions to expect
+Why no speedup? Why K7 versus K10? Why does numerical equivalence use a new AR?
+Does reduced work help? How were timing and GPU allocation controlled? The five Q&A
+pages provide 25 short answers.
+Rubric criterion
+Where the talk provides evidence
+Implementation & progress · 8
+Slides 2–3, 7, 10; ownership/control backups
+Initial results & analysis · 8
+Slides 5–10; measured plots and limits
+Comparisons / tradeoffs /
+ablations · 8
+Slides 4, 8–11; matched K and six-arm controls
+Presentation & technical
+clarity · 6
+Timed narrative, explicit units/reference, readable figures
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+01
+
+
+PAGE 2
+Slide 1 · Publish useful work sooner.
+Does the response finish sooner?
+40 seconds · cumulative 0:40 · IMPLEMENTED · RESULTS MIXED
+Say this
+Our project asks whether a speculative continuation must be fully drafted before it is useful.
+We built mechanisms that can hand over a completed prefix, and a prototype that gives
+different possible outcomes different depths. We also built the experimental infrastructure
+needed to test them fairly. The main finding so far is a useful negative result: the current
+policies have not beaten tuned complete SSD. I will show what is implemented, what the
+measurements establish, and which specific bottleneck the next version tests.
+Technical detail if asked
+The proposal’s 10% latency-reduction target is an objective, not an achieved result.
+Established SSD acceleration is distinct from our incremental scheduling contribution.
+Transition
+First, here is the system we actually built.
+Evidence
+Proposal pp. 1–2; validated baseline/publication/context studies; partial unequal-depth
+snapshot
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+02
+
+
+PAGE 3
+Slide 2 · A working executor, with safe
+handoff between two GPUs
+55 seconds · cumulative 1:35 · IMPLEMENTED
+Say this
+The large target verifies tokens and remains responsible for every committed output. The small
+drafter prepares continuations for likely recovery outcomes. AR and synchronous SD run on
+GPU zero; SSD uses the target on zero and drafter on one. These are two L40S devices
+connected through PCIe across NUMA sockets, without NVLink. Our additions sit between draft
+preparation and the target’s next verification: readiness events, valid lengths, safe snapshots
+and depth allocation. The unequal-depth implementation really removes inactive rows from
+deeper forwards. The newest token-only service version is implemented separately, but its GPU
+tests have not yet run.
+Technical detail if asked
+Batch size is one request. Target padding to sixteen rows and (K+1)×F tree rows are internal
+execution dimensions. Main complete SSD is preserved as the successor comparator.
+Transition
+The important implementation distinction is when handoff becomes safe.
+Evidence
+workload; docs/prefix_publication.md; docs/outcome_depth.md; greedy_validation
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+03
+
+
+PAGE 4
+Slide 3 · A safe prefix can be delivered
+before queued tail work finishes
+55 seconds · cumulative 2:30 · MECHANISM VALIDATED
+Say this
+Suppose four tokens are complete and a fifth draft step is already running. Submitted work
+means the CPU has queued GPU commands, not that they have finished. The earlier uniform
+path waits for that work before handoff. Our overlap path copies only the eligible completed
+prefix into independent storage and can deliver it while the queued tail finishes. It still waits
+before reusing the producer’s KV and graph buffers. That preserves memory ownership and
+avoids stale reads. We observed response-before-tail events at K ten in engineering gates, so
+the mechanism exists. That alone is not evidence of lower request latency.
+Technical detail if asked
+Normal K10 gate recorded 633 responses before tail completion across both protocols.
+Shared-GPU/0.10-KV gate timings are diagnostic. High stream priority alone does not
+guarantee concurrency.
+Transition
+To test whether this mechanism is useful, we need a controlled timing protocol.
+Evidence
+overlap_gate; overlap_stress; docs/prefix_publication.md
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+04
+
+
+PAGE 5
+Slide 4 · Tune on one split. Compare
+frozen winners on the same prompts.
+65 seconds · cumulative 3:35 · COMPLETE
+Say this
+Our baseline uses eight tuning and twenty-five test prompts per family. Sources are
+Spec-Bench chat and document tasks and HumanEval code completion. The exact formatted
+input token IDs are frozen. We tune K and F on fixed two-hundred-and-fifty-six-token
+generation, freeze the winners, then run five repeated comparisons under fixed output and
+natural stopping. Prefix-cache lookup is disabled, so every scored request performs its full
+prefill. The timer includes prefills and final obsolete-work draining. Model loading and warmup
+are outside it. Dedicated GPU monitoring invalidates contaminated blocks and preserves
+earlier valid work. Later policy studies reuse these test prompts, which limits unseen-workload
+claims.
+Technical detail if asked
+Baseline grid: AR; SD K4/6/8; SSD K4/7/10 × F1/3, 48 requests/config. Ten settings → 480
+tuning requests. Three methods × 75 × 5 × 2 → 2,250 held-out requests.
+Transition
+This gives us the baseline that an optimization must beat.
+Evidence
+workload; publication queue; AR-reference-reuse protocol
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+05
+
+
+PAGE 6
+Slide 5 · The baseline is strong:
+complete SSD reaches 2.208 seconds
+55 seconds · cumulative 4:30 · COMPLETE
+Say this
+The completed baseline campaign selected K six for synchronous SD and K seven with fan-out
+three for SSD. For fixed output, mean latency is six point two seven seconds for shared AR,
+three point one six for SD, and two point two one for SSD. All fifteen hundred speculative test
+outputs match shared AR. The chart includes uncertainty intervals and GPU counts. These are
+gains from the established speculative methods, not yet gains from our publication scheduler.
+Task-family analysis shows code has higher acceptance and cache coverage in this mix. Tuned
+complete SSD is therefore the strong practical comparator for the rest of the project.
+Technical detail if asked
+Natural-EOS means: AR 5.419, SD 2.737, SSD 1.902 s. First delivery is later for speculation
+even though full-request latency improves. See backup 3 for p50/p95 and delivery.
+Transition
+Profiling explains why there might still be headroom.
+Evidence
+baseline; direct raw-output audit in analysis.json
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+06
+
+
+PAGE 7
+Slide 6 · Draft construction can outlast
+the target’s verification window
+65 seconds · cumulative 5:35 · COMPLETE
+Say this
+Our profiling uses two tools. Nsight Systems shows the CPU and GPU timeline, including launch
+gaps and communication waits. Nsight Compute measures selected kernel counters and helps
+classify the limit. In historical captures, target verification was memory-bound, not
+compute-bound: reading the large weights dominated small verification batches. The small
+drafter also paid many short-kernel and host-launch costs. The newer shared-backend context
+profiles show the practical balance: K seven trees and verification take similar spans, while K
+ten drafting takes about one point six times verification. That creates a larger opportunity for
+partial handoff at K ten. But reducing waiting is only one part of full-request latency.
+Technical detail if asked
+Historical roofline: ~211 TFLOP/s BF16, ~747 GB/s DRAM, ridge ~283 FLOP/B. Historical target
+busy 92.4% includes ~35.2% full-window NCCL time; do not equate that with useful compute
+or wire transfer.
+Transition
+Before interpreting the speed results, there is an important reference distinction.
+Evidence
+context profiles; historical results/ncu and results/nsys (different executor)
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+07
+
+
+PAGE 8
+Slide 7 · Exact agreement is against an
+explicit shared AR reference
+45 seconds · cumulative 6:20 · TESTED SCOPE · SHARED REFERENCE
+Say this
+We found a numerical execution issue before publication. Single-token AR and batched
+verification could use different arithmetic and attention reductions. Small score differences can
+flip a greedy token, after which the entire history changes. We introduced a versioned shared
+target implementation, including consistent shapes and attention. Our tested speculative
+outputs match that shared AR reference. However, shared AR changed the numerical
+implementation too and differed from original AR on seven of nine diagnosed prompts. We
+therefore report these as separate correctness contracts. Token matching within the shared
+contract is established on the listed tests; original-wording equivalence and general answer
+quality are not established.
+Technical detail if asked
+The initial shared gate has paired_correctness_passed=true and
+historical_reference_passed=false. Generic unresolved headings in the old baseline generator
+are stale; this package directly rechecks validated output IDs.
+Transition
+Within that declared reference, here is the main publication result.
+Evidence
+shared_gate; matching-prefix controls; analysis.json
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+08
+
+
+PAGE 9
+Slide 8 · Publication is about 1% slower
+than tuned complete K7
+60 seconds · cumulative 7:20 · COMPLETE
+Say this
+The dedicated publication study tunes the methods and compares their frozen winners.
+Positive values on this chart mean more latency than complete K seven. Both uniform and
+overlap are approximately one percent slower, under both output protocols. The paired
+intervals support a regression in this experiment. The execution counters explain the selected
+setting: uniform chooses P equal to K, and overlap K seven still delivers full seven-token
+continuations with no response-before-tail events. We pay checks and handoff overhead
+without a demonstrated earlier useful response. This is not proof that an opportunity never
+existed; the producer host thread may notice requests late. That is the question targeted by
+the new service implementation.
+Technical detail if asked
+Fixed means: complete 2.2039, uniform 2.2245, overlap 2.2229 s. All 2,250 test outputs match
+shared AR. A separate service thread is only in the GPU-untested successor.
+Transition
+We then asked whether larger contexts expose a better regime.
+Evidence
+publication; publication_selection; direct validated output comparisons
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+09
+
+
+PAGE 10
+Slide 9 · Longer context helps K10
+publication—but K7 still wins
+60 seconds · cumulative 8:20 · COMPLETE
+Say this
+The context sweep holds output at two hundred and fifty-six tokens and varies initial input
+length from two hundred and fifty-six to two thousand and forty-eight. It uses three synthetic
+task templates, so this is a controlled diagnostic rather than broad long-document evidence.
+Partial handoff clearly helps the expensive K ten setting: overlap improves latency by roughly
+twelve to twenty-three percent versus complete K ten. But the blue K seven baseline is still
+faster at every length. At two thousand and forty-eight tokens, overlap K ten is about two point
+nine seconds while complete K seven is two point six seven. Uniform partial publication is also
+strong. We cannot extrapolate a crossover from these four nonmonotonic points.
+Technical detail if asked
+At 2048: completeK10 3.655 s, uniformK10 2.853 s, overlapK10 2.896 s, completeK7 2.668 s.
+Initial context grows during output. All 252 speculative measure/profile comparisons match
+fresh shared AR.
+Transition
+The next prototype tries to reduce draft work rather than only move handoff earlier.
+Evidence
+context; separate measure/profile definitions
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+10
+
+
+PAGE 11
+Slide 10 · Unequal depths remove work,
+but the partial results are slower
+50 seconds · cumulative 9:10 · PROVISIONAL · PAIRED SUBSET
+Say this
+The unequal-depth prototype gives seven tokens to the highest-ranked recovery candidate and
+four to the other two. At every acceptance position, this really shrinks deeper model forwards.
+The full tree uses one hundred and twenty query rows instead of one hundred and sixty-eight.
+However, the preliminary results are slower by about four percent. Reversing the ranking is
+worse, and we also include uniform depths with the same row budget. The test campaign is
+incomplete, so these plots use only rounds where all six methods finished. Smaller kernels,
+shorter usable continuations and additional verification can erase row savings. We need the
+final comparison and targeted traces before assigning exact causes.
+Technical detail if asked
+Fixed: three paired rounds, 225 requests/method. Natural: four paired rounds, 300/method.
+Total validated held-out outputs: 3225. Validated gate: 156 speculative matches among 168
+requests.
+Transition
+That leads to a specific remaining plan, rather than another broad sweep.
+Evidence
+depth_gate; depth_selection; analysis.json; reduced-row implementation
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+11
+
+
+PAGE 12
+Slide 11 · Next: locate the lost window
+and isolate delivery overhead
+50 seconds · cumulative 10:00 · QUEUED · BENEFIT UNMEASURED
+Say this
+The next version preserves the initial complete SSD baseline. It records when the prefix is
+ready, when the target asks, when the request is noticed, and when the target receives the
+response. It also avoids transferring draft score arrays for greedy verification, separates
+request service from model submission, and bypasses a copy when the full continuation is
+ready. Six comparison arms isolate those changes, including an optimized complete control so
+transport gains are not misattributed to publication. GPU correctness comes first. Our
+conclusion today is a working prototype, reproducible baselines and a quantified explanation of
+why the current policies do not yet beat tuned SSD.
+Technical detail if asked
+CPU successor suite passed 253 with 19 skips; CUDA ownership/stress/full-model validation
+and all successor performance are queued at cutoff. Shorter verification and learned outcome
+allocation remain separate, unimplemented proposal work.
+Transition
+I’m happy to discuss the timing protocol, numerical reference, or policy controls.
+Evidence
+greedy_validation; docs/greedy_handoff_queue.md; proposal remaining work
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+12
+
+
+PAGE 13
+Q&A practice · 1/5
+Answer directly, then give one measurement and one limitation.
+1. What is our research contribution?
+Safe incremental publication and a compacted unequal-depth outcome-cache prototype, plus
+reproducible evidence of when they help or add overhead. SSD itself and batch-independent
+arithmetic are prior ideas; their baseline speedups are not our new scheduling result.
+2. Have we beaten tuned complete SSD?
+No. The completed publication comparison is about 1% slower than complete K7. Partial
+unequal-depth results are also slower. K10 publication beats complete K10 in the context
+diagnostic, but not the stronger complete K7 comparator.
+3. What does P=4 actually mean?
+At least four continuation tokens must be safely complete before that path is eligible to
+publish. It may deliver more. P is fixed in uniform publication and does not refer to a
+neural-network layer or a number of user requests.
+4. How do uniform and overlap handoff differ?
+The earlier path finishes already-submitted work before exposure. Overlap copies a completed
+prefix into independent storage and can deliver it while the submitted tail finishes. It still joins
+outstanding accesses before KV or graph-buffer reuse.
+5. What has not run in the greedy successor?
+GPU ownership tests, stress coverage, full-model correctness gates and performance
+measurements are queued. CPU validation exists, but it is insufficient to establish correctness
+of the asynchronous GPU lifetime behavior or a latency improvement.
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+13
+
+
+PAGE 14
+Q&A practice · 2/5
+Answer directly, then give one measurement and one limitation.
+6. What is F and what is unequal depth?
+F is the recovery-candidate fan-out per possible acceptance position. F3 gives three candidate
+ranks. Unequal depth assigns those ranks different continuation budgets, such as [7,4,4],
+instead of preparing seven tokens for every rank.
+7. Is the unequal-depth scheduler adaptive?
+No. Its v1 budgets depend on static recovery rank and are identical across acceptance
+positions. A separate local adaptive publication heuristic exists, but a learned/cost-aware
+allocation policy from the proposal remains future work.
+8. Why are fewer rows not automatically faster?
+Small draft forwards can be memory- or launch-limited, so shrinking rows saves little time per
+step. Shorter continuations may increase target verification rounds. Policy handling and
+draining also cost time. Query-row reduction measures work, not full-request latency.
+9. Why include reversed and equal-work controls?
+Reversal tests whether prioritizing higher-ranked candidates matters. Uniform equal-work
+depth tests whether the uneven allocation beats a simpler matching query-row budget. Those
+controls do not match every kernel, padding or memory-traffic cost.
+10. Why can target verification be memory-bound?
+At small query width, streaming the large target weights dominates. Several query rows reuse
+those weights without proportionally increasing elapsed time. Historical Nsight Compute
+counters place verification left of the measured roofline ridge, with high memory utilization.
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+14
+
+
+PAGE 15
+Q&A practice · 3/5
+Answer directly, then give one measurement and one limitation.
+11. What does Nsight Systems capture?
+A correlated CPU/GPU timeline: host ranges, CUDA API submissions, kernels, streams, copies
+and communication. Our NVTX labels connect these events to prefill, drafting, verification and
+handoff. It reveals where time and dependencies occur.
+12. What does Nsight Compute add?
+Hardware-counter analysis of selected kernels or phases: arithmetic intensity, DRAM traffic,
+computation/memory utilization, occupancy and stalls. Our five historical captures classify
+decode, verify, draft, tree step and prefill. Profiling is kept separate from headline timing.
+13. Does 92% GPU busy mean good utilization?
+Not necessarily. In the historical target trace, about 35% of the full window is NCCL kernel
+time, which can include waiting for peer data. Kernel activity is different from useful model
+progress or arithmetic-unit utilization.
+14. How much of 9.2 ms is actual transfer?
+We have no isolated exact transfer share. About 8.0 ms aligns with unfinished-tree completion
+in the historical trace, but the residual also contains host handling and synchronization. The
+queued correlated timestamp diagnostic is designed to locate the remaining opportunity.
+15. Does a separate CUDA stream prove overlap?
+No. Dependencies and GPU resource constraints can serialize it. We record responses
+completed before the submitted tail event finishes. Actual event coverage establishes overlap;
+only full-request comparisons establish whether it improves latency.
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+15
+
+
+PAGE 16
+Q&A practice · 4/5
+Answer directly, then give one measurement and one limitation.
+16. Why did original AR and speculation disagree?
+Different execution shapes selected different finite-precision arithmetic/reduction paths. Close
+target logits could change order and flip a greedy token. Matching-prefix projection and
+attention controls supplied evidence. Later text diverges because the histories then differ.
+17. What does the shared numerical reference fix?
+It gives AR and speculative verification consistent target arithmetic for the tested scope.
+Outputs match shared-fixed16-v1 AR. It does not guarantee original AR wording: shared AR
+differed on seven of nine diagnosed prompts, and historical reproduction remained a separate
+failed gate.
+18. Are sixteen padded rows a batch of sixteen requests?
+No. They are an internal shape used for consistent target operations. The request batch size
+remains one. Verification rows, outcome-tree rows, continuation depth and simultaneous user
+requests are distinct dimensions.
+19. Why are AR and SD on one GPU but SSD on two?
+That is the declared implementation allocation: AR target-only, SD both models on GPU0, SSD
+target GPU0 and draft GPU1. The result is a latency comparison with additional SSD hardware,
+not a claim of identical resource efficiency.
+20. Why reuse AR rather than rerun every campaign?
+Saved exact output references are hash-validated against the model, inputs, numerical
+contract and dedicated receipts, with short fresh continuity checks. Historical timings stay
+labeled separately. Fresh SSD-versus-SSD arms provide the primary policy comparison.
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+16
+
+
+PAGE 17
+Q&A practice · 5/5
+Answer directly, then give one measurement and one limitation.
+21. What is the point of two output protocols?
+Fixed256 controls output work by ignoring EOS. Natural EOS measures variable response
+lengths up to the same cap. Both use winners selected on fixed-length tuning. Reporting
+lengths and agreement prevents confusing shorter output with faster execution.
+22. What does five repetitions establish?
+It estimates repeated-run variation and output repeatability on the same prompts. It does not
+create new tasks. Our hierarchical paired bootstrap preserves round/prompt grouping and
+family balance rather than treating 375 measurements as unrelated prompts.
+23. Did longer contexts help our method?
+They exposed a useful K10 partial-handoff regime, but complete K7 remained faster at every
+measured input length. The trend was not monotonic, and the synthetic three-template sweep
+does not establish unseen long-document generalization.
+24. Why not claim the CPU-tested successor works already?
+The CPU tests cannot exercise actual cross-stream writes, consumer lifetime and full-model
+output behavior. Its queued CUDA and generation gates must pass before performance, and
+every optimized arm must be compared with unchanged legacy complete SSD.
+25. What would change your conclusion next?
+A fully validated version with lower full-request latency than tuned complete SSD, supported by
+paired repeated results and disclosed family regressions. Timestamp evidence should explain
+the mechanism; a stronger unseen workload should test whether the effect generalizes.
+SPEAKER + Q&A GUIDE · frozen 2026-11-21 00:17 IST
+17

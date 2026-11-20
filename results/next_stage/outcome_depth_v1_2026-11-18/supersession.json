@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-17T20:51:12.938421+00:00",
+  "reason": "User approved removing redundant full AR timing repetitions",
+  "previous_status": {
+    "status": "stopped",
+    "reason": "",
+    "at": "2026-11-17T20:28:47.844025+00:00"
+  },
+  "replacement": "/home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v2_2026-11-18",
+  "replacement_queue_sha256": "ea05f84d781569c1c66369de3186e0f5ffef128609ee15a994719ea13f088ac2",
+  "completed_valid_blocks_preserved": 0,
+  "old_manifests_attempts_and_logs_preserved": true
+}

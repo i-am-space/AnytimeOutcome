@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-17T20:49:19.305806+00:00",
+  "tmux_session": "ao-outcome-depth",
+  "command": "env -u LD_PRELOAD -u NVIDIA_TF32_OVERRIDE -u TORCH_ALLOW_TF32_CUBLAS_OVERRIDE -u CUBLAS_WORKSPACE_CONFIG -u CUDA_LAUNCH_BLOCKING -u OMP_NUM_THREADS -u MKL_NUM_THREADS -u PYTORCH_CUDA_ALLOC_CONF CUDA_HOME=/usr/local/cuda-12.9 SSD_CUDA_ARCH=8.9 CUDA_VISIBLE_DEVICES= bash -lc 'source /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/env.sh\nexec /home/vishalrao/miniconda3/bin/python3.13 -O /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_outcome_depth_reuse_ar.py --watch >> /home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v2_2026-11-18/queue.log 2>&1'",
+  "worktree": "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1",
+  "queue_sha256": "1704265d5b7fa5a887fd29b949b165e3030e6947fb06cf650ccb80f0f47f8c81",
+  "controller_cuda_visible_devices": "",
+  "worker_allocation": "Explicit UUID visibility set by each monitored worker",
+  "global_lock": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/.campaign.lock"
+}

@@ -1,0 +1,133 @@
+{
+  "at": "2026-11-19T12:04:43.971522+00:00",
+  "status": "partial",
+  "valid_blocks": 43,
+  "planned_blocks": 60,
+  "exact_matches": 3225,
+  "exact_comparisons": 3225,
+  "protocols": {
+    "fixed": {
+      "paired_completed_rounds": [
+        0,
+        1,
+        2
+      ],
+      "results": [
+        {
+          "method": "budget",
+          "requests": 225,
+          "mean_latency_s": 2.321072784022997,
+          "latency_change_vs_complete_pct": 5.144961599211695,
+          "mean_wait_s": 0.389587137114981,
+          "query_row_reduction_pct": 0.0
+        },
+        {
+          "method": "complete",
+          "requests": 225,
+          "mean_latency_s": 2.2074978664887346,
+          "latency_change_vs_complete_pct": 0.0,
+          "mean_wait_s": 0.4300961685920548,
+          "query_row_reduction_pct": null
+        },
+        {
+          "method": "overlap",
+          "requests": 225,
+          "mean_latency_s": 2.2285387939287142,
+          "latency_change_vs_complete_pct": 0.9531573171324359,
+          "mean_wait_s": 0.45129469158308994,
+          "query_row_reduction_pct": null
+        },
+        {
+          "method": "ranked",
+          "requests": 225,
+          "mean_latency_s": 2.288902400716001,
+          "latency_change_vs_complete_pct": 3.687638183621411,
+          "mean_wait_s": 0.4672795737863311,
+          "query_row_reduction_pct": 28.57142857142857
+        },
+        {
+          "method": "ranked_overlap",
+          "requests": 225,
+          "mean_latency_s": 2.291259491172257,
+          "latency_change_vs_complete_pct": 3.7944147514286986,
+          "mean_wait_s": 0.47128485821316846,
+          "query_row_reduction_pct": 28.57142857142857
+        },
+        {
+          "method": "reverse",
+          "requests": 225,
+          "mean_latency_s": 2.548634736069426,
+          "latency_change_vs_complete_pct": 15.453553761449701,
+          "mean_wait_s": 0.4899879868357028,
+          "query_row_reduction_pct": 28.57142857142857
+        }
+      ]
+    },
+    "natural": {
+      "paired_completed_rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "results": [
+        {
+          "method": "budget",
+          "requests": 300,
+          "mean_latency_s": 2.004681190120561,
+          "latency_change_vs_complete_pct": 5.138644516313362,
+          "mean_wait_s": 0.328715288687769,
+          "query_row_reduction_pct": 0.0
+        },
+        {
+          "method": "complete",
+          "requests": 300,
+          "mean_latency_s": 1.9067025253588024,
+          "latency_change_vs_complete_pct": 0.0,
+          "mean_wait_s": 0.3619509788821839,
+          "query_row_reduction_pct": null
+        },
+        {
+          "method": "overlap",
+          "requests": 300,
+          "mean_latency_s": 1.9274240077182185,
+          "latency_change_vs_complete_pct": 1.086770593935027,
+          "mean_wait_s": 0.38388321599903674,
+          "query_row_reduction_pct": null
+        },
+        {
+          "method": "ranked",
+          "requests": 300,
+          "mean_latency_s": 1.9834918431506958,
+          "latency_change_vs_complete_pct": 4.027336030167761,
+          "mean_wait_s": 0.4010322394189037,
+          "query_row_reduction_pct": 28.57142857142857
+        },
+        {
+          "method": "ranked_overlap",
+          "requests": 300,
+          "mean_latency_s": 1.979072272182093,
+          "latency_change_vs_complete_pct": 3.7955447092971273,
+          "mean_wait_s": 0.3969992338679731,
+          "query_row_reduction_pct": 28.57142857142857
+        },
+        {
+          "method": "reverse",
+          "requests": 300,
+          "mean_latency_s": 2.2031761152043083,
+          "latency_change_vs_complete_pct": 15.549021722185842,
+          "mean_wait_s": 0.4137216710768795,
+          "query_row_reduction_pct": 28.57142857142857
+        }
+      ]
+    }
+  },
+  "mean_completed_worker_seconds": 189.85769261870274,
+  "remaining_worker_hours_proxy": 0.8965502151438741,
+  "limitations": [
+    "Incomplete campaign; provisional results only.",
+    "Comparisons use only rounds with all six SSD methods complete, with the same 75 prompt IDs.",
+    "No final campaign report or five-repetition claim until all 60 blocks complete.",
+    "Estimate excludes GPU waiting, retries and final analysis."
+  ]
+}

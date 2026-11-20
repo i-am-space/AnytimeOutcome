@@ -1,0 +1,16 @@
+Draft runner created on rank 1 (async)!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner about to wrapper.init()] graph_bs_list=[1]
+wrapper backend is auto
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|                               | 0/1 [00:00<?, ?it/s]Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=7
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.75it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.74it/s]
+Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.61it/s]Loading model files:  40%|████      | 2/5 [00:00<00:01,  2.10it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:00,  2.05it/s]/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/resource_tracker.py:301: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/loky-3186616-kcs4x6q5', '/loky-3186785-3aivo8av', '/loky-3186616-400vtqjl', '/loky-3186616-c8i2mlha', '/loky-3186616-_4bnv2di', '/loky-3186616-2inc6_8u'}
+  warnings.warn(

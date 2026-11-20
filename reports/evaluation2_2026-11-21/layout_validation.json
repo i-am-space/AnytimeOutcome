@@ -1,0 +1,2851 @@
+{
+  "guide": [
+    {
+      "page": 1,
+      "bottom_y": 255.50576377952788,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 2,
+      "bottom_y": 284.76176377952777,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 3,
+      "bottom_y": 69.77576377952776,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 4,
+      "bottom_y": 272.617763779528,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 5,
+      "bottom_y": 287.2457637795279,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 6,
+      "bottom_y": 287.2457637795279,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 7,
+      "bottom_y": 198.2437637795278,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 8,
+      "bottom_y": 101.92976377952778,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 9,
+      "bottom_y": 272.6177637795279,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 10,
+      "bottom_y": 301.87376377952796,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 11,
+      "bottom_y": 133.66976377952773,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 12,
+      "bottom_y": 301.87376377952785,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 13,
+      "bottom_y": 229.6717637795279,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 14,
+      "bottom_y": 315.94976377952787,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 15,
+      "bottom_y": 273.85976377952795,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 16,
+      "bottom_y": 259.23176377952797,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 17,
+      "bottom_y": 133.66976377952773,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 18,
+      "bottom_y": 72.67376377952782,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 19,
+      "bottom_y": 119.04176377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 20,
+      "bottom_y": 89.78576377952776,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 21,
+      "bottom_y": 227.49176377952793,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 22,
+      "bottom_y": 299.3897637795278,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 23,
+      "bottom_y": 272.617763779528,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 24,
+      "bottom_y": 242.1197637795278,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 25,
+      "bottom_y": 242.11976377952791,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 26,
+      "bottom_y": 105.65576377952775,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 27,
+      "bottom_y": 119.04176377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 28,
+      "bottom_y": 72.67376377952782,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 29,
+      "bottom_y": 270.13376377952784,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 30,
+      "bottom_y": 242.11976377952791,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 31,
+      "bottom_y": 119.04176377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 32,
+      "bottom_y": 104.41376377952776,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 33,
+      "bottom_y": 73.91576377952778,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 34,
+      "bottom_y": 101.92976377952778,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 35,
+      "bottom_y": 103.17176377952777,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 36,
+      "bottom_y": 91.02776377952776,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 37,
+      "bottom_y": 272.6177637795279,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 38,
+      "bottom_y": 114.21576377952778,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 39,
+      "bottom_y": 201.65776377952787,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 40,
+      "bottom_y": 200.41576377952794,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 41,
+      "bottom_y": 241.81576377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 42,
+      "bottom_y": 241.81576377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 43,
+      "bottom_y": 241.81576377952774,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 44,
+      "bottom_y": 227.1877637795278,
+      "body_font_pt": 10.6
+    },
+    {
+      "page": 45,
+      "bottom_y": 241.81576377952774,
+      "body_font_pt": 10.6
+    }
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 1,
+      "text": "Publish useful work sooner. Does the response finish sooner?",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 1,
+      "text": "Anytime Outcome-Cache Construction \u00b7 Evaluation 2 \u00b7 Implementation & Initial Results",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 1,
+      "text": "WHAT WE BUILT",
+      "top": 186,
+      "bottom": 203.94,
+      "font_pt": 13
+    },
+    {
+      "slide": 1,
+      "text": "WHAT WE LEARNED",
+      "top": 186,
+      "bottom": 203.94,
+      "font_pt": 13
+    },
+    {
+      "slide": 1,
+      "text": "WHAT REMAINS",
+      "top": 186,
+      "bottom": 203.94,
+      "font_pt": 13
+    },
+    {
+      "slide": 1,
+      "text": "Built: safe prefix publication and compacted unequal-depth drafting.",
+      "top": 239,
+      "bottom": 397.7,
+      "font_pt": 23
+    },
+    {
+      "slide": 1,
+      "text": "Established: reproducible baselines, tested shared-reference agreement, and profiling evidence.",
+      "top": 239,
+      "bottom": 429.44,
+      "font_pt": 23
+    },
+    {
+      "slide": 1,
+      "text": "Open result: our policies have not beaten tuned complete SSD.",
+      "top": 239,
+      "bottom": 365.96,
+      "font_pt": 23
+    },
+    {
+      "slide": 1,
+      "text": "Ishaan Romil \u00b7 Vishal Rao \u00b7 Eshaan Sharma",
+      "top": 447,
+      "bottom": 462.18,
+      "font_pt": 11
+    },
+    {
+      "slide": 1,
+      "text": "A working prototype and controlled evidence; incremental speedup remains unestablished.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 1,
+      "text": "IMPLEMENTED \u00b7 RESULTS MIXED \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 1,
+      "text": "01 / 21 \u00b7 40s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 1,
+      "text": "Evidence: Proposal pp. 1\u20132; validated baseline/publication/context studies; partial unequal-depth snapshot",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 2,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 2,
+      "text": "A working executor, with safe handoff between two GPUs",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 2,
+      "text": "Qwen3-8B target + Qwen3-0.6B drafter \u00b7 BF16 \u00b7 one request at a time",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 2,
+      "text": "L40S executor: AR, synchronous SD, complete SSD and a versioned shared target reference.",
+      "top": 180,
+      "bottom": 250.38,
+      "font_pt": 17
+    },
+    {
+      "slide": 2,
+      "text": "Publication: uniform, bounded/adaptive prototypes and stable-prefix overlap.",
+      "top": 264.38,
+      "bottom": 334.76,
+      "font_pt": 17
+    },
+    {
+      "slide": 2,
+      "text": "Unequal depths: real reduced-row execution; greedy successor remains GPU-untested.",
+      "top": 348.76,
+      "bottom": 419.14,
+      "font_pt": 17
+    },
+    {
+      "slide": 2,
+      "text": "We changed preparation and handoff; the target still verifies the committed output.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 2,
+      "text": "IMPLEMENTED \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 2,
+      "text": "02 / 21 \u00b7 55s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 2,
+      "text": "Evidence: workload; docs/prefix_publication.md; docs/outcome_depth.md; greedy_validation",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 3,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 3,
+      "text": "A safe prefix can be delivered before queued tail work finishes",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 3,
+      "text": "Execution-order illustration \u00b7 no measured time scale",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 3,
+      "text": "Uniform/bounded: finish submitted work before exposing the continuation.",
+      "top": 180,
+      "bottom": 256.59,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 3,
+      "text": "Overlap: send an independently owned completed snapshot while the tail finishes.",
+      "top": 270.59,
+      "bottom": 347.17999999999995,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 3,
+      "text": "Both: drain outstanding accesses before KV or graph-buffer reuse.",
+      "top": 361.17999999999995,
+      "bottom": 437.7699999999999,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 3,
+      "text": "Safe overlap moves a dependency; it does not remove the cost of already-submitted work.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 3,
+      "text": "MECHANISM VALIDATED \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 3,
+      "text": "03 / 21 \u00b7 55s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 3,
+      "text": "Evidence: overlap_gate; overlap_stress; docs/prefix_publication.md",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 4,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 4,
+      "text": "Tune on one split. Compare frozen winners on the same prompts.",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 4,
+      "text": "Unprofiled, warm, dedicated-GPU measurements \u00b7 full prefills and final draining",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Experiment rule",
+      "top": 188,
+      "bottom": 208.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "What is held fixed",
+      "top": 188,
+      "bottom": 208.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Input",
+      "top": 220.01,
+      "bottom": 240.01999999999998,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Frozen complete token IDs, \u22642,048 initial tokens",
+      "top": 220.01,
+      "bottom": 260.03,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Executor",
+      "top": 272.03,
+      "bottom": 292.03999999999996,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "BF16, batch 1, graphs, JIT misses, capacity 4,096",
+      "top": 272.03,
+      "bottom": 312.04999999999995,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Memory",
+      "top": 324.04999999999995,
+      "bottom": 344.05999999999995,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "0.70 target and draft KV fractions",
+      "top": 324.04999999999995,
+      "bottom": 344.05999999999995,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Timing",
+      "top": 356.05999999999995,
+      "bottom": 376.06999999999994,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Request submission \u2192 committed output + final drain",
+      "top": 356.05999999999995,
+      "bottom": 396.0799999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Excluded",
+      "top": 408.0799999999999,
+      "bottom": 428.0899999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "Loading, compilation, warmup, serialization, profiler",
+      "top": 408.0799999999999,
+      "bottom": 448.0999999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 4,
+      "text": "24 tuning + 75 test prompts, balanced across chat, code and documents; three separate warmup prompts.",
+      "top": 181,
+      "bottom": 272.08,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 4,
+      "text": "Fixed256 selects winners; natural EOS/cap256 is secondary. Five repeated test rounds.",
+      "top": 287.08,
+      "bottom": 355.39,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 4,
+      "text": "AR/SD: one GPU. SSD variants: two. Later studies reuse test prompts and saved shared-AR outputs.",
+      "top": 370.39,
+      "bottom": 438.7,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 4,
+      "text": "The primary policy comparisons are fresh SSD-versus-SSD, with identical resources and paired prompts.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 4,
+      "text": "COMPLETE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 4,
+      "text": "04 / 21 \u00b7 65s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 4,
+      "text": "Evidence: workload; publication queue; AR-reference-reuse protocol",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 5,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 5,
+      "text": "The baseline is strong: complete SSD reaches 2.208 seconds",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 5,
+      "text": "Fixed256 \u00b7 75 prompts \u00d7 five rounds \u00b7 shared-fixed16-v1 reference",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 5,
+      "text": "Shared AR: 6.271 s; SD K6: 3.161 s; SSD K7/F3: 2.208 s.",
+      "top": 180,
+      "bottom": 231.06,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 5,
+      "text": "About 1.98\u00d7 and 2.84\u00d7 faster than shared AR; SSD uses a second GPU.",
+      "top": 245.06,
+      "bottom": 321.65,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 5,
+      "text": "Code benefits most on this mix; this is latency, not answer-quality evaluation.",
+      "top": 335.65,
+      "bottom": 412.23999999999995,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 5,
+      "text": "Our contribution must improve on complete K7 SSD, not only on AR or an oversized K10 control.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 5,
+      "text": "COMPLETE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 5,
+      "text": "05 / 21 \u00b7 55s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 5,
+      "text": "Evidence: baseline; direct raw-output audit in analysis.json",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 6,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 6,
+      "text": "Draft construction can outlast the target\u2019s verification window",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 6,
+      "text": "Separate shared-backend profiles \u00b7 GPU spans include launch gaps",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 6,
+      "text": "K7 full-tree and verify spans are both about 27\u201328 ms.",
+      "top": 180,
+      "bottom": 231.06,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 6,
+      "text": "K10 full-tree spans are about 44\u201346 ms versus 27\u201328 ms verifying.",
+      "top": 245.06,
+      "bottom": 321.65,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 6,
+      "text": "Historical counters: verify was memory-bound; the drafter also paid short-kernel and host gaps.",
+      "top": 335.65,
+      "bottom": 437.77,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 6,
+      "text": "Use timelines to locate dependencies, counters to explain kernels, and unprofiled runs to rank performance.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 6,
+      "text": "COMPLETE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 6,
+      "text": "06 / 21 \u00b7 65s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 6,
+      "text": "Evidence: context profiles; historical results/ncu and results/nsys (different executor)",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 7,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 7,
+      "text": "Exact agreement is against an explicit shared AR reference",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 7,
+      "text": "Same weights do not guarantee identical finite-precision execution",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 7,
+      "text": "Direct token audit at this cutoff",
+      "top": 190,
+      "bottom": 227.26,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Matching speculative outputs",
+      "top": 190,
+      "bottom": 208.63,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Completed baseline held-out",
+      "top": 239.26,
+      "bottom": 276.52,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "1,500 / 1,500",
+      "top": 239.26,
+      "bottom": 257.89,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Fresh publication held-out",
+      "top": 288.52,
+      "bottom": 325.78,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "2,250 / 2,250",
+      "top": 288.52,
+      "bottom": 307.15,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Context study, including separate profiles",
+      "top": 337.78,
+      "bottom": 393.66999999999996,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "252 / 252",
+      "top": 337.78,
+      "bottom": 356.40999999999997,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Unequal-depth completed test blocks",
+      "top": 405.66999999999996,
+      "bottom": 442.92999999999995,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "3225 / 3225",
+      "top": 405.66999999999996,
+      "bottom": 424.29999999999995,
+      "font_pt": 13.5
+    },
+    {
+      "slide": 7,
+      "text": "Initial single-query/batched paths could round differently and flip close greedy choices.",
+      "top": 184,
+      "bottom": 256.45,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 7,
+      "text": "Shared target arithmetic makes our tested AR/SD/SSD decisions consistent.",
+      "top": 273.45,
+      "bottom": 321.75,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 7,
+      "text": "Shared AR differs from original AR on 7/9 diagnosed prompts. Original-wording equivalence remains distinct.",
+      "top": 338.75,
+      "bottom": 435.35,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 7,
+      "text": "Matching shared AR is a tested contract; it is not a claim to reproduce original AR\u2019s words.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 7,
+      "text": "TESTED SCOPE \u00b7 SHARED REFERENCE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 7,
+      "text": "07 / 21 \u00b7 45s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 7,
+      "text": "Evidence: shared_gate; matching-prefix controls; analysis.json",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 8,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 8,
+      "text": "Publication is about 1% slower than tuned complete K7",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 8,
+      "text": "Fresh matched SSD comparison \u00b7 five paired rounds \u00b7 both output protocols",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 8,
+      "text": "Winners: complete K7; uniform K7/P7; overlap K7/P4/W2.",
+      "top": 180,
+      "bottom": 228.3,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 8,
+      "text": "At K7, cached continuations still deliver all seven tokens; no responses precede tail completion.",
+      "top": 242.3,
+      "bottom": 338.9,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 8,
+      "text": "The machinery adds cost without a demonstrated useful early handoff in the selected setting.",
+      "top": 352.9,
+      "bottom": 425.34999999999997,
+      "font_pt": 17.5
+    },
+    {
+      "slide": 8,
+      "text": "Implemented overlap is not enough: the chosen policy must improve full-request latency.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 8,
+      "text": "COMPLETE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 8,
+      "text": "08 / 21 \u00b7 60s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 8,
+      "text": "Evidence: publication; publication_selection; direct validated output comparisons",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 9,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 9,
+      "text": "Longer context helps K10 publication\u2014but K7 still wins",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 9,
+      "text": "Controlled synthetic diagnostic \u00b7 one task template/family \u00b7 three rounds",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 9,
+      "text": "Against complete K10, overlap reduces latency by roughly 12\u201323%.",
+      "top": 180,
+      "bottom": 256.59,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 9,
+      "text": "Complete K7 remains fastest across all four measured input lengths.",
+      "top": 270.59,
+      "bottom": 347.17999999999995,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 9,
+      "text": "Uniform K10/P4 is also competitive; no monotonic crossover or unseen-task claim.",
+      "top": 361.17999999999995,
+      "bottom": 437.7699999999999,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 9,
+      "text": "Always show both the matched-K control and the strongest tuned complete baseline.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 9,
+      "text": "COMPLETE \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 9,
+      "text": "09 / 21 \u00b7 60s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 9,
+      "text": "Evidence: context; separate measure/profile definitions",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 10,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 10,
+      "text": "Unequal depths remove work, but the partial results are slower",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 10,
+      "text": "K7 depths [7,4,4] \u00b7 static recovery ranks \u00b7 final five-round comparison incomplete",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 10,
+      "text": "Actual tree query rows fall from 168 to 120: 28.6% less work by this count.",
+      "top": 180,
+      "bottom": 250.38,
+      "font_pt": 17
+    },
+    {
+      "slide": 10,
+      "text": "Ranked depth is about 4% slower; reversed priorities are worse. Equal-work control is included.",
+      "top": 264.38,
+      "bottom": 334.76,
+      "font_pt": 17
+    },
+    {
+      "slide": 10,
+      "text": "43/60 valid test blocks; plotted comparisons use only fully paired completed rounds.",
+      "top": 348.76,
+      "bottom": 419.14,
+      "font_pt": 17
+    },
+    {
+      "slide": 10,
+      "text": "Reduced work is verified; a net latency benefit is not.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 10,
+      "text": "PROVISIONAL \u00b7 PAIRED SUBSET \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 10,
+      "text": "10 / 21 \u00b7 50s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 10,
+      "text": "Evidence: depth_gate; depth_selection; analysis.json; reduced-row implementation",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 11,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 11,
+      "text": "Next: locate the lost window and isolate delivery overhead",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 11,
+      "text": "Complete the existing study; correctness-gate the successor before timing it",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Question",
+      "top": 188,
+      "bottom": 208.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Comparison or diagnostic",
+      "top": 188,
+      "bottom": 208.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Where is time lost?",
+      "top": 220.01,
+      "bottom": 240.01999999999998,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Prefix ready \u2192 request seen \u2192 target receipt \u2192 full tree",
+      "top": 220.01,
+      "bottom": 260.03,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Do score arrays matter?",
+      "top": 272.03,
+      "bottom": 312.04999999999995,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Legacy complete vs IDs-only complete",
+      "top": 272.03,
+      "bottom": 292.03999999999996,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Does independent service help?",
+      "top": 324.04999999999995,
+      "bottom": 364.06999999999994,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "IDs inline vs threaded vs threaded+bypass",
+      "top": 324.04999999999995,
+      "bottom": 344.05999999999995,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Does publication add value?",
+      "top": 376.06999999999994,
+      "bottom": 416.0899999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Optimized publication vs optimized complete AND legacy complete",
+      "top": 376.06999999999994,
+      "bottom": 416.0899999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 11,
+      "text": "Finish unequal-depth repetitions and disclose family regressions.",
+      "top": 181,
+      "bottom": 226.54,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 11,
+      "text": "Test IDs-only transport, independent request service and complete-ready bypass against unchanged SSD.",
+      "top": 241.54,
+      "bottom": 332.62,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 11,
+      "text": "Then consider cost-aware allocation, shorter verify graphs and broader unseen workloads if evidence supports them.",
+      "top": 347.62,
+      "bottom": 438.7,
+      "font_pt": 16.5
+    },
+    {
+      "slide": 11,
+      "text": "A strong next experiment identifies a cause and tests it against a simpler control.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 11,
+      "text": "QUEUED \u00b7 BENEFIT UNMEASURED \u00b7 MAIN TALK",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 11,
+      "text": "11 / 21 \u00b7 50s",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 11,
+      "text": "Evidence: greedy_validation; docs/greedy_handoff_queue.md; proposal remaining work",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 12,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 12,
+      "text": "Backup 1 \u00b7 Dataset and protocol provenance",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 12,
+      "text": "Source IDs and exact input tokens are retained",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 12,
+      "text": "Split",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Chat",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Code",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Document",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Total",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Tuning",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "8",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "8",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "8",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "24",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Test",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "25",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "25",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "25",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "75",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Warmup",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "1",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "1",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "1",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "3",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Excluded IDs",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "specbench-148",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "HumanEval/36",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "specbench-553",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "3",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 12,
+      "text": "Spec-Bench: chat and document tasks. HumanEval: code. Complete inputs \u22642,048 tokens; later test prompts are reused.",
+      "top": 367.3999999999999,
+      "bottom": 387.4099999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 12,
+      "text": "Frozen token IDs prevent input-format differences from confounding the methods.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 12,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 12,
+      "text": "12 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 12,
+      "text": "Evidence: workload; profiling/workloads.py",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 13,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 13,
+      "text": "Backup 2 \u00b7 Baseline tuning selected K6 and K7/F3",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 13,
+      "text": "48 scored requests per baseline setting \u00b7 held-out data never selects the winner",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 13,
+      "text": "SD K",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "Mean s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "SSD K/F",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "Mean s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "SSD K/F",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "Mean s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "4",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "3.0964",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "4 / 1",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.4331",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "4 / 3",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.2857",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "6",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "3.0352",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "7 / 1",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.2831",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "7 / 3",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.1176",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "8",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "3.1418",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "10 / 1",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.9753",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "10 / 3",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "2.9665",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 13,
+      "text": "SD: K4/6/8. SSD: K4/7/10 \u00d7 F1/3.",
+      "top": 333.31999999999994,
+      "bottom": 353.3299999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 13,
+      "text": "Objective: lowest balanced mean full-request latency; ties use smaller K/F.",
+      "top": 361.3299999999999,
+      "bottom": 381.3399999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 13,
+      "text": "AR control: 6.2726 s. Full publication and unequal-depth grids: experiment_tables.csv.",
+      "top": 389.3399999999999,
+      "bottom": 409.3499999999999,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 13,
+      "text": "Configuration tuning is part of building a fair baseline; AR tune control 6.2726 s.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 13,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 13,
+      "text": "13 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 13,
+      "text": "Evidence: baseline_selection; publication_tune; experiment_tables.csv",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 14,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 14,
+      "text": "Backup 3 \u00b7 Secondary metrics and the GPU tradeoff",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 14,
+      "text": "Fixed256, aggregate across the balanced baseline mix",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 14,
+      "text": "Method / GPUs",
+      "top": 191,
+      "bottom": 235.16,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "Mean s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "p50 s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "p95 s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "tok/s",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "First ms",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "Shared AR / 1",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "6.271",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "6.245",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "6.359",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "40.8",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "49.8",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "SD K6 / 1",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "3.161",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "2.929",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "4.845",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "81.0",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "114.2",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "SSD K7/F3 / 2",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "2.208",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "1.998",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "3.683",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "115.9",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "96.4",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 14,
+      "text": "The latency gain uses different GPU allocations and has an initial-delivery tradeoff.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 14,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 14,
+      "text": "14 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 14,
+      "text": "Evidence: baseline statistics",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 15,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 15,
+      "text": "Backup 4 \u00b7 Verification is left of the measured ridge",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 15,
+      "text": "Historical five-phase Nsight Compute diagnostic; executor differs from current timings",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 15,
+      "text": "Measured envelope: about 211 TFLOP/s BF16 and 747 GB/s DRAM read.",
+      "top": 180,
+      "bottom": 256.59,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 15,
+      "text": "Verify AI \u224813.5 FLOP/B; ridge \u2248283. Prefill AI \u2248365.",
+      "top": 270.59,
+      "bottom": 321.65,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 15,
+      "text": "GEMM use alone does not imply compute-bound execution.",
+      "top": 335.65,
+      "bottom": 386.71,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 15,
+      "text": "Separate prefill and decode explanations; do not infer current counters from historical captures.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 15,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 15,
+      "text": "15 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 15,
+      "text": "Evidence: roofline; results/ncu/*_ncu.json",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 16,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 16,
+      "text": "Backup 5 \u00b7 Cache hits still waited for the drafter",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 16,
+      "text": "Historical matched rounds \u00b7 selected request/wait/verify intervals reconstructed from saved timing",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 16,
+      "text": "166 hits: mean wait 9.2 ms. 64 misses: 30.0 ms.",
+      "top": 180,
+      "bottom": 231.06,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 16,
+      "text": "Target busy 92.4% includes ~35.2% full-window NCCL time.",
+      "top": 245.06,
+      "bottom": 296.12,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 16,
+      "text": "The residual after tree readiness is not an isolated PCIe transfer measurement.",
+      "top": 310.12,
+      "bottom": 386.71,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 16,
+      "text": "Do not turn NCCL activity or an unexplained residual into an exact wire-transfer claim.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 16,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 16,
+      "text": "16 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 16,
+      "text": "Evidence: critical_path; old_ssd",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 17,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 17,
+      "text": "Backup 6 \u00b7 Component controls and generation gates",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 17,
+      "text": "Different levels of evidence; all scoped to their declared reference",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 17,
+      "text": "Control",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Observed result",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "What it establishes",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Fixed-shape projections",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "870 / 870 operation cases",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Agreement with its own one-query arithmetic",
+      "top": 225.07999999999998,
+      "bottom": 269.24,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Attention boundary controls",
+      "top": 281.24,
+      "bottom": 303.32,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Shared 36/36; original 26/36",
+      "top": 281.24,
+      "bottom": 303.32,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Specific shape/boundary issue",
+      "top": 281.24,
+      "bottom": 303.32,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Shared generation gate",
+      "top": 315.32,
+      "bottom": 337.4,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "36/36 paired; historical gate failed",
+      "top": 315.32,
+      "bottom": 337.4,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Shared agreement, not original words",
+      "top": 315.32,
+      "bottom": 359.48,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Overlap normal + stress",
+      "top": 371.48,
+      "bottom": 393.56,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "96 + 6 exact speculative outputs",
+      "top": 371.48,
+      "bottom": 393.56,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Covered mechanism/ownership behavior",
+      "top": 371.48,
+      "bottom": 415.64,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Greedy successor",
+      "top": 427.64,
+      "bottom": 449.71999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "CPU passed; GPU queued",
+      "top": 427.64,
+      "bottom": 449.71999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Host tests, not full GPU validation",
+      "top": 427.64,
+      "bottom": 449.71999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 17,
+      "text": "Every correctness sentence needs a named reference and tested scope.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 17,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 17,
+      "text": "17 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 17,
+      "text": "Evidence: shared_gate; numerical controls; overlap_gate; overlap_stress; greedy_validation",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 18,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 18,
+      "text": "Backup 7 \u00b7 Ownership rules that prevent stale reads",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 18,
+      "text": "The producer owns model/KV writes; a consumer owns its completed snapshot",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 18,
+      "text": "State",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Required rule",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Before publication",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Prefix event completed; matching generation/context",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Partial reply",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Independent snapshot; valid length excludes uncomputed tail",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "During response",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Retain snapshot and producer storage until readers finish",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Before next model/KV reuse",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Join response and submitted tail writes",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Miss, prefill, request end, exit",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Retire outstanding work before clearing or reusing state",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 18,
+      "text": "Overlap changes ordering, not the obligation to finish all outstanding accesses.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 18,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 18,
+      "text": "18 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 18,
+      "text": "Evidence: docs/prefix_publication.md; docs/greedy_handoff_queue.md",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 19,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 19,
+      "text": "Backup 8 \u00b7 Controls for unequal outcome depths",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 19,
+      "text": "Same recovery candidates, different continuation budgets",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 19,
+      "text": "K7 ranked [7,4,4]; reverse [4,4,7]; uniform equal work [5,5,5].",
+      "top": 180,
+      "bottom": 256.59,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 19,
+      "text": "K10 ranked [10,7,4]; reverse [4,7,10]; uniform equal work [7,7,7].",
+      "top": 270.59,
+      "bottom": 347.17999999999995,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 19,
+      "text": "Static rule at every acceptance position; budget equality is query rows, not elapsed cost.",
+      "top": 361.17999999999995,
+      "bottom": 437.7699999999999,
+      "font_pt": 18.5
+    },
+    {
+      "slide": 19,
+      "text": "Ablations must answer which part of a policy caused a change.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 19,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 19,
+      "text": "19 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 19,
+      "text": "Evidence: docs/outcome_depth.md; depth_selection",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 20,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 20,
+      "text": "Backup 9 \u00b7 Six arms isolate the new handoff changes",
+      "top": 43,
+      "bottom": 83.02,
+      "font_pt": 29
+    },
+    {
+      "slide": 20,
+      "text": "Original complete SSD stays preserved; successor measurements are pending",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 20,
+      "text": "Arm",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Payload",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Service",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Ready bypass",
+      "top": 191,
+      "bottom": 213.07999999999998,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Legacy complete",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Full scores",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Original",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Original",
+      "top": 225.07999999999998,
+      "bottom": 247.15999999999997,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Legacy overlap",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Full scores",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Original",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Original",
+      "top": 259.15999999999997,
+      "bottom": 281.23999999999995,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "IDs complete",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Token IDs",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Inline",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Yes",
+      "top": 293.23999999999995,
+      "bottom": 315.31999999999994,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "IDs publication",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Token IDs",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Inline",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "No",
+      "top": 327.31999999999994,
+      "bottom": 349.3999999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "IDs threaded",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Token IDs",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Independent thread",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "No",
+      "top": 361.3999999999999,
+      "bottom": 383.4799999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "IDs threaded+bypass",
+      "top": 395.4799999999999,
+      "bottom": 417.5599999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Token IDs",
+      "top": 395.4799999999999,
+      "bottom": 417.5599999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Independent thread",
+      "top": 395.4799999999999,
+      "bottom": 417.5599999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Yes",
+      "top": 395.4799999999999,
+      "bottom": 417.5599999999999,
+      "font_pt": 16
+    },
+    {
+      "slide": 20,
+      "text": "Compare with optimized complete SSD as well as the unchanged original comparator.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 20,
+      "text": "IMPLEMENTED \u00b7 GPU UNTESTED \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 20,
+      "text": "20 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 20,
+      "text": "Evidence: docs/greedy_handoff_queue.md; greedy_validation",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    },
+    {
+      "slide": 21,
+      "text": "ANYTIME OUTCOME-CACHE CONSTRUCTION",
+      "top": 19,
+      "bottom": 32.8,
+      "font_pt": 10
+    },
+    {
+      "slide": 21,
+      "text": "Backup 10 \u00b7 Proposal gaps and evidence-driven priorities",
+      "top": 43,
+      "bottom": 123.03999999999999,
+      "font_pt": 29
+    },
+    {
+      "slide": 21,
+      "text": "The proposal permits a quantified negative result if scheduling lacks headroom",
+      "top": 126,
+      "bottom": 146.01,
+      "font_pt": 14.5
+    },
+    {
+      "slide": 21,
+      "text": "Remaining item",
+      "top": 191,
+      "bottom": 211.7,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Why it is needed",
+      "top": 191,
+      "bottom": 211.7,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Finish repetitions",
+      "top": 223.7,
+      "bottom": 244.39999999999998,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Final paired uncertainty, repeatability and family regressions",
+      "top": 223.7,
+      "bottom": 244.39999999999998,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Greedy GPU gates + six-arm comparison",
+      "top": 256.4,
+      "bottom": 297.79999999999995,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Validate lifetime safety; isolate transport/service/copy costs",
+      "top": 256.4,
+      "bottom": 277.09999999999997,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Measured-cost outcome allocation",
+      "top": 309.79999999999995,
+      "bottom": 330.49999999999994,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Move beyond static rank and local publication heuristics",
+      "top": 309.79999999999995,
+      "bottom": 330.49999999999994,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Short-prefix verification buckets",
+      "top": 342.49999999999994,
+      "bottom": 363.19999999999993,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Test whether fewer valid tokens can reduce target cost",
+      "top": 342.49999999999994,
+      "bottom": 363.19999999999993,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Broader unseen data / output lengths",
+      "top": 375.19999999999993,
+      "bottom": 395.8999999999999,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Separate repeated-set findings from generalization",
+      "top": 375.19999999999993,
+      "bottom": 395.8999999999999,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "Cross-device / larger contexts",
+      "top": 407.8999999999999,
+      "bottom": 428.5999999999999,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "New memory/capacity checks and versioned campaigns",
+      "top": 407.8999999999999,
+      "bottom": 428.5999999999999,
+      "font_pt": 15
+    },
+    {
+      "slide": 21,
+      "text": "The next acceptance criterion is lower validated full-request latency than the strongest matched baseline.",
+      "top": 476,
+      "bottom": 493.112,
+      "font_pt": 12.4
+    },
+    {
+      "slide": 21,
+      "text": "COMPLETE \u00b7 Q&A BACKUP",
+      "top": 506,
+      "bottom": 517.868,
+      "font_pt": 8.6
+    },
+    {
+      "slide": 21,
+      "text": "21 / 21",
+      "top": 506,
+      "bottom": 518.42,
+      "font_pt": 9
+    },
+    {
+      "slide": 21,
+      "text": "Evidence: Proposal pp. 1\u20132; analysis.json; queue definitions",
+      "top": 521,
+      "bottom": 530.798,
+      "font_pt": 7.1
+    }
+  ],
+  "speaker_pages": 17,
+  "main_seconds": 600
+}

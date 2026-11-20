@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_outcome_depth_campaign.py", line 642, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_outcome_depth_campaign.py", line 617, in main
+    time.sleep(30)
+    ~~~~~~~~~~^^^^
+  File "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_baselines.py", line 40, in interrupted
+    raise KeyboardInterrupt
+KeyboardInterrupt

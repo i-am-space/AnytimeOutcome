@@ -1,0 +1,290 @@
+{
+  "queue_sha256": "1704265d5b7fa5a887fd29b949b165e3030e6947fb06cf650ccb80f0f47f8c81",
+  "valid_blocks": 26,
+  "requests": 624,
+  "exact_comparisons": 624,
+  "exact_matches": 624,
+  "scores": [
+    {
+      "config": {
+        "label": "complete_k4",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 4,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": null
+      },
+      "requests": 48,
+      "mean_latency_s": 2.285559736753688
+    },
+    {
+      "config": {
+        "label": "complete_k7",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": null
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1213554350009267
+    },
+    {
+      "config": {
+        "label": "complete_k10",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": null
+      },
+      "requests": 48,
+      "mean_latency_s": 2.972764166752313
+    },
+    {
+      "config": {
+        "label": "overlap_k7",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2,
+        "outcome_depths": null
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1510393372724743
+    },
+    {
+      "config": {
+        "label": "overlap_k10",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2,
+        "outcome_depths": null
+      },
+      "requests": 48,
+      "mean_latency_s": 2.458473992287812
+    },
+    {
+      "config": {
+        "label": "ranked_k7",
+        "method": "ranked",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          7,
+          4,
+          4
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.2040869425666947
+    },
+    {
+      "config": {
+        "label": "ranked_k10",
+        "method": "ranked",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          10,
+          7,
+          4
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 3.019355902147557
+    },
+    {
+      "config": {
+        "label": "ranked_overlap_k7",
+        "method": "ranked_overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2,
+        "outcome_depths": [
+          7,
+          4,
+          4
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.2159435640605807
+    },
+    {
+      "config": {
+        "label": "ranked_overlap_k10",
+        "method": "ranked_overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2,
+        "outcome_depths": [
+          10,
+          7,
+          4
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4729364288699194
+    },
+    {
+      "config": {
+        "label": "reverse_k7",
+        "method": "reverse",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          4,
+          4,
+          7
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4671675423730144
+    },
+    {
+      "config": {
+        "label": "reverse_k10",
+        "method": "reverse",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          4,
+          7,
+          10
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 3.523359108250588
+    },
+    {
+      "config": {
+        "label": "budget_k7",
+        "method": "budget",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          5,
+          5,
+          5
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.2546608621244864
+    },
+    {
+      "config": {
+        "label": "budget_k10",
+        "method": "budget",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 2,
+        "outcome_depths": [
+          7,
+          7,
+          7
+        ]
+      },
+      "requests": 48,
+      "mean_latency_s": 2.498694073625908
+    }
+  ],
+  "winners": {
+    "complete": {
+      "label": "complete_k7",
+      "method": "complete",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 0,
+      "policy": "uniform",
+      "window": 2,
+      "outcome_depths": null
+    },
+    "overlap": {
+      "label": "overlap_k7",
+      "method": "overlap",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 4,
+      "policy": "overlap",
+      "window": 2,
+      "outcome_depths": null
+    },
+    "ranked": {
+      "label": "ranked_k7",
+      "method": "ranked",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 0,
+      "policy": "uniform",
+      "window": 2,
+      "outcome_depths": [
+        7,
+        4,
+        4
+      ]
+    },
+    "ranked_overlap": {
+      "label": "ranked_overlap_k7",
+      "method": "ranked_overlap",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 4,
+      "policy": "overlap",
+      "window": 2,
+      "outcome_depths": [
+        7,
+        4,
+        4
+      ]
+    }
+  }
+}

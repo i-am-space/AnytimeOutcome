@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "definition_sha256": "875ab3cdbd9ebdd527350d5738d64696941e90c13e1519791186e08fb9636a8e",
+  "command": [
+    "/usr/local/cuda-12.9/bin/nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt",
+    "--cuda-graph-trace=node",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=stop",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "-o",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/profiles/l256_complete_k10/attempt_0/trace",
+    "/home/vishalrao/miniconda3/bin/python3.13",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_context_length_sweep_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18",
+    "--phase",
+    "profiles",
+    "--job",
+    "l256_complete_k10",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/profiles/l256_complete_k10/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 77,
+  "external_processes": [],
+  "error": null,
+  "run_token": "4b656b9524bf459f86f76cba5f97d4b5",
+  "dedicated_gpus": true,
+  "profiler": true,
+  "at": "2026-11-18T07:22:17.412937+00:00",
+  "artifacts": {
+    "trace.nsys-rep": "d6927c98e93d8f932d6688dc479f3bd36a7123a35a47db84e8a6e6b1e7c40192",
+    "trace.sqlite": "fee95169472ee8159d585ddba4ad15df0ede044a5c016c105c68d237766d926f",
+    "phase_analysis.json": "89b61283be725ef0c9d5bb906a81aeab09fc1ea843579f5669adc203e8e70213"
+  },
+  "output_sha256": "4434fe44551ece4fc3ac6805760b8ea5be541e3dd5b2458d01ac6d01072d02fe"
+}

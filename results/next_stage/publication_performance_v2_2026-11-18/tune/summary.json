@@ -1,0 +1,335 @@
+{
+  "queue_sha256": "410f285a3351168f9aaecc282396e355a727af83de7405af0e20271a493cda32",
+  "valid_blocks": 42,
+  "requests": 1008,
+  "exact_comparisons": 1008,
+  "exact_matches": 1008,
+  "scores": [
+    {
+      "config": {
+        "label": "complete_k4",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 4,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.2888184049528113
+    },
+    {
+      "config": {
+        "label": "complete_k7",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1166039590364867
+    },
+    {
+      "config": {
+        "label": "complete_k10",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.969658089138344
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p2",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.178487048107248
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p4",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1579129383887143
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p7",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1481263388741354
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p2",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.357538372740237
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p4",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.3536120839150194
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p7",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4838340260672944
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p2_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.173832744705578
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p2_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1526403607082707
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p4_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1803378482897338
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p4_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.137225626819903
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p7_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1905678084791966
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p7_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1383179072896987
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p2_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.3679051988268234
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p2_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4627149241847897
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p4_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.364069574374298
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p4_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.45985768539443
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p7_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.5388035464153895
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p7_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4982150749553207
+    }
+  ],
+  "winners": {
+    "complete": {
+      "label": "complete_k7",
+      "method": "complete",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 0,
+      "policy": "uniform",
+      "window": 1
+    },
+    "uniform": {
+      "label": "uniform_k7_p7",
+      "method": "uniform",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 7,
+      "policy": "uniform",
+      "window": 1
+    },
+    "overlap": {
+      "label": "overlap_k7_p4_w2",
+      "method": "overlap",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 4,
+      "policy": "overlap",
+      "window": 2
+    }
+  }
+}

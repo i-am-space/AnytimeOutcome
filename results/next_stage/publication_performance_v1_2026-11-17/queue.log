@@ -24,3 +24,29 @@ Traceback (most recent call last):
   File "/home/vishalrao/AnytimeOutcome/profiling/run_baselines.py", line 40, in interrupted
     raise KeyboardInterrupt
 KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_campaign.py", line 538, in run_phase
+    run_block(args,d,j,q)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_campaign.py", line 229, in run_block
+    uuids = [g['uuid'] for g in q['hardware']['gpus']]; require_idle(uuids)
+                                                        ~~~~~~~~~~~~^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_baselines.py", line 144, in require_idle
+    raise PendingWindow(f'Dedicated window unavailable: unrelated GPU processes {other}')
+run_baselines.PendingWindow: Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 2701047, 'name': '.venv/bin/python'}]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_campaign.py", line 600, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_campaign.py", line 580, in main
+    if not run_phase(args,q,load_definition(args.outdir,q,'tune')):return 2
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_campaign.py", line 542, in run_phase
+    time.sleep(30)
+    ~~~~~~~~~~^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_baselines.py", line 40, in interrupted
+    raise KeyboardInterrupt
+KeyboardInterrupt

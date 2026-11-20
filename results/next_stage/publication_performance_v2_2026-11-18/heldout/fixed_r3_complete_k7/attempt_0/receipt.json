@@ -1,0 +1,27 @@
+{
+  "valid": true,
+  "definition_sha256": "89a48db9076939e1a60b3981fa98a3642b1c4fe93e47b42fbf16ecf7dceb220c",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python3.13",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18",
+    "--phase",
+    "heldout",
+    "--job",
+    "fixed_r3_complete_k7",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r3_complete_k7/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 164,
+  "external_processes": [],
+  "error": null,
+  "run_token": "2b636949f20a4967ace0f9f1586ae645",
+  "dedicated_gpus": true,
+  "profiler": false,
+  "at": "2026-11-18T06:22:31.386087+00:00",
+  "output_sha256": "495f6e3ddb380ec3a9b91c0b8fcf47bcb90860918e9af31430ae1938007c1503"
+}

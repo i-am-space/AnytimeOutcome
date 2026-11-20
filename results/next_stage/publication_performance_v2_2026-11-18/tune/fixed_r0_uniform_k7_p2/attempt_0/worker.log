@@ -1,0 +1,45 @@
+/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:184: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+Failed to get device capability: CUDA driver initialization failed, you might not have a CUDA gpu..
+Failed to get device capability: CUDA driver initialization failed, you might not have a CUDA gpu..
+Draft runner created on rank 1 (async)!
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 538, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 499, in main
+    engine_worker.worker(args);return 0
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_adaptive_publication.py", line 78, in worker
+    model = LLM(q['models']['target']['path'], draft=q['models']['draft']['path'],
+        target_numerics='shared_fixed16', num_gpus=2 if mode == 'ssd' else 1,
+    ...<3 lines>...
+        early_publish_tokens=c['p'], publication_policy=c['policy'], publication_max_inflight=c['window'],
+        drain_draft_on_finish=mode == 'ssd')
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/llm_engine.py", line 102, in __init__
+    self.model_runner = ModelRunner(
+                        ~~~~~~~~~~~^
+        config, 0, self.events, is_draft=False, num_tp_gpus=self.num_tp_gpus)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/third_party/ssd/ssd/engine/model_runner.py", line 88, in __init__
+    torch.cuda.set_device(self.rank)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py", line 584, in set_device
+    torch._C._cuda_setDevice(device)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py", line 424, in _lazy_init
+    torch._C._cuda_init()
+    ~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=33, pipe_handle=37)
+                                                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+  File "/home/vishalrao/miniconda3/lib/python3.13/multiprocessing/synchronize.py", line 115, in __setstate__
+    self._semlock = _multiprocessing.SemLock._rebuild(*state)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory

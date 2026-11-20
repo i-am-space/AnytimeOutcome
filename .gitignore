@@ -9,3 +9,10 @@ results/**/smoke_*.json
 results/**/probe_*
 results/**/.*.lock
 results/**/*.tmp
+.worktrees/
+
+# Live controller state is frozen in the Evaluation 2 evidence archive.
+results/next_stage/outcome_depth_v2_2026-11-18/status.json
+results/next_stage/outcome_depth_v2_2026-11-18/queue.log
+results/next_stage/greedy_handoff_v1_2026-11-19/status.json
+results/next_stage/greedy_handoff_v1_2026-11-19/queue.log

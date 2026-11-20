@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 538, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 518, in main
+    if not run_phase(args,q,load_definition(args.outdir,q,'tune')):return 2
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 472, in run_phase
+    run_block(args,d,j,q)
+    ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py", line 275, in run_block
+    raise RuntimeError(f'Campaign worker failed: {attempt}/worker.log; {error}')
+RuntimeError: Campaign worker failed: /home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k7_p2/attempt_0/worker.log; None

@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-17T20:48:34.310127+00:00",
+  "queue_sha256": "5f6b6a2a8678a7045426da6bd14bf0e188a745f8f00637682c8d50821a059e19",
+  "source_archive_verified": true,
+  "source_files_unchanged": true,
+  "dry_run_passed": true,
+  "phase_blocks": {
+    "measure": 21,
+    "profiles": 12
+  },
+  "ar_jobs": {
+    "measure": 3,
+    "profiles": 0
+  },
+  "full_ar_performance_arms_removed": false,
+  "new_input_ar_preserved": true
+}

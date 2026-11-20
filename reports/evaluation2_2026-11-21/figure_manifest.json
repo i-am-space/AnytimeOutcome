@@ -1,0 +1,102 @@
+{
+  "baseline_fixed": {
+    "sources": [
+      "baseline"
+    ],
+    "caption": "fixed: 75 prompts \u00d7 five rounds per method; shared-fixed16-v1; unprofiled dedicated runs. Error bars are hierarchical 95% bootstrap intervals for means."
+  },
+  "baseline_natural": {
+    "sources": [
+      "baseline"
+    ],
+    "caption": "natural: 75 prompts \u00d7 five rounds per method; shared-fixed16-v1; unprofiled dedicated runs. Error bars are hierarchical 95% bootstrap intervals for means."
+  },
+  "family_latency": {
+    "sources": [
+      "baseline"
+    ],
+    "caption": "Fixed256; 25 prompts/family \u00d7 five rounds. Code has higher measured draft acceptance on this mix; this is not a code-quality evaluation."
+  },
+  "baseline_tuning": {
+    "sources": [
+      "baseline_selection"
+    ],
+    "caption": "24 tuning prompts \u00d7 two repetitions per setting; tune fixed256 only. Selected SD K6 and SSD K7/F3 before held-out evaluation."
+  },
+  "publication_effect": {
+    "sources": [
+      "publication"
+    ],
+    "caption": "Positive means slower. Five paired rounds \u00d7 75 reused test prompts; all methods use two GPUs. 95% intervals from 10,000 paired bootstrap samples."
+  },
+  "context_latency": {
+    "sources": [
+      "context"
+    ],
+    "caption": "Synthetic length diagnostic: one template/family, three rounds, fixed256 outputs. Publication improves K10 but complete K7 is faster at every measured length. All curves use two GPUs."
+  },
+  "phase_balance": {
+    "sources": [
+      "context"
+    ],
+    "caption": "Separate profiled captures. K7 tree and verify spans are similar; K10 tree spans are about 1.6\u00d7 verify. Spans include gaps and are not sums of isolated kernel durations."
+  },
+  "unequal_depth": {
+    "sources": [
+      "analysis.json",
+      "depth_selection"
+    ],
+    "caption": "PROVISIONAL: only rounds with all six methods completed; 75 prompts/round, two GPUs per method. Not the final five-round result."
+  },
+  "unequal_depth_fixed": {
+    "sources": [
+      "analysis.json"
+    ],
+    "caption": "PROVISIONAL fixed256: three fully paired rounds, 75 prompts/round. Positive latency change means slower. Natural EOS shows the same direction in four complete paired rounds."
+  },
+  "depth_allocation": {
+    "sources": [
+      ".worktrees/outcome-depth-v1/docs/outcome_depth.md"
+    ],
+    "caption": "Schematic allocation repeated at every acceptance position. Equal-work controls match query-row budgets, not measured latency or memory traffic."
+  },
+  "roofline": {
+    "sources": [
+      "roofline",
+      "results/ncu/*_ncu.json"
+    ],
+    "caption": "Historical executor: five isolated Nsight Compute captures. Target verify is left of the ridge; prefill is compute-oriented. Padding, cache effects and replay influence positions."
+  },
+  "historical_wait": {
+    "sources": [
+      "critical_path"
+    ],
+    "caption": "Historical 230 matched rounds. Dashed line is mean verification duration, shown for scale; it is not a wait threshold or an extra stacked cost."
+  },
+  "measured_timeline": {
+    "sources": [
+      "critical_path"
+    ],
+    "caption": "Measured reconstruction: first five matched historical rounds. The draft row shows only remaining tree time on hits, not whole-tree duration. Target wait includes dependencies and service; it is not wire-transfer time."
+  },
+  "gpu_states": {
+    "sources": [
+      "old_ssd"
+    ],
+    "caption": "Historical Nsight Systems window. Non-NCCL time is a category, not a proof that all activity is useful; NCCL can spend time waiting for peer data."
+  },
+  "handoff_schematic": {
+    "sources": [
+      "docs/prefix_publication.md",
+      "docs/adaptive_publication.md"
+    ],
+    "caption": "Uniform finishes submitted work before delivery. Overlap delivers an independent completed snapshot while that work finishes, then joins before buffer reuse."
+  },
+  "architecture": {
+    "sources": [
+      "workload",
+      "docs/prefix_publication.md"
+    ],
+    "caption": "SSD target and drafter use different physical L40S GPUs. AR/SD use GPU0 only. Architecture is schematic."
+  }
+}

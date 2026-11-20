@@ -1,7 +1,6 @@
 {
-  "status": "pending_dedicated_gpus",
-  "phase": "tune",
-  "job": "fixed_r0_ar",
-  "reason": "Dedicated window unavailable: unrelated GPU processes [{'uuid': 'GPU-4890b987-943e-ab85-5519-27aab934f5bd', 'pid': 2701047, 'name': '.venv/bin/python'}]",
-  "at": "2026-11-17T19:32:21.317080+00:00"
+  "status": "superseded",
+  "replacement": "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18",
+  "reason": "User approved removing redundant full AR timing repetitions",
+  "at": "2026-11-17T20:51:12.935802+00:00"
 }

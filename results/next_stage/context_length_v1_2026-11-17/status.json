@@ -1,6 +1,6 @@
 {
-  "status": "waiting_for_predecessor",
-  "after": "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v1_2026-11-17",
-  "reason": "Requires successful completed campaign and exclusive global campaign lock",
-  "at": "2026-11-17T19:32:19.902269+00:00"
+  "status": "superseded",
+  "replacement": "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18",
+  "reason": "User approved removing redundant full AR timing repetitions",
+  "at": "2026-11-17T20:51:12.937449+00:00"
 }

@@ -1,0 +1,49 @@
+{
+  "queue_sha256": "01f7285246ded3bded797ac98de076df365f70f601d955c3ac4d34891f30f28d",
+  "phase": "micro",
+  "configurations": [
+    {
+      "method": "micro",
+      "label": "micro",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 0,
+      "greedy": false,
+      "service": "inline",
+      "bypass": false,
+      "engine_root": "/home/vishalrao/AnytimeOutcome/.worktrees/greedy-handoff-v1"
+    }
+  ],
+  "prompts": [],
+  "warmup": [],
+  "repetitions": 1,
+  "protocols": [
+    "fixed"
+  ],
+  "kv_fraction": 0.1,
+  "diagnostic": false,
+  "selection_sha256": null,
+  "profiler": false,
+  "jobs": [
+    {
+      "id": "fixed_r0_micro",
+      "config": {
+        "method": "micro",
+        "label": "micro",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "greedy": false,
+        "service": "inline",
+        "bypass": false,
+        "engine_root": "/home/vishalrao/AnytimeOutcome/.worktrees/greedy-handoff-v1"
+      },
+      "round": 0,
+      "protocol": "fixed",
+      "prompt_order": []
+    }
+  ],
+  "sha256": "b50a1d9e6b0f853b369104da07a1c5e57f556c6e43318136c627e8c2a997b8af"
+}

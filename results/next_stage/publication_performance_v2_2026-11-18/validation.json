@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-17T20:48:34.293612+00:00",
+  "queue_sha256": "410f285a3351168f9aaecc282396e355a727af83de7405af0e20271a493cda32",
+  "source_archive_verified": true,
+  "source_files_unchanged": true,
+  "dry_run_passed": true,
+  "phase_blocks": {
+    "continuity": 1,
+    "tune": 42
+  },
+  "ar_jobs": {
+    "continuity": 1,
+    "tune": 0
+  },
+  "full_ar_performance_arms_removed": true,
+  "cpu_tests": "233 passed, 16 skipped, 14 warnings in 12.76s",
+  "cpu_log_sha256": "f7dfff829bab62fd4c4853b9faebe3f4f38e3b0d351b73a9c5d7efc342513812"
+}

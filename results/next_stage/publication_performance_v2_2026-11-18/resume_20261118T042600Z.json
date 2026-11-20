@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-18T04:26:00.613716+00:00",
+  "previous_status": {
+    "status": "stopped",
+    "reason": "Campaign worker failed: /home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k7_p2/attempt_0/worker.log; None",
+    "at": "2026-11-18T00:05:41.703892+00:00"
+  },
+  "action": "Resume unchanged frozen campaign after CUDA initialization failure",
+  "cuda_probe": "Both UUID-pinned L40S devices initialized and completed CUDA reductions",
+  "completed_blocks_preserved": true,
+  "execution_code_changed": false,
+  "command": "env -u LD_PRELOAD -u NVIDIA_TF32_OVERRIDE -u TORCH_ALLOW_TF32_CUBLAS_OVERRIDE -u CUBLAS_WORKSPACE_CONFIG -u CUDA_LAUNCH_BLOCKING -u OMP_NUM_THREADS -u MKL_NUM_THREADS -u PYTORCH_CUDA_ALLOC_CONF CUDA_HOME=/usr/local/cuda-12.9 SSD_CUDA_ARCH=8.9 CUDA_VISIBLE_DEVICES= bash -lc 'source /home/vishalrao/AnytimeOutcome/profiling/env.sh\nexec /home/vishalrao/miniconda3/bin/python3.13 -O /home/vishalrao/AnytimeOutcome/profiling/run_publication_reuse_ar.py --watch >> /home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v2_2026-11-18/queue.log 2>&1'"
+}

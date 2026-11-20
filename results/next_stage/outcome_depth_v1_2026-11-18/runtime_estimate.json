@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-17T20:11:11.747745+00:00",
+  "historical_source": "/home/vishalrao/AnytimeOutcome/results/next_stage/queue_runtime_estimate_2026-11-18.json",
+  "historical_source_sha256": "873d3ebdf434b0747320333f074ccab12f90a93e45bedf493ae77d0664719b14",
+  "correctness_minutes_proxy": 20.895433450610494,
+  "tuning_minutes_proxy": 44.398466291666665,
+  "heldout_minutes_proxy": 258.6383934666666,
+  "new_queue_hours_proxy": 5.398871553482397,
+  "all_queues_hours_proxy": 10.318224573404704,
+  "all_queues_with_optional_anchor_hours_proxy": 10.825796532849148,
+  "assumptions": [
+    "No dedicated-GPU waiting or invalidated retries included.",
+    "SSD arms use historical mean costs as proxies; new policy performance is unknown.",
+    "Gate uses six requests per worker plus historical warmup/loading/exit overhead.",
+    "Long contexts, extra graph captures, additional JIT misses and analysis may increase runtime."
+  ]
+}

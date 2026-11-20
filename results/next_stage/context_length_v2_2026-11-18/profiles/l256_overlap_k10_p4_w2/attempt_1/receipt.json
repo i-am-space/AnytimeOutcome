@@ -1,0 +1,44 @@
+{
+  "valid": false,
+  "definition_sha256": "875ab3cdbd9ebdd527350d5738d64696941e90c13e1519791186e08fb9636a8e",
+  "command": [
+    "/usr/local/cuda-12.9/bin/nsys",
+    "profile",
+    "--trace=cuda,nvtx,osrt",
+    "--cuda-graph-trace=node",
+    "--capture-range=cudaProfilerApi",
+    "--capture-range-end=stop",
+    "--sample=none",
+    "--cpuctxsw=none",
+    "-o",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/profiles/l256_overlap_k10_p4_w2/attempt_1/trace",
+    "/home/vishalrao/miniconda3/bin/python3.13",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_context_length_sweep_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18",
+    "--phase",
+    "profiles",
+    "--job",
+    "l256_overlap_k10_p4_w2",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/profiles/l256_overlap_k10_p4_w2/attempt_1"
+  ],
+  "returncode": 0,
+  "samples": 72,
+  "external_processes": [
+    {
+      "uuid": "GPU-4dc32c12-52e7-d133-d641-ac04543af1de",
+      "pid": 3057123,
+      "name": "[No data]"
+    }
+  ],
+  "error": null,
+  "run_token": "17951a2013b54a73b7cddc8cdf8809bc",
+  "dedicated_gpus": true,
+  "profiler": true,
+  "at": "2026-11-18T07:25:31.634637+00:00",
+  "artifacts": {},
+  "output_sha256": "73bf076cdbc33a47124a595fced4f9e6ef703f6b711af8bee3c0cf853ef4208b"
+}

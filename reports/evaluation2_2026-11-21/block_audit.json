@@ -1,0 +1,1520 @@
+[
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k7_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k10_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/sd_k4.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k4_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/sd_k8.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k4_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/sd_k6.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ar.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k10_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r0/ssd_k7_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k7_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k10_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ar.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/sd_k6.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k4_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/sd_k8.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k4_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/sd_k4.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k10_f1.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "tune",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/tune/fixed/r1/ssd_k7_f3.receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r0/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r0/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r0/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r0/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r0/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r0/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r1/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r1/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r1/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r1/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r1/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r1/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r2/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r2/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r2/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r2/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r2/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r2/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r3/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r3/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r3/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r3/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r3/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r3/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r4/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r4/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/fixed/r4/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r4/ar.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r4/sd_k6.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "baseline",
+    "phase": "heldout",
+    "receipt": "results/next_stage/shared_uniform_v1_2026-11-17/baselines/raw/heldout/natural/r4/ssd_k7_f3.receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "continuity",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/continuity/fixed_r0_ar/attempt_1/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_complete_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_complete_k4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p2_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p2_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p4_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p7_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k10_p7_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p2_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p2_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p4_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p7_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_overlap_k7_p7_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k10_p2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k10_p4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k10_p7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k7_p2/attempt_1/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k7_p4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r0_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_complete_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_complete_k4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p2_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p2_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p4_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p7_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k10_p7_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p2_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p2_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p4_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p7_w1/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_overlap_k7_p7_w2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k10_p2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k10_p4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k10_p7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k7_p2/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k7_p4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/tune/fixed_r1_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r0_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r0_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r1_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r1_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r2_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r2_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r2_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r3_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r3_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r3_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r4_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r4_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/fixed_r4_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r0_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r0_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r1_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r1_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r2_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r2_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r2_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r3_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r3_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r3_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r4_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r4_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "publication_performance_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/publication_performance_v2_2026-11-18/heldout/natural_r4_uniform_k7_p7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_ar/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_complete_k10/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_complete_k7/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_uniform_k10_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r0_uniform_k7_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_ar/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_complete_k10/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_complete_k7/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_uniform_k10_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r1_uniform_k7_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_ar/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_complete_k10/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_complete_k7/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_overlap_k7_p4_w2/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_uniform_k10_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "measure",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/measure/r2_uniform_k7_p4/attempt_0/receipt.json",
+    "requests": 12
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l1024_complete_k10/attempt_2/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l1024_complete_k7/attempt_1/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l1024_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l2048_complete_k10/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l2048_complete_k7/attempt_1/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l2048_overlap_k10_p4_w2/attempt_1/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l256_complete_k10/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l256_complete_k7/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l256_overlap_k10_p4_w2/attempt_2/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l512_complete_k10/attempt_1/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l512_complete_k7/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "context_length_v2_2026-11-18",
+    "phase": "profiles",
+    "receipt": "results/next_stage/context_length_v2_2026-11-18/profiles/l512_overlap_k10_p4_w2/attempt_0/receipt.json",
+    "requests": 3
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_ar/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_budget_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_budget_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_complete_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_complete_k4/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_overlap_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_overlap_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_ranked_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_ranked_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_ranked_overlap_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_reverse_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/fixed_r0_reverse_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_ar/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_budget_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_budget_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_complete_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_complete_k4/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_overlap_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_overlap_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_ranked_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_ranked_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_ranked_overlap_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_reverse_k10/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "gate",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/gate/natural_r0_reverse_k7/attempt_0/receipt.json",
+    "requests": 6
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_budget_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_budget_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_complete_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_complete_k4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_overlap_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_overlap_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_ranked_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_ranked_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_ranked_overlap_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_reverse_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r0_reverse_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_budget_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_budget_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_complete_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_complete_k4/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_overlap_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_overlap_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_ranked_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_ranked_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_ranked_overlap_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_ranked_overlap_k7/attempt_1/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_reverse_k10/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "tune",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/tune/fixed_r1_reverse_k7/attempt_0/receipt.json",
+    "requests": 24
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r0_reverse_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r1_reverse_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r2_reverse_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/fixed_r3_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r0_reverse_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_overlap_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_ranked_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r1_reverse_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r2_reverse_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_budget_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_complete_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_overlap_k7/attempt_1/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_ranked_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_ranked_overlap_k7/attempt_0/receipt.json",
+    "requests": 75
+  },
+  {
+    "campaign": "outcome_depth_v2_2026-11-18",
+    "phase": "heldout",
+    "receipt": "results/next_stage/outcome_depth_v2_2026-11-18/heldout/natural_r3_reverse_k7/attempt_0/receipt.json",
+    "requests": 75
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "valid": true,
+  "definition_sha256": "d907f6118ec1b95799d1467a1ad0d5bc1fcb2e7a7c164c8fba0a9a8d94031909",
+  "command": [
+    "/home/vishalrao/miniconda3/bin/python3.13",
+    "-O",
+    "/home/vishalrao/AnytimeOutcome/profiling/run_context_length_sweep_v2.py",
+    "--worker",
+    "--outdir",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18",
+    "--phase",
+    "measure",
+    "--job",
+    "r1_ar",
+    "--attempt",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/measure/r1_ar/attempt_0"
+  ],
+  "returncode": 0,
+  "samples": 140,
+  "external_processes": [],
+  "error": null,
+  "run_token": "a08a34ab8d3242c089fd2db02d8412fd",
+  "dedicated_gpus": true,
+  "profiler": false,
+  "at": "2026-11-18T07:01:58.725981+00:00",
+  "artifacts": {},
+  "output_sha256": "543ea61949e1c522cce2c1d180dbf2c2bf2ec6872706dc673b1228cb480dcf19"
+}

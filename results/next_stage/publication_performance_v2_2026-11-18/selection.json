@@ -1,0 +1,380 @@
+{
+  "queue_sha256": "410f285a3351168f9aaecc282396e355a727af83de7405af0e20271a493cda32",
+  "tuning_definition_sha256": "33b91b0c49abc8128ed3654afd36824dbd7d25aeca6000f42198e927e1e11f33",
+  "winners": {
+    "complete": {
+      "label": "complete_k7",
+      "method": "complete",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 0,
+      "policy": "uniform",
+      "window": 1
+    },
+    "uniform": {
+      "label": "uniform_k7_p7",
+      "method": "uniform",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 7,
+      "policy": "uniform",
+      "window": 1
+    },
+    "overlap": {
+      "label": "overlap_k7_p4_w2",
+      "method": "overlap",
+      "mode": "ssd",
+      "k": 7,
+      "f": 3,
+      "p": 4,
+      "policy": "overlap",
+      "window": 2
+    }
+  },
+  "scores": [
+    {
+      "config": {
+        "label": "complete_k4",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 4,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.2888184049528113
+    },
+    {
+      "config": {
+        "label": "complete_k7",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1166039590364867
+    },
+    {
+      "config": {
+        "label": "complete_k10",
+        "method": "complete",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 0,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.969658089138344
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p2",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.178487048107248
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p4",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1579129383887143
+    },
+    {
+      "config": {
+        "label": "uniform_k7_p7",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1481263388741354
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p2",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.357538372740237
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p4",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.3536120839150194
+    },
+    {
+      "config": {
+        "label": "uniform_k10_p7",
+        "method": "uniform",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "uniform",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4838340260672944
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p2_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.173832744705578
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p2_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1526403607082707
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p4_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1803378482897338
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p4_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.137225626819903
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p7_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1905678084791966
+    },
+    {
+      "config": {
+        "label": "overlap_k7_p7_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 7,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.1383179072896987
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p2_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.3679051988268234
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p2_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 2,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4627149241847897
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p4_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.364069574374298
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p4_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 4,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.45985768539443
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p7_w1",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 1
+      },
+      "requests": 48,
+      "mean_latency_s": 2.5388035464153895
+    },
+    {
+      "config": {
+        "label": "overlap_k10_p7_w2",
+        "method": "overlap",
+        "mode": "ssd",
+        "k": 10,
+        "f": 3,
+        "p": 7,
+        "policy": "overlap",
+        "window": 2
+      },
+      "requests": 48,
+      "mean_latency_s": 2.4982150749553207
+    }
+  ],
+  "evidence_sha256": {
+    "tune/fixed_r0_overlap_k10_p2_w2/attempt_0/receipt.json": "dea98552a40cd552e2c6a2d763aa660cccef9ad89743b74b7a068ec8c723da01",
+    "tune/fixed_r1_overlap_k10_p4_w2/attempt_0/receipt.json": "f73cd937ab60a85a1c0bb7746f0550ee82437628389f45f765491be2684fbd94",
+    "tune/fixed_r0_uniform_k7_p4/attempt_0/receipt.json": "8e7760cdbd3993f08e0a82e48d091fb7922b96747559a615c4eea444168efbe0",
+    "tune/fixed_r1_overlap_k7_p7_w1/attempt_0/receipt.json": "bfb46776f1a05e7d13600a4867fe7bbd3eca63ea55d49998efb78a76af20f3af",
+    "tune/fixed_r1_overlap_k10_p2_w1/attempt_0/receipt.json": "0cd4171c694c2d5c76cadc0f868b2f03bc2b34a02829b488f3d11250945a3932",
+    "tune/fixed_r0_overlap_k10_p4_w1/attempt_0/receipt.json": "82ea3fb32f313635db65ca36be6adeaa9f25d29eb3b2050105ece6af6ece2284",
+    "tune/fixed_r0_overlap_k7_p7_w1/attempt_0/receipt.json": "e236364a4de9700af59adc2fda750736a3b128bea10b801d3496dcace5c6f300",
+    "tune/fixed_r1_uniform_k10_p4/attempt_0/receipt.json": "09b4e29b902387e6523e5cb90b8ed525a4ef206e9eaf8acdcd8acb8e471ecc17",
+    "tune/fixed_r1_overlap_k7_p2_w2/attempt_0/receipt.json": "8971796bb547f6f3dd4dba8a3b0c69417c0e9d1d8cd91dfd5bf0b12ab8716123",
+    "tune/fixed_r0_complete_k4/attempt_0/receipt.json": "e3e489a8c62c8ba140b97d12969fdcb79ce6b74cf3d63c76fde18c558e25ce5c",
+    "tune/fixed_r1_overlap_k10_p7_w2/attempt_0/receipt.json": "0f87183c5be75141916568206cff09bacf7a4c408a5738de8c50216e650aa3f5",
+    "tune/fixed_r0_overlap_k10_p7_w1/attempt_0/receipt.json": "33b5b1d5c4cffe743a29379492898d2859854ab57adc0c4b7470f17804756931",
+    "tune/fixed_r1_overlap_k7_p4_w1/attempt_0/receipt.json": "4670e799d83413355a26dca603a40830fbd20dff31677b0813d1c3084f521155",
+    "tune/fixed_r0_overlap_k7_p2_w2/attempt_0/receipt.json": "9328f6b50efbec585604a7491f8a5856b69af8f99dde5b05c57f4e4bf51b7d14",
+    "tune/fixed_r0_overlap_k7_p4_w1/attempt_0/receipt.json": "275831472b96e284d92d63dbe835871f0a1af2a132877da6082ec14d1ac03678",
+    "tune/fixed_r1_overlap_k10_p4_w1/attempt_0/receipt.json": "d9dd0794a88d14f5f22a8ace3090d0bad967d4f5d74a419d69d6df37caf97be5",
+    "tune/fixed_r0_overlap_k10_p2_w1/attempt_0/receipt.json": "f19b3170edecd0034a88b9293d5fcdeea33b245dd8b027a3239676443366a76b",
+    "tune/fixed_r0_complete_k10/attempt_0/receipt.json": "d56e0d5be2e1e1b90f9bd740ff609386b74616c564a479305a8321511c947e96",
+    "tune/fixed_r0_overlap_k10_p4_w2/attempt_0/receipt.json": "16b8c0cfc82d72fc3d411b7eb705304d2daf3840b831d3009b61ac499e32bae2",
+    "tune/fixed_r1_overlap_k10_p2_w2/attempt_0/receipt.json": "ba57e01e00bb7707f372cbe3dafe3f409fba8559ad33df38920bee255889f21e",
+    "tune/fixed_r1_complete_k10/attempt_0/receipt.json": "963b02fffa47708df22987265fd755a4e1a0028d641e02e3d5db6cffebf523f4",
+    "tune/fixed_r1_overlap_k7_p7_w2/attempt_0/receipt.json": "fc333245c98399d5d0896a708730cb188ae2f5176be6f73e6c3b4f957983fe09",
+    "tune/fixed_r0_uniform_k7_p7/attempt_0/receipt.json": "26f85b5ad205b0ee31986cd32e147838162fa914a8ed52cd78295266d623eae8",
+    "tune/fixed_r0_overlap_k7_p7_w2/attempt_0/receipt.json": "9bc4d10eb12aebb913615577e312d793da8c5117f39a03db196ddd1bf3c06468",
+    "tune/fixed_r1_uniform_k10_p7/attempt_0/receipt.json": "ebc478308316a6822ccc96828bc043b685c7ab21d66634ad1bde6e1605cf35cf",
+    "tune/fixed_r1_overlap_k10_p7_w1/attempt_0/receipt.json": "fed0e49b9f2898803eacaef8c2e999ab3e14cc1fd7bc515000a16692fc622022",
+    "tune/fixed_r0_complete_k7/attempt_0/receipt.json": "ef96de8ff4ba8e2aa310b6d5a2d388d5e83726a95fcd1bd4343007f998d07c0c",
+    "tune/fixed_r1_overlap_k7_p2_w1/attempt_0/receipt.json": "df6b4bcfa424b90b68cd96d383d76c2d40cea5dfbc81e723527fada5495e7644",
+    "tune/fixed_r1_overlap_k7_p4_w2/attempt_0/receipt.json": "2fa248f444d4192f28300efc73b30610b898cf386f4b410d44dded5282b36a1f",
+    "tune/fixed_r0_overlap_k10_p7_w2/attempt_0/receipt.json": "1c1eb110a3b3676c68b9e8c9a08a1a7036c7c679f2c40d5c30470f95f4287728",
+    "tune/fixed_r0_overlap_k7_p2_w1/attempt_0/receipt.json": "faa1796b7986946ac21d2314a0145a8baa651dcf6539d0035a23ed3c2ee9a47e",
+    "tune/fixed_r1_uniform_k7_p2/attempt_0/receipt.json": "f45615faf126dc3a8ecb001fd5c78f2629fd3dd1214395a91e56c68cec6b4735",
+    "tune/fixed_r0_uniform_k10_p2/attempt_0/receipt.json": "ec3dfeb6d4e2cfe1255cd304c52c7bed94ca2435d0a2296f3ded4d2f261d4c81",
+    "tune/fixed_r0_overlap_k7_p4_w2/attempt_0/receipt.json": "edb954db36f9b20140668e6ba7ebe21b1098ad905c423fcab3c47dd9a0c3edd1",
+    "tune/fixed_r0_uniform_k7_p2/attempt_1/receipt.json": "e084d91ae34084da7d5a15842fd83eba1b1a1be6fb58031deda1189058826adc",
+    "tune/fixed_r1_uniform_k10_p2/attempt_0/receipt.json": "3d252c35eaf1a35dbda37381f50727a7d0d6c54c06ee7f0634a28ffdce25c628",
+    "tune/fixed_r1_complete_k7/attempt_0/receipt.json": "f9666a7f95f53eed52a6b18410aff9ce11c1f53e72915d82b2170d40d916de7e",
+    "tune/fixed_r1_uniform_k7_p7/attempt_0/receipt.json": "f1f9219cf623b1b5242a509e1ecc5ee3d88880f0af36646e9e68e854191000d4",
+    "tune/fixed_r0_uniform_k10_p7/attempt_0/receipt.json": "19ce78f37c0fa1cc36dcfb5a4028c1f6f6065c1a16e7967070a070dd1360f75d",
+    "tune/fixed_r0_uniform_k10_p4/attempt_0/receipt.json": "d33638ef759fcdfbad28950406f5332590b560a3af07b887f9b600ffabf9df85",
+    "tune/fixed_r1_uniform_k7_p4/attempt_0/receipt.json": "a7914ac37998f7ee6238215c02bfa34fa7f42d5910e87c1b948d468701e8463c",
+    "tune/fixed_r1_complete_k4/attempt_0/receipt.json": "f31f21dbd00aca929a786de7fec38a96cb054967d61071576e1ff7b24140a370"
+  },
+  "selection_data": "Tuning requests only; held-out results never read",
+  "objective": "lowest balanced mean full-request latency on tuning prompts only",
+  "tie_rule": "smaller K, then smaller P, then smaller queue bound",
+  "sha256": "27ba9e423999a4d0642fab0597d2fbcf071bb5114784baab4b28620242df3cd6"
+}

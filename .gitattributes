@@ -1,0 +1,11 @@
+
+# Generated documents retain exact bytes and are reviewed as artifacts.
+*.pdf binary
+*.pptx binary
+*.png binary
+*.jpg binary
+*.zip binary
+# Preserve raw diagnostic logs, including original console whitespace.
+results/**/*.log -whitespace
+reports/**/validation_logs/*.log -whitespace
+*.csv whitespace=cr-at-eol

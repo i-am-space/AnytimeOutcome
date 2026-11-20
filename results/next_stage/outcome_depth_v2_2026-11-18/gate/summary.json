@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "exact_comparisons": 156,
+  "exact_matches": 156,
+  "valid_blocks": 28,
+  "requests": 168,
+  "computed_query_rows": 1194882.0,
+  "dense_query_rows": 1520742.0,
+  "reference": "shared-fixed16-v1; saved validated AR plus short fresh gate; original AR separate"
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-17T20:11:32.728894+00:00",
+  "tmux_session": "ao-outcome-depth",
+  "worktree": "/home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1",
+  "command": "env -u LD_PRELOAD -u NVIDIA_TF32_OVERRIDE -u TORCH_ALLOW_TF32_CUBLAS_OVERRIDE -u CUBLAS_WORKSPACE_CONFIG -u CUDA_LAUNCH_BLOCKING -u OMP_NUM_THREADS -u MKL_NUM_THREADS -u PYTORCH_CUDA_ALLOC_CONF CUDA_HOME=/usr/local/cuda-12.9 SSD_CUDA_ARCH=8.9 bash -lc 'source /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/env.sh\nexec /home/vishalrao/miniconda3/bin/python3.13 -O /home/vishalrao/AnytimeOutcome/.worktrees/outcome-depth-v1/profiling/run_outcome_depth_campaign.py --watch >> /home/vishalrao/AnytimeOutcome/results/next_stage/outcome_depth_v1_2026-11-18/queue.log 2>&1'",
+  "queue_sha256": "bc560af93991a9ca21cf162b05524cd4cb677832070689eca1ed708fb5c1d402",
+  "after": [
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v1_2026-11-17",
+    "/home/vishalrao/AnytimeOutcome/results/next_stage/publication_performance_v1_2026-11-17"
+  ],
+  "global_lock": "/home/vishalrao/AnytimeOutcome/results/baselines/eval1/.campaign.lock"
+}

@@ -1,0 +1,404 @@
+{
+  "baseline_heldout_exact": 1500,
+  "baseline_heldout_comparisons": 1500,
+  "publication_heldout_exact": 2250,
+  "context_speculative_exact": 252,
+  "depth_heldout_exact": 3225,
+  "depth_valid_blocks": 43,
+  "depth_required_blocks": 60,
+  "depth_status": "partial",
+  "depth_results": [
+    {
+      "protocol": "fixed",
+      "method": "complete",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.2074978664887346,
+      "mean_wait_s": 0.4300961685920548,
+      "comparison": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 2.2074978664887346,
+        "mean_latency_ci95_s": [
+          2.0578559318898866,
+          2.352449302293709
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "fixed",
+      "method": "overlap",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.2285387939287142,
+      "mean_wait_s": 0.45129469158308994,
+      "comparison": {
+        "speedup": 0.9905584199398717,
+        "speedup_ci95": [
+          0.9867267740243417,
+          0.9935227289119424
+        ],
+        "latency_reduction": -0.009531573171324359,
+        "latency_reduction_ci95": [
+          -0.013451774426032225,
+          -0.00651949965470825
+        ],
+        "mean_latency_s": 2.2285387939287142,
+        "mean_latency_ci95_s": [
+          2.078509385239449,
+          2.374055178534214
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "fixed",
+      "method": "ranked",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.288902400716001,
+      "mean_wait_s": 0.4672795737863311,
+      "comparison": {
+        "speedup": 0.9644351221782973,
+        "speedup_ci95": [
+          0.9597083243195005,
+          0.9690305009537564
+        ],
+        "latency_reduction": -0.03687638183621411,
+        "latency_reduction_ci95": [
+          -0.04198325122323058,
+          -0.03195926136071331
+        ],
+        "mean_latency_s": 2.288902400716001,
+        "mean_latency_ci95_s": [
+          2.1386690629929137,
+          2.43605398678744
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "fixed",
+      "method": "ranked_overlap",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.291259491172257,
+      "mean_wait_s": 0.47128485821316846,
+      "comparison": {
+        "speedup": 0.9634429775386689,
+        "speedup_ci95": [
+          0.9580705850264827,
+          0.968225129241582
+        ],
+        "latency_reduction": -0.037944147514286986,
+        "latency_reduction_ci95": [
+          -0.043764432008101505,
+          -0.0328176472588946
+        ],
+        "mean_latency_s": 2.291259491172257,
+        "mean_latency_ci95_s": [
+          2.140650975828557,
+          2.4385530461556173
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "fixed",
+      "method": "budget",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.321072784022997,
+      "mean_wait_s": 0.389587137114981,
+      "comparison": {
+        "speedup": 0.9510679206976832,
+        "speedup_ci95": [
+          0.9393512419340098,
+          0.9610237012358432
+        ],
+        "latency_reduction": -0.05144961599211695,
+        "latency_reduction_ci95": [
+          -0.06456451576828892,
+          -0.040557062967662226
+        ],
+        "mean_latency_s": 2.321072784022997,
+        "mean_latency_ci95_s": [
+          2.1871439062494384,
+          2.453464430041294
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "fixed",
+      "method": "reverse",
+      "rounds": [
+        0,
+        1,
+        2
+      ],
+      "requests": 225,
+      "mean_latency_s": 2.548634736069426,
+      "mean_wait_s": 0.4899879868357028,
+      "comparison": {
+        "speedup": 0.866149172043852,
+        "speedup_ci95": [
+          0.8498317157703695,
+          0.880440860248214
+        ],
+        "latency_reduction": -0.154535537614497,
+        "latency_reduction_ci95": [
+          -0.1767035537071686,
+          -0.13579462874840756
+        ],
+        "mean_latency_s": 2.548634736069426,
+        "mean_latency_ci95_s": [
+          2.420284717275457,
+          2.674136225710403
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "complete",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 1.9067025253588024,
+      "mean_wait_s": 0.3619509788821839,
+      "comparison": {
+        "speedup": 1.0,
+        "speedup_ci95": [
+          1.0,
+          1.0
+        ],
+        "latency_reduction": 0.0,
+        "latency_reduction_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_latency_s": 1.9067025253588024,
+        "mean_latency_ci95_s": [
+          1.731079777623134,
+          2.0812028941725824
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "overlap",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 1.9274240077182185,
+      "mean_wait_s": 0.38388321599903674,
+      "comparison": {
+        "speedup": 0.9892491313398408,
+        "speedup_ci95": [
+          0.9850237805393981,
+          0.9925721466666042
+        ],
+        "latency_reduction": -0.01086770593935027,
+        "latency_reduction_ci95": [
+          -0.015203916653217959,
+          -0.007483439222460837
+        ],
+        "mean_latency_s": 1.9274240077182185,
+        "mean_latency_ci95_s": [
+          1.7488328537808218,
+          2.1030460319965396
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "ranked",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 1.9834918431506958,
+      "mean_wait_s": 0.4010322394189037,
+      "comparison": {
+        "speedup": 0.9612857909867092,
+        "speedup_ci95": [
+          0.9557610986114992,
+          0.9670162299829484
+        ],
+        "latency_reduction": -0.04027336030167761,
+        "latency_reduction_ci95": [
+          -0.04628656832643968,
+          -0.03410880706763753
+        ],
+        "mean_latency_s": 1.9834918431506958,
+        "mean_latency_ci95_s": [
+          1.8020568936158523,
+          2.1616618292381413
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "ranked_overlap",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 1.979072272182093,
+      "mean_wait_s": 0.3969992338679731,
+      "comparison": {
+        "speedup": 0.9634324891311337,
+        "speedup_ci95": [
+          0.9583234499950336,
+          0.9682032087457362
+        ],
+        "latency_reduction": -0.03795544709297127,
+        "latency_reduction_ci95": [
+          -0.04348902243436182,
+          -0.03284103065051068
+        ],
+        "mean_latency_s": 1.979072272182093,
+        "mean_latency_ci95_s": [
+          1.798337149226039,
+          2.157678065202951
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "budget",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 2.004681190120561,
+      "mean_wait_s": 0.328715288687769,
+      "comparison": {
+        "speedup": 0.9511250640527704,
+        "speedup_ci95": [
+          0.9387247324164214,
+          0.961418002648514
+        ],
+        "latency_reduction": -0.05138644516313362,
+        "latency_reduction_ci95": [
+          -0.06527501137198724,
+          -0.04013030466264159
+        ],
+        "mean_latency_s": 2.004681190120561,
+        "mean_latency_ci95_s": [
+          1.8340577243982068,
+          2.172867311700029
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    },
+    {
+      "protocol": "natural",
+      "method": "reverse",
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "requests": 300,
+      "mean_latency_s": 2.2031761152043083,
+      "mean_wait_s": 0.4137216710768795,
+      "comparison": {
+        "speedup": 0.8654335494109998,
+        "speedup_ci95": [
+          0.8476614331485182,
+          0.8807624810229133
+        ],
+        "latency_reduction": -0.1554902172218584,
+        "latency_reduction_ci95": [
+          -0.1797162887156794,
+          -0.13537987998642806
+        ],
+        "mean_latency_s": 2.2031761152043083,
+        "mean_latency_ci95_s": [
+          2.0258754257477607,
+          2.3750907017019203
+        ],
+        "bootstrap_samples": 10000,
+        "bootstrap_seed": 0,
+        "bootstrap_unit": "paired repetition rounds and prompt IDs, stratified by family"
+      }
+    }
+  ],
+  "reference": "shared-fixed16-v1; original AR remains separate",
+  "stale_header_note": "Baseline generic correctness_status text is stale. Claims here were rechecked directly against validated raw token IDs."
+}

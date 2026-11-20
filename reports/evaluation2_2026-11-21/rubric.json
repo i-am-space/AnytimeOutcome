@@ -1,0 +1,14 @@
+{
+  "source": "User-provided Evaluation 2 requirements in this conversation",
+  "evaluation": "Implementation & Initial Results",
+  "weight_percent": 30,
+  "presentation_minutes": 10,
+  "questions_minutes": 5,
+  "criteria_marks": {
+    "Implementation & Progress": 8,
+    "Initial Results & Analysis": 8,
+    "Comparisons / Trade-offs / Ablations": 8,
+    "Presentation & Technical Clarity": 6
+  },
+  "key_question": "What have you built, what have you learned, and what remains to be established?"
+}

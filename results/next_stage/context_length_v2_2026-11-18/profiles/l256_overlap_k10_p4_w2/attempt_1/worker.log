@@ -1,0 +1,46 @@
+WARNING: Device-side CUDA Event completion trace is currently enabled.
+         This may increase runtime overhead and the likelihood of false
+         dependencies across CUDA Streams. If you wish to avoid this, please
+         disable the feature with --cuda-event-trace=false.
+Draft runner created on rank 1 (async)!
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner about to wrapper.init()] graph_bs_list=[1]
+wrapper backend is auto
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+`torch_dtype` is deprecated! Use `dtype` instead!
+[model_runner] about to setup and warmup model and cudagraphs, is use_eagle=False
+Starting Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=10
+Finishing Qwen3ForCausalLM init, draft=True, speculate=True, spec_k=10
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+Loading model files:   0%|                               | 0/1 [00:00<?, ?it/s]Starting Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=10
+Finishing Qwen3ForCausalLM init, draft=False, speculate=True, spec_k=10
+[load_model] loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+Loading model files:   0%|          | 0/5 [00:00<?, ?it/s]Loading model files:  20%|██        | 1/5 [00:00<00:00,  4.05it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.17it/s]Loading model files: 100%|███████████████████████| 1/1 [00:00<00:00,  3.17it/s]
+Loading model files:  40%|████      | 2/5 [00:01<00:01,  1.82it/s]Loading model files:  60%|██████    | 3/5 [00:01<00:01,  1.79it/s]Loading model files:  80%|████████  | 4/5 [00:02<00:00,  1.65it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.57it/s]Loading model files: 100%|██████████| 5/5 [00:02<00:00,  1.69it/s]
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 28, 1072, 256, 8, 128])
+[load_model] finished loading model from /scratch/vishalrao/hf/hub/models--Qwen--Qwen3-8B/snapshots/local
+inside allocate_kv_cache -- 
+allocate_kv_cache(): kv_cache shape = torch.Size([2, 36, 559, 256, 8, 128])
+F=3, fan_out_list=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], fan_out_list_miss=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], MQ_LEN=33
+[LLMEngine] finished llm_engine init
+[rank0]:[W1118 07:24:29.684832378 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 2 PG GUID 2 Rank 0] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+About to capture FI cudagraphs for bs=[1]
+F=3, fan_out_list=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], fan_out_list_miss=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], MQ_LEN=33
+DraftRunner set up, starting draft_loop
+[rank1]:[W1118 07:24:29.942951572 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 1 PG GUID 2 Rank 1] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+[rank0]:[W1118 07:24:31.065864441 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 2 PG GUID 2 Rank 0] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+[rank1]:[W1118 07:24:31.183222374 ProcessGroupNCCL.cpp:4025] Warning: [PG ID 1 PG GUID 2 Rank 1] An unbatched P2P op (send/recv) was called on this ProcessGroup with size 2.  In eager initialization mode, unbatched P2P ops are treated as independent collective ops, and are thus serialized with all other ops on this ProcessGroup, including other P2P ops. To avoid serialization, either create additional independent ProcessGroups for the P2P ops or use batched P2P ops. You can squash this warning by setting the environment variable TORCH_NCCL_SHOW_EAGER_INIT_P2P_SERIALIZATION_WARNING to false. (function operator())
+Capture range started in the application.
+Capture range ended in the application.
+Generating '/tmp/nsys-report-d987.qdstrm'
+[1/1] [0%                          ] trace.nsys-repProcessing events...
+[1/1] [0%                          ] trace.nsys-rep[1/1] [0%                          ] trace.nsys-rep[1/1] [5%                          ] trace.nsys-rep[1/1] [6%                          ] trace.nsys-rep[1/1] [7%                          ] trace.nsys-rep[1/1] [8%                          ] trace.nsys-rep[1/1] [9%                          ] trace.nsys-rep[1/1] [10%                         ] trace.nsys-rep[1/1] [11%                         ] trace.nsys-rep[1/1] [12%                         ] trace.nsys-rep[1/1] [13%                         ] trace.nsys-rep[1/1] [14%                         ] trace.nsys-rep[1/1] [=15%                        ] trace.nsys-rep[1/1] [=16%                        ] trace.nsys-rep[1/1] [=17%                        ] trace.nsys-rep[1/1] [==18%                       ] trace.nsys-rep[1/1] [==19%                       ] trace.nsys-rep[1/1] [==20%                       ] trace.nsys-rep[1/1] [==21%                       ] trace.nsys-rep[1/1] [===22%                      ] trace.nsys-rep[1/1] [===23%                      ] trace.nsys-rep[1/1] [===24%                      ] trace.nsys-rep[1/1] [====25%                     ] trace.nsys-rep[1/1] [====26%                     ] trace.nsys-rep[1/1] [====27%                     ] trace.nsys-rep[1/1] [====28%                     ] trace.nsys-rep[1/1] [=====29%                    ] trace.nsys-rep[1/1] [=====30%                    ] trace.nsys-rep[1/1] [=====31%                    ] trace.nsys-rep[1/1] [=====32%                    ] trace.nsys-rep[1/1] [======33%                   ] trace.nsys-rep[1/1] [======34%                   ] trace.nsys-rep[1/1] [======35%                   ] trace.nsys-rep[1/1] [=======36%                  ] trace.nsys-rep[1/1] [=======37%                  ] trace.nsys-rep[1/1] [=======38%                  ] trace.nsys-rep[1/1] [=======39%                  ] trace.nsys-rep[1/1] [========40%                 ] trace.nsys-rep[1/1] [========41%                 ] trace.nsys-rep[1/1] [========42%                 ] trace.nsys-rep[1/1] [=========43%                ] trace.nsys-rep[1/1] [=========44%                ] trace.nsys-rep[1/1] [=========45%                ] trace.nsys-rep[1/1] [=========46%                ] trace.nsys-rep[1/1] [==========47%               ] trace.nsys-rep[1/1] [==========48%               ] trace.nsys-rep[1/1] [==========49%               ] trace.nsys-rep[1/1] [===========50%              ] trace.nsys-rep[1/1] [===========51%              ] trace.nsys-rep[1/1] [===========52%              ] trace.nsys-rep[1/1] [===========53%              ] trace.nsys-rep[1/1] [============54%             ] trace.nsys-rep[1/1] [============55%             ] trace.nsys-rep[1/1] [============56%             ] trace.nsys-rep[1/1] [============57%             ] trace.nsys-rep[1/1] [========================100%] trace.nsys-rep[1/1] [========================100%] trace.nsys-rep
+[LLMEngine] Exiting (hard=True)
+[metrics] Avg draft step time (ms): 36.90
+Generated:
+	/home/vishalrao/AnytimeOutcome/results/next_stage/context_length_v2_2026-11-18/profiles/l256_overlap_k10_p4_w2/attempt_1/trace.nsys-rep
+The target application terminated. One or more process it created re-parented.
+Waiting for termination of re-parented processes.
+Use the `--wait` option to modify this behavior.
